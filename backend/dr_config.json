@@ -1,0 +1,83 @@
+{
+  "ASEMI24": {
+    "primary": "3119.HK",
+    "market": "HK",
+    "dr_ratio": 0.005,
+    "name": "ASEMI ETF DR (FSS)",
+    "issuer": "FSS",
+    "underlying": "ASEMI ETF",
+    "recommend": true
+  },
+  "ADVANT23": {
+    "primary": "6857.T",
+    "market": "JP",
+    "dr_ratio": 0.0006770480704129993,
+    "name": "ADVANT DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "ADVANT",
+    "recommend": true
+  },
+  "ZJINNO80": {
+    "primary": "300308.SZ",
+    "market": "HK",
+    "dr_ratio": 0.001,
+    "name": "ZJINNO DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "ZJINNO",
+    "recommend": true
+  },
+  "CAMBRI80": {
+    "primary": "688256.SS",
+    "market": "HK",
+    "dr_ratio": 0.001,
+    "name": "CAMBRI DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "CAMBRI",
+    "recommend": true
+  },
+  "CNSEMI23": {
+    "primary": "3191.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "CNSEMI ETF DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "CNSEMI ETF",
+    "recommend": true
+  },
+  "NAURA80": {
+    "primary": "002371.SZ",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "NAURA DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "NAURA",
+    "recommend": true
+  },
+  "MONTAGE80": {
+    "primary": "688008.SS",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "MONTAGE DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "MONTAGE",
+    "recommend": true
+  },
+  "STAR5001": {
+    "primary": "3151.HK",
+    "market": "HK",
+    "dr_ratio": 1,
+    "name": "PREMIA STAR50 ETF DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "PREMIA STAR50 ETF",
+    "recommend": true
+  },
+  "JPSEMI24": {
+    "primary": "2644.T",
+    "market": "JP",
+    "dr_ratio": 0.0016666666666666668,
+    "name": "JPSEMI ETF DR (FSS)",
+    "issuer": "FSS",
+    "underlying": "JPSEMI ETF",
+    "recommend": true
+  }
+}

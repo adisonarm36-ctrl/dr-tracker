@@ -1,0 +1,3404 @@
+{
+  "AAPL01": {
+    "primary": "AAPL",
+    "market": "US",
+    "dr_ratio": 0.0029411764705882353,
+    "name": "AAPL DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "AAPL",
+    "recommend": false
+  },
+  "AAPL03": {
+    "primary": "AAPL",
+    "market": "US",
+    "dr_ratio": 0.0003333333333333333,
+    "name": "AAPL DR (PI)",
+    "issuer": "PI",
+    "underlying": "AAPL",
+    "recommend": false
+  },
+  "AAPL19": {
+    "primary": "AAPL",
+    "market": "US",
+    "dr_ratio": 0.0006666666666666666,
+    "name": "AAPL DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "AAPL",
+    "recommend": false
+  },
+  "AAPL80": {
+    "primary": "AAPL",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "AAPL DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "AAPL",
+    "recommend": true
+  },
+  "ABBV19": {
+    "primary": "ABBV",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "ABBV DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "ABBV",
+    "recommend": false
+  },
+  "ABBV80": {
+    "primary": "ABBV",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "ABBV DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "ABBV",
+    "recommend": true
+  },
+  "ABNB06": {
+    "primary": "ABNB",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "ABNB DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "ABNB",
+    "recommend": true
+  },
+  "ADBE03": {
+    "primary": "ADBE",
+    "market": "US",
+    "dr_ratio": 0.00022222222222222223,
+    "name": "ADBE DR (PI)",
+    "issuer": "PI",
+    "underlying": "ADBE",
+    "recommend": false
+  },
+  "ADBE06": {
+    "primary": "ADBE",
+    "market": "US",
+    "dr_ratio": 0.00025,
+    "name": "ADBE DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "ADBE",
+    "recommend": true
+  },
+  "ADVANT19": {
+    "primary": "6857.T",
+    "market": "JP",
+    "dr_ratio": 0.001,
+    "name": "ADVANT DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "ADVANT",
+    "recommend": false
+  },
+  "ADVANT23": {
+    "primary": "6857.T",
+    "market": "JP",
+    "dr_ratio": 0.0006770480704129993,
+    "name": "ADVANT DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "ADVANT",
+    "recommend": true
+  },
+  "AFRM03": {
+    "primary": "AFRM",
+    "market": "US",
+    "dr_ratio": 0.00125,
+    "name": "AFRM DR (PI)",
+    "issuer": "PI",
+    "underlying": "AFRM",
+    "recommend": true
+  },
+  "AIA06": {
+    "primary": "1299.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "AIA DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "AIA",
+    "recommend": false
+  },
+  "AIA19": {
+    "primary": "1299.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "AIA DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "AIA",
+    "recommend": false
+  },
+  "AIA23": {
+    "primary": "1299.HK",
+    "market": "HK",
+    "dr_ratio": 0.007692307692307693,
+    "name": "AIA DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "AIA",
+    "recommend": true
+  },
+  "AMD03": {
+    "primary": "AMD",
+    "market": "US",
+    "dr_ratio": 0.0005,
+    "name": "AMD DR (PI)",
+    "issuer": "PI",
+    "underlying": "AMD",
+    "recommend": false
+  },
+  "AMD23": {
+    "primary": "AMD",
+    "market": "US",
+    "dr_ratio": 0.0004166666666666667,
+    "name": "AMD DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "AMD",
+    "recommend": false
+  },
+  "AMD80": {
+    "primary": "AMD",
+    "market": "US",
+    "dr_ratio": 0.0002,
+    "name": "AMD DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "AMD",
+    "recommend": true
+  },
+  "AMGN06": {
+    "primary": "AMGN",
+    "market": "US",
+    "dr_ratio": 0.00025,
+    "name": "AMGN DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "AMGN",
+    "recommend": true
+  },
+  "AMZN01": {
+    "primary": "AMZN",
+    "market": "US",
+    "dr_ratio": 0.0029411764705882353,
+    "name": "AMZN DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "AMZN",
+    "recommend": false
+  },
+  "AMZN03": {
+    "primary": "AMZN",
+    "market": "US",
+    "dr_ratio": 0.0005,
+    "name": "AMZN DR (PI)",
+    "issuer": "PI",
+    "underlying": "AMZN",
+    "recommend": false
+  },
+  "AMZN06": {
+    "primary": "AMZN",
+    "market": "US",
+    "dr_ratio": 0.00025,
+    "name": "AMZN DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "AMZN",
+    "recommend": false
+  },
+  "AMZN23": {
+    "primary": "AMZN",
+    "market": "US",
+    "dr_ratio": 0.0003333333333333333,
+    "name": "AMZN DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "AMZN",
+    "recommend": false
+  },
+  "AMZN80": {
+    "primary": "AMZN",
+    "market": "US",
+    "dr_ratio": 0.00025,
+    "name": "AMZN DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "AMZN",
+    "recommend": true
+  },
+  "ANET23": {
+    "primary": "ANET",
+    "market": "US",
+    "dr_ratio": 0.0005555555555555556,
+    "name": "ANET DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "ANET",
+    "recommend": false
+  },
+  "ANET80": {
+    "primary": "ANET",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "ANET DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "ANET",
+    "recommend": true
+  },
+  "ANTA13": {
+    "primary": "2020.HK",
+    "market": "HK",
+    "dr_ratio": 0.0058823529411764705,
+    "name": "ANTA DR (KGI)",
+    "issuer": "KGI",
+    "underlying": "ANTA",
+    "recommend": false
+  },
+  "ANTA23": {
+    "primary": "2020.HK",
+    "market": "HK",
+    "dr_ratio": 0.00625,
+    "name": "ANTA DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "ANTA",
+    "recommend": true
+  },
+  "APLD03": {
+    "primary": "APLD",
+    "market": "US",
+    "dr_ratio": 0.0033333333333333335,
+    "name": "APLD DR (PI)",
+    "issuer": "PI",
+    "underlying": "APLD",
+    "recommend": true
+  },
+  "APPL03": {
+    "primary": "APPL",
+    "market": "US",
+    "dr_ratio": 0.00016666666666666666,
+    "name": "APPL DR (PI)",
+    "issuer": "PI",
+    "underlying": "APPL",
+    "recommend": true
+  },
+  "ASEMI24": {
+    "primary": "3119.HK",
+    "market": "HK",
+    "dr_ratio": 0.005,
+    "name": "ASEMI ETF DR (FSS)",
+    "issuer": "FSS",
+    "underlying": "ASEMI ETF",
+    "recommend": true
+  },
+  "ASICS23": {
+    "primary": "7936.T",
+    "market": "JP",
+    "dr_ratio": 0.0029411764705882353,
+    "name": "ASICS DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "ASICS",
+    "recommend": true
+  },
+  "ASML01": {
+    "primary": "ASML.AS",
+    "market": "AS",
+    "dr_ratio": 0.0008333333333333334,
+    "name": "ASML DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "ASML",
+    "recommend": true
+  },
+  "ASTS03": {
+    "primary": "ASTS",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "ASTS DR (PI)",
+    "issuer": "PI",
+    "underlying": "ASTS",
+    "recommend": true
+  },
+  "AVGO23": {
+    "primary": "AVGO",
+    "market": "US",
+    "dr_ratio": 0.00022727272727272727,
+    "name": "AVGO DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "AVGO",
+    "recommend": false
+  },
+  "AVGO80": {
+    "primary": "AVGO",
+    "market": "US",
+    "dr_ratio": 0.0002,
+    "name": "AVGO DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "AVGO",
+    "recommend": true
+  },
+  "AXP06": {
+    "primary": "AXP",
+    "market": "US",
+    "dr_ratio": 0.00025,
+    "name": "AXP DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "AXP",
+    "recommend": true
+  },
+  "BABA01": {
+    "primary": "9988.HK",
+    "market": "HK",
+    "dr_ratio": 0.022727272727272728,
+    "name": "BABA DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "BABA",
+    "recommend": false
+  },
+  "BABA06": {
+    "primary": "9988.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "BABA DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "BABA",
+    "recommend": false
+  },
+  "BABA13": {
+    "primary": "9988.HK",
+    "market": "HK",
+    "dr_ratio": 0.004,
+    "name": "BABA DR (KGI)",
+    "issuer": "KGI",
+    "underlying": "BABA",
+    "recommend": false
+  },
+  "BABA23": {
+    "primary": "9988.HK",
+    "market": "HK",
+    "dr_ratio": 0.006666666666666667,
+    "name": "BABA DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "BABA",
+    "recommend": false
+  },
+  "BABA80": {
+    "primary": "9988.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "BABA DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "BABA",
+    "recommend": true
+  },
+  "BAC03": {
+    "primary": "BAC",
+    "market": "US",
+    "dr_ratio": 0.002,
+    "name": "BAC DR (PI)",
+    "issuer": "PI",
+    "underlying": "BAC",
+    "recommend": true
+  },
+  "BDX06": {
+    "primary": "BDX",
+    "market": "US",
+    "dr_ratio": 0.0003333333333333333,
+    "name": "BDX DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "BDX",
+    "recommend": true
+  },
+  "BIDU01": {
+    "primary": "9888.HK",
+    "market": "HK",
+    "dr_ratio": 0.022727272727272728,
+    "name": "BIDU DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "BIDU",
+    "recommend": false
+  },
+  "BIDU06": {
+    "primary": "9888.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "BIDU DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "BIDU",
+    "recommend": false
+  },
+  "BIDU23": {
+    "primary": "9888.HK",
+    "market": "HK",
+    "dr_ratio": 0.004761904761904762,
+    "name": "BIDU DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "BIDU",
+    "recommend": false
+  },
+  "BIDU80": {
+    "primary": "9888.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "BIDU DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "BIDU",
+    "recommend": true
+  },
+  "BILIBILI01": {
+    "primary": "9626.HK",
+    "market": "HK",
+    "dr_ratio": 0.004761904761904762,
+    "name": "BILIBI DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "BILIBI",
+    "recommend": true
+  },
+  "BIREN23": {
+    "primary": "6082.HK",
+    "market": "HK",
+    "dr_ratio": 0.04,
+    "name": "BIREN DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "BIREN",
+    "recommend": true
+  },
+  "BKNG03": {
+    "primary": "BKNG",
+    "market": "US",
+    "dr_ratio": 0.0004166666666666667,
+    "name": "BKNG DR (PI)",
+    "issuer": "PI",
+    "underlying": "BKNG",
+    "recommend": false
+  },
+  "BKNG80": {
+    "primary": "BKNG",
+    "market": "US",
+    "dr_ratio": 0.0005,
+    "name": "BKNG DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "BKNG",
+    "recommend": true
+  },
+  "BLK06": {
+    "primary": "BLK",
+    "market": "US",
+    "dr_ratio": 0.0001,
+    "name": "BLK DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "BLK",
+    "recommend": true
+  },
+  "BOEING80": {
+    "primary": "BOEING",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "BOEING DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "BOEING",
+    "recommend": true
+  },
+  "BONDAS19": {
+    "primary": "N6M.SI",
+    "market": "SG",
+    "dr_ratio": 0.02,
+    "name": "BONDAS ETF DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "BONDAS ETF",
+    "recommend": true
+  },
+  "BRKB80": {
+    "primary": "BRKB",
+    "market": "US",
+    "dr_ratio": 0.0001,
+    "name": "BRKB DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "BRKB",
+    "recommend": true
+  },
+  "BYDCOM01": {
+    "primary": "0285.HK",
+    "market": "HK",
+    "dr_ratio": 0.0022727272727272726,
+    "name": "BYDCOM DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "BYDCOM",
+    "recommend": false
+  },
+  "BYDCOM80": {
+    "primary": "0285.HK",
+    "market": "HK",
+    "dr_ratio": 0.001,
+    "name": "BYDCOM DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "BYDCOM",
+    "recommend": true
+  },
+  "CAMBRI80": {
+    "primary": "688256.SS",
+    "market": "HK",
+    "dr_ratio": 0.001,
+    "name": "CAMBRI DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "CAMBRI",
+    "recommend": true
+  },
+  "CATL01": {
+    "primary": "300750.SZ",
+    "market": "HK",
+    "dr_ratio": 0.0022727272727272726,
+    "name": "CATL DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "CATL",
+    "recommend": false
+  },
+  "CATL23": {
+    "primary": "300750.SZ",
+    "market": "HK",
+    "dr_ratio": 0.004,
+    "name": "CATL DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "CATL",
+    "recommend": false
+  },
+  "CATL80": {
+    "primary": "300750.SZ",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "CATL DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "CATL",
+    "recommend": true
+  },
+  "CCJ23": {
+    "primary": "CCJ",
+    "market": "US",
+    "dr_ratio": 0.000625,
+    "name": "CCJ DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "CCJ",
+    "recommend": true
+  },
+  "CEG23": {
+    "primary": "CEG",
+    "market": "US",
+    "dr_ratio": 0.00025,
+    "name": "CEG DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "CEG",
+    "recommend": true
+  },
+  "CHHONGQ19": {
+    "primary": "1378.HK",
+    "market": "HK",
+    "dr_ratio": 0.1,
+    "name": "CHHONGQ DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "CHHONGQ",
+    "recommend": true
+  },
+  "CHMOBILE19": {
+    "primary": "0941.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "CHMOBILE DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "CHMOBILE",
+    "recommend": false
+  },
+  "CHMOBILE23": {
+    "primary": "0941.HK",
+    "market": "HK",
+    "dr_ratio": 0.007692307692307693,
+    "name": "CHMOBILE DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "CHMOBILE",
+    "recommend": true
+  },
+  "CHNXT5023": {
+    "primary": "159682.SZ",
+    "market": "HK",
+    "dr_ratio": 1.0,
+    "name": "CHNXT50 ETF DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "CHNXT50 ETF",
+    "recommend": true
+  },
+  "CMBANK23": {
+    "primary": "3968.HK",
+    "market": "HK",
+    "dr_ratio": 0.011111111111111112,
+    "name": "CMBANK DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "CMBANK",
+    "recommend": true
+  },
+  "CME03": {
+    "primary": "CME",
+    "market": "US",
+    "dr_ratio": 0.0003333333333333333,
+    "name": "CME DR (PI)",
+    "issuer": "PI",
+    "underlying": "CME",
+    "recommend": true
+  },
+  "CN01": {
+    "primary": "3180.HK",
+    "market": "HK",
+    "dr_ratio": 0.1,
+    "name": "CAM CSI300 ETF DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "CAM CSI300 ETF",
+    "recommend": true
+  },
+  "CN23": {
+    "primary": "510300.SS",
+    "market": "HK",
+    "dr_ratio": 0.25,
+    "name": "CN CSI300 ETF DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "CN CSI300 ETF",
+    "recommend": true
+  },
+  "CNBIO24": {
+    "primary": "2820.HK",
+    "market": "HK",
+    "dr_ratio": 0.005,
+    "name": "CNBIO ETF DR (FSS)",
+    "issuer": "FSS",
+    "underlying": "CNBIO ETF",
+    "recommend": true
+  },
+  "CNEV24": {
+    "primary": "2845.HK",
+    "market": "HK",
+    "dr_ratio": 0.005,
+    "name": "CNEV ETF DR (FSS)",
+    "issuer": "FSS",
+    "underlying": "CNEV ETF",
+    "recommend": true
+  },
+  "CNRE80": {
+    "primary": "600111.SS",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "CNRE DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "CNRE",
+    "recommend": true
+  },
+  "CNROBOAI23": {
+    "primary": "2807.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "CNROBOAI ETF DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "CNROBOAI ETF",
+    "recommend": true
+  },
+  "CNSEMI23": {
+    "primary": "3191.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "CNSEMI ETF DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "CNSEMI ETF",
+    "recommend": true
+  },
+  "CNSTAR5023": {
+    "primary": "588000.SS",
+    "market": "HK",
+    "dr_ratio": 1.0,
+    "name": "CNSTAR50 ETF DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "CNSTAR50 ETF",
+    "recommend": true
+  },
+  "CNTECH01": {
+    "primary": "3088.HK",
+    "market": "HK",
+    "dr_ratio": 1.0,
+    "name": "CAM HSTECH ETF DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "CAM HSTECH ETF",
+    "recommend": true
+  },
+  "COIN80": {
+    "primary": "COIN",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "COIN DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "COIN",
+    "recommend": true
+  },
+  "COSTCO19": {
+    "primary": "COSTCO",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "COSTCO DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "COSTCO",
+    "recommend": true
+  },
+  "CRM01": {
+    "primary": "CRM",
+    "market": "US",
+    "dr_ratio": 0.0005555555555555556,
+    "name": "CRM DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "CRM",
+    "recommend": false
+  },
+  "CRM06": {
+    "primary": "CRM",
+    "market": "US",
+    "dr_ratio": 0.0004,
+    "name": "CRM DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "CRM",
+    "recommend": false
+  },
+  "CRM80": {
+    "primary": "CRM",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "CRM DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "CRM",
+    "recommend": true
+  },
+  "CRSP03": {
+    "primary": "CRSP",
+    "market": "US",
+    "dr_ratio": 0.002,
+    "name": "CRSP DR (PI)",
+    "issuer": "PI",
+    "underlying": "CRSP",
+    "recommend": true
+  },
+  "CRWD06": {
+    "primary": "CRWD",
+    "market": "US",
+    "dr_ratio": 0.0002,
+    "name": "CRWD DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "CRWD",
+    "recommend": false
+  },
+  "CRWD80": {
+    "primary": "CRWD",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "CRWD DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "CRWD",
+    "recommend": true
+  },
+  "CRWV03": {
+    "primary": "CRWV",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "CRWV DR (PI)",
+    "issuer": "PI",
+    "underlying": "CRWV",
+    "recommend": true
+  },
+  "CSCO06": {
+    "primary": "CSCO",
+    "market": "US",
+    "dr_ratio": 0.00125,
+    "name": "CSCO DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "CSCO",
+    "recommend": true
+  },
+  "CYPC80": {
+    "primary": "600900.SS",
+    "market": "HK",
+    "dr_ratio": 0.1,
+    "name": "CYPC DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "CYPC",
+    "recommend": true
+  },
+  "DASH03": {
+    "primary": "DASH",
+    "market": "US",
+    "dr_ratio": 0.0005,
+    "name": "DASH DR (PI)",
+    "issuer": "PI",
+    "underlying": "DASH",
+    "recommend": true
+  },
+  "DBS19": {
+    "primary": "D05.SI",
+    "market": "SG",
+    "dr_ratio": 0.01,
+    "name": "DBS DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "DBS",
+    "recommend": true
+  },
+  "DDOG19": {
+    "primary": "DDOG",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "DDOG DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "DDOG",
+    "recommend": true
+  },
+  "DELL19": {
+    "primary": "DELL",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "DELL DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "DELL",
+    "recommend": true
+  },
+  "DISCO24": {
+    "primary": "6146.T",
+    "market": "JP",
+    "dr_ratio": 6.896551724137931e-05,
+    "name": "DISCO DR (FSS)",
+    "issuer": "FSS",
+    "underlying": "DISCO",
+    "recommend": true
+  },
+  "DISNEY19": {
+    "primary": "DISNEY",
+    "market": "US",
+    "dr_ratio": 0.005,
+    "name": "DISNEY DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "DISNEY",
+    "recommend": true
+  },
+  "DUOL06": {
+    "primary": "DUOL",
+    "market": "US",
+    "dr_ratio": 0.000625,
+    "name": "DUOL DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "DUOL",
+    "recommend": true
+  },
+  "E1VFVN3001": {
+    "primary": "E1VFVN30.HM",
+    "market": "VN",
+    "dr_ratio": 1.0,
+    "name": "DCVFMVN30 ETF DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "DCVFMVN30 ETF",
+    "recommend": true
+  },
+  "EOSE03": {
+    "primary": "EOSE",
+    "market": "US",
+    "dr_ratio": 0.005,
+    "name": "EOSE DR (PI)",
+    "issuer": "PI",
+    "underlying": "EOSE",
+    "recommend": true
+  },
+  "ESTEE80": {
+    "primary": "ESTEE",
+    "market": "US",
+    "dr_ratio": 0.0003333333333333333,
+    "name": "ESTEE DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "ESTEE",
+    "recommend": true
+  },
+  "EXPE06": {
+    "primary": "EXPE",
+    "market": "US",
+    "dr_ratio": 0.0004,
+    "name": "EXPE DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "EXPE",
+    "recommend": true
+  },
+  "FANUC23": {
+    "primary": "6954.T",
+    "market": "JP",
+    "dr_ratio": 0.0018181818181818182,
+    "name": "FANUC DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "FANUC",
+    "recommend": true
+  },
+  "FCX23": {
+    "primary": "FCX",
+    "market": "US",
+    "dr_ratio": 0.00125,
+    "name": "FCX DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "FCX",
+    "recommend": true
+  },
+  "FERRARI80": {
+    "primary": "RACE.MI",
+    "market": "IT",
+    "dr_ratio": 0.0001,
+    "name": "FERRARI DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "FERRARI",
+    "recommend": true
+  },
+  "FPTVN11": {
+    "primary": "FPT.HM",
+    "market": "VN",
+    "dr_ratio": 0.02,
+    "name": "FPTVN DR (KS)",
+    "issuer": "KS",
+    "underlying": "FPTVN",
+    "recommend": false
+  },
+  "FPTVN19": {
+    "primary": "FPT.HM",
+    "market": "VN",
+    "dr_ratio": 0.1,
+    "name": "FPTVN DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "FPTVN",
+    "recommend": true
+  },
+  "FUEVFVND01": {
+    "primary": "FUEVFVND.HM",
+    "market": "VN",
+    "dr_ratio": 1.0,
+    "name": "DCVFMVN DIAMOND ETF DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "DCVFMVN DIAMOND ETF",
+    "recommend": true
+  },
+  "GAC03": {
+    "primary": "2238.HK",
+    "market": "HK",
+    "dr_ratio": 0.2,
+    "name": "GAC DR (PI)",
+    "issuer": "PI",
+    "underlying": "GAC",
+    "recommend": true
+  },
+  "GANFENG23": {
+    "primary": "1772.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "GANFENG DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "GANFENG",
+    "recommend": true
+  },
+  "GASVN11": {
+    "primary": "GAS.HM",
+    "market": "VN",
+    "dr_ratio": 0.04,
+    "name": "GASVN DR (KS)",
+    "issuer": "KS",
+    "underlying": "GASVN",
+    "recommend": true
+  },
+  "GDS23": {
+    "primary": "9698.HK",
+    "market": "HK",
+    "dr_ratio": 0.014285714285714285,
+    "name": "GDS DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "GDS",
+    "recommend": true
+  },
+  "GEELY06": {
+    "primary": "0175.HK",
+    "market": "HK",
+    "dr_ratio": 0.04,
+    "name": "GEELY DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "GEELY",
+    "recommend": false
+  },
+  "GEELY80": {
+    "primary": "0175.HK",
+    "market": "HK",
+    "dr_ratio": 0.1,
+    "name": "GEELY DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "GEELY",
+    "recommend": true
+  },
+  "GEV23": {
+    "primary": "GEV",
+    "market": "US",
+    "dr_ratio": 9.09090909090909e-05,
+    "name": "GEV DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "GEV",
+    "recommend": false
+  },
+  "GEV80": {
+    "primary": "GEV",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "GEV DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "GEV",
+    "recommend": true
+  },
+  "GIGA23": {
+    "primary": "603986.SS",
+    "market": "HK",
+    "dr_ratio": 0.0033333333333333335,
+    "name": "GIGA DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "GIGA",
+    "recommend": true
+  },
+  "GOLD03": {
+    "primary": "2840.HK",
+    "market": "HK",
+    "dr_ratio": 0.00025,
+    "name": "SPDR GOLD (HK) ETF DR (PI)",
+    "issuer": "PI",
+    "underlying": "SPDR GOLD (HK) ETF",
+    "recommend": true
+  },
+  "GOLD19": {
+    "primary": "O33.SI",
+    "market": "SG",
+    "dr_ratio": 0.001,
+    "name": "SPDR GOLD TRUST(GSD) DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "SPDR GOLD TRUST(GSD)",
+    "recommend": true
+  },
+  "GOLDUS03": {
+    "primary": "GLD",
+    "market": "US",
+    "dr_ratio": 0.00025,
+    "name": "SPDR GOLD (US) ETF DR (PI)",
+    "issuer": "PI",
+    "underlying": "SPDR GOLD (US) ETF",
+    "recommend": false
+  },
+  "GOLDUS19": {
+    "primary": "GLD",
+    "market": "US",
+    "dr_ratio": 0.0033333333333333335,
+    "name": "SPDR GOLD (US) ETF DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "SPDR GOLD (US) ETF",
+    "recommend": false
+  },
+  "GOLDUS80": {
+    "primary": "GLD",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "SPDR GOLD (US) ETF DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "SPDR GOLD (US) ETF",
+    "recommend": true
+  },
+  "GOOG23": {
+    "primary": "GOOG",
+    "market": "US",
+    "dr_ratio": 0.00025,
+    "name": "GOOG DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "GOOG",
+    "recommend": false
+  },
+  "GOOG80": {
+    "primary": "GOOG",
+    "market": "US",
+    "dr_ratio": 0.0005,
+    "name": "GOOG DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "GOOG",
+    "recommend": true
+  },
+  "GOOGL01": {
+    "primary": "GOOGL",
+    "market": "US",
+    "dr_ratio": 0.0029411764705882353,
+    "name": "GOOGL DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "GOOGL",
+    "recommend": true
+  },
+  "GOOGL03": {
+    "primary": "GOOGL",
+    "market": "US",
+    "dr_ratio": 0.0005,
+    "name": "GOOGL DR (PI)",
+    "issuer": "PI",
+    "underlying": "GOOGL",
+    "recommend": false
+  },
+  "GRAB80": {
+    "primary": "GRAB",
+    "market": "US",
+    "dr_ratio": 0.1,
+    "name": "GRAB DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "GRAB",
+    "recommend": true
+  },
+  "GSEMI24": {
+    "primary": "2644.T",
+    "market": "JP",
+    "dr_ratio": 0.0025,
+    "name": "GSEMI ETF DR (FSS)",
+    "issuer": "FSS",
+    "underlying": "GSEMI ETF",
+    "recommend": true
+  },
+  "GSUS06": {
+    "primary": "GSUS",
+    "market": "US",
+    "dr_ratio": 0.00014285714285714287,
+    "name": "GSUS DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "GSUS",
+    "recommend": true
+  },
+  "HAIERS19": {
+    "primary": "6690.HK",
+    "market": "HK",
+    "dr_ratio": 0.1,
+    "name": "HAIERS DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "HAIERS",
+    "recommend": true
+  },
+  "HANSOH19": {
+    "primary": "3692.HK",
+    "market": "HK",
+    "dr_ratio": 0.04,
+    "name": "HANSOH DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "HANSOH",
+    "recommend": true
+  },
+  "HERMES80": {
+    "primary": "RMS.PA",
+    "market": "FR",
+    "dr_ratio": 0.0001,
+    "name": "HERMES DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "HERMES",
+    "recommend": true
+  },
+  "HIMS03": {
+    "primary": "HIMS",
+    "market": "US",
+    "dr_ratio": 0.005,
+    "name": "HIMS DR (PI)",
+    "issuer": "PI",
+    "underlying": "HIMS",
+    "recommend": true
+  },
+  "HITACHI24": {
+    "primary": "6501.T",
+    "market": "JP",
+    "dr_ratio": 0.00125,
+    "name": "HITACHI DR (FSS)",
+    "issuer": "FSS",
+    "underlying": "HITACHI",
+    "recommend": true
+  },
+  "HK01": {
+    "primary": "2800.HK",
+    "market": "HK",
+    "dr_ratio": 0.2,
+    "name": "TRAHK ETF DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "TRAHK ETF",
+    "recommend": true
+  },
+  "HK13": {
+    "primary": "2800.HK",
+    "market": "HK",
+    "dr_ratio": 0.05,
+    "name": "TRAHK ETF DR (KGI)",
+    "issuer": "KGI",
+    "underlying": "TRAHK ETF",
+    "recommend": false
+  },
+  "HKCE01": {
+    "primary": "2828.HK",
+    "market": "HK",
+    "dr_ratio": 0.06666666666666667,
+    "name": "HSCEI ETF DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "HSCEI ETF",
+    "recommend": true
+  },
+  "HKEX23": {
+    "primary": "0388.HK",
+    "market": "HK",
+    "dr_ratio": 0.001287001287001287,
+    "name": "HKEX DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "HKEX",
+    "recommend": true
+  },
+  "HKTECH13": {
+    "primary": "3032.HK",
+    "market": "HK",
+    "dr_ratio": 0.2,
+    "name": "HSTECH ETF DR (KGI)",
+    "issuer": "KGI",
+    "underlying": "HSTECH ETF",
+    "recommend": true
+  },
+  "HONDA19": {
+    "primary": "7267.T",
+    "market": "JP",
+    "dr_ratio": 0.01,
+    "name": "HONDA DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "HONDA",
+    "recommend": true
+  },
+  "HOOD03": {
+    "primary": "HOOD",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "HOOD DR (PI)",
+    "issuer": "PI",
+    "underlying": "HOOD",
+    "recommend": false
+  },
+  "HOOD06": {
+    "primary": "HOOD",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "HOOD DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "HOOD",
+    "recommend": false
+  },
+  "HOOD80": {
+    "primary": "HOOD",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "HOOD DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "HOOD",
+    "recommend": true
+  },
+  "HORIZON23": {
+    "primary": "9930.HK",
+    "market": "HK",
+    "dr_ratio": 0.0625,
+    "name": "HORIZON DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "HORIZON",
+    "recommend": true
+  },
+  "HPG19": {
+    "primary": "HPG.HM",
+    "market": "VN",
+    "dr_ratio": 0.1,
+    "name": "HPG DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "HPG",
+    "recommend": true
+  },
+  "HSHD23": {
+    "primary": "3110.HK",
+    "market": "HK",
+    "dr_ratio": 0.05,
+    "name": "HSHD ETF DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "HSHD ETF",
+    "recommend": true
+  },
+  "HUAHONG23": {
+    "primary": "1347.HK",
+    "market": "HK",
+    "dr_ratio": 0.014285714285714285,
+    "name": "HUAHONG DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "HUAHONG",
+    "recommend": true
+  },
+  "IBM06": {
+    "primary": "IBM",
+    "market": "US",
+    "dr_ratio": 0.0004,
+    "name": "IBM DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "IBM",
+    "recommend": true
+  },
+  "ICBC06": {
+    "primary": "1398.HK",
+    "market": "HK",
+    "dr_ratio": 0.1,
+    "name": "ICBC DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "ICBC",
+    "recommend": true
+  },
+  "ICBC19": {
+    "primary": "1398.HK",
+    "market": "HK",
+    "dr_ratio": 0.1,
+    "name": "ICBC DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "ICBC",
+    "recommend": false
+  },
+  "IFLYTEK80": {
+    "primary": "002230.SZ",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "IFLYTEK DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "IFLYTEK",
+    "recommend": true
+  },
+  "INDIA01": {
+    "primary": "3074.HK",
+    "market": "HK",
+    "dr_ratio": 0.5,
+    "name": "CAM MSCIINDIA ETF DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "CAM MSCIINDIA ETF",
+    "recommend": true
+  },
+  "INDIAESG19": {
+    "primary": "I17.SI",
+    "market": "SG",
+    "dr_ratio": 0.01,
+    "name": "IS INDIA CLIMATE ETF DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "IS INDIA CLIMATE ETF",
+    "recommend": true
+  },
+  "INTEL03": {
+    "primary": "INTEL",
+    "market": "US",
+    "dr_ratio": 0.002,
+    "name": "INTEL DR (PI)",
+    "issuer": "PI",
+    "underlying": "INTEL",
+    "recommend": true
+  },
+  "IONQ03": {
+    "primary": "IONQ",
+    "market": "US",
+    "dr_ratio": 0.002,
+    "name": "IONQ DR (PI)",
+    "issuer": "PI",
+    "underlying": "IONQ",
+    "recommend": true
+  },
+  "ISRG01": {
+    "primary": "ISRG",
+    "market": "US",
+    "dr_ratio": 0.00022222222222222223,
+    "name": "ISRG DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "ISRG",
+    "recommend": true
+  },
+  "ISRG06": {
+    "primary": "ISRG",
+    "market": "US",
+    "dr_ratio": 0.0002,
+    "name": "ISRG DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "ISRG",
+    "recommend": false
+  },
+  "ISRG19": {
+    "primary": "ISRG",
+    "market": "US",
+    "dr_ratio": 0.00025,
+    "name": "ISRG DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "ISRG",
+    "recommend": false
+  },
+  "ITOCHU19": {
+    "primary": "8001.T",
+    "market": "JP",
+    "dr_ratio": 0.016666666666666666,
+    "name": "ITOCHU DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "ITOCHU",
+    "recommend": true
+  },
+  "JAP03": {
+    "primary": "3118.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "GLOBALX JAPAN(HK)ETF DR (PI)",
+    "issuer": "PI",
+    "underlying": "GLOBALX JAPAN(HK)ETF",
+    "recommend": true
+  },
+  "JAPAN10001": {
+    "primary": "3126.HK",
+    "market": "HK",
+    "dr_ratio": 1.0,
+    "name": "HS JAPAN TPX100 ETF DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "HS JAPAN TPX100 ETF",
+    "recommend": true
+  },
+  "JAPAN13": {
+    "primary": "3160.HK",
+    "market": "HK",
+    "dr_ratio": 0.04,
+    "name": "CAM JAPAN HDG ETF DR (KGI)",
+    "issuer": "KGI",
+    "underlying": "CAM JAPAN HDG ETF",
+    "recommend": true
+  },
+  "JD80": {
+    "primary": "9618.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "JD DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "JD",
+    "recommend": true
+  },
+  "JDHEAL19": {
+    "primary": "6618.HK",
+    "market": "HK",
+    "dr_ratio": 0.02,
+    "name": "JDHEAL DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "JDHEAL",
+    "recommend": true
+  },
+  "JEPI19": {
+    "primary": "JEPI",
+    "market": "US",
+    "dr_ratio": 0.0033333333333333335,
+    "name": "JEPI ETF DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "JEPI ETF",
+    "recommend": true
+  },
+  "JGRO19": {
+    "primary": "JGRO",
+    "market": "US",
+    "dr_ratio": 0.0033333333333333335,
+    "name": "JGRO ETF DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "JGRO ETF",
+    "recommend": true
+  },
+  "JLMAG80": {
+    "primary": "6680.HK",
+    "market": "HK",
+    "dr_ratio": 0.1,
+    "name": "JLMAG DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "JLMAG",
+    "recommend": true
+  },
+  "JNJ03": {
+    "primary": "JNJ",
+    "market": "US",
+    "dr_ratio": 0.0005,
+    "name": "JNJ DR (PI)",
+    "issuer": "PI",
+    "underlying": "JNJ",
+    "recommend": true
+  },
+  "JPANIME24": {
+    "primary": "2524.T",
+    "market": "JP",
+    "dr_ratio": 0.0016666666666666668,
+    "name": "JPANIME ETF DR (FSS)",
+    "issuer": "FSS",
+    "underlying": "JPANIME ETF",
+    "recommend": true
+  },
+  "JPMUS06": {
+    "primary": "JPMUS",
+    "market": "US",
+    "dr_ratio": 0.0003333333333333333,
+    "name": "JPMUS DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "JPMUS",
+    "recommend": true
+  },
+  "JPMUS19": {
+    "primary": "JPMUS",
+    "market": "US",
+    "dr_ratio": 0.002,
+    "name": "JPMUS DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "JPMUS",
+    "recommend": false
+  },
+  "JPROBOAI24": {
+    "primary": "2638.T",
+    "market": "JP",
+    "dr_ratio": 0.0025,
+    "name": "JPROBOAI ETF DR (FSS)",
+    "issuer": "FSS",
+    "underlying": "JPROBOAI ETF",
+    "recommend": true
+  },
+  "JPSEMI24": {
+    "primary": "2644.T",
+    "market": "JP",
+    "dr_ratio": 0.0016666666666666668,
+    "name": "JPSEMI ETF DR (FSS)",
+    "issuer": "FSS",
+    "underlying": "JPSEMI ETF",
+    "recommend": true
+  },
+  "JTEK19": {
+    "primary": "JTEK",
+    "market": "US",
+    "dr_ratio": 0.0033333333333333335,
+    "name": "JTEK ETF DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "JTEK ETF",
+    "recommend": true
+  },
+  "KEYENCE23": {
+    "primary": "6861.T",
+    "market": "JP",
+    "dr_ratio": 0.00017699115044247788,
+    "name": "KEYENCE DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "KEYENCE",
+    "recommend": true
+  },
+  "KINGSOFT23": {
+    "primary": "3888.HK",
+    "market": "HK",
+    "dr_ratio": 0.016666666666666666,
+    "name": "KINGSOFT DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "KINGSOFT",
+    "recommend": true
+  },
+  "KIOXIA23": {
+    "primary": "6600.T",
+    "market": "JP",
+    "dr_ratio": 0.000625,
+    "name": "KIOXIA DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "KIOXIA",
+    "recommend": true
+  },
+  "KO80": {
+    "primary": "KO",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "KO DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "KO",
+    "recommend": true
+  },
+  "KONAMI24": {
+    "primary": "9766.T",
+    "market": "JP",
+    "dr_ratio": 0.0002631578947368421,
+    "name": "KONAMI DR (FSS)",
+    "issuer": "FSS",
+    "underlying": "KONAMI",
+    "recommend": true
+  },
+  "KUAISH01": {
+    "primary": "1024.HK",
+    "market": "HK",
+    "dr_ratio": 0.0125,
+    "name": "KUAISH DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "KUAISH",
+    "recommend": false
+  },
+  "KUAISH06": {
+    "primary": "1024.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "KUAISH DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "KUAISH",
+    "recommend": false
+  },
+  "KUAISH23": {
+    "primary": "1024.HK",
+    "market": "HK",
+    "dr_ratio": 0.007142857142857143,
+    "name": "KUAISH DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "KUAISH",
+    "recommend": false
+  },
+  "KUAISH80": {
+    "primary": "1024.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "KUAISH DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "KUAISH",
+    "recommend": true
+  },
+  "LENOVO13": {
+    "primary": "0992.HK",
+    "market": "HK",
+    "dr_ratio": 0.05,
+    "name": "LENOVO DR (KGI)",
+    "issuer": "KGI",
+    "underlying": "LENOVO",
+    "recommend": true
+  },
+  "LLY80": {
+    "primary": "LLY",
+    "market": "US",
+    "dr_ratio": 5e-05,
+    "name": "LLY DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "LLY",
+    "recommend": true
+  },
+  "LOREAL80": {
+    "primary": "OR.PA",
+    "market": "FR",
+    "dr_ratio": 0.0001,
+    "name": "LOREAL DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "LOREAL",
+    "recommend": true
+  },
+  "LPGOLD13": {
+    "primary": "6181.HK",
+    "market": "HK",
+    "dr_ratio": 0.001,
+    "name": "LAOPU DR (KGI)",
+    "issuer": "KGI",
+    "underlying": "LAOPU",
+    "recommend": true
+  },
+  "LRCX23": {
+    "primary": "LRCX",
+    "market": "US",
+    "dr_ratio": 0.0003846153846153846,
+    "name": "LRCX DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "LRCX",
+    "recommend": true
+  },
+  "LULU06": {
+    "primary": "LULU",
+    "market": "US",
+    "dr_ratio": 0.0005,
+    "name": "LULU DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "LULU",
+    "recommend": true
+  },
+  "LVMH01": {
+    "primary": "MC.PA",
+    "market": "FR",
+    "dr_ratio": 0.000625,
+    "name": "LVMH DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "LVMH",
+    "recommend": true
+  },
+  "MA80": {
+    "primary": "MA",
+    "market": "US",
+    "dr_ratio": 0.0001,
+    "name": "MA DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "MA",
+    "recommend": true
+  },
+  "MAOGEP80": {
+    "primary": "1042.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "MAOGEP DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "MAOGEP",
+    "recommend": true
+  },
+  "MEITUAN19": {
+    "primary": "3690.HK",
+    "market": "HK",
+    "dr_ratio": 0.0033333333333333335,
+    "name": "MEITUAN DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "MEITUAN",
+    "recommend": false
+  },
+  "MEITUAN23": {
+    "primary": "3690.HK",
+    "market": "HK",
+    "dr_ratio": 0.00625,
+    "name": "MEITUAN DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "MEITUAN",
+    "recommend": false
+  },
+  "MEITUAN80": {
+    "primary": "3690.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "MEITUAN DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "MEITUAN",
+    "recommend": true
+  },
+  "MELI06": {
+    "primary": "MELI",
+    "market": "US",
+    "dr_ratio": 4e-05,
+    "name": "MELI DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "MELI",
+    "recommend": true
+  },
+  "META01": {
+    "primary": "META",
+    "market": "US",
+    "dr_ratio": 0.0002941176470588235,
+    "name": "META DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "META",
+    "recommend": false
+  },
+  "META06": {
+    "primary": "META",
+    "market": "US",
+    "dr_ratio": 0.000125,
+    "name": "META DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "META",
+    "recommend": false
+  },
+  "META23": {
+    "primary": "META",
+    "market": "US",
+    "dr_ratio": 0.00011904761904761905,
+    "name": "META DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "META",
+    "recommend": false
+  },
+  "META80": {
+    "primary": "META",
+    "market": "US",
+    "dr_ratio": 0.000125,
+    "name": "META DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "META",
+    "recommend": true
+  },
+  "MICRON01": {
+    "primary": "MICRON",
+    "market": "US",
+    "dr_ratio": 0.000625,
+    "name": "MICRON DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "MICRON",
+    "recommend": false
+  },
+  "MICRON03": {
+    "primary": "MICRON",
+    "market": "US",
+    "dr_ratio": 0.0003333333333333333,
+    "name": "MICRON DR (PI)",
+    "issuer": "PI",
+    "underlying": "MICRON",
+    "recommend": false
+  },
+  "MICRON19": {
+    "primary": "MICRON",
+    "market": "US",
+    "dr_ratio": 0.0006666666666666666,
+    "name": "MICRON DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "MICRON",
+    "recommend": false
+  },
+  "MICRON23": {
+    "primary": "MICRON",
+    "market": "US",
+    "dr_ratio": 0.0002,
+    "name": "MICRON DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "MICRON",
+    "recommend": false
+  },
+  "MICRON80": {
+    "primary": "MICRON",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "MICRON DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "MICRON",
+    "recommend": true
+  },
+  "MIDEA80": {
+    "primary": "0300.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "MIDEA DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "MIDEA",
+    "recommend": true
+  },
+  "MITSU19": {
+    "primary": "8031.T",
+    "market": "JP",
+    "dr_ratio": 0.01,
+    "name": "MITSU DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "MITSU",
+    "recommend": true
+  },
+  "MIXUE80": {
+    "primary": "MIXUE",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "MIXUE DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "MIXUE",
+    "recommend": true
+  },
+  "MNSO80": {
+    "primary": "9896.HK",
+    "market": "HK",
+    "dr_ratio": 0.1,
+    "name": "MNSO DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "MNSO",
+    "recommend": true
+  },
+  "MNST06": {
+    "primary": "MNST",
+    "market": "US",
+    "dr_ratio": 0.0014285714285714286,
+    "name": "MNST DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "MNST",
+    "recommend": true
+  },
+  "MONTAGE80": {
+    "primary": "688008.SS",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "MONTAGE DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "MONTAGE",
+    "recommend": true
+  },
+  "MOUTAI80": {
+    "primary": "600519.SS",
+    "market": "HK",
+    "dr_ratio": 0.001,
+    "name": "MOUTAI DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "MOUTAI",
+    "recommend": true
+  },
+  "MP80": {
+    "primary": "MP",
+    "market": "US",
+    "dr_ratio": 0.01,
+    "name": "MP DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "MP",
+    "recommend": true
+  },
+  "MRVL06": {
+    "primary": "MRVL",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "MRVL DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "MRVL",
+    "recommend": false
+  },
+  "MRVL23": {
+    "primary": "MRVL",
+    "market": "US",
+    "dr_ratio": 0.0008333333333333334,
+    "name": "MRVL DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "MRVL",
+    "recommend": false
+  },
+  "MRVL80": {
+    "primary": "MRVL",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "MRVL DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "MRVL",
+    "recommend": true
+  },
+  "MS06": {
+    "primary": "MS",
+    "market": "US",
+    "dr_ratio": 0.0006666666666666666,
+    "name": "MS DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "MS",
+    "recommend": true
+  },
+  "MSFT01": {
+    "primary": "MSFT",
+    "market": "US",
+    "dr_ratio": 0.0002941176470588235,
+    "name": "MSFT DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "MSFT",
+    "recommend": false
+  },
+  "MSFT03": {
+    "primary": "MSFT",
+    "market": "US",
+    "dr_ratio": 0.0002,
+    "name": "MSFT DR (PI)",
+    "issuer": "PI",
+    "underlying": "MSFT",
+    "recommend": false
+  },
+  "MSFT06": {
+    "primary": "MSFT",
+    "market": "US",
+    "dr_ratio": 0.00025,
+    "name": "MSFT DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "MSFT",
+    "recommend": false
+  },
+  "MSFT19": {
+    "primary": "MSFT",
+    "market": "US",
+    "dr_ratio": 0.0003333333333333333,
+    "name": "MSFT DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "MSFT",
+    "recommend": false
+  },
+  "MSFT23": {
+    "primary": "MSFT",
+    "market": "US",
+    "dr_ratio": 0.00018518518518518518,
+    "name": "MSFT DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "MSFT",
+    "recommend": false
+  },
+  "MSFT80": {
+    "primary": "MSFT",
+    "market": "US",
+    "dr_ratio": 0.0005,
+    "name": "MSFT DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "MSFT",
+    "recommend": true
+  },
+  "MSN11": {
+    "primary": "MSN.HM",
+    "market": "VN",
+    "dr_ratio": 0.04,
+    "name": "MSN DR (KS)",
+    "issuer": "KS",
+    "underlying": "MSN",
+    "recommend": false
+  },
+  "MSN19": {
+    "primary": "MSN.HM",
+    "market": "VN",
+    "dr_ratio": 0.03333333333333333,
+    "name": "MSN DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "MSN",
+    "recommend": true
+  },
+  "MUFG19": {
+    "primary": "8306.T",
+    "market": "JP",
+    "dr_ratio": 0.01,
+    "name": "MUFG DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "MUFG",
+    "recommend": false
+  },
+  "MUFG23": {
+    "primary": "8306.T",
+    "market": "JP",
+    "dr_ratio": 0.004,
+    "name": "MUFG DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "MUFG",
+    "recommend": true
+  },
+  "MWG11": {
+    "primary": "MWG.HM",
+    "market": "VN",
+    "dr_ratio": 0.04,
+    "name": "MWG DR (KS)",
+    "issuer": "KS",
+    "underlying": "MWG",
+    "recommend": false
+  },
+  "MWG19": {
+    "primary": "MWG.HM",
+    "market": "VN",
+    "dr_ratio": 0.1,
+    "name": "MWG DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "MWG",
+    "recommend": true
+  },
+  "NAURA23": {
+    "primary": "002371.SZ",
+    "market": "HK",
+    "dr_ratio": 0.0011111111111111111,
+    "name": "NAURA DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "NAURA",
+    "recommend": false
+  },
+  "NAURA80": {
+    "primary": "002371.SZ",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "NAURA DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "NAURA",
+    "recommend": true
+  },
+  "NBIS03": {
+    "primary": "NBIS",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "NBIS DR (PI)",
+    "issuer": "PI",
+    "underlying": "NBIS",
+    "recommend": true
+  },
+  "NDAQ06": {
+    "primary": "NDAQ",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "NDAQ DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "NDAQ",
+    "recommend": true
+  },
+  "NDX01": {
+    "primary": "3086.HK",
+    "market": "HK",
+    "dr_ratio": 0.1,
+    "name": "CAM NASDAQ 100 ETF DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "CAM NASDAQ 100 ETF",
+    "recommend": true
+  },
+  "NEE80": {
+    "primary": "NEE",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "NEE DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "NEE",
+    "recommend": true
+  },
+  "NEM06": {
+    "primary": "NEM",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "NEM DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "NEM",
+    "recommend": false
+  },
+  "NEM23": {
+    "primary": "NEM",
+    "market": "US",
+    "dr_ratio": 0.000625,
+    "name": "NEM DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "NEM",
+    "recommend": true
+  },
+  "NET03": {
+    "primary": "NET",
+    "market": "US",
+    "dr_ratio": 0.0005,
+    "name": "NET DR (PI)",
+    "issuer": "PI",
+    "underlying": "NET",
+    "recommend": true
+  },
+  "NETEASE80": {
+    "primary": "9999.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "NTES DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "NTES",
+    "recommend": true
+  },
+  "NFLX06": {
+    "primary": "NFLX",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "NFLX DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "NFLX",
+    "recommend": false
+  },
+  "NFLX80": {
+    "primary": "NFLX",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "NFLX DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "NFLX",
+    "recommend": true
+  },
+  "NIKE80": {
+    "primary": "NIKE",
+    "market": "US",
+    "dr_ratio": 0.0005,
+    "name": "NIKE DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "NIKE",
+    "recommend": true
+  },
+  "NIKKEI80": {
+    "primary": "1321.T",
+    "market": "JP",
+    "dr_ratio": 0.001,
+    "name": "NIKKEI ETF DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "NIKKEI ETF",
+    "recommend": true
+  },
+  "NINTENDO19": {
+    "primary": "7974.T",
+    "market": "JP",
+    "dr_ratio": 0.01,
+    "name": "NINTENDO DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "NINTENDO",
+    "recommend": false
+  },
+  "NINTENDO23": {
+    "primary": "7974.T",
+    "market": "JP",
+    "dr_ratio": 0.0008849557522123894,
+    "name": "NINTENDO DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "NINTENDO",
+    "recommend": true
+  },
+  "NONGFU80": {
+    "primary": "9633.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "NONGFU DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "NONGFU",
+    "recommend": true
+  },
+  "NOVOB80": {
+    "primary": "NOVO-B.CO",
+    "market": "DK",
+    "dr_ratio": 0.001,
+    "name": "NOVOB DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "NOVOB",
+    "recommend": true
+  },
+  "NOW19": {
+    "primary": "NOW",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "NOW DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "NOW",
+    "recommend": true
+  },
+  "NVDA01": {
+    "primary": "NVDA",
+    "market": "US",
+    "dr_ratio": 0.0029411764705882353,
+    "name": "NVDA DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "NVDA",
+    "recommend": false
+  },
+  "NVDA03": {
+    "primary": "NVDA",
+    "market": "US",
+    "dr_ratio": 0.0006666666666666666,
+    "name": "NVDA DR (PI)",
+    "issuer": "PI",
+    "underlying": "NVDA",
+    "recommend": false
+  },
+  "NVDA06": {
+    "primary": "NVDA",
+    "market": "US",
+    "dr_ratio": 0.0006666666666666666,
+    "name": "NVDA DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "NVDA",
+    "recommend": false
+  },
+  "NVDA19": {
+    "primary": "NVDA",
+    "market": "US",
+    "dr_ratio": 0.004,
+    "name": "NVDA DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "NVDA",
+    "recommend": false
+  },
+  "NVDA23": {
+    "primary": "NVDA",
+    "market": "US",
+    "dr_ratio": 0.0004761904761904762,
+    "name": "NVDA DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "NVDA",
+    "recommend": false
+  },
+  "NVDA80": {
+    "primary": "NVDA",
+    "market": "US",
+    "dr_ratio": 0.005,
+    "name": "NVDA DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "NVDA",
+    "recommend": true
+  },
+  "NVTS03": {
+    "primary": "NVTS",
+    "market": "US",
+    "dr_ratio": 0.01,
+    "name": "NVTS DR (PI)",
+    "issuer": "PI",
+    "underlying": "NVTS",
+    "recommend": true
+  },
+  "OIL03": {
+    "primary": "3097.HK",
+    "market": "HK",
+    "dr_ratio": 0.1,
+    "name": "S&P CRUDE OIL(HK)ETF DR (PI)",
+    "issuer": "PI",
+    "underlying": "S&P CRUDE OIL(HK)ETF",
+    "recommend": false
+  },
+  "OIL24": {
+    "primary": "3097.HK",
+    "market": "HK",
+    "dr_ratio": 0.5,
+    "name": "S&P CRUDE OIL(HK)ETF DR (FSS)",
+    "issuer": "FSS",
+    "underlying": "S&P CRUDE OIL(HK)ETF",
+    "recommend": true
+  },
+  "ONON03": {
+    "primary": "ONON",
+    "market": "US",
+    "dr_ratio": 0.002,
+    "name": "ONON DR (PI)",
+    "issuer": "PI",
+    "underlying": "ONON",
+    "recommend": true
+  },
+  "ORCL01": {
+    "primary": "ORCL",
+    "market": "US",
+    "dr_ratio": 0.000625,
+    "name": "ORCL DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "ORCL",
+    "recommend": true
+  },
+  "ORCL06": {
+    "primary": "ORCL",
+    "market": "US",
+    "dr_ratio": 0.0004,
+    "name": "ORCL DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "ORCL",
+    "recommend": false
+  },
+  "ORCL19": {
+    "primary": "ORCL",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "ORCL DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "ORCL",
+    "recommend": false
+  },
+  "PANW80": {
+    "primary": "PANW",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "PANW DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "PANW",
+    "recommend": true
+  },
+  "PEP80": {
+    "primary": "PEP",
+    "market": "US",
+    "dr_ratio": 0.0002,
+    "name": "PEP DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "PEP",
+    "recommend": true
+  },
+  "PETROCN80": {
+    "primary": "0857.HK",
+    "market": "HK",
+    "dr_ratio": 0.1,
+    "name": "PETROCN DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "PETROCN",
+    "recommend": true
+  },
+  "PFIZER19": {
+    "primary": "PFIZER",
+    "market": "US",
+    "dr_ratio": 0.02,
+    "name": "PFIZER DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "PFIZER",
+    "recommend": true
+  },
+  "PINGAN01": {
+    "primary": "2318.HK",
+    "market": "HK",
+    "dr_ratio": 0.022727272727272728,
+    "name": "PINGAN DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "PINGAN",
+    "recommend": false
+  },
+  "PINGAN80": {
+    "primary": "2318.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "PINGAN DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "PINGAN",
+    "recommend": true
+  },
+  "PLTR01": {
+    "primary": "PLTR",
+    "market": "US",
+    "dr_ratio": 0.0009090909090909091,
+    "name": "PLTR DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "PLTR",
+    "recommend": true
+  },
+  "PLTR03": {
+    "primary": "PLTR",
+    "market": "US",
+    "dr_ratio": 0.0006666666666666666,
+    "name": "PLTR DR (PI)",
+    "issuer": "PI",
+    "underlying": "PLTR",
+    "recommend": false
+  },
+  "PLTR06": {
+    "primary": "PLTR",
+    "market": "US",
+    "dr_ratio": 0.0006666666666666666,
+    "name": "PLTR DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "PLTR",
+    "recommend": false
+  },
+  "PLTR23": {
+    "primary": "PLTR",
+    "market": "US",
+    "dr_ratio": 0.0005263157894736842,
+    "name": "PLTR DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "PLTR",
+    "recommend": false
+  },
+  "POPMART23": {
+    "primary": "9992.HK",
+    "market": "HK",
+    "dr_ratio": 0.002380952380952381,
+    "name": "POPMART DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "POPMART",
+    "recommend": false
+  },
+  "POPMART80": {
+    "primary": "9992.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "POPMART DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "POPMART",
+    "recommend": true
+  },
+  "PYPL06": {
+    "primary": "PYPL",
+    "market": "US",
+    "dr_ratio": 0.002,
+    "name": "PYPL DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "PYPL",
+    "recommend": true
+  },
+  "QCOM06": {
+    "primary": "QCOM",
+    "market": "US",
+    "dr_ratio": 0.0005,
+    "name": "QCOM DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "QCOM",
+    "recommend": true
+  },
+  "QQQM19": {
+    "primary": "INVESCO NDAQ100",
+    "market": "US",
+    "dr_ratio": 0.002,
+    "name": "INVESCO NDAQ100 ETF DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "INVESCO NDAQ100 ETF",
+    "recommend": true
+  },
+  "RBLX06": {
+    "primary": "RBLX",
+    "market": "US",
+    "dr_ratio": 0.0008333333333333334,
+    "name": "RBLX DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "RBLX",
+    "recommend": true
+  },
+  "REMX03": {
+    "primary": "REMX",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "REMX ETF DR (PI)",
+    "issuer": "PI",
+    "underlying": "REMX ETF",
+    "recommend": true
+  },
+  "RGTI03": {
+    "primary": "RGTI",
+    "market": "US",
+    "dr_ratio": 0.005,
+    "name": "RGTI DR (PI)",
+    "issuer": "PI",
+    "underlying": "RGTI",
+    "recommend": true
+  },
+  "RKLB03": {
+    "primary": "RKLB",
+    "market": "US",
+    "dr_ratio": 0.002,
+    "name": "RKLB DR (PI)",
+    "issuer": "PI",
+    "underlying": "RKLB",
+    "recommend": false
+  },
+  "RKLB80": {
+    "primary": "RKLB",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "RKLB DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "RKLB",
+    "recommend": true
+  },
+  "SANOFI80": {
+    "primary": "SAN.PA",
+    "market": "FR",
+    "dr_ratio": 0.001,
+    "name": "SANOFI DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "SANOFI",
+    "recommend": true
+  },
+  "SANRIO23": {
+    "primary": "8136.T",
+    "market": "JP",
+    "dr_ratio": 0.007352941176470588,
+    "name": "SANRIO DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "SANRIO",
+    "recommend": false
+  },
+  "SANRIO80": {
+    "primary": "8136.T",
+    "market": "JP",
+    "dr_ratio": 0.05,
+    "name": "SANRIO DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "SANRIO",
+    "recommend": true
+  },
+  "SBUX80": {
+    "primary": "SBUX",
+    "market": "US",
+    "dr_ratio": 0.0005,
+    "name": "SBUX DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "SBUX",
+    "recommend": true
+  },
+  "SEAGATE23": {
+    "primary": "SEAGATE",
+    "market": "US",
+    "dr_ratio": 0.00020833333333333335,
+    "name": "SEAGATE DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "SEAGATE",
+    "recommend": true
+  },
+  "SEMB19": {
+    "primary": "U96.SI",
+    "market": "SG",
+    "dr_ratio": 0.03333333333333333,
+    "name": "SEMB DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "SEMB",
+    "recommend": true
+  },
+  "SENSE23": {
+    "primary": "0020.HK",
+    "market": "HK",
+    "dr_ratio": 0.25,
+    "name": "SENSE DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "SENSE",
+    "recommend": true
+  },
+  "SGX19": {
+    "primary": "S68.SI",
+    "market": "SG",
+    "dr_ratio": 0.01,
+    "name": "SGX DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "SGX",
+    "recommend": true
+  },
+  "SHOP03": {
+    "primary": "SHOP",
+    "market": "US",
+    "dr_ratio": 0.0006666666666666666,
+    "name": "SHOP DR (PI)",
+    "issuer": "PI",
+    "underlying": "SHOP",
+    "recommend": false
+  },
+  "SHOP06": {
+    "primary": "SHOP",
+    "market": "US",
+    "dr_ratio": 0.0005,
+    "name": "SHOP DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "SHOP",
+    "recommend": true
+  },
+  "SIA19": {
+    "primary": "C6L.SI",
+    "market": "SG",
+    "dr_ratio": 0.1,
+    "name": "SIA DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "SIA",
+    "recommend": true
+  },
+  "SIL03": {
+    "primary": "SIL",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "SIL ETF DR (PI)",
+    "issuer": "PI",
+    "underlying": "SIL ETF",
+    "recommend": true
+  },
+  "SINGTEL80": {
+    "primary": "Z74.SI",
+    "market": "SG",
+    "dr_ratio": 0.1,
+    "name": "SINGTEL DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "SINGTEL",
+    "recommend": true
+  },
+  "SINOBIO19": {
+    "primary": "1177.HK",
+    "market": "HK",
+    "dr_ratio": 0.2,
+    "name": "SINOBIO DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "SINOBIO",
+    "recommend": true
+  },
+  "SMCI03": {
+    "primary": "SMCI",
+    "market": "US",
+    "dr_ratio": 0.002,
+    "name": "SMCI DR (PI)",
+    "issuer": "PI",
+    "underlying": "SMCI",
+    "recommend": true
+  },
+  "SMFG19": {
+    "primary": "8316.T",
+    "market": "JP",
+    "dr_ratio": 0.01,
+    "name": "SMFG DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "SMFG",
+    "recommend": true
+  },
+  "SMIC01": {
+    "primary": "0981.HK",
+    "market": "HK",
+    "dr_ratio": 0.014285714285714285,
+    "name": "SMIC DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "SMIC",
+    "recommend": true
+  },
+  "SMIC03": {
+    "primary": "0981.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "SMIC DR (PI)",
+    "issuer": "PI",
+    "underlying": "SMIC",
+    "recommend": false
+  },
+  "SMIC13": {
+    "primary": "0981.HK",
+    "market": "HK",
+    "dr_ratio": 0.006666666666666667,
+    "name": "SMIC DR (KGI)",
+    "issuer": "KGI",
+    "underlying": "SMIC",
+    "recommend": false
+  },
+  "SMIC23": {
+    "primary": "0981.HK",
+    "market": "HK",
+    "dr_ratio": 0.011764705882352941,
+    "name": "SMIC DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "SMIC",
+    "recommend": false
+  },
+  "SNDK03": {
+    "primary": "SNDK",
+    "market": "US",
+    "dr_ratio": 0.00025,
+    "name": "SNDK DR (PI)",
+    "issuer": "PI",
+    "underlying": "SNDK",
+    "recommend": false
+  },
+  "SNDK23": {
+    "primary": "SNDK",
+    "market": "US",
+    "dr_ratio": 0.000125,
+    "name": "SNDK DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "SNDK",
+    "recommend": false
+  },
+  "SNDK80": {
+    "primary": "SNDK",
+    "market": "US",
+    "dr_ratio": 0.0001,
+    "name": "SNDK DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "SNDK",
+    "recommend": true
+  },
+  "SNOW06": {
+    "primary": "SNOW",
+    "market": "US",
+    "dr_ratio": 0.0005,
+    "name": "SNOW DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "SNOW",
+    "recommend": false
+  },
+  "SNOW23": {
+    "primary": "SNOW",
+    "market": "US",
+    "dr_ratio": 0.00045454545454545455,
+    "name": "SNOW DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "SNOW",
+    "recommend": true
+  },
+  "SOFTBANK23": {
+    "primary": "9984.T",
+    "market": "JP",
+    "dr_ratio": 0.0018957345971563982,
+    "name": "SOFTBANK DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "SOFTBANK",
+    "recommend": false
+  },
+  "SOFTBANK80": {
+    "primary": "9984.T",
+    "market": "JP",
+    "dr_ratio": 0.01,
+    "name": "SOFTBANK DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "SOFTBANK",
+    "recommend": true
+  },
+  "SONY80": {
+    "primary": "6758.T",
+    "market": "JP",
+    "dr_ratio": 0.005,
+    "name": "SONY DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "SONY",
+    "recommend": true
+  },
+  "SP50001": {
+    "primary": "3195.HK",
+    "market": "HK",
+    "dr_ratio": 0.5,
+    "name": "SP500HK ETF DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "SP500HK ETF",
+    "recommend": true
+  },
+  "SP500US19": {
+    "primary": "SPY",
+    "market": "US",
+    "dr_ratio": 0.005,
+    "name": "SP500US ETF DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "SP500US ETF",
+    "recommend": false
+  },
+  "SP500US80": {
+    "primary": "SPY",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "SP500US ETF DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "SP500US ETF",
+    "recommend": true
+  },
+  "SPBOND80": {
+    "primary": "BND",
+    "market": "US",
+    "dr_ratio": 0.01,
+    "name": "SPBOND ETF DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "SPBOND ETF",
+    "recommend": true
+  },
+  "SPCOM80": {
+    "primary": "SPCOM",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "SPCOM ETF DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "SPCOM ETF",
+    "recommend": true
+  },
+  "SPENGY80": {
+    "primary": "XLE",
+    "market": "US",
+    "dr_ratio": 0.002,
+    "name": "SPENGY ETF DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "SPENGY ETF",
+    "recommend": true
+  },
+  "SPFIN80": {
+    "primary": "XLF",
+    "market": "US",
+    "dr_ratio": 0.01,
+    "name": "SPFIN ETF DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "SPFIN ETF",
+    "recommend": true
+  },
+  "SPHLTH80": {
+    "primary": "XLV",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "SPHLTH ETF DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "SPHLTH ETF",
+    "recommend": true
+  },
+  "SPOT06": {
+    "primary": "SPOT",
+    "market": "US",
+    "dr_ratio": 0.000125,
+    "name": "SPOT DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "SPOT",
+    "recommend": true
+  },
+  "SPTECH80": {
+    "primary": "XLK",
+    "market": "US",
+    "dr_ratio": 0.002,
+    "name": "SPTECH ETF DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "SPTECH ETF",
+    "recommend": true
+  },
+  "STAR5001": {
+    "primary": "3151.HK",
+    "market": "HK",
+    "dr_ratio": 1.0,
+    "name": "PREMIA STAR50 ETF DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "PREMIA STAR50 ETF",
+    "recommend": true
+  },
+  "STEG19": {
+    "primary": "S63.SI",
+    "market": "SG",
+    "dr_ratio": 0.1,
+    "name": "STEG DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "STEG",
+    "recommend": true
+  },
+  "SUNNY19": {
+    "primary": "2382.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "SUNNY DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "SUNNY",
+    "recommend": false
+  },
+  "SUNNY80": {
+    "primary": "2382.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "SUNNY DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "SUNNY",
+    "recommend": true
+  },
+  "SUSHI23": {
+    "primary": "7550.T",
+    "market": "JP",
+    "dr_ratio": 0.0015060240963855422,
+    "name": "SUSHI DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "SUSHI",
+    "recommend": true
+  },
+  "SYNP03": {
+    "primary": "SYNP",
+    "market": "US",
+    "dr_ratio": 0.0002,
+    "name": "SYNP DR (PI)",
+    "issuer": "PI",
+    "underlying": "SYNP",
+    "recommend": true
+  },
+  "TAIWAN19": {
+    "primary": "0050.TW",
+    "market": "TW",
+    "dr_ratio": 0.4,
+    "name": "YT TAIWAN50 ETF DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "YT TAIWAN50 ETF",
+    "recommend": true
+  },
+  "TAIWANAI13": {
+    "primary": "00915.TW",
+    "market": "TW",
+    "dr_ratio": 1.0,
+    "name": "KGI TAIWAN AI 50 ETF DR (KGI)",
+    "issuer": "KGI",
+    "underlying": "KGI TAIWAN AI 50 ETF",
+    "recommend": true
+  },
+  "TAIWANHD13": {
+    "primary": "00918.TW",
+    "market": "TW",
+    "dr_ratio": 1.0,
+    "name": "KGI TAIWAN HD 30 ETF DR (KGI)",
+    "issuer": "KGI",
+    "underlying": "KGI TAIWAN HD 30 ETF",
+    "recommend": true
+  },
+  "TEL23": {
+    "primary": "8035.T",
+    "market": "JP",
+    "dr_ratio": 0.00036900369003690036,
+    "name": "TEL DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "TEL",
+    "recommend": false
+  },
+  "TEL80": {
+    "primary": "8035.T",
+    "market": "JP",
+    "dr_ratio": 0.001,
+    "name": "TEL DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "TEL",
+    "recommend": true
+  },
+  "TENCENT01": {
+    "primary": "0700.HK",
+    "market": "HK",
+    "dr_ratio": 0.0022727272727272726,
+    "name": "TENCENT DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "TENCENT",
+    "recommend": false
+  },
+  "TENCENT06": {
+    "primary": "0700.HK",
+    "market": "HK",
+    "dr_ratio": 0.001,
+    "name": "TENCENT DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "TENCENT",
+    "recommend": false
+  },
+  "TENCENT13": {
+    "primary": "0700.HK",
+    "market": "HK",
+    "dr_ratio": 0.002,
+    "name": "TENCENT DR (KGI)",
+    "issuer": "KGI",
+    "underlying": "TENCENT",
+    "recommend": false
+  },
+  "TENCENT19": {
+    "primary": "0700.HK",
+    "market": "HK",
+    "dr_ratio": 0.005,
+    "name": "TENCENT DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "TENCENT",
+    "recommend": false
+  },
+  "TENCENT23": {
+    "primary": "0700.HK",
+    "market": "HK",
+    "dr_ratio": 0.0011111111111111111,
+    "name": "TENCENT DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "TENCENT",
+    "recommend": false
+  },
+  "TENCENT80": {
+    "primary": "0700.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "TENCENT DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "TENCENT",
+    "recommend": true
+  },
+  "THAIBEV19": {
+    "primary": "Y92.SI",
+    "market": "SG",
+    "dr_ratio": 1.0,
+    "name": "THAIBEV DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "THAIBEV",
+    "recommend": true
+  },
+  "TME23": {
+    "primary": "1698.HK",
+    "market": "HK",
+    "dr_ratio": 0.00625,
+    "name": "TME DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "TME",
+    "recommend": true
+  },
+  "TOYOTA80": {
+    "primary": "7203.T",
+    "market": "JP",
+    "dr_ratio": 0.01,
+    "name": "TOYOTA DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "TOYOTA",
+    "recommend": true
+  },
+  "TRIPCOM23": {
+    "primary": "9961.HK",
+    "market": "HK",
+    "dr_ratio": 0.001,
+    "name": "TRIPCOM DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "TRIPCOM",
+    "recommend": false
+  },
+  "TRIPCOM80": {
+    "primary": "9961.HK",
+    "market": "HK",
+    "dr_ratio": 0.001,
+    "name": "TRIPCOM DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "TRIPCOM",
+    "recommend": true
+  },
+  "TRVUS06": {
+    "primary": "TRVUS",
+    "market": "US",
+    "dr_ratio": 0.0004,
+    "name": "TRVUS DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "TRVUS",
+    "recommend": true
+  },
+  "TSLA01": {
+    "primary": "TSLA",
+    "market": "US",
+    "dr_ratio": 0.0029411764705882353,
+    "name": "TSLA DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "TSLA",
+    "recommend": false
+  },
+  "TSLA03": {
+    "primary": "TSLA",
+    "market": "US",
+    "dr_ratio": 0.0003333333333333333,
+    "name": "TSLA DR (PI)",
+    "issuer": "PI",
+    "underlying": "TSLA",
+    "recommend": false
+  },
+  "TSLA23": {
+    "primary": "TSLA",
+    "market": "US",
+    "dr_ratio": 0.0001923076923076923,
+    "name": "TSLA DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "TSLA",
+    "recommend": false
+  },
+  "TSLA80": {
+    "primary": "TSLA",
+    "market": "US",
+    "dr_ratio": 0.0002,
+    "name": "TSLA DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "TSLA",
+    "recommend": true
+  },
+  "UBER06": {
+    "primary": "UBER",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "UBER DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "UBER",
+    "recommend": true
+  },
+  "UBTECH23": {
+    "primary": "9880.HK",
+    "market": "HK",
+    "dr_ratio": 0.004,
+    "name": "UBTECH DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "UBTECH",
+    "recommend": true
+  },
+  "UNH19": {
+    "primary": "UNH",
+    "market": "US",
+    "dr_ratio": 0.0005,
+    "name": "UNH DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "UNH",
+    "recommend": true
+  },
+  "UNIQLO80": {
+    "primary": "9983.T",
+    "market": "JP",
+    "dr_ratio": 0.001,
+    "name": "UNIQLO DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "UNIQLO",
+    "recommend": true
+  },
+  "UOB19": {
+    "primary": "U11.SI",
+    "market": "SG",
+    "dr_ratio": 0.01,
+    "name": "UOB DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "UOB",
+    "recommend": true
+  },
+  "USTR24": {
+    "primary": "3433.HK",
+    "market": "HK",
+    "dr_ratio": 0.005,
+    "name": "USTR ETF DR (FSS)",
+    "issuer": "FSS",
+    "underlying": "USTR ETF",
+    "recommend": true
+  },
+  "VCB11": {
+    "primary": "VCB.HM",
+    "market": "VN",
+    "dr_ratio": 0.04,
+    "name": "VCB DR (KS)",
+    "issuer": "KS",
+    "underlying": "VCB",
+    "recommend": false
+  },
+  "VCB19": {
+    "primary": "VCB.HM",
+    "market": "VN",
+    "dr_ratio": 0.1,
+    "name": "VCB DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "VCB",
+    "recommend": true
+  },
+  "VENTURE19": {
+    "primary": "V03.SI",
+    "market": "SG",
+    "dr_ratio": 0.01,
+    "name": "VENTURE DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "VENTURE",
+    "recommend": true
+  },
+  "VHM19": {
+    "primary": "VHM.HM",
+    "market": "VN",
+    "dr_ratio": 0.1,
+    "name": "VHM DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "VHM",
+    "recommend": true
+  },
+  "VISA06": {
+    "primary": "VISA",
+    "market": "US",
+    "dr_ratio": 0.000125,
+    "name": "VISA DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "VISA",
+    "recommend": false
+  },
+  "VISA80": {
+    "primary": "VISA",
+    "market": "US",
+    "dr_ratio": 0.000125,
+    "name": "VISA DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "VISA",
+    "recommend": true
+  },
+  "VNFIN24": {
+    "primary": "FUESSVFL.HM",
+    "market": "VN",
+    "dr_ratio": 0.05,
+    "name": "VNFIN LEAD ETF DR (FSS)",
+    "issuer": "FSS",
+    "underlying": "VNFIN LEAD ETF",
+    "recommend": true
+  },
+  "VNM19": {
+    "primary": "VNM.HM",
+    "market": "VN",
+    "dr_ratio": 0.1,
+    "name": "VNM DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "VNM",
+    "recommend": true
+  },
+  "VRT23": {
+    "primary": "VRT",
+    "market": "US",
+    "dr_ratio": 0.0002941176470588235,
+    "name": "VRT DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "VRT",
+    "recommend": true
+  },
+  "VT03": {
+    "primary": "VT",
+    "market": "US",
+    "dr_ratio": 0.0006666666666666666,
+    "name": "VT ETF DR (PI)",
+    "issuer": "PI",
+    "underlying": "VT ETF",
+    "recommend": true
+  },
+  "WMT06": {
+    "primary": "WMT",
+    "market": "US",
+    "dr_ratio": 0.001,
+    "name": "WMT DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "WMT",
+    "recommend": true
+  },
+  "WORLD03": {
+    "primary": "3110.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "GLOBALX INBLU(HK)ETF DR (PI)",
+    "issuer": "PI",
+    "underlying": "GLOBALX INBLU(HK)ETF",
+    "recommend": true
+  },
+  "WORLDA01": {
+    "primary": "EUNL.DE",
+    "market": "DE",
+    "dr_ratio": 0.001,
+    "name": "WORLDA ETF DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "WORLDA ETF",
+    "recommend": true
+  },
+  "WUXI06": {
+    "primary": "2269.HK",
+    "market": "HK",
+    "dr_ratio": 0.025,
+    "name": "WUXI DR (KKPS)",
+    "issuer": "KKPS",
+    "underlying": "WUXI",
+    "recommend": true
+  },
+  "WUXI13": {
+    "primary": "2269.HK",
+    "market": "HK",
+    "dr_ratio": 0.014285714285714285,
+    "name": "WUXI DR (KGI)",
+    "issuer": "KGI",
+    "underlying": "WUXI",
+    "recommend": false
+  },
+  "WUXIAT80": {
+    "primary": "2359.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "WUXIAT DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "WUXIAT",
+    "recommend": true
+  },
+  "XIAOMI01": {
+    "primary": "1810.HK",
+    "market": "HK",
+    "dr_ratio": 0.022727272727272728,
+    "name": "XIAOMI DR (BLS)",
+    "issuer": "BLS",
+    "underlying": "XIAOMI",
+    "recommend": false
+  },
+  "XIAOMI13": {
+    "primary": "1810.HK",
+    "market": "HK",
+    "dr_ratio": 0.02,
+    "name": "XIAOMI DR (KGI)",
+    "issuer": "KGI",
+    "underlying": "XIAOMI",
+    "recommend": false
+  },
+  "XIAOMI19": {
+    "primary": "1810.HK",
+    "market": "HK",
+    "dr_ratio": 0.05,
+    "name": "XIAOMI DR (YUANTA)",
+    "issuer": "YUANTA",
+    "underlying": "XIAOMI",
+    "recommend": false
+  },
+  "XIAOMI23": {
+    "primary": "1810.HK",
+    "market": "HK",
+    "dr_ratio": 0.012048192771084338,
+    "name": "XIAOMI DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "XIAOMI",
+    "recommend": false
+  },
+  "XIAOMI80": {
+    "primary": "1810.HK",
+    "market": "HK",
+    "dr_ratio": 0.1,
+    "name": "XIAOMI DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "XIAOMI",
+    "recommend": true
+  },
+  "XPENG03": {
+    "primary": "9868.HK",
+    "market": "HK",
+    "dr_ratio": 0.01,
+    "name": "XPENG DR (PI)",
+    "issuer": "PI",
+    "underlying": "XPENG",
+    "recommend": true
+  },
+  "ZAI23": {
+    "primary": "9688.HK",
+    "market": "HK",
+    "dr_ratio": 0.0025,
+    "name": "ZAI DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "ZAI",
+    "recommend": true
+  },
+  "ZIJIN13": {
+    "primary": "2899.HK",
+    "market": "HK",
+    "dr_ratio": 0.016666666666666666,
+    "name": "ZIJIN DR (KGI)",
+    "issuer": "KGI",
+    "underlying": "ZIJIN",
+    "recommend": false
+  },
+  "ZIJIN23": {
+    "primary": "2899.HK",
+    "market": "HK",
+    "dr_ratio": 0.015384615384615385,
+    "name": "ZIJIN DR (INVX)",
+    "issuer": "INVX",
+    "underlying": "ZIJIN",
+    "recommend": false
+  },
+  "ZIJIN80": {
+    "primary": "2899.HK",
+    "market": "HK",
+    "dr_ratio": 0.1,
+    "name": "ZIJIN DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "ZIJIN",
+    "recommend": true
+  },
+  "ZJINNO80": {
+    "primary": "300308.SZ",
+    "market": "HK",
+    "dr_ratio": 0.001,
+    "name": "ZJINNO DR (KTB)",
+    "issuer": "KTB",
+    "underlying": "ZJINNO",
+    "recommend": true
+  }
+}

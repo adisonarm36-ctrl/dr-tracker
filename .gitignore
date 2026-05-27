@@ -1,0 +1,17 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Large local testing files
+test_html_raw.txt
+test_html_json_*.json
+inv_out.txt
+inv_out2.txt
+test_out.txt
+*.log
+
+# Watchlist configuration templates
+# (You might want to keep the initial config as a template)
+# backend/dr_config.json

@@ -1,0 +1,6 @@
+{
+  "httpCode": 417,
+  "msg": "Internal server error",
+  "code": "API_DISABLED",
+  "traceId": "878b0d06-8429-43cd-a399-d060cb533c8a"
+}
