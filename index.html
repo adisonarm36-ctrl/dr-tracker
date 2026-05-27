@@ -509,7 +509,7 @@
             renderCatalog();
         }
 
-        // Save Current Configuration to Server
+        // Save Current Configuration to localStorage
         async function saveConfigToBackend() {
             const configObj = {};
             currentData.forEach(item => {
@@ -528,17 +528,10 @@
             });
             
             try {
-                const res = await fetch(`${BACKEND_URL}/api/config/save`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ config: configObj })
-                });
-                const json = await res.json();
-                if (json.status === "success") {
-                    console.log("Config persisted successfully.");
-                }
+                localStorage.setItem('dr_watchlist', JSON.stringify(configObj));
+                console.log("Config persisted to localStorage successfully.");
             } catch (e) {
-                console.error("Error persisting config:", e);
+                console.error("Error saving config to localStorage:", e);
             }
         }
 
@@ -798,7 +791,32 @@
 
         async function updateTracker() {
             try {
-                const res = await fetch(`${BACKEND_URL}/api/tracker?t=${Date.now()}`);
+                let res;
+                if (currentData.length === 0) {
+                    res = await fetch(`${BACKEND_URL}/api/tracker?t=${Date.now()}`);
+                } else {
+                    const configObj = {};
+                    currentData.forEach(item => {
+                        if (drCatalog[item.symbol]) {
+                            configObj[item.symbol] = drCatalog[item.symbol];
+                        } else if (item.raw_config) {
+                            configObj[item.symbol] = item.raw_config;
+                        } else {
+                            configObj[item.symbol] = {
+                                primary: item.hk_ticker || item.us_ticker,
+                                market: item.active_market === "US" ? "US" : "HK",
+                                dr_ratio: 0.001
+                            };
+                        }
+                    });
+                    
+                    res = await fetch(`${BACKEND_URL}/api/tracker?t=${Date.now()}`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ config: configObj })
+                    });
+                }
+                
                 const json = await res.json();
                 
                 const isLive = json.status.includes('LIVE');
@@ -820,15 +838,13 @@
                 // Render table keeping manual inputs state if user edited them
                 if (currentData.length === 0) {
                     currentData = json.data;
+                    // Persist default config locally on first load
+                    saveConfigToBackend();
                 } else {
                     // Update and map properties keeping state
                     json.data.forEach(newItem => {
                         let target = currentData.find(oldItem => oldItem.symbol === newItem.symbol);
                         if (target) {
-                            // Update prices from yfinance only if inputs haven't been manually adjusted by users
-                            const inputsHk = document.querySelectorAll(`input[data-multiplier][oninput*="recalculateDR"]`);
-                            let userEditedHk = false;
-                            
                             target.hk_price = newItem.hk_price;
                             target.us_price = newItem.us_price;
                             target.dr_thb = newItem.dr_thb;
@@ -840,7 +856,7 @@
                         }
                     });
                     
-                    // Filter out any that were deleted in backend config if synced
+                    // Filter out any that were deleted
                     currentData = currentData.filter(item => json.data.some(d => d.symbol === item.symbol));
                 }
                 
@@ -862,6 +878,30 @@
         // Initialize application
         async function init() {
             await fetchCatalog();
+            
+            // Check if saved watchlist exists in localStorage
+            const savedConfig = localStorage.getItem('dr_watchlist');
+            if (savedConfig) {
+                try {
+                    const configObj = JSON.parse(savedConfig);
+                    currentData = Object.keys(configObj).map(symbol => {
+                        const cfg = configObj[symbol];
+                        return {
+                            symbol: symbol,
+                            active_market: cfg.market === "US" ? "US" : "HK",
+                            hk_ticker: cfg.market !== "US" ? cfg.primary : null,
+                            us_ticker: cfg.market === "US" ? cfg.primary : (cfg.us_adr || null),
+                            hk_price: "...",
+                            us_price: "...",
+                            dr_thb: "...",
+                            raw_config: cfg
+                        };
+                    });
+                } catch (e) {
+                    console.error("Failed to parse saved config:", e);
+                }
+            }
+            
             await updateTracker();
             await fetchTopMovers();
             

@@ -178,9 +178,7 @@ def get_rich_market_data(ticker):
         price = get_price_safe(ticker)
         return {"price": price, "prices": [price] if price else [], "change_pct": 0.0, "delay_msg": "Error", "prev_close": 0.0, "last_trade_time": ""}
 
-@app.get("/api/tracker")
-def get_tracker():
-    dr_config = load_dr_config() 
+def compute_tracker_data(dr_config):
     current_market, status = get_market_info()
     
     fx_hkd = get_price_safe("HKDTHB=X") or 4.7
@@ -198,12 +196,15 @@ def get_tracker():
         item = {"symbol": symbol}
         active = "HK"
         
-        if cfg['market'] == "US" or (current_market == "US" and "us_adr" in cfg):
+        market = cfg.get('market', 'US')
+        dr_ratio = cfg.get('dr_ratio', 0.001)
+        
+        if market == "US" or (current_market == "US" and "us_adr" in cfg):
             active = "US"
         item["active_market"] = active
         
         # ---------------- ตลาดฝั่งเอเชีย / ยุโรป (Asiatic/European) ----------------
-        item["hk_ticker"] = cfg.get('primary') if cfg['market'] in ['HK', 'CN', 'SG', 'VN', 'JP', 'AS', 'FR', 'IT', 'TW', 'DK', 'DE'] else None
+        item["hk_ticker"] = cfg.get('primary') if market in ['HK', 'CN', 'SG', 'VN', 'JP', 'AS', 'FR', 'IT', 'TW', 'DK', 'DE'] else None
         item["hk_price"] = ""
         item["hk_multiplier"] = ""
         item["hk_rich"] = None
@@ -214,32 +215,32 @@ def get_tracker():
                 item["hk_price"] = round(hk_rich["price"], 2)
                 item["hk_rich"] = hk_rich
                 
-                if cfg['market'] == 'HK':
+                if market == 'HK':
                     if item["hk_ticker"].endswith(".SS") or item["hk_ticker"].endswith(".SZ"):
-                        item["hk_multiplier"] = fx_cny * cfg['dr_ratio']
+                        item["hk_multiplier"] = fx_cny * dr_ratio
                     else:
-                        item["hk_multiplier"] = fx_hkd * cfg['dr_ratio']
-                elif cfg['market'] == 'JP':
-                    item["hk_multiplier"] = fx_jpy * cfg['dr_ratio']
-                elif cfg['market'] == 'SG':
-                    item["hk_multiplier"] = fx_sgd * cfg['dr_ratio']
-                elif cfg['market'] == 'VN':
-                    item["hk_multiplier"] = fx_vnd * cfg['dr_ratio']
-                elif cfg['market'] == 'TW':
-                    item["hk_multiplier"] = fx_twd * cfg['dr_ratio']
-                elif cfg['market'] == 'DK':
-                    item["hk_multiplier"] = fx_dkk * cfg['dr_ratio']
-                elif cfg['market'] in ['AS', 'FR', 'IT', 'DE']:
-                    item["hk_multiplier"] = fx_eur * cfg['dr_ratio']
+                        item["hk_multiplier"] = fx_hkd * dr_ratio
+                elif market == 'JP':
+                    item["hk_multiplier"] = fx_jpy * dr_ratio
+                elif market == 'SG':
+                    item["hk_multiplier"] = fx_sgd * dr_ratio
+                elif market == 'VN':
+                    item["hk_multiplier"] = fx_vnd * dr_ratio
+                elif market == 'TW':
+                    item["hk_multiplier"] = fx_twd * dr_ratio
+                elif market == 'DK':
+                    item["hk_multiplier"] = fx_dkk * dr_ratio
+                elif market in ['AS', 'FR', 'IT', 'DE']:
+                    item["hk_multiplier"] = fx_eur * dr_ratio
                 else:
-                    item["hk_multiplier"] = fx_hkd * cfg['dr_ratio']
+                    item["hk_multiplier"] = fx_hkd * dr_ratio
 
         # ---------------- ตลาดฝั่งอเมริกา (US) ----------------
-        if cfg['market'] == 'US':
-            item["us_ticker"] = cfg['primary']
+        if market == 'US':
+            item["us_ticker"] = cfg.get('primary')
             us_ratio = 1
         elif "us_adr" in cfg:
-            item["us_ticker"] = cfg['us_adr']
+            item["us_ticker"] = cfg.get('us_adr')
             us_ratio = cfg.get('adr_ratio', 1)
         else:
             item["us_ticker"] = None
@@ -254,7 +255,7 @@ def get_tracker():
             if us_rich and us_rich["price"]:
                 item["us_price"] = round(us_rich["price"], 2)
                 item["us_rich"] = us_rich
-                item["us_multiplier"] = (1 / us_ratio) * fx_usd * cfg['dr_ratio']
+                item["us_multiplier"] = (1 / us_ratio) * fx_usd * dr_ratio
 
         # ---------------- คำนวณราคา DR (THB) ----------------
         item["dr_thb"] = "0.00"
@@ -278,6 +279,18 @@ def get_tracker():
         "fx_dkk": round(fx_dkk, 4),
         "data": data
     }
+
+@app.get("/api/tracker")
+def get_tracker():
+    dr_config = load_dr_config() 
+    return compute_tracker_data(dr_config)
+
+class TrackerQueryRequest(BaseModel):
+    config: Dict[str, Any]
+
+@app.post("/api/tracker")
+def post_tracker(req: TrackerQueryRequest):
+    return compute_tracker_data(req.config)
 
 @app.get("/api/catalog")
 def get_catalog():
