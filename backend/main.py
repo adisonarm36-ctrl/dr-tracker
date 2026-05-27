@@ -10,6 +10,7 @@ import pytz
 import os
 import math
 import threading
+from concurrent.futures import ThreadPoolExecutor
 
 app = FastAPI()
 app.add_middleware(
@@ -43,9 +44,26 @@ DR_CATALOG = load_dr_catalog()
 # Caching for top movers endpoint to ensure rapid delivery without hitting Yahoo limits
 top_movers_cache = {
     "data": None,
-    "last_fetched": 0
+    "last_fetched": 0,
+    "is_updating": False
 }
 cache_lock = threading.Lock()
+MOVERS_CACHE_FILE = os.path.join(os.path.dirname(__file__), "top_movers_cache.json")
+
+def load_movers_cache_from_file():
+    global top_movers_cache
+    if os.path.exists(MOVERS_CACHE_FILE):
+        try:
+            with open(MOVERS_CACHE_FILE, "r", encoding="utf-8") as f:
+                cached = json.load(f)
+                top_movers_cache["data"] = cached.get("data")
+                top_movers_cache["last_fetched"] = cached.get("last_fetched", 0)
+                print("Loaded top movers cache from file successfully.")
+        except Exception as e:
+            print("Failed to load top movers cache file:", e)
+
+# Load cache immediately on server startup
+load_movers_cache_from_file()
 
 class ConfigSaveRequest(BaseModel):
     config: Dict[str, Any]
@@ -178,18 +196,48 @@ def get_rich_market_data(ticker):
         price = get_price_safe(ticker)
         return {"price": price, "prices": [price] if price else [], "change_pct": 0.0, "delay_msg": "Error", "prev_close": 0.0, "last_trade_time": ""}
 
+def fetch_all_parallel(tickers):
+    if not tickers:
+        return {}
+    with ThreadPoolExecutor(max_workers=min(len(tickers), 16)) as executor:
+        results = list(executor.map(get_rich_market_data, tickers))
+    return dict(zip(tickers, results))
+
+def fetch_fx_parallel(fx_tickers):
+    if not fx_tickers:
+        return {}
+    with ThreadPoolExecutor(max_workers=min(len(fx_tickers), 10)) as executor:
+        results = list(executor.map(get_price_safe, fx_tickers))
+    return dict(zip(fx_tickers, results))
+
 def compute_tracker_data(dr_config):
     current_market, status = get_market_info()
     
-    fx_hkd = get_price_safe("HKDTHB=X") or 4.7
-    fx_usd = get_price_safe("USDTHB=X") or 36.5
-    fx_cny = get_price_safe("CNYTHB=X") or 5.0
-    fx_sgd = get_price_safe("SGDTHB=X") or 27.0
-    fx_vnd = get_price_safe("VNDTHB=X") or 0.0014
-    fx_jpy = get_price_safe("JPYTHB=X") or 0.23
-    fx_eur = get_price_safe("EURTHB=X") or 40.0
-    fx_twd = get_price_safe("TWDTHB=X") or 1.12
-    fx_dkk = get_price_safe("DKKTHB=X") or 5.00
+    # Parallel fetch of FX rates
+    fx_list = ["HKDTHB=X", "USDTHB=X", "CNYTHB=X", "SGDTHB=X", "VNDTHB=X", "JPYTHB=X", "EURTHB=X", "TWDTHB=X", "DKKTHB=X"]
+    fx_map = fetch_fx_parallel(fx_list)
+    
+    fx_hkd = fx_map.get("HKDTHB=X") or 4.7
+    fx_usd = fx_map.get("USDTHB=X") or 36.5
+    fx_cny = fx_map.get("CNYTHB=X") or 5.0
+    fx_sgd = fx_map.get("SGDTHB=X") or 27.0
+    fx_vnd = fx_map.get("VNDTHB=X") or 0.0014
+    fx_jpy = fx_map.get("JPYTHB=X") or 0.23
+    fx_eur = fx_map.get("EURTHB=X") or 40.0
+    fx_twd = fx_map.get("TWDTHB=X") or 1.12
+    fx_dkk = fx_map.get("DKKTHB=X") or 5.00
+    
+    # Pre-collect all unique stock tickers to fetch in parallel
+    stock_tickers = set()
+    for symbol, cfg in dr_config.items():
+        market = cfg.get('market', 'US')
+        hk_t = cfg.get('primary') if market in ['HK', 'CN', 'SG', 'VN', 'JP', 'AS', 'FR', 'IT', 'TW', 'DK', 'DE'] else None
+        us_t = cfg.get('primary') if market == 'US' else cfg.get('us_adr')
+        if hk_t: stock_tickers.add(hk_t)
+        if us_t: stock_tickers.add(us_t)
+        
+    # Parallel fetch stock rich data
+    stock_data_map = fetch_all_parallel(list(stock_tickers))
     
     data = []
     for symbol, cfg in dr_config.items():
@@ -210,8 +258,8 @@ def compute_tracker_data(dr_config):
         item["hk_rich"] = None
         
         if item["hk_ticker"]:
-            hk_rich = get_rich_market_data(item["hk_ticker"])
-            if hk_rich and hk_rich["price"]:
+            hk_rich = stock_data_map.get(item["hk_ticker"])
+            if hk_rich and hk_rich.get("price"):
                 item["hk_price"] = round(hk_rich["price"], 2)
                 item["hk_rich"] = hk_rich
                 
@@ -251,8 +299,8 @@ def compute_tracker_data(dr_config):
         item["us_rich"] = None
         
         if item["us_ticker"]:
-            us_rich = get_rich_market_data(item["us_ticker"])
-            if us_rich and us_rich["price"]:
+            us_rich = stock_data_map.get(item["us_ticker"])
+            if us_rich and us_rich.get("price"):
                 item["us_price"] = round(us_rich["price"], 2)
                 item["us_rich"] = us_rich
                 item["us_multiplier"] = (1 / us_ratio) * fx_usd * dr_ratio
@@ -309,21 +357,19 @@ def save_config(req: ConfigSaveRequest):
     except Exception as e:
         return {"status": "error", "message": str(e)}
 
-@app.get("/api/top_movers")
-def get_top_movers():
-    import time
-    now = time.time()
-    
-    with cache_lock:
-        if top_movers_cache["data"] and (now - top_movers_cache["last_fetched"] < 120):
-            return top_movers_cache["data"]
-            
+def update_movers_background():
+    global top_movers_cache
     try:
+        print("Starting background update of top movers...")
         catalog = load_dr_catalog()
-        symbols = list(catalog.keys())
+        # Only download recommended symbols (262 instead of 378) to speed up and reduce Yahoo throttle probability
+        symbols = [sym for sym, cat in catalog.items() if cat.get("recommend", False)]
+        if not symbols:
+            symbols = list(catalog.keys())
+            
         tickers_string = " ".join([f"{sym}.BK" for sym in symbols])
         
-        # Parallel fetch from yfinance using yf.download (takes ~6.5s)
+        # Parallel fetch from yfinance using yf.download
         data = yf.download(tickers_string, period="5d", group_by='ticker', progress=False)
         
         results = []
@@ -339,10 +385,6 @@ def get_top_movers():
                         
                         catalog_item = catalog[sym]
                         
-                        # Only include recommended items to avoid duplicate underlying assets (e.g. multiple brokers for the same asset)
-                        if not catalog_item.get("recommend", False):
-                            continue
-                            
                         market_group = "US" if catalog_item["market"] == "US" else (
                             "HK/CN" if catalog_item["market"] in ["HK", "CN"] else "Others"
                         )
@@ -382,14 +424,68 @@ def get_top_movers():
             "movers": movers
         }
         
+        # Update cache in memory and write to disk
+        import time
         with cache_lock:
             top_movers_cache["data"] = response_data
-            top_movers_cache["last_fetched"] = now
+            top_movers_cache["last_fetched"] = time.time()
+            top_movers_cache["is_updating"] = False
             
-        return response_data
+        try:
+            with open(MOVERS_CACHE_FILE, "w", encoding="utf-8") as f:
+                json.dump({
+                    "data": response_data,
+                    "last_fetched": top_movers_cache["last_fetched"]
+                }, f, indent=2, ensure_ascii=False)
+            print("Saved top movers cache to file successfully.")
+        except Exception as e:
+            print("Failed to save top movers cache file:", e)
+            
     except Exception as e:
-        print("Error getting top movers:", e)
-        return {"status": "error", "message": str(e)}
+        print("Error updating top movers in background:", e)
+        with cache_lock:
+            top_movers_cache["is_updating"] = False
+
+@app.get("/api/top_movers")
+def get_top_movers():
+    import time
+    now = time.time()
+    
+    with cache_lock:
+        cached_data = top_movers_cache["data"]
+        last_fetched = top_movers_cache["last_fetched"]
+        is_updating = top_movers_cache["is_updating"]
+        
+    is_stale = (now - last_fetched > 300) or (cached_data is None)
+    
+    if is_stale and not is_updating:
+        with cache_lock:
+            top_movers_cache["is_updating"] = True
+        t = threading.Thread(target=update_movers_background)
+        t.daemon = True
+        t.start()
+        
+    if cached_data:
+        return cached_data
+        
+    # Brief active wait (up to 2 seconds) for first-load case to see if background thread finishes quickly
+    import time as pytime
+    for _ in range(20):
+        pytime.sleep(0.1)
+        with cache_lock:
+            if top_movers_cache["data"]:
+                return top_movers_cache["data"]
+                
+    return {
+        "status": "success",
+        "timestamp": datetime.now().isoformat(),
+        "movers": {
+            "US": {"gainers": [], "losers": []},
+            "HK/CN": {"gainers": [], "losers": []},
+            "Others": {"gainers": [], "losers": []}
+        },
+        "is_loading": True
+    }
 
 if __name__ == "__main__":
     import os

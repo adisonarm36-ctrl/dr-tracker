@@ -109,14 +109,50 @@
             </div>
         </div>
 
+        <!-- Connection / Waking-up Alert Banner -->
+        <div id="connection-banner" class="hidden transition-all duration-500 transform -translate-y-4 opacity-0">
+            <div class="glass-panel rounded-3xl p-5 border border-amber-500/30 bg-gradient-to-r from-amber-500/10 via-orange-500/5 to-yellow-500/10 flex flex-col md:flex-row items-center justify-between gap-4 shadow-[0_0_25px_rgba(245,158,11,0.12)]">
+                <div class="flex items-center gap-4">
+                    <span class="flex h-4 w-4 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-4 w-4 bg-amber-500"></span>
+                    </span>
+                    <div class="text-left">
+                        <p class="font-bold text-amber-300 text-base">⏳ กำลังเชื่อมต่อกับระบบเซิร์ฟเวอร์คลาวด์ Render...</p>
+                        <p class="text-xs text-gray-400 mt-1">เซิร์ฟเวอร์คลาวด์ฟรีอาจใช้เวลาเปิดระบบประมาณ 30-50 วินาทีในกรณีที่ไม่มีการใช้งานนาน โปรดเปิดหน้าจอนี้ค้างไว้ ระบบกำลังตื่นตัวทำงานอัตโนมัติ...</p>
+                    </div>
+                </div>
+                <!-- Loading Progress Micro bar -->
+                <div class="w-full md:w-40 bg-slate-900 rounded-full h-2 overflow-hidden border border-gray-800">
+                    <div class="bg-gradient-to-r from-amber-500 to-yellow-400 h-2 rounded-full animate-[pulse_1.5s_infinite]" style="width: 75%"></div>
+                </div>
+            </div>
+        </div>
+
         <!-- Top Movers Section -->
-        <div class="space-y-3">
-            <h2 class="text-xl font-bold text-cyan-400 flex items-center gap-2 px-2">
-                <span>📊</span> ข้อมูลการเคลื่อนไหวสูงสุด (Top Movers)
-            </h2>
+        <div class="space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2">
+                <h2 class="text-xl font-bold text-cyan-400 flex items-center gap-2">
+                    <span>📊</span> ข้อมูลการเคลื่อนไหวสูงสุด (Top Movers)
+                </h2>
+                
+                <!-- Mobile Market Tabs Switcher (Visible on mobile only, < 1024px) -->
+                <div class="flex lg:hidden bg-slate-950/60 p-1 rounded-2xl border border-gray-850 gap-1 self-start sm:self-auto w-full sm:w-auto">
+                    <button id="tab-btn-us" onclick="setMoverTab('US')" class="flex-1 sm:flex-initial text-center py-2 px-4 rounded-xl text-xs font-bold transition duration-200 bg-cyan-600 text-white shadow-md">
+                        🇺🇸 ตลาด US
+                    </button>
+                    <button id="tab-btn-hk" onclick="setMoverTab('HK')" class="flex-1 sm:flex-initial text-center py-2 px-4 rounded-xl text-xs font-bold transition duration-200 text-gray-400 hover:text-white">
+                        🇭🇰 ตลาด HK/CN
+                    </button>
+                    <button id="tab-btn-other" onclick="setMoverTab('OTHER')" class="flex-1 sm:flex-initial text-center py-2 px-4 rounded-xl text-xs font-bold transition duration-200 text-gray-400 hover:text-white">
+                        🌐 ตลาดอื่นๆ
+                    </button>
+                </div>
+            </div>
+
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <!-- US Market -->
-                <div class="glass-panel rounded-2xl p-5 shadow-lg border border-cyan-500/10">
+                <div id="mover-col-us" class="mover-column glass-panel rounded-2xl p-5 shadow-lg border border-cyan-500/10 block lg:block">
                     <h3 class="text-sm font-bold text-cyan-400 border-b border-gray-800 pb-2 mb-3 flex justify-between items-center">
                         <span>🇺🇸 ตลาดสหรัฐฯ (US)</span>
                         <span class="text-[10px] bg-cyan-950 text-cyan-400 px-2 py-0.5 rounded-md font-mono">Top 5</span>
@@ -138,7 +174,7 @@
                 </div>
 
                 <!-- HK/CN Market -->
-                <div class="glass-panel rounded-2xl p-5 shadow-lg border border-cyan-500/10">
+                <div id="mover-col-hk" class="mover-column glass-panel rounded-2xl p-5 shadow-lg border border-cyan-500/10 hidden lg:block">
                     <h3 class="text-sm font-bold text-cyan-400 border-b border-gray-800 pb-2 mb-3 flex justify-between items-center">
                         <span>🇨🇳 ตลาดฮ่องกง / จีน (HK/CN)</span>
                         <span class="text-[10px] bg-cyan-950 text-cyan-400 px-2 py-0.5 rounded-md font-mono">Top 5</span>
@@ -160,7 +196,7 @@
                 </div>
 
                 <!-- Others Market -->
-                <div class="glass-panel rounded-2xl p-5 shadow-lg border border-cyan-500/10">
+                <div id="mover-col-other" class="mover-column glass-panel rounded-2xl p-5 shadow-lg border border-cyan-500/10 hidden lg:block">
                     <h3 class="text-sm font-bold text-cyan-400 border-b border-gray-800 pb-2 mb-3 flex justify-between items-center">
                         <span>🇸🇬🇻🇳 ตลาดอื่นๆ (SG/VN)</span>
                         <span class="text-[10px] bg-cyan-950 text-cyan-400 px-2 py-0.5 rounded-md font-mono">Top 5</span>
@@ -186,15 +222,16 @@
         <!-- Main Workspace: Tracker + Management Sidebar -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
             
-            <!-- Left: Tracker Table (8 Cols) -->
-            <div class="lg:col-span-8 space-y-4">
+            <!-- Left: Tracker Table / Cards (8 Cols) -->
+            <div class="lg:col-span-8 space-y-4 order-2 lg:order-1">
                 <div class="glass-panel rounded-3xl p-5 shadow-2xl overflow-hidden">
                     <h2 class="text-xl font-bold text-white mb-4 flex items-center justify-between">
-                        <span>⭐ ตารางติดตามราคา DR ของฉัน</span>
+                        <span>⭐ รายการติดตามราคา DR ของฉัน</span>
                         <span id="tracker-count" class="text-xs bg-slate-800 text-gray-400 px-3 py-1 rounded-full border border-gray-700">0 รายการ</span>
                     </h2>
                     
-                    <div class="overflow-x-auto">
+                    <!-- Desktop Table View -->
+                    <div class="hidden md:block overflow-x-auto">
                         <table class="w-full text-left border-collapse">
                             <thead>
                                 <tr class="border-b border-gray-800 text-gray-400 text-xs font-bold uppercase tracking-wider">
@@ -214,11 +251,16 @@
                             </tbody>
                         </table>
                     </div>
+
+                    <!-- Mobile Touch-friendly Card Stack View -->
+                    <div id="ticker-mobile-cards" class="block md:hidden space-y-4">
+                        <p class="text-center text-gray-500 py-8">กำลังโหลดรายการติดตามบนมือถือ...</p>
+                    </div>
                 </div>
             </div>
             
             <!-- Right: Search & Management Sidebar (4 Cols) -->
-            <div class="lg:col-span-4 space-y-6">
+            <div class="lg:col-span-4 space-y-6 order-1 lg:order-2">
                 
                 <!-- Search Box -->
                 <div class="glass-panel rounded-3xl p-5 shadow-2xl space-y-4">
@@ -635,11 +677,21 @@
             const multiplier = parseFloat(inputElement.getAttribute('data-multiplier'));
             const newPrice = parseFloat(inputElement.value);
             const drPriceSpan = document.getElementById(`dr-price-${index}`);
+            const drMobilePriceSpan = document.getElementById(`dr-mobile-price-${index}`);
             
             if (!isNaN(newPrice) && multiplier) {
                 const result = (newPrice * multiplier).toFixed(2);
-                drPriceSpan.innerText = result;
-                drPriceSpan.classList.replace('text-cyan-400', 'text-yellow-400');
+                
+                if (drPriceSpan) {
+                    drPriceSpan.innerText = result;
+                    drPriceSpan.classList.remove('text-cyan-400');
+                    drPriceSpan.classList.add('text-yellow-400');
+                }
+                if (drMobilePriceSpan) {
+                    drMobilePriceSpan.innerText = result;
+                    drMobilePriceSpan.classList.remove('text-cyan-400');
+                    drMobilePriceSpan.classList.add('text-yellow-400');
+                }
                 
                 if (sourceMarket === 'HK') currentData[index].hk_price = newPrice;
                 if (sourceMarket === 'US') currentData[index].us_price = newPrice;
@@ -702,20 +754,22 @@
 
         function renderTable() {
             const body = document.getElementById('ticker-body');
+            const mobileCards = document.getElementById('ticker-mobile-cards');
             document.getElementById('tracker-count').innerText = `${currentData.length} รายการ`;
             
             if (currentData.length === 0) {
-                body.innerHTML = `
-                    <tr>
-                        <td colspan="7" class="p-12 text-center text-gray-500">
-                            <p class="text-base font-bold mb-2">ตารางติดตามว่างเปล่า 😢</p>
-                            <p class="text-xs">ค้นหา DR ในกล่องด้านขวา แล้วกด + เพิ่ม เพื่อติดตามราคาเรียลไทม์ได้เลย!</p>
-                        </td>
-                    </tr>
+                const emptyHtml = `
+                    <div class="p-12 text-center text-gray-500">
+                        <p class="text-base font-bold mb-2">ตารางติดตามว่างเปล่า 😢</p>
+                        <p class="text-xs">ค้นหา DR ในกล่องด้านขวา แล้วกด + เพิ่ม เพื่อติดตามราคาเรียลไทม์ได้เลย!</p>
+                    </div>
                 `;
+                body.innerHTML = `<tr><td colspan="7">${emptyHtml}</td></tr>`;
+                mobileCards.innerHTML = emptyHtml;
                 return;
             }
 
+            // 1. Render Desktop Table Body
             body.innerHTML = currentData.map((item, index) => {
                 let activeRichData = item.active_market === 'HK' ? item.hk_rich : item.us_rich;
                 let trendHtml = `<span class="text-gray-600 text-xs">ไม่มีข้อมูล</span>`;
@@ -787,6 +841,92 @@
                     </td>
                 </tr>
             `}).join('');
+
+            // 2. Render Mobile Touch-Friendly Card Stack
+            mobileCards.innerHTML = currentData.map((item, index) => {
+                let activeRichData = item.active_market === 'HK' ? item.hk_rich : item.us_rich;
+                let trendBadge = "";
+                let delayHtml = "";
+                let sparklineSvg = "";
+                
+                if (activeRichData) {
+                    const colorClass = activeRichData.change_pct >= 0 ? "text-emerald-400" : "text-red-400";
+                    const bgBadgeClass = activeRichData.change_pct >= 0 ? "bg-emerald-950/40 text-emerald-400" : "bg-red-950/40 text-red-400";
+                    const sign = activeRichData.change_pct > 0 ? "+" : "";
+                    sparklineSvg = createSparkline(activeRichData.prices, activeRichData.change_pct >= 0);
+                    
+                    let delayColor = "text-gray-500";
+                    if (activeRichData.delay_msg.includes('Realtime') || activeRichData.delay_msg.includes('Live')) {
+                        delayColor = "text-yellow-500";
+                    } else if (activeRichData.delay_msg.includes('Overnight')) {
+                        delayColor = "text-purple-400";
+                    }
+                    
+                    trendBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold ${bgBadgeClass} ml-2 font-mono">${sign}${activeRichData.change_pct.toFixed(2)}%</span>`;
+                    delayHtml = `<span class="${delayColor} text-[9px] uppercase tracking-wider font-semibold font-mono" title="ข้อมูลจาก Yahoo Finance">${activeRichData.delay_msg}</span>`;
+                } else {
+                    trendBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-900 text-gray-500 ml-2">ไม่มีข้อมูล</span>`;
+                }
+                
+                return `
+                    <div class="glass-panel p-4 rounded-2xl border border-gray-800 space-y-4 shadow-lg text-left">
+                        
+                        <!-- Card Header: Symbol, Name & Quick Controls -->
+                        <div class="flex justify-between items-start gap-2">
+                            <div>
+                                <div class="flex items-center">
+                                    <span class="text-xl font-extrabold text-white font-display tracking-wide">${item.symbol}</span>
+                                    ${trendBadge}
+                                </div>
+                                <p class="text-[10px] text-gray-500 font-normal mt-1 truncate max-w-[150px]" title="${drCatalog[item.symbol]?.name || ''}">
+                                    ${drCatalog[item.symbol]?.name || 'DR Asset'}
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <button onclick="moveItem(${index}, -1)" class="text-cyan-500 hover:text-cyan-400 transition text-xs font-bold bg-slate-950 p-2 rounded-xl border border-gray-850 select-none active:scale-90 w-8 h-8 flex items-center justify-center">▲</button>
+                                <button onclick="moveItem(${index}, 1)" class="text-cyan-500 hover:text-cyan-400 transition text-xs font-bold bg-slate-950 p-2 rounded-xl border border-gray-850 select-none active:scale-90 w-8 h-8 flex items-center justify-center">▼</button>
+                                <button onclick="removeDR(${index})" class="text-rose-500 bg-rose-950/20 border border-rose-900/30 rounded-xl p-2 text-xs ml-1 hover:bg-rose-950/40 active:scale-90 w-8 h-8 flex items-center justify-center" title="นำออก">🗑️</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Price & Trend Section -->
+                        <div class="flex justify-between items-center py-2.5 border-t border-b border-gray-800/60 bg-slate-950/20 px-2.5 rounded-xl">
+                            <div class="flex flex-col">
+                                <span class="text-[9px] text-gray-500 font-bold uppercase tracking-wider flex items-center gap-1.5">
+                                    ราคา DR (บาท)
+                                    ${delayHtml}
+                                </span>
+                                <span id="dr-mobile-price-${index}" class="text-2xl font-extrabold font-mono text-cyan-400 mt-1">
+                                    ${parseFloat(item.dr_thb).toFixed(2)}
+                                </span>
+                            </div>
+                            <div class="w-20 h-7 opacity-95">
+                                ${sparklineSvg}
+                            </div>
+                        </div>
+                        
+                        <!-- Inputs Row -->
+                        <div class="grid grid-cols-2 gap-3 py-1 text-center justify-items-center">
+                            <div class="border-r border-gray-800/80 pr-1 w-full flex justify-center">
+                                ${renderInput(item.hk_ticker, item.hk_price, item.hk_multiplier, index, 'HK', item.active_market === 'HK', item.hk_rich)}
+                            </div>
+                            <div class="w-full flex justify-center">
+                                ${renderInput(item.us_ticker, item.us_price, item.us_multiplier, index, 'US', item.active_market === 'US', item.us_rich)}
+                            </div>
+                        </div>
+                        
+                        <!-- Sequence adjustment (Alternative order change input) -->
+                        <div class="flex items-center justify-between text-xs text-gray-550 pt-1 border-t border-gray-900/35">
+                            <span class="text-[10px]">ปรับลำดับด้วยตัวเลข:</span>
+                            <input type="number" 
+                                   value="${index + 1}" 
+                                   onchange="changeOrder(${index}, this.value)"
+                                   class="bg-slate-950 text-gray-400 text-center w-9 py-1 rounded border border-gray-855 focus:border-cyan-500 focus:text-white outline-none font-bold font-mono text-xs">
+                        </div>
+                        
+                    </div>
+                `;
+            }).join('');
         }
 
         async function updateTracker() {
@@ -875,40 +1015,116 @@
             showToast("✓ อัปเดตข้อมูลเสร็จสิ้น!");
         }
 
-        // Initialize application
-        async function init() {
-            await fetchCatalog();
+        // Waking alert helpers
+        let loadingSuccess = false;
+        let serverWakeupTimer = null;
+
+        function showConnectionBanner() {
+            if (loadingSuccess) return;
+            const banner = document.getElementById('connection-banner');
+            if (banner) {
+                banner.classList.remove('hidden', '-translate-y-4', 'opacity-0');
+                banner.classList.add('translate-y-0', 'opacity-100');
+            }
+        }
+
+        function hideConnectionBanner() {
+            loadingSuccess = true;
+            if (serverWakeupTimer) clearTimeout(serverWakeupTimer);
+            const banner = document.getElementById('connection-banner');
+            if (banner) {
+                banner.classList.remove('translate-y-0', 'opacity-100');
+                banner.classList.add('-translate-y-4', 'opacity-0');
+                setTimeout(() => { banner.classList.add('hidden'); }, 500);
+            }
+        }
+
+        // Mobile Top Movers Tabs switcher helper
+        let activeMoverTab = 'US';
+        function setMoverTab(tab) {
+            activeMoverTab = tab;
             
-            // Check if saved watchlist exists in localStorage
-            const savedConfig = localStorage.getItem('dr_watchlist');
-            if (savedConfig) {
-                try {
-                    const configObj = JSON.parse(savedConfig);
-                    currentData = Object.keys(configObj).map(symbol => {
-                        const cfg = configObj[symbol];
-                        return {
-                            symbol: symbol,
-                            active_market: cfg.market === "US" ? "US" : "HK",
-                            hk_ticker: cfg.market !== "US" ? cfg.primary : null,
-                            us_ticker: cfg.market === "US" ? cfg.primary : (cfg.us_adr || null),
-                            hk_price: "...",
-                            us_price: "...",
-                            dr_thb: "...",
-                            raw_config: cfg
-                        };
-                    });
-                } catch (e) {
-                    console.error("Failed to parse saved config:", e);
+            // 1. Update button classes
+            const btnUs = document.getElementById('tab-btn-us');
+            const btnHk = document.getElementById('tab-btn-hk');
+            const btnOther = document.getElementById('tab-btn-other');
+            
+            [btnUs, btnHk, btnOther].forEach(btn => {
+                if (btn) {
+                    btn.classList.remove('bg-cyan-600', 'text-white', 'shadow-md');
+                    btn.classList.add('text-gray-400');
                 }
+            });
+            
+            const activeBtn = document.getElementById(`tab-btn-${tab.toLowerCase()}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('text-gray-400');
+                activeBtn.classList.add('bg-cyan-600', 'text-white', 'shadow-md');
             }
             
-            await updateTracker();
-            await fetchTopMovers();
+            // 2. Update columns visibility
+            const colUs = document.getElementById('mover-col-us');
+            const colHk = document.getElementById('mover-col-hk');
+            const colOther = document.getElementById('mover-col-other');
             
-            // Poll for prices every 60 seconds
-            setInterval(updateTracker, 60000);
-            // Poll for top movers every 5 minutes
-            setInterval(fetchTopMovers, 300000);
+            [colUs, colHk, colOther].forEach(col => {
+                if (col) {
+                    col.classList.add('hidden');
+                    col.classList.remove('block');
+                }
+            });
+            
+            const activeCol = document.getElementById(`mover-col-${tab.toLowerCase()}`);
+            if (activeCol) {
+                activeCol.classList.remove('hidden');
+                activeCol.classList.add('block');
+            }
+        }
+
+        // Initialize application
+        async function init() {
+            // Start connection checker timer (shows banner after 1.5 seconds if loading hangs)
+            serverWakeupTimer = setTimeout(showConnectionBanner, 1500);
+            
+            try {
+                await fetchCatalog();
+                
+                // Check if saved watchlist exists in localStorage
+                const savedConfig = localStorage.getItem('dr_watchlist');
+                if (savedConfig) {
+                    try {
+                        const configObj = JSON.parse(savedConfig);
+                        currentData = Object.keys(configObj).map(symbol => {
+                            const cfg = configObj[symbol];
+                            return {
+                                symbol: symbol,
+                                active_market: cfg.market === "US" ? "US" : "HK",
+                                hk_ticker: cfg.market !== "US" ? cfg.primary : null,
+                                us_ticker: cfg.market === "US" ? cfg.primary : (cfg.us_adr || null),
+                                hk_price: "...",
+                                us_price: "...",
+                                dr_thb: "...",
+                                raw_config: cfg
+                            };
+                        });
+                    } catch (e) {
+                        console.error("Failed to parse saved config:", e);
+                    }
+                }
+                
+                await updateTracker();
+                await fetchTopMovers();
+                
+                // Hide connection alert banner on successful load
+                hideConnectionBanner();
+                
+                // Poll for prices every 60 seconds
+                setInterval(updateTracker, 60000);
+                // Poll for top movers every 5 minutes
+                setInterval(fetchTopMovers, 300000);
+            } catch (err) {
+                console.error("Failed to initialize app:", err);
+            }
         }
 
         init();
