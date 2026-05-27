@@ -362,10 +362,17 @@ def update_movers_background():
     try:
         print("Starting background update of top movers...")
         catalog = load_dr_catalog()
-        # Only download recommended symbols (262 instead of 378) to speed up and reduce Yahoo throttle probability
-        symbols = [sym for sym, cat in catalog.items() if cat.get("recommend", False)]
+        
+        # Hardcoded list of highly active and popular DR symbols to fit inside Render 512MB memory limits and avoid OOM crash!
+        popular_symbols = [
+            'AAPL80', 'TSLA80', 'NVDA80', 'MSFT80', 'AMZN80', 'META80', 'GOOG80', 'NFLX80', 'AMD80', 'COIN80', 'AVGO80', 'AAPL01',
+            'BABA80', 'TENCENT80', 'XIAOMI80', 'BYDCOM80', 'MEITUAN80', 'PINGAN80', 'JD80', 'BABA01', 'TENCENT01',
+            'JPSEMI24', 'ADVANT23', 'HERMES80', 'ASML01', 'ASICS23', 'AIA23'
+        ]
+        
+        symbols = [sym for sym in popular_symbols if sym in catalog]
         if not symbols:
-            symbols = list(catalog.keys())
+            symbols = [sym for sym, cat in catalog.items() if cat.get("recommend", False)][:30]
             
         tickers_string = " ".join([f"{sym}.BK" for sym in symbols])
         
