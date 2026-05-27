@@ -477,8 +477,10 @@ def get_top_movers():
         last_fetched = top_movers_cache["last_fetched"]
         is_updating = top_movers_cache["is_updating"]
         
-    # Set stale cache interval to 15 minutes (900 seconds) to avoid rate limits and minimize resource usage
-    is_stale = (now - last_fetched > 900) or (cached_data is None)
+    # Dynamic cache timing: 15 minutes (900s) on Render to save RAM/CPU, 3 minutes (180s) locally for fast updates!
+    is_render = os.environ.get("RENDER") == "true" or "RENDER_SERVICE_ID" in os.environ
+    cache_timeout = 900 if is_render else 180
+    is_stale = (now - last_fetched > cache_timeout) or (cached_data is None)
     
     if is_stale and not is_updating:
         with cache_lock:
