@@ -360,55 +360,70 @@ def save_config(req: ConfigSaveRequest):
 def update_movers_background():
     global top_movers_cache
     try:
-        print("Starting background update of top movers...")
+        print("Starting batch background update of top movers...")
         catalog = load_dr_catalog()
-        
-        # Hardcoded list of highly active and popular DR symbols to fit inside Render 512MB memory limits and avoid OOM crash!
-        popular_symbols = [
-            'AAPL80', 'TSLA80', 'NVDA80', 'MSFT80', 'AMZN80', 'META80', 'GOOG80', 'NFLX80', 'AMD80', 'COIN80', 'AVGO80', 'AAPL01',
-            'BABA80', 'TENCENT80', 'XIAOMI80', 'BYDCOM80', 'MEITUAN80', 'PINGAN80', 'JD80', 'BABA01', 'TENCENT01',
-            'JPSEMI24', 'ADVANT23', 'HERMES80', 'ASML01', 'ASICS23', 'AIA23'
-        ]
-        
-        symbols = [sym for sym in popular_symbols if sym in catalog]
+        # Query ALL recommended DRs (approx 262) as requested by user to get the complete market picture!
+        symbols = [sym for sym, cat in catalog.items() if cat.get("recommend", False)]
         if not symbols:
-            symbols = [sym for sym, cat in catalog.items() if cat.get("recommend", False)][:30]
+            symbols = list(catalog.keys())
             
-        tickers_string = " ".join([f"{sym}.BK" for sym in symbols])
+        # Deduplicate
+        symbols = list(dict.fromkeys(symbols))
         
-        # Parallel fetch from yfinance using yf.download
-        data = yf.download(tickers_string, period="5d", group_by='ticker', progress=False)
-        
+        # Batching configuration: download 20 symbols at a time to keep RAM extremely low!
+        BATCH_SIZE = 20
         results = []
-        for sym in symbols:
-            ticker_sym = f"{sym}.BK"
+        
+        import time as pytime
+        for i in range(0, len(symbols), BATCH_SIZE):
+            batch = symbols[i:i+BATCH_SIZE]
+            tickers_string = " ".join([f"{sym}.BK" for sym in batch])
+            
+            print(f"Downloading batch {i//BATCH_SIZE + 1} ({len(batch)} symbols)...")
             try:
-                if ticker_sym in data.columns.levels[0]:
-                    closes = data[ticker_sym]['Close'].dropna()
-                    if len(closes) >= 2:
-                        last_price = closes.iloc[-1]
-                        prev_close = closes.iloc[-2]
-                        change = ((last_price - prev_close) / prev_close) * 100
-                        
-                        catalog_item = catalog[sym]
-                        
-                        market_group = "US" if catalog_item["market"] == "US" else (
-                            "HK/CN" if catalog_item["market"] in ["HK", "CN"] else "Others"
-                        )
-                        
-                        if catalog_item["market"] in ["SG", "VN", "JP", "AS", "FR", "IT", "TW", "DK", "DE"]:
-                            market_group = "Others"
-                            
-                        results.append({
-                            "symbol": sym,
-                            "name": catalog_item.get("name", sym),
-                            "price": round(float(last_price), 2),
-                            "change_pct": round(float(change), 2),
-                            "market_group": market_group
-                        })
-            except Exception as ex:
-                pass
+                # Controlled small download
+                data = yf.download(tickers_string, period="5d", group_by='ticker', progress=False)
                 
+                for sym in batch:
+                    ticker_sym = f"{sym}.BK"
+                    try:
+                        if ticker_sym in data.columns.levels[0]:
+                            closes = data[ticker_sym]['Close'].dropna()
+                            if len(closes) >= 2:
+                                last_price = closes.iloc[-1]
+                                prev_close = closes.iloc[-2]
+                                change = ((last_price - prev_close) / prev_close) * 100
+                                
+                                catalog_item = catalog[sym]
+                                
+                                market_group = "US" if catalog_item["market"] == "US" else (
+                                    "HK/CN" if catalog_item["market"] in ["HK", "CN"] else "Others"
+                                )
+                                
+                                if catalog_item["market"] in ["SG", "VN", "JP", "AS", "FR", "IT", "TW", "DK", "DE"]:
+                                    market_group = "Others"
+                                    
+                                results.append({
+                                    "symbol": sym,
+                                    "name": catalog_item.get("name", sym),
+                                    "price": round(float(last_price), 2),
+                                    "change_pct": round(float(change), 2),
+                                    "market_group": market_group
+                                })
+                    except Exception:
+                        pass
+            except Exception as e:
+                print(f"Error in batch {i//BATCH_SIZE + 1}:", e)
+                
+            # Controlled delay between batches to be extremely gentle on memory/CPU
+            pytime.sleep(0.5)
+            
+        if not results:
+            print("No movers results parsed from batch download.")
+            with cache_lock:
+                top_movers_cache["is_updating"] = False
+            return
+            
         # Group and rank results
         markets = {"US": [], "HK/CN": [], "Others": []}
         for r in results:
@@ -432,10 +447,9 @@ def update_movers_background():
         }
         
         # Update cache in memory and write to disk
-        import time
         with cache_lock:
             top_movers_cache["data"] = response_data
-            top_movers_cache["last_fetched"] = time.time()
+            top_movers_cache["last_fetched"] = pytime.time()
             top_movers_cache["is_updating"] = False
             
         try:
@@ -444,9 +458,9 @@ def update_movers_background():
                     "data": response_data,
                     "last_fetched": top_movers_cache["last_fetched"]
                 }, f, indent=2, ensure_ascii=False)
-            print("Saved top movers cache to file successfully.")
+            print("Saved top movers batch cache to file successfully.")
         except Exception as e:
-            print("Failed to save top movers cache file:", e)
+            print("Failed to save top movers batch cache file:", e)
             
     except Exception as e:
         print("Error updating top movers in background:", e)
@@ -463,7 +477,8 @@ def get_top_movers():
         last_fetched = top_movers_cache["last_fetched"]
         is_updating = top_movers_cache["is_updating"]
         
-    is_stale = (now - last_fetched > 300) or (cached_data is None)
+    # Set stale cache interval to 15 minutes (900 seconds) to avoid rate limits and minimize resource usage
+    is_stale = (now - last_fetched > 900) or (cached_data is None)
     
     if is_stale and not is_updating:
         with cache_lock:
