@@ -329,8 +329,25 @@ def compute_tracker_data(dr_config):
     }
 
 @app.get("/api/tracker")
-def get_tracker():
-    dr_config = load_dr_config() 
+def get_tracker(symbols: str = None):
+    if symbols:
+        sym_list = [s.strip().upper() for s in symbols.split(",") if s.strip()]
+        catalog = load_dr_catalog()
+        dr_config = {}
+        for sym in sym_list:
+            if sym in catalog:
+                dr_config[sym] = catalog[sym]
+            else:
+                market = "US" if sym.endswith("80") or sym.endswith("01") else "HK"
+                primary = sym + ".BK"
+                dr_config[sym] = {
+                    "primary": primary,
+                    "market": market,
+                    "dr_ratio": 0.001,
+                    "name": f"Custom {sym}"
+                }
+    else:
+        dr_config = load_dr_config() 
     return compute_tracker_data(dr_config)
 
 class TrackerQueryRequest(BaseModel):

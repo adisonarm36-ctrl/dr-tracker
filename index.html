@@ -937,29 +937,51 @@
         async function updateTracker() {
             try {
                 let res;
+                let fetchSuccess = false;
+                
                 if (currentData.length === 0) {
                     res = await fetch(`${BACKEND_URL}/api/tracker?t=${Date.now()}`);
+                    if (res.ok) fetchSuccess = true;
                 } else {
-                    const configObj = {};
-                    currentData.forEach(item => {
-                        if (drCatalog[item.symbol]) {
-                            configObj[item.symbol] = drCatalog[item.symbol];
-                        } else if (item.raw_config) {
-                            configObj[item.symbol] = item.raw_config;
-                        } else {
-                            configObj[item.symbol] = {
-                                primary: item.hk_ticker || item.us_ticker,
-                                market: item.active_market === "US" ? "US" : "HK",
-                                dr_ratio: 0.001
-                            };
-                        }
-                    });
+                    // Try POST first to support custom/local watchlist fully
+                    try {
+                        const configObj = {};
+                        currentData.forEach(item => {
+                            if (drCatalog[item.symbol]) {
+                                configObj[item.symbol] = drCatalog[item.symbol];
+                            } else if (item.raw_config) {
+                                configObj[item.symbol] = item.raw_config;
+                            } else {
+                                configObj[item.symbol] = {
+                                    primary: item.hk_ticker || item.us_ticker,
+                                    market: item.active_market === "US" ? "US" : "HK",
+                                    dr_ratio: 0.001
+                                };
+                            }
+                        });
+                        
+                        res = await fetch(`${BACKEND_URL}/api/tracker?t=${Date.now()}`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ config: configObj })
+                        });
+                        
+                        if (res.ok) fetchSuccess = true;
+                    } catch (postErr) {
+                        console.warn("POST tracker failed, will fallback to GET:", postErr);
+                    }
                     
-                    res = await fetch(`${BACKEND_URL}/api/tracker?t=${Date.now()}`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ config: configObj })
-                    });
+                    // Fallback to GET with symbols parameter if POST failed or returned error
+                    if (!fetchSuccess) {
+                        console.log("Using GET fallback for tracker pricing...");
+                        const symbolsParam = currentData.map(item => item.symbol).join(',');
+                        res = await fetch(`${BACKEND_URL}/api/tracker?symbols=${symbolsParam}&t=${Date.now()}`);
+                        if (res.ok) fetchSuccess = true;
+                    }
+                }
+                
+                if (!fetchSuccess) {
+                    throw new Error(`Failed to fetch pricing data (Status: ${res ? res.status : 'Unknown'})`);
                 }
                 
                 const json = await res.json();
