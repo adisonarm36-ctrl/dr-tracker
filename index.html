@@ -340,7 +340,12 @@
     </div>
 
     <script>
-        const BACKEND_URL = 'https://dr-tracker-backend-9y50.onrender.com';
+        // Auto-detect environment: connect to local server if running locally, otherwise connect to live cloud backend
+        const BACKEND_URL = (window.location.hostname === 'localhost' || 
+                             window.location.hostname === '127.0.0.1' || 
+                             window.location.protocol === 'file:') 
+                            ? 'http://127.0.0.1:8000' 
+                            : 'https://dr-tracker-backend-9y50.onrender.com';
         let currentData = [];
         let drCatalog = {};
         let searchActive = "";
