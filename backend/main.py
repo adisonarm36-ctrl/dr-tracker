@@ -236,6 +236,9 @@ def compute_tracker_data(dr_config):
         if hk_t: stock_tickers.add(hk_t)
         if us_t: stock_tickers.add(us_t)
         
+        # Add local Thai DR ticker (traded on SET) to fetch its actual trading price and trend!
+        stock_tickers.add(f"{symbol}.BK")
+        
     # Parallel fetch stock rich data
     stock_data_map = fetch_all_parallel(list(stock_tickers))
     
@@ -311,6 +314,27 @@ def compute_tracker_data(dr_config):
             item["dr_thb"] = round(item["us_price"] * item["us_multiplier"], 2)
         elif active == "HK" and item["hk_price"]:
             item["dr_thb"] = round(item["hk_price"] * item["hk_multiplier"], 2)
+            
+        # ---------------- ดึงราคาซื้อขายจริงบน SET 🇹🇭 ----------------
+        set_ticker = f"{symbol}.BK"
+        set_rich = stock_data_map.get(set_ticker)
+        item["set_price"] = ""
+        item["premium_pct"] = ""
+        item["set_rich"] = None
+        
+        if set_rich and set_rich.get("price"):
+            item["set_price"] = round(set_rich["price"], 2)
+            item["set_rich"] = set_rich
+            
+            # คำนวณส่วนต่าง Premium / Discount
+            if item["dr_thb"] and item["dr_thb"] != "0.00":
+                try:
+                    dr_thb_val = float(item["dr_thb"])
+                    if dr_thb_val > 0:
+                        diff = ((item["set_price"] - dr_thb_val) / dr_thb_val) * 100
+                        item["premium_pct"] = round(diff, 2)
+                except:
+                    pass
             
         data.append(item)
         

@@ -241,15 +241,16 @@
                                     <th class="p-4 w-12 text-center">สลับ</th>
                                     <th class="p-4 w-14 text-center">ลำดับ</th>
                                     <th class="p-4 w-28">ชื่อ DR</th>
-                                    <th class="p-4 text-center bg-gray-800/10">ตลาดต่างประเทศ (อ้างอิง)</th>
-                                    <th class="p-4 text-center w-28">แนวโน้ม</th>
-                                    <th class="p-4 text-right text-cyan-400 w-32" title="ราคาอ้างอิงตามทฤษฎี (Fair Price) คำนวณจากราคาหุ้นแม่ต่างประเทศจริง x อัตราแลกเปลี่ยน x สัดส่วน DR">ราคาอ้างอิง (THB) ℹ️</th>
+                                    <th class="p-4 text-center bg-gray-800/10">ตลาดแม่ต่างประเทศ (อ้างอิง)</th>
+                                    <th class="p-4 text-right text-cyan-400 w-36" title="ราคาอ้างอิงตามทฤษฎี (Fair Price) คำนวณจากราคาหุ้นแม่ต่างประเทศจริง x อัตราแลกเปลี่ยน x สัดส่วน DR">ราคาอ้างอิง Fair Price</th>
+                                    <th class="p-4 text-right text-emerald-400 w-36" title="ราคาซื้อขายจริงของ DR ตัวนี้บนกระดานตลาดหลักทรัพย์แห่งประเทศไทย (SET)">ราคาจริงบน SET 🇹🇭</th>
+                                    <th class="p-4 text-center w-28" title="ราคาซื้อขายจริงบนกระดาน SET แพงกว่า (Premium) หรือ ถูกกว่า (Discount) ราคาอ้างอิงตามทฤษฎีกี่ %">ส่วนต่าง (Premium)</th>
                                     <th class="p-4 w-12 text-center">นำออก</th>
                                 </tr>
                             </thead>
                             <tbody id="ticker-body" class="divide-y divide-gray-850">
                                 <tr>
-                                    <td colspan="7" class="p-8 text-center text-gray-500">กำลังโหลดรายการติดตามของคุณ...</td>
+                                    <td colspan="8" class="p-8 text-center text-gray-500">กำลังโหลดรายการติดตามของคุณ...</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -823,38 +824,50 @@
                         <p class="text-xs">ค้นหา DR ในกล่องด้านขวา แล้วกด + เพิ่ม เพื่อติดตามราคาเรียลไทม์ได้เลย!</p>
                     </div>
                 `;
-                body.innerHTML = `<tr><td colspan="7">${emptyHtml}</td></tr>`;
+                body.innerHTML = `<tr><td colspan="8">${emptyHtml}</td></tr>`;
                 mobileCards.innerHTML = emptyHtml;
                 return;
             }
 
             // 1. Render Desktop Table Body
             body.innerHTML = currentData.map((item, index) => {
-                let activeRichData = item.active_market === 'HK' ? item.hk_rich : item.us_rich;
-                let trendHtml = `<span class="text-gray-600 text-xs">ไม่มีข้อมูล</span>`;
-                
-                if (activeRichData) {
-                    const colorClass = activeRichData.change_pct >= 0 ? "text-emerald-400" : "text-red-400";
-                    const bgBadgeClass = activeRichData.change_pct >= 0 ? "bg-emerald-950/40 text-emerald-400" : "bg-red-950/40 text-red-400";
-                    const sign = activeRichData.change_pct > 0 ? "+" : "";
-                    const sparklineSvg = createSparkline(activeRichData.prices, activeRichData.change_pct >= 0);
-                    
-                    let delayColor = "text-gray-500";
-                    if (activeRichData.delay_msg.includes('Realtime') || activeRichData.delay_msg.includes('Live')) {
-                        delayColor = "text-yellow-500";
-                    } else if (activeRichData.delay_msg.includes('Overnight')) {
-                        delayColor = "text-purple-400";
+                let setPriceHtml = `<span class="text-gray-600 text-sm font-semibold">-</span>`;
+                if (item.set_price) {
+                    let setTrendHtml = "";
+                    if (item.set_rich) {
+                        const setSign = item.set_rich.change_pct > 0 ? "+" : "";
+                        const setBadgeClass = item.set_rich.change_pct >= 0 ? "text-emerald-400" : "text-red-400";
+                        const setBgClass = item.set_rich.change_pct >= 0 ? "bg-emerald-950/30 text-emerald-400" : "bg-red-950/30 text-red-400";
+                        const setSparkline = createSparkline(item.set_rich.prices, item.set_rich.change_pct >= 0);
+                        
+                        setTrendHtml = `
+                            <div class="flex items-center gap-1.5 mt-1 justify-end">
+                                <span class="px-1.5 py-0.5 rounded text-[9px] font-bold ${setBgClass}">${setSign}${item.set_rich.change_pct.toFixed(2)}%</span>
+                                <span class="text-[9px] text-gray-500 font-mono tracking-tighter" title="เวลาอัปเดตราคาบนกระดาน SET ล่าสุด">SET: ${item.set_rich.last_trade_time}</span>
+                            </div>
+                        `;
                     }
+                    setPriceHtml = `
+                        <div class="flex flex-col items-end">
+                            <span class="text-emerald-400 text-xl font-mono font-extrabold">${parseFloat(item.set_price).toFixed(2)}</span>
+                            ${setTrendHtml}
+                        </div>
+                    `;
+                }
+
+                let premiumHtml = `<span class="text-gray-600 text-xs">-</span>`;
+                if (item.premium_pct !== "" && item.premium_pct !== undefined) {
+                    const premVal = parseFloat(item.premium_pct);
+                    const sign = premVal > 0 ? "+" : "";
+                    const badgeClass = premVal >= 0 
+                        ? "bg-emerald-950/50 text-emerald-400 border-emerald-900/30" 
+                        : "bg-red-950/50 text-red-400 border-red-900/30";
+                    const label = premVal > 0 ? "Premium" : (premVal < 0 ? "Discount" : "Fair");
                     
-                    trendHtml = `
-                        <div class="flex flex-col items-center w-full px-2">
-                            <div class="flex justify-between w-full text-[10px] mb-1 font-bold">
-                                <span class="px-1.5 py-0.5 rounded ${bgBadgeClass}">${sign}${activeRichData.change_pct.toFixed(2)}%</span>
-                                <span class="${delayColor} text-[9px] uppercase tracking-wider font-semibold" title="ข้อมูลจาก Yahoo Finance">${activeRichData.delay_msg}</span>
-                            </div>
-                            <div class="w-20 h-7 opacity-90">
-                                ${sparklineSvg}
-                            </div>
+                    premiumHtml = `
+                        <div class="flex flex-col items-center gap-0.5">
+                            <span class="px-2 py-0.5 rounded-lg text-[10px] font-bold border ${badgeClass} font-mono tracking-tight">${sign}${premVal.toFixed(2)}%</span>
+                            <span class="text-[8px] uppercase tracking-wider font-semibold text-gray-500">${label}</span>
                         </div>
                     `;
                 }
@@ -885,12 +898,16 @@
                         </div>
                     </td>
                     
-                    <td class="p-3 text-center border-l border-r border-gray-900 align-middle">
-                        ${trendHtml}
+                    <td class="p-3 text-right border-l border-gray-900 align-middle">
+                        <span id="dr-price-${index}" class="dr-price text-cyan-300 font-mono font-bold text-xl">${parseFloat(item.dr_thb).toFixed(2)}</span>
                     </td>
                     
-                    <td class="p-3 text-right font-extrabold text-2xl font-mono align-middle">
-                        <span id="dr-price-${index}" class="dr-price text-cyan-400 transition-colors">${parseFloat(item.dr_thb).toFixed(2)}</span>
+                    <td class="p-3 text-right border-l border-gray-900 align-middle">
+                        ${setPriceHtml}
+                    </td>
+
+                    <td class="p-3 text-center border-l border-r border-gray-900 align-middle">
+                        ${premiumHtml}
                     </td>
                     
                     <td class="p-3 text-center align-middle">
@@ -903,7 +920,7 @@
 
             // 2. Render Mobile Touch-Friendly Card Stack
             mobileCards.innerHTML = currentData.map((item, index) => {
-                let activeRichData = item.active_market === 'HK' ? item.hk_rich : item.us_rich;
+                let activeRichData = item.set_rich || (item.active_market === 'HK' ? item.hk_rich : item.us_rich);
                 let trendBadge = "";
                 let delayHtml = "";
                 let sparklineSvg = "";
@@ -922,9 +939,33 @@
                     }
                     
                     trendBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold ${bgBadgeClass} ml-2 font-mono">${sign}${activeRichData.change_pct.toFixed(2)}%</span>`;
-                    delayHtml = `<span class="${delayColor} text-[9px] uppercase tracking-wider font-semibold font-mono" title="ข้อมูลจาก Yahoo Finance">${activeRichData.delay_msg}</span>`;
+                    delayHtml = `<span class="${delayColor} text-[9px] uppercase tracking-wider font-semibold font-mono" title="ข้อมูลอัปเดตล่าสุด">${activeRichData.delay_msg}</span>`;
                 } else {
                     trendBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-900 text-gray-500 ml-2">ไม่มีข้อมูล</span>`;
+                }
+
+                let mobileSetPriceHtml = `
+                    <div class="flex flex-col items-end text-right">
+                        <span class="text-[9px] text-gray-500 font-bold uppercase tracking-wider">ราคาจริงบน SET 🇹🇭</span>
+                        <span class="text-emerald-400 text-lg font-mono font-extrabold mt-0.5">${item.set_price ? parseFloat(item.set_price).toFixed(2) : '-'}</span>
+                    </div>
+                `;
+                
+                let mobilePremiumHtml = "";
+                if (item.premium_pct !== "" && item.premium_pct !== undefined) {
+                    const premVal = parseFloat(item.premium_pct);
+                    const sign = premVal > 0 ? "+" : "";
+                    const badgeClass = premVal >= 0 
+                        ? "bg-emerald-950/40 text-emerald-400 border-emerald-900/30" 
+                        : "bg-red-950/40 text-red-400 border-red-900/30";
+                    const label = premVal > 0 ? "Premium" : (premVal < 0 ? "Discount" : "Fair");
+                    
+                    mobilePremiumHtml = `
+                        <div class="flex items-center justify-between py-1.5 px-3 bg-slate-950/40 rounded-xl border border-gray-800 text-[10px]">
+                            <span class="text-gray-500 font-bold">ส่วนต่าง (Premium/Discount)</span>
+                            <span class="px-2 py-0.5 rounded-lg font-bold border ${badgeClass} font-mono">${sign}${premVal.toFixed(2)}% (${label})</span>
+                        </div>
+                    `;
                 }
                 
                 return `
@@ -942,8 +983,8 @@
                                 </p>
                             </div>
                             <div class="flex items-center gap-1.5">
-                                <button onclick="moveItem(${index}, -1)" class="text-cyan-500 hover:text-cyan-400 transition text-xs font-bold bg-slate-950 p-2 rounded-xl border border-gray-850 select-none active:scale-90 w-8 h-8 flex items-center justify-center">▲</button>
-                                <button onclick="moveItem(${index}, 1)" class="text-cyan-500 hover:text-cyan-400 transition text-xs font-bold bg-slate-950 p-2 rounded-xl border border-gray-850 select-none active:scale-90 w-8 h-8 flex items-center justify-center">▼</button>
+                                <button onclick="moveItem(${index}, -1)" class="text-cyan-500 hover:text-cyan-400 transition text-xs font-bold bg-slate-950 p-2 rounded-xl border border-gray-855 select-none active:scale-90 w-8 h-8 flex items-center justify-center">▲</button>
+                                <button onclick="moveItem(${index}, 1)" class="text-cyan-500 hover:text-cyan-400 transition text-xs font-bold bg-slate-950 p-2 rounded-xl border border-gray-855 select-none active:scale-90 w-8 h-8 flex items-center justify-center">▼</button>
                                 <button onclick="removeDR(${index})" class="text-rose-500 bg-rose-950/20 border border-rose-900/30 rounded-xl p-2 text-xs ml-1 hover:bg-rose-950/40 active:scale-90 w-8 h-8 flex items-center justify-center" title="นำออก">🗑️</button>
                             </div>
                         </div>
@@ -951,18 +992,22 @@
                         <!-- Price & Trend Section -->
                         <div class="flex justify-between items-center py-2.5 border-t border-b border-gray-800/60 bg-slate-950/20 px-2.5 rounded-xl">
                             <div class="flex flex-col">
-                                <span class="text-[9px] text-gray-500 font-bold uppercase tracking-wider flex items-center gap-1.5" title="ราคาอ้างอิงตามทฤษฎี (Fair Price) คำนวณจากหุ้นแม่ต่างประเทศ">
-                                    ราคาอ้างอิง DR (บาท) ℹ️
-                                    ${delayHtml}
+                                <span class="text-[9px] text-gray-500 font-bold uppercase tracking-wider flex items-center gap-1" title="ราคาอ้างอิงตามทฤษฎี (Fair Price) คำนวณจากหุ้นแม่ต่างประเทศ">
+                                    ราคาอ้างอิง Fair
                                 </span>
-                                <span id="dr-mobile-price-${index}" class="text-2xl font-extrabold font-mono text-cyan-400 mt-1">
+                                <span id="dr-mobile-price-${index}" class="text-cyan-300 text-lg font-mono font-extrabold mt-0.5">
                                     ${parseFloat(item.dr_thb).toFixed(2)}
                                 </span>
                             </div>
-                            <div class="w-20 h-7 opacity-95">
+                            
+                            <div class="w-12 h-6 opacity-40">
                                 ${sparklineSvg}
                             </div>
+                            
+                            ${mobileSetPriceHtml}
                         </div>
+                        
+                        ${mobilePremiumHtml}
                         
                         <!-- Inputs Row -->
                         <div class="grid grid-cols-2 gap-3 py-1 text-center justify-items-center">
