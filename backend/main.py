@@ -94,6 +94,38 @@ def get_market_info():
 
 def get_price_safe(ticker):
     if not ticker: return None
+    
+    # 1. Cache-First Lookup
+    cache_key = ticker
+    if ticker.endswith(".BK"):
+        cache_key = ticker[:-3]
+        
+    if cache_key in SET_PRICES_CACHE:
+        cached = SET_PRICES_CACHE[cache_key]
+        if isinstance(cached, dict) and "price" in cached:
+            return cached["price"]
+        elif isinstance(cached, (int, float)):
+            return cached
+            
+    # On Render, if not in cache, avoid calling Yahoo Finance and return safe fallbacks
+    is_render = os.environ.get("RENDER") == "true" or "RENDER_SERVICE_ID" in os.environ
+    if is_render:
+        fallbacks = {
+            "HKDTHB=X": 4.7,
+            "USDTHB=X": 36.5,
+            "CNYTHB=X": 5.0,
+            "SGDTHB=X": 27.0,
+            "VNDTHB=X": 0.0014,
+            "JPYTHB=X": 0.23,
+            "EURTHB=X": 40.0,
+            "TWDTHB=X": 1.12,
+            "DKKTHB=X": 5.00
+        }
+        if ticker in fallbacks:
+            return fallbacks[ticker]
+        print(f"Cache miss for underlying price {ticker} on Render. Returning fallback 0.0")
+        return 0.0
+
     try:
         price = yf.Ticker(ticker).fast_info.last_price
         if price is None or price == 0:
@@ -107,6 +139,32 @@ def get_price_safe(ticker):
 
 def get_rich_market_data(ticker):
     if not ticker: return None
+    
+    # 1. Cache-First Lookup
+    cache_key = ticker
+    if ticker.endswith(".BK"):
+        cache_key = ticker[:-3]
+        
+    if cache_key in SET_PRICES_CACHE:
+        cached = SET_PRICES_CACHE[cache_key]
+        if isinstance(cached, dict) and "price" in cached and "candles" in cached:
+            return {
+                "price": cached.get("price", 0.0),
+                "prices": cached.get("prices", []),
+                "change_pct": cached.get("change_pct", 0.0),
+                "delay_msg": cached.get("delay_msg", "Cached"),
+                "prev_close": cached.get("prev_close", 0.0),
+                "last_trade_time": cached.get("last_trade_time", ""),
+                "candles": cached.get("candles", [])
+            }
+            
+    # On Render, if not in cache, avoid calling Yahoo Finance and return dummy data
+    is_render = os.environ.get("RENDER") == "true" or "RENDER_SERVICE_ID" in os.environ
+    if is_render:
+        print(f"Cache miss for rich data {ticker} on Render. Returning fallback safe object.")
+        price = get_price_safe(ticker)
+        return {"price": price, "prices": [price] if price else [], "change_pct": 0.0, "delay_msg": "Unavailable", "prev_close": 0.0, "last_trade_time": "", "candles": []}
+
     try:
         t = yf.Ticker(ticker)
         try:
@@ -473,80 +531,122 @@ def update_movers_background():
         if not symbols:
             symbols = list(catalog.keys())
             
-        # Deduplicate
+        # Deduplicate symbols
         symbols = list(dict.fromkeys(symbols))
         
-        # Batching configuration: download 20 symbols at a time to keep RAM extremely low!
-        BATCH_SIZE = 20
+        # 1. Collect all unique underlying tickers from the catalog for recommended DRs
+        underlying_tickers = set()
+        for sym in symbols:
+            cat_item = catalog[sym]
+            market = cat_item.get("market", "US")
+            
+            hk_t = cat_item.get('primary') if market in ['HK', 'CN', 'SG', 'VN', 'JP', 'AS', 'FR', 'IT', 'TW', 'DK', 'DE'] else None
+            us_t = cat_item.get('primary') if market == 'US' else cat_item.get('us_adr')
+            
+            if hk_t: underlying_tickers.add(hk_t)
+            if us_t: underlying_tickers.add(us_t)
+            
+        underlying_tickers = list(underlying_tickers)
+        
+        # 2. FX rates list
+        fx_tickers = ["HKDTHB=X", "USDTHB=X", "CNYTHB=X", "SGDTHB=X", "VNDTHB=X", "JPYTHB=X", "EURTHB=X", "TWDTHB=X", "DKKTHB=X"]
+        
+        # 3. Combine into a single deduplicated list
+        all_tickers = []
+        for sym in symbols:
+            all_tickers.append(f"{sym}.BK")
+        all_tickers.extend(underlying_tickers)
+        all_tickers.extend(fx_tickers)
+        all_tickers = list(dict.fromkeys(all_tickers))
+        
+        print(f"Total tickers to fetch in background: {len(all_tickers)} (DRs on SET: {len(symbols)}, Underlyings: {len(underlying_tickers)}, FX: {len(fx_tickers)})")
+        
+        # Batching configuration: download 30 symbols at a time to keep RAM extremely low!
+        BATCH_SIZE = 30
         results = []
         
-        for i in range(0, len(symbols), BATCH_SIZE):
-            batch = symbols[i:i+BATCH_SIZE]
-            tickers_string = " ".join([f"{sym}.BK" for sym in batch])
+        for i in range(0, len(all_tickers), BATCH_SIZE):
+            batch = all_tickers[i:i+BATCH_SIZE]
+            tickers_string = " ".join(batch)
             
             print(f"Downloading batch {i//BATCH_SIZE + 1} ({len(batch)} symbols)...")
             try:
-                # Controlled small download with 45 days period to get 30 trading days of daily candles!
+                # Controlled download with 45 days period to get 30 trading days of daily candles!
                 data = yf.download(tickers_string, period="45d", group_by='ticker', progress=False)
                 
-                for sym in batch:
-                    ticker_sym = f"{sym}.BK"
+                for ticker_sym in batch:
                     try:
-                        if ticker_sym in data.columns.levels[0]:
+                        if len(batch) == 1:
+                            closes = data['Close'].dropna()
+                            df = data
+                        else:
+                            if ticker_sym not in data.columns.levels[0]:
+                                continue
                             closes = data[ticker_sym]['Close'].dropna()
-                            if len(closes) >= 2:
-                                last_price = closes.iloc[-1]
-                                prev_close = closes.iloc[-2]
-                                change = ((last_price - prev_close) / prev_close) * 100
+                            df = data[ticker_sym]
+                            
+                        if len(closes) >= 2:
+                            last_price = closes.iloc[-1]
+                            prev_close = closes.iloc[-2]
+                            change = ((last_price - prev_close) / prev_close) * 100
+                            
+                            # Build daily candles list for the 30-day candlestick chart
+                            ticker_df = df.dropna(subset=['Close'])
+                            candles_list = []
+                            for idx, row in ticker_df.iterrows():
+                                try:
+                                    candles_list.append({
+                                        "date": idx.strftime('%Y-%m-%d'),
+                                        "open": round(float(row['Open']), 2),
+                                        "high": round(float(row['High']), 2),
+                                        "low": round(float(row['Low']), 2),
+                                        "close": round(float(row['Close']), 2)
+                                    })
+                                except Exception:
+                                    pass
+                            
+                            candles_list = candles_list[-30:]
+                            prices_list = [c["close"] for c in candles_list]
+                            
+                            tz_bangkok = pytz.timezone('Asia/Bangkok')
+                            last_trade_time = datetime.now(tz_bangkok).strftime('%H:%M (%d/%m)')
+                            
+                            parsed_item = {
+                                "price": round(float(last_price), 2),
+                                "prices": prices_list,
+                                "change_pct": round(float(change), 2),
+                                "prev_close": round(float(prev_close), 2),
+                                "delay_msg": "Delayed",
+                                "last_trade_time": last_trade_time,
+                                "candles": candles_list
+                            }
+                            
+                            # Cache in SET_PRICES_CACHE
+                            if ticker_sym.endswith(".BK"):
+                                sym = ticker_sym[:-3]
+                                SET_PRICES_CACHE[sym] = parsed_item
                                 
-                                catalog_item = catalog[sym]
+                                # Add to results list for movers rankings
+                                catalog_item = catalog.get(sym)
+                                if catalog_item:
+                                    market_group = "US" if catalog_item["market"] == "US" else (
+                                        "HK/CN" if catalog_item["market"] in ["HK", "CN"] else "Others"
+                                    )
+                                    if catalog_item["market"] in ["SG", "VN", "JP", "AS", "FR", "IT", "TW", "DK", "DE"]:
+                                        market_group = "Others"
+                                        
+                                    results.append({
+                                        "symbol": sym,
+                                        "name": catalog_item.get("name", sym),
+                                        "price": round(float(last_price), 2),
+                                        "change_pct": round(float(change), 2),
+                                        "market_group": market_group
+                                    })
+                            else:
+                                SET_PRICES_CACHE[ticker_sym] = parsed_item
                                 
-                                market_group = "US" if catalog_item["market"] == "US" else (
-                                    "HK/CN" if catalog_item["market"] in ["HK", "CN"] else "Others"
-                                )
-                                
-                                if catalog_item["market"] in ["SG", "VN", "JP", "AS", "FR", "IT", "TW", "DK", "DE"]:
-                                    market_group = "Others"
-                                    
-                                results.append({
-                                    "symbol": sym,
-                                    "name": catalog_item.get("name", sym),
-                                    "price": round(float(last_price), 2),
-                                    "change_pct": round(float(change), 2),
-                                    "market_group": market_group
-                                })
-                                
-                                # Build daily candles list for the 30-day candlestick chart
-                                ticker_df = data[ticker_sym].dropna(subset=['Close'])
-                                candles_list = []
-                                for idx, row in ticker_df.iterrows():
-                                    try:
-                                        candles_list.append({
-                                            "date": idx.strftime('%Y-%m-%d'),
-                                            "open": round(float(row['Open']), 2),
-                                            "high": round(float(row['High']), 2),
-                                            "low": round(float(row['Low']), 2),
-                                            "close": round(float(row['Close']), 2)
-                                        })
-                                    except Exception:
-                                        pass
-                                
-                                candles_list = candles_list[-30:]
-                                prices_list = [c["close"] for c in candles_list]
-                                
-                                tz_bangkok = pytz.timezone('Asia/Bangkok')
-                                last_trade_time = datetime.now(tz_bangkok).strftime('%H:%M (%d/%m)')
-                                SET_PRICES_CACHE[sym] = {
-                                    "price": round(float(last_price), 2),
-                                    "prices": prices_list,
-                                    "change_pct": round(float(change), 2),
-                                    "prev_close": round(float(prev_close), 2),
-                                    "delay_msg": "Delayed",
-                                    "last_trade_time": last_trade_time,
-                                    "candles": candles_list
-                                }
-                    except Exception:
-                        pass
+                    except Exception as parse_err:
+                        print(f"Error parsing ticker {ticker_sym}: {parse_err}")
             except Exception as e:
                 print(f"Error in batch {i//BATCH_SIZE + 1}:", e)
                 

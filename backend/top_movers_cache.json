@@ -1,7 +1,7 @@
 {
   "data": {
     "status": "success",
-    "timestamp": "2026-05-28T14:57:15.220080",
+    "timestamp": "2026-05-28T15:21:52.730735",
     "movers": {
       "US": {
         "gainers": [
@@ -29,15 +29,15 @@
           {
             "symbol": "NOW19",
             "name": "NOW DR (YUANTA)",
-            "price": 3.5,
-            "change_pct": 8.02,
+            "price": 3.46,
+            "change_pct": 6.79,
             "market_group": "US"
           },
           {
             "symbol": "APLD03",
             "name": "APLD DR (PI)",
-            "price": 5.25,
-            "change_pct": 5.42,
+            "price": 5.3,
+            "change_pct": 6.43,
             "market_group": "US"
           }
         ],
@@ -52,29 +52,29 @@
           {
             "symbol": "NVTS03",
             "name": "NVTS DR (PI)",
-            "price": 9.4,
-            "change_pct": -11.32,
+            "price": 9.35,
+            "change_pct": -11.79,
             "market_group": "US"
           },
           {
             "symbol": "QCOM06",
             "name": "QCOM DR (KKPS)",
-            "price": 3.8,
-            "change_pct": -7.32,
+            "price": 3.78,
+            "change_pct": -7.8,
             "market_group": "US"
           },
           {
             "symbol": "RKLB80",
             "name": "RKLB DR (KTB)",
-            "price": 4.8,
-            "change_pct": -5.88,
+            "price": 4.78,
+            "change_pct": -6.27,
             "market_group": "US"
           },
           {
-            "symbol": "NEM23",
-            "name": "NEM DR (INVX)",
-            "price": 2.14,
-            "change_pct": -5.31,
+            "symbol": "COIN80",
+            "name": "COIN DR (KTB)",
+            "price": 5.65,
+            "change_pct": -5.04,
             "market_group": "US"
           }
         ]
@@ -84,8 +84,8 @@
           {
             "symbol": "ZAI23",
             "name": "ZAI DR (INVX)",
-            "price": 17.0,
-            "change_pct": 15.65,
+            "price": 17.2,
+            "change_pct": 17.01,
             "market_group": "HK/CN"
           },
           {
@@ -103,33 +103,33 @@
             "market_group": "HK/CN"
           },
           {
-            "symbol": "XPENG03",
-            "name": "XPENG DR (PI)",
-            "price": 2.8,
-            "change_pct": 6.06,
+            "symbol": "LENOVO13",
+            "name": "LENOVO DR (KGI)",
+            "price": 4.2,
+            "change_pct": 5.53,
             "market_group": "HK/CN"
           },
           {
-            "symbol": "LENOVO13",
-            "name": "LENOVO DR (KGI)",
-            "price": 4.22,
-            "change_pct": 6.03,
+            "symbol": "XPENG03",
+            "name": "XPENG DR (PI)",
+            "price": 2.78,
+            "change_pct": 5.3,
             "market_group": "HK/CN"
           }
         ],
         "losers": [
           {
-            "symbol": "UBTECH23",
-            "name": "UBTECH DR (INVX)",
-            "price": 1.82,
-            "change_pct": -7.14,
-            "market_group": "HK/CN"
-          },
-          {
             "symbol": "HANSOH19",
             "name": "HANSOH DR (YUANTA)",
             "price": 5.25,
             "change_pct": -7.08,
+            "market_group": "HK/CN"
+          },
+          {
+            "symbol": "UBTECH23",
+            "name": "UBTECH DR (INVX)",
+            "price": 1.83,
+            "change_pct": -6.63,
             "market_group": "HK/CN"
           },
           {
@@ -147,10 +147,10 @@
             "market_group": "HK/CN"
           },
           {
-            "symbol": "GIGA23",
-            "name": "GIGA DR (INVX)",
-            "price": 11.0,
-            "change_pct": -5.17,
+            "symbol": "HORIZON23",
+            "name": "HORIZON DR (INVX)",
+            "price": 1.49,
+            "change_pct": -5.1,
             "market_group": "HK/CN"
           }
         ]
@@ -165,17 +165,10 @@
             "market_group": "Others"
           },
           {
-            "symbol": "SEMB19",
-            "name": "SEMB DR (YUANTA)",
-            "price": 5.5,
-            "change_pct": 4.76,
-            "market_group": "Others"
-          },
-          {
             "symbol": "HITACHI24",
             "name": "HITACHI DR (FSS)",
-            "price": 1.33,
-            "change_pct": 3.91,
+            "price": 1.34,
+            "change_pct": 4.69,
             "market_group": "Others"
           },
           {
@@ -183,6 +176,13 @@
             "name": "SUSHI DR (INVX)",
             "price": 3.24,
             "change_pct": 3.85,
+            "market_group": "Others"
+          },
+          {
+            "symbol": "SEMB19",
+            "name": "SEMB DR (YUANTA)",
+            "price": 5.45,
+            "change_pct": 3.81,
             "market_group": "Others"
           },
           {
@@ -233,5 +233,5 @@
       }
     }
   },
-  "last_fetched": 1779955035.2201078
+  "last_fetched": 1779956512.7307694
 }
