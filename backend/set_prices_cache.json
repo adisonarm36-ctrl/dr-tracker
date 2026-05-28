@@ -1,17 +1,17 @@
 {
   "AAPL80": {
-    "price": 10.2,
+    "price": 10.1,
     "prices": [
       10.0,
       10.2,
       10.2,
       10.0,
-      10.2
+      10.1
     ],
-    "change_pct": 2.0,
+    "change_pct": 1.0,
     "prev_close": 10.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "ABBV80": {
     "price": 7.0,
@@ -25,7 +25,7 @@
     "change_pct": 0.0,
     "prev_close": 7.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "ABNB06": {
     "price": 4.32,
@@ -38,7 +38,7 @@
     "change_pct": -0.92,
     "prev_close": 4.36,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "ADBE06": {
     "price": 1.97,
@@ -52,21 +52,21 @@
     "change_pct": 0.51,
     "prev_close": 1.96,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "ADVANT23": {
-    "price": 3.64,
+    "price": 3.62,
     "prices": [
       3.76,
       3.84,
       3.7,
       3.88,
-      3.64
+      3.62
     ],
-    "change_pct": -6.19,
+    "change_pct": -6.7,
     "prev_close": 3.88,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "AFRM03": {
     "price": 2.88,
@@ -80,7 +80,7 @@
     "change_pct": 0.0,
     "prev_close": 2.88,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "AIA23": {
     "price": 2.64,
@@ -94,7 +94,7 @@
     "change_pct": -1.26,
     "prev_close": 2.67,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "AMD80": {
     "price": 3.14,
@@ -108,7 +108,7 @@
     "change_pct": -5.99,
     "prev_close": 3.34,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "AMGN06": {
     "price": 2.78,
@@ -122,7 +122,7 @@
     "change_pct": 0.72,
     "prev_close": 2.76,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "AMZN80": {
     "price": 2.22,
@@ -136,7 +136,7 @@
     "change_pct": 2.78,
     "prev_close": 2.16,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "ANET80": {
     "price": 5.0,
@@ -150,7 +150,7 @@
     "change_pct": -2.91,
     "prev_close": 5.15,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "ANTA23": {
     "price": 1.94,
@@ -164,7 +164,7 @@
     "change_pct": -2.02,
     "prev_close": 1.98,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "APLD03": {
     "price": 5.2,
@@ -178,7 +178,7 @@
     "change_pct": 4.42,
     "prev_close": 4.98,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "APPL03": {
     "price": 3.08,
@@ -192,7 +192,7 @@
     "change_pct": 8.45,
     "prev_close": 2.84,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "ASEMI24": {
     "price": 3.84,
@@ -206,7 +206,7 @@
     "change_pct": -3.52,
     "prev_close": 3.98,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "ASICS23": {
     "price": 2.82,
@@ -219,7 +219,7 @@
     "change_pct": 1.44,
     "prev_close": 2.78,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "ASML01": {
     "price": 43.75,
@@ -233,49 +233,49 @@
     "change_pct": -2.23,
     "prev_close": 44.75,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "ASTS03": {
-    "price": 4.04,
+    "price": 4.02,
     "prices": [
       3.22,
       3.56,
       3.74,
       4.22,
-      4.04
+      4.02
     ],
-    "change_pct": -4.27,
+    "change_pct": -4.74,
     "prev_close": 4.22,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "AVGO80": {
-    "price": 2.76,
+    "price": 2.74,
     "prices": [
       2.74,
       2.72,
       2.74,
       2.78,
-      2.76
+      2.74
     ],
-    "change_pct": -0.72,
+    "change_pct": -1.44,
     "prev_close": 2.78,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "AXP06": {
-    "price": 2.56,
+    "price": 2.58,
     "prices": [
       2.52,
       2.56,
       2.56,
       2.56,
-      2.56
+      2.58
     ],
-    "change_pct": 0.0,
+    "change_pct": 0.78,
     "prev_close": 2.56,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "BABA80": {
     "price": 5.05,
@@ -289,7 +289,7 @@
     "change_pct": -1.94,
     "prev_close": 5.15,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "BAC03": {
     "price": 3.36,
@@ -303,21 +303,21 @@
     "change_pct": -1.75,
     "prev_close": 3.42,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "BDX06": {
-    "price": 1.63,
+    "price": 1.62,
     "prices": [
       1.61,
       1.6,
       1.6,
       1.61,
-      1.63
+      1.62
     ],
-    "change_pct": 1.24,
+    "change_pct": 0.62,
     "prev_close": 1.61,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "BIDU80": {
     "price": 5.15,
@@ -331,21 +331,21 @@
     "change_pct": -2.83,
     "prev_close": 5.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "BILIBILI01": {
-    "price": 2.62,
+    "price": 2.6,
     "prices": [
       2.74,
       2.78,
       2.74,
       2.7,
-      2.62
+      2.6
     ],
-    "change_pct": -2.96,
+    "change_pct": -3.7,
     "prev_close": 2.7,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "BIREN23": {
     "price": 8.9,
@@ -359,7 +359,7 @@
     "change_pct": 1.14,
     "prev_close": 8.8,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "BKNG80": {
     "price": 2.76,
@@ -373,7 +373,7 @@
     "change_pct": 2.99,
     "prev_close": 2.68,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "BLK06": {
     "price": 3.5,
@@ -387,7 +387,7 @@
     "change_pct": 0.57,
     "prev_close": 3.48,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "BOEING80": {
     "price": 7.3,
@@ -401,7 +401,7 @@
     "change_pct": 2.1,
     "prev_close": 7.15,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "BONDAS19": {
     "price": 6.45,
@@ -414,7 +414,7 @@
     "change_pct": -0.77,
     "prev_close": 6.5,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "BRKB80": {
     "price": 1.58,
@@ -428,7 +428,7 @@
     "change_pct": 0.0,
     "prev_close": 1.58,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "BYDCOM80": {
     "price": 0.38,
@@ -442,7 +442,7 @@
     "change_pct": 0.0,
     "prev_close": 0.38,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CAMBRI80": {
     "price": 6.6,
@@ -456,21 +456,21 @@
     "change_pct": 3.94,
     "prev_close": 6.35,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CATL80": {
-    "price": 28.75,
+    "price": 29.0,
     "prices": [
       28.75,
       28.75,
       27.75,
       29.25,
-      28.75
+      29.0
     ],
-    "change_pct": -1.71,
+    "change_pct": -0.85,
     "prev_close": 29.25,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CCJ23": {
     "price": 2.18,
@@ -484,7 +484,7 @@
     "change_pct": -0.91,
     "prev_close": 2.2,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CEG23": {
     "price": 2.36,
@@ -498,7 +498,7 @@
     "change_pct": -4.07,
     "prev_close": 2.46,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CHHONGQ19": {
     "price": 12.1,
@@ -512,7 +512,7 @@
     "change_pct": -5.47,
     "prev_close": 12.8,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CHMOBILE23": {
     "price": 2.7,
@@ -526,7 +526,7 @@
     "change_pct": 0.75,
     "prev_close": 2.68,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CHNXT5023": {
     "price": 9.2,
@@ -540,7 +540,7 @@
     "change_pct": -1.08,
     "prev_close": 9.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CMBANK23": {
     "price": 2.14,
@@ -554,7 +554,7 @@
     "change_pct": -0.93,
     "prev_close": 2.16,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CME03": {
     "price": 3.1,
@@ -567,21 +567,21 @@
     "change_pct": -2.52,
     "prev_close": 3.18,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CN01": {
-    "price": 24.3,
+    "price": 24.4,
     "prices": [
       24.1,
       24.2,
       24.3,
       24.3,
-      24.3
+      24.4
     ],
-    "change_pct": 0.0,
+    "change_pct": 0.41,
     "prev_close": 24.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CN23": {
     "price": 6.15,
@@ -595,7 +595,7 @@
     "change_pct": -0.81,
     "prev_close": 6.2,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CNBIO24": {
     "price": 1.34,
@@ -609,7 +609,7 @@
     "change_pct": -1.47,
     "prev_close": 1.36,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CNEV24": {
     "price": 2.4,
@@ -623,7 +623,7 @@
     "change_pct": -0.83,
     "prev_close": 2.42,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CNRE80": {
     "price": 2.38,
@@ -637,7 +637,7 @@
     "change_pct": 0.85,
     "prev_close": 2.36,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CNROBOAI23": {
     "price": 2.78,
@@ -651,7 +651,7 @@
     "change_pct": -2.8,
     "prev_close": 2.86,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CNSEMI23": {
     "price": 4.06,
@@ -665,7 +665,7 @@
     "change_pct": 0.0,
     "prev_close": 4.06,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CNSTAR5023": {
     "price": 9.05,
@@ -678,63 +678,63 @@
     "change_pct": -3.21,
     "prev_close": 9.35,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CNTECH01": {
-    "price": 25.75,
+    "price": 25.5,
     "prices": [
       26.0,
       26.0,
       26.25,
       26.0,
-      25.75
+      25.5
     ],
-    "change_pct": -0.96,
+    "change_pct": -1.92,
     "prev_close": 26.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "COIN80": {
-    "price": 5.6,
+    "price": 5.55,
     "prices": [
       6.35,
       6.2,
       6.15,
       5.95,
-      5.6
+      5.55
     ],
-    "change_pct": -5.88,
+    "change_pct": -6.72,
     "prev_close": 5.95,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "COSTCO19": {
-    "price": 33.0,
+    "price": 33.25,
     "prices": [
       34.5,
       33.75,
       33.5,
       32.75,
-      33.0
+      33.25
     ],
-    "change_pct": 0.76,
+    "change_pct": 1.53,
     "prev_close": 32.75,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CRM80": {
-    "price": 5.75,
+    "price": 5.7,
     "prices": [
       5.85,
       5.95,
       5.9,
       5.85,
-      5.75
+      5.7
     ],
-    "change_pct": -1.71,
+    "change_pct": -2.56,
     "prev_close": 5.85,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CRSP03": {
     "price": 3.36,
@@ -747,35 +747,35 @@
     "change_pct": 0.0,
     "prev_close": 3.36,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CRWD80": {
-    "price": 21.1,
+    "price": 21.0,
     "prices": [
       21.2,
       22.0,
       21.5,
       21.1,
-      21.1
+      21.0
     ],
-    "change_pct": 0.0,
+    "change_pct": -0.47,
     "prev_close": 21.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CRWV03": {
-    "price": 3.36,
+    "price": 3.34,
     "prices": [
       3.6,
       3.52,
       3.52,
       3.5,
-      3.36
+      3.34
     ],
-    "change_pct": -4.0,
+    "change_pct": -4.57,
     "prev_close": 3.5,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CSCO06": {
     "price": 4.9,
@@ -789,7 +789,7 @@
     "change_pct": 1.24,
     "prev_close": 4.84,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "CYPC80": {
     "price": 13.2,
@@ -803,7 +803,7 @@
     "change_pct": 1.54,
     "prev_close": 13.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "DASH03": {
     "price": 2.6,
@@ -817,7 +817,7 @@
     "change_pct": 3.17,
     "prev_close": 2.52,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "DBS19": {
     "price": 15.9,
@@ -831,7 +831,7 @@
     "change_pct": -1.24,
     "prev_close": 16.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "DDOG19": {
     "price": 7.6,
@@ -845,7 +845,7 @@
     "change_pct": 4.11,
     "prev_close": 7.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "DELL19": {
     "price": 10.3,
@@ -859,21 +859,21 @@
     "change_pct": 0.0,
     "prev_close": 10.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "DISCO24": {
-    "price": 0.93,
+    "price": 0.92,
     "prices": [
       0.95,
       1.03,
       1.03,
       0.96,
-      0.93
+      0.92
     ],
-    "change_pct": -3.12,
+    "change_pct": -4.17,
     "prev_close": 0.96,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "DISNEY19": {
     "price": 17.0,
@@ -887,7 +887,7 @@
     "change_pct": 0.0,
     "prev_close": 17.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "DUOL06": {
     "price": 2.2,
@@ -901,21 +901,21 @@
     "change_pct": 1.85,
     "prev_close": 2.16,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "E1VFVN3001": {
-    "price": 44.0,
+    "price": 44.25,
     "prices": [
       43.75,
       44.25,
       44.0,
       44.0,
-      44.0
+      44.25
     ],
-    "change_pct": 0.0,
+    "change_pct": 0.57,
     "prev_close": 44.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "EOSE03": {
     "price": 1.38,
@@ -929,21 +929,21 @@
     "change_pct": -4.83,
     "prev_close": 1.45,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "ESTEE80": {
-    "price": 0.99,
+    "price": 0.98,
     "prices": [
       0.94,
       0.95,
       0.96,
       0.94,
-      0.99
+      0.98
     ],
-    "change_pct": 5.32,
+    "change_pct": 4.26,
     "prev_close": 0.94,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "EXPE06": {
     "price": 2.92,
@@ -957,7 +957,7 @@
     "change_pct": -0.5,
     "prev_close": 2.93,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "FANUC23": {
     "price": 2.98,
@@ -971,7 +971,7 @@
     "change_pct": 0.68,
     "prev_close": 2.96,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "FCX23": {
     "price": 2.58,
@@ -985,7 +985,7 @@
     "change_pct": -2.27,
     "prev_close": 2.64,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "FERRARI80": {
     "price": 1.09,
@@ -999,7 +999,7 @@
     "change_pct": -0.91,
     "prev_close": 1.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "FPTVN19": {
     "price": 9.05,
@@ -1013,7 +1013,7 @@
     "change_pct": -1.38,
     "prev_close": 9.18,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "FUEVFVND01": {
     "price": 45.0,
@@ -1027,7 +1027,7 @@
     "change_pct": 0.56,
     "prev_close": 44.75,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "GAC03": {
     "price": 2.14,
@@ -1041,21 +1041,21 @@
     "change_pct": -1.83,
     "prev_close": 2.18,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "GANFENG23": {
-    "price": 2.66,
+    "price": 2.68,
     "prices": [
       2.92,
       2.92,
       2.82,
       2.78,
-      2.66
+      2.68
     ],
-    "change_pct": -4.32,
+    "change_pct": -3.6,
     "prev_close": 2.78,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "GASVN11": {
     "price": 4.14,
@@ -1069,7 +1069,7 @@
     "change_pct": 2.48,
     "prev_close": 4.04,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "GDS23": {
     "price": 1.86,
@@ -1083,7 +1083,7 @@
     "change_pct": -3.12,
     "prev_close": 1.92,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "GEELY80": {
     "price": 7.85,
@@ -1097,7 +1097,7 @@
     "change_pct": -2.48,
     "prev_close": 8.05,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "GEV80": {
     "price": 33.5,
@@ -1111,7 +1111,7 @@
     "change_pct": -5.63,
     "prev_close": 35.5,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "GIGA23": {
     "price": 11.4,
@@ -1125,35 +1125,35 @@
     "change_pct": -1.72,
     "prev_close": 11.6,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "GOLD03": {
-    "price": 3.3,
+    "price": 3.32,
     "prices": [
       3.42,
       3.46,
       3.42,
       3.38,
-      3.3
+      3.32
     ],
-    "change_pct": -2.37,
+    "change_pct": -1.78,
     "prev_close": 3.38,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "GOLD19": {
-    "price": 13.3,
+    "price": 13.2,
     "prices": [
       13.7,
       13.6,
       13.6,
       13.5,
-      13.3
+      13.2
     ],
-    "change_pct": -1.48,
+    "change_pct": -2.22,
     "prev_close": 13.5,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "GOLDUS80": {
     "price": 13.2,
@@ -1167,21 +1167,21 @@
     "change_pct": -2.22,
     "prev_close": 13.5,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "GOOG80": {
-    "price": 6.3,
+    "price": 6.25,
     "prices": [
       6.35,
       6.3,
       6.2,
       6.25,
-      6.3
+      6.25
     ],
-    "change_pct": 0.8,
+    "change_pct": 0.0,
     "prev_close": 6.25,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "GOOGL01": {
     "price": 37.25,
@@ -1195,7 +1195,7 @@
     "change_pct": 0.0,
     "prev_close": 37.25,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "GRAB80": {
     "price": 11.8,
@@ -1209,7 +1209,7 @@
     "change_pct": 0.85,
     "prev_close": 11.7,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "GSEMI24": {
     "price": 2.44,
@@ -1223,7 +1223,7 @@
     "change_pct": -4.69,
     "prev_close": 2.56,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "GSUS06": {
     "price": 4.68,
@@ -1237,7 +1237,7 @@
     "change_pct": 0.86,
     "prev_close": 4.64,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "HAIERS19": {
     "price": 8.05,
@@ -1251,7 +1251,7 @@
     "change_pct": -2.42,
     "prev_close": 8.25,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "HANSOH19": {
     "price": 5.4,
@@ -1265,7 +1265,7 @@
     "change_pct": -4.42,
     "prev_close": 5.65,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "HERMES80": {
     "price": 6.25,
@@ -1279,21 +1279,21 @@
     "change_pct": -0.79,
     "prev_close": 6.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "HIMS03": {
-    "price": 4.08,
+    "price": 4.06,
     "prices": [
       3.92,
       3.84,
       3.92,
       3.98,
-      4.08
+      4.06
     ],
-    "change_pct": 2.51,
+    "change_pct": 2.01,
     "prev_close": 3.98,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "HITACHI24": {
     "price": 1.32,
@@ -1307,7 +1307,7 @@
     "change_pct": 3.13,
     "prev_close": 1.28,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "HK01": {
     "price": 21.0,
@@ -1321,7 +1321,7 @@
     "change_pct": -1.41,
     "prev_close": 21.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "HKCE01": {
     "price": 23.8,
@@ -1335,7 +1335,7 @@
     "change_pct": -0.83,
     "prev_close": 24.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "HKEX23": {
     "price": 2.14,
@@ -1349,7 +1349,7 @@
     "change_pct": 0.94,
     "prev_close": 2.12,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "HKTECH13": {
     "price": 4.02,
@@ -1363,7 +1363,7 @@
     "change_pct": -0.99,
     "prev_close": 4.06,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "HONDA19": {
     "price": 2.96,
@@ -1377,7 +1377,7 @@
     "change_pct": 2.07,
     "prev_close": 2.9,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "HOOD80": {
     "price": 2.48,
@@ -1391,7 +1391,7 @@
     "change_pct": 1.64,
     "prev_close": 2.44,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "HORIZON23": {
     "price": 1.48,
@@ -1405,7 +1405,7 @@
     "change_pct": -5.73,
     "prev_close": 1.57,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "HPG19": {
     "price": 3.02,
@@ -1413,12 +1413,13 @@
       3.1,
       3.04,
       3.02,
+      3.02,
       3.02
     ],
     "change_pct": 0.0,
     "prev_close": 3.02,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "HSHD23": {
     "price": 6.6,
@@ -1432,35 +1433,35 @@
     "change_pct": -2.22,
     "prev_close": 6.75,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "HUAHONG23": {
-    "price": 10.0,
+    "price": 10.2,
     "prices": [
       7.7,
       8.6,
       8.55,
       9.05,
-      10.0
+      10.2
     ],
-    "change_pct": 10.5,
+    "change_pct": 12.71,
     "prev_close": 9.05,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "IBM06": {
-    "price": 3.3,
+    "price": 3.34,
     "prices": [
       3.5,
       3.44,
       3.36,
       3.28,
-      3.3
+      3.34
     ],
-    "change_pct": 0.61,
+    "change_pct": 1.83,
     "prev_close": 3.28,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "ICBC06": {
     "price": 2.74,
@@ -1474,7 +1475,7 @@
     "change_pct": -2.84,
     "prev_close": 2.82,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "IFLYTEK80": {
     "price": 2.34,
@@ -1488,7 +1489,7 @@
     "change_pct": -2.5,
     "prev_close": 2.4,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "INDIA01": {
     "price": 12.9,
@@ -1502,7 +1503,7 @@
     "change_pct": -1.53,
     "prev_close": 13.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "INDIAESG19": {
     "price": 4.0,
@@ -1516,7 +1517,7 @@
     "change_pct": -0.5,
     "prev_close": 4.02,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "INTEL03": {
     "price": 7.7,
@@ -1530,7 +1531,7 @@
     "change_pct": -3.14,
     "prev_close": 7.95,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "IONQ03": {
     "price": 4.1,
@@ -1544,21 +1545,21 @@
     "change_pct": 0.0,
     "prev_close": 4.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "ISRG01": {
-    "price": 3.04,
+    "price": 3.06,
     "prices": [
       3.22,
       3.2,
       3.22,
       3.18,
-      3.04
+      3.06
     ],
-    "change_pct": -4.4,
+    "change_pct": -3.77,
     "prev_close": 3.18,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "ITOCHU19": {
     "price": 6.65,
@@ -1572,7 +1573,7 @@
     "change_pct": 0.76,
     "prev_close": 6.6,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "JAP03": {
     "price": 3.58,
@@ -1585,7 +1586,7 @@
     "change_pct": -1.65,
     "prev_close": 3.64,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "JAPAN10001": {
     "price": 28.25,
@@ -1599,7 +1600,7 @@
     "change_pct": -3.42,
     "prev_close": 29.25,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "JAPAN13": {
     "price": 5.55,
@@ -1613,7 +1614,7 @@
     "change_pct": 0.91,
     "prev_close": 5.5,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "JD80": {
     "price": 4.7,
@@ -1627,7 +1628,7 @@
     "change_pct": -2.89,
     "prev_close": 4.84,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "JDHEAL19": {
     "price": 3.2,
@@ -1641,7 +1642,7 @@
     "change_pct": -3.61,
     "prev_close": 3.32,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "JEPI19": {
     "price": 6.2,
@@ -1655,7 +1656,7 @@
     "change_pct": 0.81,
     "prev_close": 6.15,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "JGRO19": {
     "price": 10.7,
@@ -1669,7 +1670,7 @@
     "change_pct": 0.0,
     "prev_close": 10.7,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "JLMAG80": {
     "price": 8.2,
@@ -1683,21 +1684,21 @@
     "change_pct": -1.2,
     "prev_close": 8.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "JNJ03": {
-    "price": 3.8,
+    "price": 3.78,
     "prices": [
       3.78,
       3.84,
       3.86,
       3.76,
-      3.8
+      3.78
     ],
-    "change_pct": 1.06,
+    "change_pct": 0.53,
     "prev_close": 3.76,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "JPANIME24": {
     "price": 1.25,
@@ -1710,7 +1711,7 @@
     "change_pct": 0.81,
     "prev_close": 1.24,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "JPMUS06": {
     "price": 3.28,
@@ -1724,7 +1725,7 @@
     "change_pct": -1.8,
     "prev_close": 3.34,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "JPROBOAI24": {
     "price": 1.47,
@@ -1738,7 +1739,7 @@
     "change_pct": -1.34,
     "prev_close": 1.49,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "JPSEMI24": {
     "price": 1.38,
@@ -1752,7 +1753,7 @@
     "change_pct": -2.82,
     "prev_close": 1.42,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "JTEK19": {
     "price": 11.5,
@@ -1766,21 +1767,21 @@
     "change_pct": -1.71,
     "prev_close": 11.7,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "KEYENCE23": {
-    "price": 2.74,
+    "price": 2.72,
     "prices": [
       2.92,
       2.9,
       2.8,
       2.66,
-      2.74
+      2.72
     ],
-    "change_pct": 3.01,
+    "change_pct": 2.26,
     "prev_close": 2.66,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "KINGSOFT23": {
     "price": 1.46,
@@ -1794,21 +1795,21 @@
     "change_pct": 1.39,
     "prev_close": 1.44,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "KIOXIA23": {
-    "price": 7.6,
+    "price": 7.45,
     "prices": [
       7.5,
       8.5,
       8.1,
       7.95,
-      7.6
+      7.45
     ],
-    "change_pct": -4.4,
+    "change_pct": -6.29,
     "prev_close": 7.95,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "KO80": {
     "price": 2.68,
@@ -1822,7 +1823,7 @@
     "change_pct": 1.52,
     "prev_close": 2.64,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "KONAMI24": {
     "price": 1.05,
@@ -1836,7 +1837,7 @@
     "change_pct": -2.78,
     "prev_close": 1.08,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "KUAISH80": {
     "price": 1.88,
@@ -1850,7 +1851,7 @@
     "change_pct": -1.05,
     "prev_close": 1.9,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "LENOVO13": {
     "price": 4.1,
@@ -1864,21 +1865,21 @@
     "change_pct": 3.02,
     "prev_close": 3.98,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "LLY80": {
-    "price": 1.77,
+    "price": 1.76,
     "prices": [
       1.7,
       1.77,
       1.77,
       1.75,
-      1.77
+      1.76
     ],
-    "change_pct": 1.14,
+    "change_pct": 0.57,
     "prev_close": 1.75,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "LOREAL80": {
     "price": 1.45,
@@ -1892,7 +1893,7 @@
     "change_pct": 0.69,
     "prev_close": 1.44,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "LPGOLD13": {
     "price": 2.12,
@@ -1906,49 +1907,49 @@
     "change_pct": -4.5,
     "prev_close": 2.22,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "LRCX23": {
-    "price": 4.0,
+    "price": 3.98,
     "prices": [
       3.86,
       3.88,
       3.94,
       4.1,
-      4.0
+      3.98
     ],
-    "change_pct": -2.44,
+    "change_pct": -2.93,
     "prev_close": 4.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "LULU06": {
-    "price": 2.16,
+    "price": 2.14,
     "prices": [
       2.08,
       2.08,
       2.06,
       2.1,
-      2.16
+      2.14
     ],
-    "change_pct": 2.86,
+    "change_pct": 1.9,
     "prev_close": 2.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "LVMH01": {
-    "price": 11.6,
+    "price": 11.5,
     "prices": [
       11.2,
       11.3,
       11.2,
       11.5,
-      11.6
+      11.5
     ],
-    "change_pct": 0.87,
+    "change_pct": 0.0,
     "prev_close": 11.5,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "MA80": {
     "price": 1.63,
@@ -1962,7 +1963,7 @@
     "change_pct": 1.24,
     "prev_close": 1.61,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "MAOGEP80": {
     "price": 2.38,
@@ -1976,7 +1977,7 @@
     "change_pct": -2.46,
     "prev_close": 2.44,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "MEITUAN80": {
     "price": 3.04,
@@ -1990,49 +1991,49 @@
     "change_pct": -6.75,
     "prev_close": 3.26,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "MELI06": {
-    "price": 2.24,
+    "price": 2.22,
     "prices": [
       2.2,
       2.2,
       2.2,
       2.14,
-      2.24
+      2.22
     ],
-    "change_pct": 4.67,
+    "change_pct": 3.74,
     "prev_close": 2.14,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "META80": {
-    "price": 2.58,
+    "price": 2.56,
     "prices": [
       2.48,
       2.5,
       2.5,
       2.48,
-      2.58
+      2.56
     ],
-    "change_pct": 4.03,
+    "change_pct": 3.23,
     "prev_close": 2.48,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "MICRON80": {
-    "price": 29.0,
+    "price": 29.25,
     "prices": [
       24.5,
       25.25,
       26.0,
       30.75,
-      29.0
+      29.25
     ],
-    "change_pct": -5.69,
+    "change_pct": -4.88,
     "prev_close": 30.75,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "MIDEA80": {
     "price": 3.58,
@@ -2046,7 +2047,7 @@
     "change_pct": -1.65,
     "prev_close": 3.64,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "MITSU19": {
     "price": 7.85,
@@ -2060,7 +2061,7 @@
     "change_pct": -2.48,
     "prev_close": 8.05,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "MIXUE80": {
     "price": 10.8,
@@ -2073,7 +2074,7 @@
     "change_pct": -1.82,
     "prev_close": 11.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "MNSO80": {
     "price": 10.1,
@@ -2087,7 +2088,7 @@
     "change_pct": 0.0,
     "prev_close": 10.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "MNST06": {
     "price": 4.18,
@@ -2101,7 +2102,7 @@
     "change_pct": 2.96,
     "prev_close": 4.06,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "MONTAGE80": {
     "price": 19.4,
@@ -2115,7 +2116,7 @@
     "change_pct": 1.04,
     "prev_close": 19.2,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "MOUTAI80": {
     "price": 6.25,
@@ -2129,7 +2130,7 @@
     "change_pct": -0.79,
     "prev_close": 6.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "MP80": {
     "price": 20.9,
@@ -2143,7 +2144,7 @@
     "change_pct": -5.0,
     "prev_close": 22.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "MRVL80": {
     "price": 6.25,
@@ -2157,7 +2158,7 @@
     "change_pct": -13.19,
     "prev_close": 7.2,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "MS06": {
     "price": 4.42,
@@ -2171,7 +2172,7 @@
     "change_pct": 0.91,
     "prev_close": 4.38,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "MSFT80": {
     "price": 6.8,
@@ -2185,7 +2186,7 @@
     "change_pct": 0.74,
     "prev_close": 6.75,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "MSN19": {
     "price": 3.2,
@@ -2199,7 +2200,7 @@
     "change_pct": 0.0,
     "prev_close": 3.2,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "MUFG23": {
     "price": 2.48,
@@ -2212,7 +2213,7 @@
     "change_pct": -3.12,
     "prev_close": 2.56,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "MWG19": {
     "price": 10.2,
@@ -2226,7 +2227,7 @@
     "change_pct": 2.0,
     "prev_close": 10.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "NAURA80": {
     "price": 31.25,
@@ -2240,7 +2241,7 @@
     "change_pct": -3.85,
     "prev_close": 32.5,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "NBIS03": {
     "price": 7.4,
@@ -2254,7 +2255,7 @@
     "change_pct": 8.03,
     "prev_close": 6.85,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "NDAQ06": {
     "price": 2.98,
@@ -2268,21 +2269,21 @@
     "change_pct": -0.67,
     "prev_close": 3.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "NDX01": {
-    "price": 25.25,
+    "price": 25.5,
     "prices": [
       25.0,
       25.25,
       25.25,
       25.75,
-      25.25
+      25.5
     ],
-    "change_pct": -1.94,
+    "change_pct": -0.97,
     "prev_close": 25.75,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "NEE80": {
     "price": 2.88,
@@ -2296,7 +2297,7 @@
     "change_pct": 0.0,
     "prev_close": 2.88,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "NEM23": {
     "price": 2.14,
@@ -2310,7 +2311,7 @@
     "change_pct": -5.31,
     "prev_close": 2.26,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "NET03": {
     "price": 3.46,
@@ -2324,21 +2325,21 @@
     "change_pct": -1.7,
     "prev_close": 3.52,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "NETEASE80": {
-    "price": 7.95,
+    "price": 7.9,
     "prices": [
       7.6,
       7.7,
       7.9,
       8.1,
-      7.95
+      7.9
     ],
-    "change_pct": -1.85,
+    "change_pct": -2.47,
     "prev_close": 8.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "NFLX80": {
     "price": 2.86,
@@ -2352,35 +2353,35 @@
     "change_pct": 0.7,
     "prev_close": 2.84,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "NIKE80": {
-    "price": 0.75,
+    "price": 0.74,
     "prices": [
       0.73,
       0.73,
       0.72,
       0.73,
-      0.75
+      0.74
     ],
-    "change_pct": 2.74,
+    "change_pct": 1.37,
     "prev_close": 0.73,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "NIKKEI80": {
-    "price": 13.7,
+    "price": 13.8,
     "prices": [
       13.5,
       13.9,
       13.9,
       14.0,
-      13.7
+      13.8
     ],
-    "change_pct": -2.14,
+    "change_pct": -1.43,
     "prev_close": 14.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "NINTENDO23": {
     "price": 1.27,
@@ -2394,7 +2395,7 @@
     "change_pct": -2.31,
     "prev_close": 1.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "NONGFU80": {
     "price": 1.76,
@@ -2408,77 +2409,77 @@
     "change_pct": -2.22,
     "prev_close": 1.8,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "NOVOB80": {
-    "price": 1.49,
+    "price": 1.48,
     "prices": [
       1.45,
       1.48,
       1.47,
       1.46,
-      1.49
+      1.48
     ],
-    "change_pct": 2.05,
+    "change_pct": 1.37,
     "prev_close": 1.46,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "NOW19": {
-    "price": 3.4,
+    "price": 3.42,
     "prices": [
       3.34,
       3.4,
       3.36,
       3.24,
-      3.4
+      3.42
     ],
-    "change_pct": 4.94,
+    "change_pct": 5.56,
     "prev_close": 3.24,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "NVDA80": {
-    "price": 34.5,
+    "price": 34.25,
     "prices": [
       36.0,
       35.25,
       35.25,
       35.0,
-      34.5
+      34.25
     ],
-    "change_pct": -1.43,
+    "change_pct": -2.14,
     "prev_close": 35.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "NVTS03": {
-    "price": 9.2,
+    "price": 9.3,
     "prices": [
       8.1,
       10.6,
       10.3,
       10.6,
-      9.2
+      9.3
     ],
-    "change_pct": -13.21,
+    "change_pct": -12.26,
     "prev_close": 10.6,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "OIL24": {
-    "price": 18.5,
+    "price": 18.6,
     "prices": [
       19.8,
       19.7,
       19.7,
       18.4,
-      18.5
+      18.6
     ],
-    "change_pct": 0.54,
+    "change_pct": 1.09,
     "prev_close": 18.4,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "ONON03": {
     "price": 2.6,
@@ -2492,7 +2493,7 @@
     "change_pct": -1.52,
     "prev_close": 2.64,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "ORCL01": {
     "price": 3.88,
@@ -2506,7 +2507,7 @@
     "change_pct": -1.02,
     "prev_close": 3.92,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "PANW80": {
     "price": 8.15,
@@ -2520,7 +2521,7 @@
     "change_pct": -0.61,
     "prev_close": 8.2,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "PEP80": {
     "price": 0.97,
@@ -2534,7 +2535,7 @@
     "change_pct": 1.04,
     "prev_close": 0.96,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "PETROCN80": {
     "price": 4.46,
@@ -2548,7 +2549,7 @@
     "change_pct": 0.45,
     "prev_close": 4.44,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "PFIZER19": {
     "price": 17.2,
@@ -2562,21 +2563,21 @@
     "change_pct": 1.78,
     "prev_close": 16.9,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "PINGAN80": {
-    "price": 2.46,
+    "price": 2.44,
     "prices": [
       2.56,
       2.58,
       2.52,
       2.52,
-      2.46
+      2.44
     ],
-    "change_pct": -2.38,
+    "change_pct": -3.17,
     "prev_close": 2.52,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "PLTR01": {
     "price": 3.94,
@@ -2590,7 +2591,7 @@
     "change_pct": -1.5,
     "prev_close": 4.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "POPMART80": {
     "price": 6.65,
@@ -2604,7 +2605,7 @@
     "change_pct": 3.91,
     "prev_close": 6.4,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "PYPL06": {
     "price": 2.84,
@@ -2618,7 +2619,7 @@
     "change_pct": -2.07,
     "prev_close": 2.9,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "QCOM06": {
     "price": 3.7,
@@ -2632,7 +2633,7 @@
     "change_pct": -9.76,
     "prev_close": 4.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "QQQM19": {
     "price": 19.6,
@@ -2646,7 +2647,7 @@
     "change_pct": 0.0,
     "prev_close": 19.6,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "RBLX06": {
     "price": 1.24,
@@ -2660,7 +2661,7 @@
     "change_pct": 0.81,
     "prev_close": 1.23,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "REMX03": {
     "price": 3.2,
@@ -2674,35 +2675,35 @@
     "change_pct": 0.0,
     "prev_close": 3.2,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "RGTI03": {
-    "price": 3.86,
+    "price": 3.84,
     "prices": [
       3.82,
       4.6,
       4.32,
       4.0,
-      3.86
+      3.84
     ],
-    "change_pct": -3.5,
+    "change_pct": -4.0,
     "prev_close": 4.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "RKLB80": {
-    "price": 4.74,
+    "price": 4.66,
     "prices": [
       4.2,
       4.54,
       4.7,
       5.1,
-      4.74
+      4.66
     ],
-    "change_pct": -7.06,
+    "change_pct": -8.63,
     "prev_close": 5.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SANOFI80": {
     "price": 2.94,
@@ -2716,7 +2717,7 @@
     "change_pct": 0.68,
     "prev_close": 2.92,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SANRIO80": {
     "price": 8.65,
@@ -2729,7 +2730,7 @@
     "change_pct": -1.14,
     "prev_close": 8.75,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SBUX80": {
     "price": 1.67,
@@ -2743,7 +2744,7 @@
     "change_pct": 0.6,
     "prev_close": 1.66,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SEAGATE23": {
     "price": 5.85,
@@ -2757,7 +2758,7 @@
     "change_pct": 0.0,
     "prev_close": 5.85,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SEMB19": {
     "price": 5.35,
@@ -2771,7 +2772,7 @@
     "change_pct": 1.9,
     "prev_close": 5.25,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SENSE23": {
     "price": 1.73,
@@ -2785,7 +2786,7 @@
     "change_pct": -4.42,
     "prev_close": 1.81,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SGX19": {
     "price": 5.5,
@@ -2799,7 +2800,7 @@
     "change_pct": -2.65,
     "prev_close": 5.65,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SHOP06": {
     "price": 1.76,
@@ -2813,7 +2814,7 @@
     "change_pct": 2.92,
     "prev_close": 1.71,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SIA19": {
     "price": 17.1,
@@ -2827,21 +2828,21 @@
     "change_pct": 0.59,
     "prev_close": 17.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SIL03": {
-    "price": 2.88,
+    "price": 2.84,
     "prices": [
       2.92,
       2.98,
       2.92,
       2.96,
-      2.88
+      2.84
     ],
-    "change_pct": -2.7,
+    "change_pct": -4.05,
     "prev_close": 2.96,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SINGTEL80": {
     "price": 11.1,
@@ -2855,7 +2856,7 @@
     "change_pct": -4.31,
     "prev_close": 11.6,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SINOBIO19": {
     "price": 4.04,
@@ -2869,7 +2870,7 @@
     "change_pct": -3.35,
     "prev_close": 4.18,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SMCI03": {
     "price": 2.46,
@@ -2883,7 +2884,7 @@
     "change_pct": 0.0,
     "prev_close": 2.46,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SMFG19": {
     "price": 12.2,
@@ -2897,7 +2898,7 @@
     "change_pct": -0.81,
     "prev_close": 12.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SMIC01": {
     "price": 5.3,
@@ -2911,35 +2912,35 @@
     "change_pct": 6.0,
     "prev_close": 5.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SNDK80": {
-    "price": 5.0,
+    "price": 4.98,
     "prices": [
       4.94,
       5.05,
       4.96,
       5.25,
-      5.0
+      4.98
     ],
-    "change_pct": -4.76,
+    "change_pct": -5.14,
     "prev_close": 5.25,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SNOW23": {
-    "price": 3.56,
+    "price": 3.54,
     "prices": [
       2.5,
       2.66,
       2.58,
       2.64,
-      3.56
+      3.54
     ],
-    "change_pct": 34.85,
+    "change_pct": 34.09,
     "prev_close": 2.64,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SOFTBANK80": {
     "price": 14.3,
@@ -2953,7 +2954,7 @@
     "change_pct": -4.67,
     "prev_close": 15.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SONY80": {
     "price": 3.54,
@@ -2967,7 +2968,7 @@
     "change_pct": -2.21,
     "prev_close": 3.62,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SP50001": {
     "price": 24.9,
@@ -2981,7 +2982,7 @@
     "change_pct": 0.0,
     "prev_close": 24.9,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SP500US80": {
     "price": 2.88,
@@ -2995,21 +2996,21 @@
     "change_pct": -0.69,
     "prev_close": 2.9,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SPBOND80": {
-    "price": 8.4,
+    "price": 8.35,
     "prices": [
       8.3,
       8.45,
       8.35,
       8.4,
-      8.4
+      8.35
     ],
-    "change_pct": 0.0,
+    "change_pct": -0.6,
     "prev_close": 8.4,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SPCOM80": {
     "price": 3.84,
@@ -3023,7 +3024,7 @@
     "change_pct": 2.13,
     "prev_close": 3.76,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SPENGY80": {
     "price": 3.8,
@@ -3037,7 +3038,7 @@
     "change_pct": 1.6,
     "prev_close": 3.74,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SPFIN80": {
     "price": 16.9,
@@ -3051,7 +3052,7 @@
     "change_pct": 0.6,
     "prev_close": 16.8,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SPHLTH80": {
     "price": 4.9,
@@ -3065,7 +3066,7 @@
     "change_pct": 1.24,
     "prev_close": 4.84,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SPOT06": {
     "price": 2.08,
@@ -3079,7 +3080,7 @@
     "change_pct": -2.8,
     "prev_close": 2.14,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SPTECH80": {
     "price": 12.0,
@@ -3093,7 +3094,7 @@
     "change_pct": -1.64,
     "prev_close": 12.2,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "STAR5001": {
     "price": 54.0,
@@ -3107,7 +3108,7 @@
     "change_pct": 0.93,
     "prev_close": 53.5,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "STEG19": {
     "price": 28.0,
@@ -3121,7 +3122,7 @@
     "change_pct": 0.0,
     "prev_close": 28.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SUNNY80": {
     "price": 3.12,
@@ -3134,21 +3135,21 @@
     "change_pct": 0.65,
     "prev_close": 3.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SUSHI23": {
-    "price": 3.2,
+    "price": 3.18,
     "prices": [
       3.34,
       3.16,
       3.24,
       3.12,
-      3.2
+      3.18
     ],
-    "change_pct": 2.56,
+    "change_pct": 1.92,
     "prev_close": 3.12,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "SYNP03": {
     "price": 3.38,
@@ -3162,35 +3163,35 @@
     "change_pct": -4.52,
     "prev_close": 3.54,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "TAIWAN19": {
-    "price": 42.25,
+    "price": 42.0,
     "prices": [
       41.0,
       42.5,
       42.25,
       43.0,
-      42.25
+      42.0
     ],
-    "change_pct": -1.74,
+    "change_pct": -2.33,
     "prev_close": 43.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "TAIWANAI13": {
-    "price": 19.8,
+    "price": 19.7,
     "prices": [
       19.2,
       20.1,
       20.1,
       19.8,
-      19.8
+      19.7
     ],
-    "change_pct": 0.0,
+    "change_pct": -0.51,
     "prev_close": 19.8,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "TAIWANHD13": {
     "price": 31.0,
@@ -3204,7 +3205,7 @@
     "change_pct": 0.0,
     "prev_close": 31.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "TEL80": {
     "price": 10.6,
@@ -3218,7 +3219,7 @@
     "change_pct": -1.85,
     "prev_close": 10.8,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "TENCENT80": {
     "price": 17.7,
@@ -3232,35 +3233,35 @@
     "change_pct": -2.21,
     "prev_close": 18.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "THAIBEV19": {
-    "price": 11.4,
+    "price": 11.5,
     "prices": [
       11.47,
       11.56,
       11.5,
       11.5,
-      11.4
+      11.5
     ],
-    "change_pct": -0.87,
+    "change_pct": 0.0,
     "prev_close": 11.5,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "TME23": {
-    "price": 0.91,
+    "price": 0.9,
     "prices": [
       0.91,
       0.97,
       0.93,
       0.93,
-      0.91
+      0.9
     ],
-    "change_pct": -2.15,
+    "change_pct": -3.23,
     "prev_close": 0.93,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "TOYOTA80": {
     "price": 6.2,
@@ -3274,21 +3275,21 @@
     "change_pct": 0.81,
     "prev_close": 6.15,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "TRIPCOM80": {
-    "price": 1.52,
+    "price": 1.51,
     "prices": [
       1.52,
       1.52,
       1.53,
       1.54,
-      1.52
+      1.51
     ],
-    "change_pct": -1.3,
+    "change_pct": -1.95,
     "prev_close": 1.54,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "TRVUS06": {
     "price": 4.04,
@@ -3302,21 +3303,21 @@
     "change_pct": 2.02,
     "prev_close": 3.96,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "TSLA80": {
-    "price": 2.82,
+    "price": 2.8,
     "prices": [
       2.72,
       2.8,
       2.8,
       2.9,
-      2.82
+      2.8
     ],
-    "change_pct": -2.76,
+    "change_pct": -3.45,
     "prev_close": 2.9,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "UBER06": {
     "price": 2.32,
@@ -3330,21 +3331,21 @@
     "change_pct": 1.75,
     "prev_close": 2.28,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "UBTECH23": {
-    "price": 1.84,
+    "price": 1.83,
     "prices": [
       2.12,
       2.22,
       2.04,
       1.96,
-      1.84
+      1.83
     ],
-    "change_pct": -6.12,
+    "change_pct": -6.63,
     "prev_close": 1.96,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "UNH19": {
     "price": 6.25,
@@ -3358,7 +3359,7 @@
     "change_pct": 2.46,
     "prev_close": 6.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "UNIQLO80": {
     "price": 16.0,
@@ -3372,7 +3373,7 @@
     "change_pct": 0.0,
     "prev_close": 16.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "UOB19": {
     "price": 9.7,
@@ -3386,7 +3387,7 @@
     "change_pct": 0.0,
     "prev_close": 9.7,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "USTR24": {
     "price": 1.18,
@@ -3399,21 +3400,21 @@
     "change_pct": 0.85,
     "prev_close": 1.17,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "VCB19": {
-    "price": 7.95,
+    "price": 7.9,
     "prices": [
       8.0,
       7.95,
       7.95,
       7.95,
-      7.95
+      7.9
     ],
-    "change_pct": 0.0,
+    "change_pct": -0.63,
     "prev_close": 7.95,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "VENTURE19": {
     "price": 4.58,
@@ -3427,7 +3428,7 @@
     "change_pct": -0.87,
     "prev_close": 4.62,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "VHM19": {
     "price": 18.4,
@@ -3441,7 +3442,7 @@
     "change_pct": -1.08,
     "prev_close": 18.6,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "VISA80": {
     "price": 1.35,
@@ -3455,20 +3456,21 @@
     "change_pct": 2.27,
     "prev_close": 1.32,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "VNFIN24": {
-    "price": 1.89,
+    "price": 1.87,
     "prices": [
       1.85,
       1.85,
       1.86,
-      1.89
+      1.89,
+      1.87
     ],
-    "change_pct": 1.61,
-    "prev_close": 1.86,
+    "change_pct": -1.06,
+    "prev_close": 1.89,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "VNM19": {
     "price": 7.45,
@@ -3482,21 +3484,21 @@
     "change_pct": 0.68,
     "prev_close": 7.4,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "VRT23": {
-    "price": 3.04,
+    "price": 3.02,
     "prices": [
       3.2,
       3.16,
       3.28,
       3.16,
-      3.04
+      3.02
     ],
-    "change_pct": -3.8,
+    "change_pct": -4.43,
     "prev_close": 3.16,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "VT03": {
     "price": 3.42,
@@ -3510,7 +3512,7 @@
     "change_pct": -0.58,
     "prev_close": 3.44,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "WMT06": {
     "price": 3.9,
@@ -3524,7 +3526,7 @@
     "change_pct": 0.0,
     "prev_close": 3.9,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "WORLD03": {
     "price": 4.32,
@@ -3538,7 +3540,7 @@
     "change_pct": 0.0,
     "prev_close": 4.32,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "WORLDA01": {
     "price": 5.15,
@@ -3552,7 +3554,7 @@
     "change_pct": 1.98,
     "prev_close": 5.05,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "WUXI06": {
     "price": 3.42,
@@ -3566,7 +3568,7 @@
     "change_pct": -3.39,
     "prev_close": 3.54,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "WUXIAT80": {
     "price": 5.2,
@@ -3580,21 +3582,21 @@
     "change_pct": -2.8,
     "prev_close": 5.35,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "XIAOMI80": {
-    "price": 11.5,
+    "price": 11.6,
     "prices": [
       12.5,
       12.6,
       12.4,
       11.8,
-      11.5
+      11.6
     ],
-    "change_pct": -2.54,
+    "change_pct": -1.69,
     "prev_close": 11.8,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "XPENG03": {
     "price": 2.74,
@@ -3608,21 +3610,21 @@
     "change_pct": 3.79,
     "prev_close": 2.64,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "ZAI23": {
-    "price": 16.0,
+    "price": 15.9,
     "prices": [
       13.1,
       13.7,
       14.3,
       14.7,
-      16.0
+      15.9
     ],
-    "change_pct": 8.84,
+    "change_pct": 8.16,
     "prev_close": 14.7,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "ZIJIN80": {
     "price": 13.5,
@@ -3636,20 +3638,20 @@
     "change_pct": -5.59,
     "prev_close": 14.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   },
   "ZJINNO80": {
-    "price": 5.55,
+    "price": 5.5,
     "prices": [
       5.1,
       5.35,
       5.3,
       5.4,
-      5.55
+      5.5
     ],
-    "change_pct": 2.78,
+    "change_pct": 1.85,
     "prev_close": 5.4,
     "delay_msg": "Delayed",
-    "last_trade_time": "11:26 (28/05)"
+    "last_trade_time": "11:33 (28/05)"
   }
 }
