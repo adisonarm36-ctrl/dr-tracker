@@ -911,20 +911,22 @@
                 if (item.set_price) {
                     let setTrendHtml = "";
                     if (item.set_rich) {
-                        const setSign = item.set_rich.change_pct > 0 ? "+" : "";
-                        const setBgClass = item.set_rich.change_pct >= 0 ? "bg-emerald-950/30 text-emerald-400" : "bg-red-950/30 text-red-400";
+                        const changePct = (item.set_rich.change_pct !== undefined && item.set_rich.change_pct !== null) ? parseFloat(item.set_rich.change_pct) : 0.0;
+                        const setSign = changePct > 0 ? "+" : "";
+                        const setBgClass = changePct >= 0 ? "bg-emerald-950/30 text-emerald-400" : "bg-red-950/30 text-red-400";
+                        const tradeTime = item.set_rich.last_trade_time || "N/A";
                         
                         setTrendHtml = `
                             <div class="flex items-center gap-1.5 mt-1 justify-end">
-                                <span class="px-1.5 py-0.5 rounded text-[9px] font-bold ${setBgClass}">${setSign}${item.set_rich.change_pct.toFixed(2)}%</span>
-                                <span class="text-[9px] text-gray-500 font-mono tracking-tighter" title="เวลาอัปเดตราคาบนกระดาน SET ล่าสุด">SET: ${item.set_rich.last_trade_time}</span>
+                                <span class="px-1.5 py-0.5 rounded text-[9px] font-bold ${setBgClass}">${setSign}${changePct.toFixed(2)}%</span>
+                                <span class="text-[9px] text-gray-500 font-mono tracking-tighter" title="เวลาอัปเดตราคาบนกระดาน SET ล่าสุด">SET: ${tradeTime}</span>
                             </div>
                         `;
                     }
                     
                     setPriceHtml = `
                         <div class="flex flex-col items-end">
-                            <span class="text-emerald-400 text-xl font-mono font-extrabold">${parseFloat(item.set_price).toFixed(2)}</span>
+                            <span class="text-emerald-400 text-xl font-mono font-extrabold">${parseFloat(item.set_price || 0).toFixed(2)}</span>
                             ${setTrendHtml}
                         </div>
                     `;
@@ -939,7 +941,7 @@
                 }
 
                 let premiumHtml = `<span class="text-gray-600 text-xs">-</span>`;
-                if (item.premium_pct !== "" && item.premium_pct !== undefined) {
+                if (item.premium_pct !== "" && item.premium_pct !== undefined && item.premium_pct !== null) {
                     const premVal = parseFloat(item.premium_pct);
                     const sign = premVal > 0 ? "+" : "";
                     const badgeClass = premVal >= 0 
@@ -1000,7 +1002,7 @@
                     </td>
                     
                     <td class="p-3 text-right border-l border-gray-900 align-middle">
-                        <span id="dr-price-${originalIndex}" class="dr-price text-cyan-300 font-mono font-bold text-xl">${parseFloat(item.dr_thb).toFixed(2)}</span>
+                        <span id="dr-price-${originalIndex}" class="dr-price text-cyan-300 font-mono font-bold text-xl">${parseFloat(item.dr_thb || 0).toFixed(2)}</span>
                     </td>
                     
                     <td class="p-3 text-right border-l border-gray-900 align-middle">
@@ -1031,19 +1033,21 @@
                 let sparklineSvg = "";
                 
                 if (activeRichData) {
-                    const bgBadgeClass = activeRichData.change_pct >= 0 ? "bg-emerald-950/40 text-emerald-400" : "bg-red-950/40 text-red-400";
-                    const sign = activeRichData.change_pct > 0 ? "+" : "";
-                    sparklineSvg = createSparkline(activeRichData.prices, activeRichData.change_pct >= 0);
+                    const changePct = (activeRichData.change_pct !== undefined && activeRichData.change_pct !== null) ? parseFloat(activeRichData.change_pct) : 0.0;
+                    const bgBadgeClass = changePct >= 0 ? "bg-emerald-950/40 text-emerald-400" : "bg-red-950/40 text-red-400";
+                    const sign = changePct > 0 ? "+" : "";
+                    sparklineSvg = createSparkline(activeRichData.prices, changePct >= 0);
                     
                     let delayColor = "text-gray-500";
-                    if (activeRichData.delay_msg.includes('Realtime') || activeRichData.delay_msg.includes('Live')) {
+                    const delayMsg = activeRichData.delay_msg || "";
+                    if (delayMsg.includes('Realtime') || delayMsg.includes('Live')) {
                         delayColor = "text-yellow-500";
-                    } else if (activeRichData.delay_msg.includes('Overnight')) {
+                    } else if (delayMsg.includes('Overnight')) {
                         delayColor = "text-purple-400";
                     }
                     
-                    trendBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold ${bgBadgeClass} ml-2 font-mono">${sign}${activeRichData.change_pct.toFixed(2)}%</span>`;
-                    delayHtml = `<span class="${delayColor} text-[9px] uppercase tracking-wider font-semibold font-mono" title="ข้อมูลอัปเดตล่าสุด">${activeRichData.delay_msg}</span>`;
+                    trendBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold ${bgBadgeClass} ml-2 font-mono">${sign}${changePct.toFixed(2)}%</span>`;
+                    delayHtml = `<span class="${delayColor} text-[9px] uppercase tracking-wider font-semibold font-mono" title="ข้อมูลอัปเดตล่าสุด">${delayMsg}</span>`;
                 } else {
                     trendBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-900 text-gray-500 ml-2">ไม่มีข้อมูล</span>`;
                 }
@@ -1051,12 +1055,12 @@
                 let mobileSetPriceHtml = `
                     <div class="flex flex-col items-end text-right">
                         <span class="text-[9px] text-gray-500 font-bold uppercase tracking-wider">ราคาจริงบน SET 🇹🇭</span>
-                        <span class="text-emerald-400 text-lg font-mono font-extrabold mt-0.5">${item.set_price ? parseFloat(item.set_price).toFixed(2) : '-'}</span>
+                        <span class="text-emerald-400 text-lg font-mono font-extrabold mt-0.5">${item.set_price ? parseFloat(item.set_price || 0).toFixed(2) : '-'}</span>
                     </div>
                 `;
                 
                 let mobilePremiumHtml = "";
-                if (item.premium_pct !== "" && item.premium_pct !== undefined) {
+                if (item.premium_pct !== "" && item.premium_pct !== undefined && item.premium_pct !== null) {
                     const premVal = parseFloat(item.premium_pct);
                     const sign = premVal > 0 ? "+" : "";
                     const badgeClass = premVal >= 0 
@@ -1111,7 +1115,7 @@
                                     ราคาอ้างอิง Fair
                                 </span>
                                 <span id="dr-mobile-price-${originalIndex}" class="text-cyan-300 text-lg font-mono font-extrabold mt-0.5">
-                                    ${parseFloat(item.dr_thb).toFixed(2)}
+                                    ${parseFloat(item.dr_thb || 0).toFixed(2)}
                                 </span>
                             </div>
                             
@@ -1205,18 +1209,18 @@
                 
                 const json = await res.json();
                 
-                const isLive = json.status.includes('LIVE');
+                const isLive = json.status && json.status.includes('LIVE');
                 const dotColor = isLive ? 'bg-emerald-400 pulse-green' : 'bg-rose-500 pulse-red';
                 
                 document.getElementById('market-status').innerHTML = 
                     `<span class="inline-block w-2.5 h-2.5 rounded-full ${dotColor} mr-2.5"></span>` +
-                    `สถานะตลาดต่างประเทศ: <span class="${isLive ? 'text-emerald-400' : 'text-rose-500'} font-bold ml-1">${json.status}</span>`;
+                    `สถานะตลาดต่างประเทศ: <span class="${isLive ? 'text-emerald-400' : 'text-rose-500'} font-bold ml-1">${json.status || 'CLOSED'}</span>`;
                 
-                document.getElementById('fx-hkd').innerText = json.fx_hkd.toFixed(4);
-                document.getElementById('fx-usd').innerText = json.fx_usd.toFixed(4);
-                document.getElementById('fx-cny').innerText = json.fx_cny.toFixed(4);
-                document.getElementById('fx-sgd').innerText = json.fx_sgd.toFixed(4);
-                document.getElementById('fx-vnd').innerText = json.fx_vnd.toFixed(4);
+                document.getElementById('fx-hkd').innerText = json.fx_hkd ? json.fx_hkd.toFixed(4) : '-';
+                document.getElementById('fx-usd').innerText = json.fx_usd ? json.fx_usd.toFixed(4) : '-';
+                document.getElementById('fx-cny').innerText = json.fx_cny ? json.fx_cny.toFixed(4) : '-';
+                document.getElementById('fx-sgd').innerText = json.fx_sgd ? json.fx_sgd.toFixed(4) : '-';
+                document.getElementById('fx-vnd').innerText = json.fx_vnd ? json.fx_vnd.toFixed(4) : '-';
                 
                 const now = new Date();
                 document.getElementById('last-updated').innerText = now.toLocaleTimeString('th-TH');
