@@ -514,7 +514,7 @@ def update_movers_background():
             top_movers_cache["is_updating"] = False
 
 @app.get("/api/top_movers")
-def get_top_movers():
+def get_top_movers(force: bool = False):
     import time
     now = time.time()
     
@@ -526,7 +526,15 @@ def get_top_movers():
     # Dynamic cache timing: 15 minutes (900s) on Render to save RAM/CPU, 3 minutes (180s) locally for fast updates!
     is_render = os.environ.get("RENDER") == "true" or "RENDER_SERVICE_ID" in os.environ
     cache_timeout = 900 if is_render else 180
-    is_stale = (now - last_fetched > cache_timeout) or (cached_data is None)
+    
+    is_stale = (now - last_fetched > cache_timeout) or (cached_data is None) or force
+    
+    if force:
+        print("Force refresh requested for top movers. Bypassing cache!")
+        if not is_updating:
+            with cache_lock:
+                top_movers_cache["data"] = None
+                cached_data = None
     
     if is_stale and not is_updating:
         with cache_lock:

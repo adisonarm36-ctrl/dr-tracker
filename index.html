@@ -132,9 +132,12 @@
         <!-- Top Movers Section -->
         <div class="space-y-4">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2">
-                <h2 class="text-xl font-bold text-cyan-400 flex items-center gap-2">
-                    <span>📊</span> ข้อมูลการเคลื่อนไหวสูงสุด (Top Movers)
-                </h2>
+                <div class="flex flex-wrap items-center gap-2">
+                    <h2 class="text-xl font-bold text-cyan-400 flex items-center gap-2">
+                        <span>📊</span> ข้อมูลการเคลื่อนไหวสูงสุด (Top Movers)
+                    </h2>
+                    <span id="movers-last-updated" class="text-[10px] text-cyan-400/70 font-medium bg-cyan-950/40 px-2.5 py-0.5 rounded-lg border border-cyan-800/30 font-mono hidden tracking-tight"></span>
+                </div>
                 
                 <!-- Mobile Market Tabs Switcher (Visible on mobile only, < 1024px) -->
                 <div class="flex lg:hidden bg-slate-950/60 p-1 rounded-2xl border border-gray-850 gap-1 self-start sm:self-auto w-full sm:w-auto">
@@ -427,13 +430,16 @@
             });
         }
 
-        async function fetchTopMovers() {
+        async function fetchTopMovers(force = false) {
             if (moversPollTimer) {
                 clearTimeout(moversPollTimer);
                 moversPollTimer = null;
             }
             try {
-                const res = await fetch(`${BACKEND_URL}/api/top_movers?t=${Date.now()}`);
+                const url = force 
+                    ? `${BACKEND_URL}/api/top_movers?force=true&t=${Date.now()}` 
+                    : `${BACKEND_URL}/api/top_movers?t=${Date.now()}`;
+                const res = await fetch(url);
                 const json = await res.json();
                 
                 if (json.status === "success") {
@@ -442,6 +448,24 @@
                         // Poll quickly in 3 seconds to get the built cache
                         moversPollTimer = setTimeout(fetchTopMovers, 3000);
                         return;
+                    }
+                    
+                    // Render timestamp
+                    if (json.timestamp) {
+                        try {
+                            const date = new Date(json.timestamp);
+                            const formattedTime = date.toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' });
+                            const formattedDate = date.toLocaleDateString('th-TH', { day: '2-digit', month: '2-digit' });
+                            const timeStr = `🕒 อัปเดตล่าสุด: ${formattedTime} (${formattedDate})`;
+                            
+                            const tsSpan = document.getElementById("movers-last-updated");
+                            if (tsSpan) {
+                                tsSpan.innerText = timeStr;
+                                tsSpan.classList.remove("hidden");
+                            }
+                        } catch (err) {
+                            console.error("Failed to parse movers timestamp:", err);
+                        }
                     }
                     
                     renderMoversList("movers-us-gainers", json.movers.US.gainers, true);
@@ -1068,7 +1092,7 @@
         async function manualRefresh() {
             showToast("⏳ กำลังอัปเดตข้อมูลราคาทั้งหมด...");
             await updateTracker();
-            await fetchTopMovers();
+            await fetchTopMovers(true);
             showToast("✓ อัปเดตข้อมูลเสร็จสิ้น!");
         }
 

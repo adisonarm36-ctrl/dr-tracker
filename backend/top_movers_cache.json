@@ -1,7 +1,7 @@
 {
   "data": {
     "status": "success",
-    "timestamp": "2026-05-28T10:17:09.507454",
+    "timestamp": "2026-05-28T10:27:54.238045",
     "movers": {
       "US": {
         "gainers": [
@@ -105,8 +105,8 @@
           {
             "symbol": "CHHONGQ19",
             "name": "CHHONGQ DR (YUANTA)",
-            "price": 12.8,
-            "change_pct": 3.23,
+            "price": 12.9,
+            "change_pct": 4.03,
             "market_group": "HK/CN"
           },
           {
@@ -119,17 +119,17 @@
         ],
         "losers": [
           {
+            "symbol": "SMIC01",
+            "name": "SMIC DR (BLS)",
+            "price": 5.0,
+            "change_pct": -10.71,
+            "market_group": "HK/CN"
+          },
+          {
             "symbol": "MNSO80",
             "name": "MNSO DR (KTB)",
             "price": 10.1,
             "change_pct": -8.18,
-            "market_group": "HK/CN"
-          },
-          {
-            "symbol": "OIL24",
-            "name": "S&P CRUDE OIL(HK)ETF DR (FSS)",
-            "price": 18.4,
-            "change_pct": -6.6,
             "market_group": "HK/CN"
           },
           {
@@ -158,17 +158,10 @@
       "Others": {
         "gainers": [
           {
-            "symbol": "KONAMI24",
-            "name": "KONAMI DR (FSS)",
-            "price": 1.08,
-            "change_pct": 6.93,
-            "market_group": "Others"
-          },
-          {
-            "symbol": "GSEMI24",
-            "name": "GSEMI ETF DR (FSS)",
-            "price": 2.56,
-            "change_pct": 6.67,
+            "symbol": "SOFTBANK80",
+            "name": "SOFTBANK DR (KTB)",
+            "price": 16.2,
+            "change_pct": 10.96,
             "market_group": "Others"
           },
           {
@@ -191,16 +184,16 @@
             "price": 1.44,
             "change_pct": 4.35,
             "market_group": "Others"
+          },
+          {
+            "symbol": "UNIQLO80",
+            "name": "UNIQLO DR (KTB)",
+            "price": 16.0,
+            "change_pct": 3.9,
+            "market_group": "Others"
           }
         ],
         "losers": [
-          {
-            "symbol": "SOFTBANK80",
-            "name": "SOFTBANK DR (KTB)",
-            "price": 15.0,
-            "change_pct": -7.41,
-            "market_group": "Others"
-          },
           {
             "symbol": "FANUC23",
             "name": "FANUC DR (INVX)",
@@ -211,15 +204,8 @@
           {
             "symbol": "DISCO24",
             "name": "DISCO DR (FSS)",
-            "price": 0.96,
-            "change_pct": -6.8,
-            "market_group": "Others"
-          },
-          {
-            "symbol": "JPROBOAI24",
-            "name": "JPROBOAI ETF DR (FSS)",
-            "price": 1.49,
-            "change_pct": -5.7,
+            "price": 0.97,
+            "change_pct": -5.83,
             "market_group": "Others"
           },
           {
@@ -228,10 +214,24 @@
             "price": 2.66,
             "change_pct": -5.0,
             "market_group": "Others"
+          },
+          {
+            "symbol": "KONAMI24",
+            "name": "KONAMI DR (FSS)",
+            "price": 1.01,
+            "change_pct": -4.72,
+            "market_group": "Others"
+          },
+          {
+            "symbol": "SUSHI23",
+            "name": "SUSHI DR (INVX)",
+            "price": 3.12,
+            "change_pct": -3.7,
+            "market_group": "Others"
           }
         ]
       }
     }
   },
-  "last_fetched": 1779938229.5074723
+  "last_fetched": 1779938874.238072
 }
