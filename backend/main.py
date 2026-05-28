@@ -49,9 +49,11 @@ top_movers_cache = {
 }
 cache_lock = threading.Lock()
 MOVERS_CACHE_FILE = os.path.join(os.path.dirname(__file__), "top_movers_cache.json")
+SET_PRICES_CACHE = {}
+SET_PRICES_FILE = os.path.join(os.path.dirname(__file__), "set_prices_cache.json")
 
 def load_movers_cache_from_file():
-    global top_movers_cache
+    global top_movers_cache, SET_PRICES_CACHE
     if os.path.exists(MOVERS_CACHE_FILE):
         try:
             with open(MOVERS_CACHE_FILE, "r", encoding="utf-8") as f:
@@ -61,6 +63,14 @@ def load_movers_cache_from_file():
                 print("Loaded top movers cache from file successfully.")
         except Exception as e:
             print("Failed to load top movers cache file:", e)
+            
+    if os.path.exists(SET_PRICES_FILE):
+        try:
+            with open(SET_PRICES_FILE, "r", encoding="utf-8") as f:
+                SET_PRICES_CACHE = json.load(f)
+                print("Loaded SET prices cache from file successfully.")
+        except Exception as e:
+            print("Failed to load SET prices cache file:", e)
 
 # Load cache immediately on server startup
 load_movers_cache_from_file()
@@ -236,8 +246,9 @@ def compute_tracker_data(dr_config):
         if hk_t: stock_tickers.add(hk_t)
         if us_t: stock_tickers.add(us_t)
         
-        # Add local Thai DR ticker (traded on SET) to fetch its actual trading price and trend!
-        stock_tickers.add(f"{symbol}.BK")
+        # Add local Thai DR ticker (traded on SET) to fetch only if NOT in cache
+        if symbol not in SET_PRICES_CACHE:
+            stock_tickers.add(f"{symbol}.BK")
         
     # Parallel fetch stock rich data
     stock_data_map = fetch_all_parallel(list(stock_tickers))
@@ -317,7 +328,13 @@ def compute_tracker_data(dr_config):
             
         # ---------------- ดึงราคาซื้อขายจริงบน SET 🇹🇭 ----------------
         set_ticker = f"{symbol}.BK"
-        set_rich = stock_data_map.get(set_ticker)
+        set_rich = None
+        
+        if symbol in SET_PRICES_CACHE:
+            set_rich = SET_PRICES_CACHE[symbol]
+        else:
+            set_rich = stock_data_map.get(set_ticker)
+            
         item["set_price"] = ""
         item["premium_pct"] = ""
         item["set_rich"] = None
@@ -399,7 +416,7 @@ def save_config(req: ConfigSaveRequest):
         return {"status": "error", "message": str(e)}
 
 def update_movers_background():
-    global top_movers_cache
+    global top_movers_cache, SET_PRICES_CACHE
     try:
         import time as pytime
         print("Starting batch background update of top movers...")
@@ -408,6 +425,26 @@ def update_movers_background():
         if is_render:
             try:
                 import urllib.request
+                
+                # Fetch SET prices cache from GitHub Raw first to keep them completely synchronized!
+                try:
+                    github_set_url = "https://raw.githubusercontent.com/adisonarm36-ctrl/dr-tracker/main/backend/set_prices_cache.json"
+                    print(f"Attempting to fetch pre-compiled SET prices cache from GitHub Raw: {github_set_url}")
+                    req_set = urllib.request.Request(github_set_url, headers={'User-Agent': 'Mozilla/5.0'})
+                    with urllib.request.urlopen(req_set, timeout=5) as response_set:
+                        if response_set.status == 200:
+                            cached_set_data = json.loads(response_set.read().decode('utf-8'))
+                            if cached_set_data:
+                                SET_PRICES_CACHE = cached_set_data
+                                try:
+                                    with open(SET_PRICES_FILE, "w", encoding="utf-8") as f:
+                                        json.dump(cached_set_data, f, indent=2, ensure_ascii=False)
+                                    print("Successfully updated and saved SET prices cache from GitHub.")
+                                except Exception as file_err:
+                                    print("Failed to write SET prices cache to local disk:", file_err)
+                except Exception as set_err:
+                    print("Failed to fetch SET prices cache from GitHub:", set_err)
+
                 github_url = "https://raw.githubusercontent.com/adisonarm36-ctrl/dr-tracker/main/backend/top_movers_cache.json"
                 print(f"Attempting to fetch pre-compiled cache from GitHub Raw: {github_url}")
                 req = urllib.request.Request(github_url, headers={'User-Agent': 'Mozilla/5.0'})
@@ -480,6 +517,19 @@ def update_movers_background():
                                     "change_pct": round(float(change), 2),
                                     "market_group": market_group
                                 })
+                                
+                                # Populate SET_PRICES_CACHE so the watchlist can query SET price directly from cache without hitting yfinance
+                                prices_list = [round(float(p), 2) for p in closes.tolist() if not math.isnan(p)]
+                                tz_bangkok = pytz.timezone('Asia/Bangkok')
+                                last_trade_time = datetime.now(tz_bangkok).strftime('%H:%M (%d/%m)')
+                                SET_PRICES_CACHE[sym] = {
+                                    "price": round(float(last_price), 2),
+                                    "prices": prices_list,
+                                    "change_pct": round(float(change), 2),
+                                    "prev_close": round(float(prev_close), 2),
+                                    "delay_msg": "Delayed",
+                                    "last_trade_time": last_trade_time
+                                }
                     except Exception:
                         pass
             except Exception as e:
@@ -531,6 +581,13 @@ def update_movers_background():
             print("Saved top movers batch cache to file successfully.")
         except Exception as e:
             print("Failed to save top movers batch cache file:", e)
+            
+        try:
+            with open(SET_PRICES_FILE, "w", encoding="utf-8") as f:
+                json.dump(SET_PRICES_CACHE, f, indent=2, ensure_ascii=False)
+            print("Saved SET prices cache to file successfully.")
+        except Exception as e:
+            print("Failed to save SET prices cache file:", e)
             
     except Exception as e:
         print("Error updating top movers in background:", e)
