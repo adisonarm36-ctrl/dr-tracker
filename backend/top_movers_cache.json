@@ -1,7 +1,7 @@
 {
   "data": {
     "status": "success",
-    "timestamp": "2026-05-28T11:33:50.582791",
+    "timestamp": "2026-05-28T12:45:32.597369",
     "movers": {
       "US": {
         "gainers": [
@@ -13,13 +13,6 @@
             "market_group": "US"
           },
           {
-            "symbol": "APPL03",
-            "name": "APPL DR (PI)",
-            "price": 3.08,
-            "change_pct": 8.45,
-            "market_group": "US"
-          },
-          {
             "symbol": "NBIS03",
             "name": "NBIS DR (PI)",
             "price": 7.4,
@@ -27,17 +20,24 @@
             "market_group": "US"
           },
           {
-            "symbol": "NOW19",
-            "name": "NOW DR (YUANTA)",
-            "price": 3.42,
-            "change_pct": 5.56,
+            "symbol": "APPL03",
+            "name": "APPL DR (PI)",
+            "price": 3.06,
+            "change_pct": 7.75,
             "market_group": "US"
           },
           {
-            "symbol": "APLD03",
-            "name": "APLD DR (PI)",
-            "price": 5.2,
-            "change_pct": 4.42,
+            "symbol": "NOW19",
+            "name": "NOW DR (YUANTA)",
+            "price": 3.4,
+            "change_pct": 4.94,
+            "market_group": "US"
+          },
+          {
+            "symbol": "ESTEE80",
+            "name": "ESTEE DR (KTB)",
+            "price": 0.98,
+            "change_pct": 4.26,
             "market_group": "US"
           }
         ],
@@ -45,15 +45,15 @@
           {
             "symbol": "MRVL80",
             "name": "MRVL DR (KTB)",
-            "price": 6.25,
-            "change_pct": -13.19,
+            "price": 6.2,
+            "change_pct": -13.89,
             "market_group": "US"
           },
           {
             "symbol": "NVTS03",
             "name": "NVTS DR (PI)",
-            "price": 9.3,
-            "change_pct": -12.26,
+            "price": 9.15,
+            "change_pct": -13.68,
             "market_group": "US"
           },
           {
@@ -66,15 +66,15 @@
           {
             "symbol": "RKLB80",
             "name": "RKLB DR (KTB)",
-            "price": 4.66,
-            "change_pct": -8.63,
+            "price": 4.74,
+            "change_pct": -7.06,
             "market_group": "US"
           },
           {
-            "symbol": "COIN80",
-            "name": "COIN DR (KTB)",
-            "price": 5.55,
-            "change_pct": -6.72,
+            "symbol": "NEM23",
+            "name": "NEM DR (INVX)",
+            "price": 2.12,
+            "change_pct": -6.19,
             "market_group": "US"
           }
         ]
@@ -84,22 +84,22 @@
           {
             "symbol": "HUAHONG23",
             "name": "HUAHONG DR (INVX)",
-            "price": 10.2,
-            "change_pct": 12.71,
+            "price": 10.1,
+            "change_pct": 11.6,
             "market_group": "HK/CN"
           },
           {
             "symbol": "ZAI23",
             "name": "ZAI DR (INVX)",
-            "price": 15.9,
-            "change_pct": 8.16,
+            "price": 15.7,
+            "change_pct": 6.8,
             "market_group": "HK/CN"
           },
           {
             "symbol": "SMIC01",
             "name": "SMIC DR (BLS)",
-            "price": 5.3,
-            "change_pct": 6.0,
+            "price": 5.25,
+            "change_pct": 5.0,
             "market_group": "HK/CN"
           },
           {
@@ -110,10 +110,10 @@
             "market_group": "HK/CN"
           },
           {
-            "symbol": "POPMART80",
-            "name": "POPMART DR (KTB)",
-            "price": 6.65,
-            "change_pct": 3.91,
+            "symbol": "XPENG03",
+            "name": "XPENG DR (PI)",
+            "price": 2.74,
+            "change_pct": 3.79,
             "market_group": "HK/CN"
           }
         ],
@@ -121,29 +121,29 @@
           {
             "symbol": "MEITUAN80",
             "name": "MEITUAN DR (KTB)",
-            "price": 3.04,
-            "change_pct": -6.75,
+            "price": 3.02,
+            "change_pct": -7.36,
             "market_group": "HK/CN"
           },
           {
             "symbol": "UBTECH23",
             "name": "UBTECH DR (INVX)",
-            "price": 1.83,
-            "change_pct": -6.63,
+            "price": 1.82,
+            "change_pct": -7.14,
             "market_group": "HK/CN"
           },
           {
             "symbol": "HORIZON23",
             "name": "HORIZON DR (INVX)",
-            "price": 1.48,
-            "change_pct": -5.73,
+            "price": 1.47,
+            "change_pct": -6.37,
             "market_group": "HK/CN"
           },
           {
-            "symbol": "ZIJIN80",
-            "name": "ZIJIN DR (KTB)",
-            "price": 13.5,
-            "change_pct": -5.59,
+            "symbol": "SENSE23",
+            "name": "SENSE DR (INVX)",
+            "price": 1.71,
+            "change_pct": -5.52,
             "market_group": "HK/CN"
           },
           {
@@ -158,10 +158,10 @@
       "Others": {
         "gainers": [
           {
-            "symbol": "HITACHI24",
-            "name": "HITACHI DR (FSS)",
-            "price": 1.32,
-            "change_pct": 3.13,
+            "symbol": "SUSHI23",
+            "name": "SUSHI DR (INVX)",
+            "price": 3.2,
+            "change_pct": 2.56,
             "market_group": "Others"
           },
           {
@@ -172,10 +172,10 @@
             "market_group": "Others"
           },
           {
-            "symbol": "KEYENCE23",
-            "name": "KEYENCE DR (INVX)",
-            "price": 2.72,
-            "change_pct": 2.26,
+            "symbol": "HITACHI24",
+            "name": "HITACHI DR (FSS)",
+            "price": 1.31,
+            "change_pct": 2.34,
             "market_group": "Others"
           },
           {
@@ -186,10 +186,10 @@
             "market_group": "Others"
           },
           {
-            "symbol": "MWG19",
-            "name": "MWG DR (YUANTA)",
-            "price": 10.2,
-            "change_pct": 2.0,
+            "symbol": "NOVOB80",
+            "name": "NOVOB DR (KTB)",
+            "price": 1.49,
+            "change_pct": 2.05,
             "market_group": "Others"
           }
         ],
@@ -202,24 +202,24 @@
             "market_group": "Others"
           },
           {
-            "symbol": "KIOXIA23",
-            "name": "KIOXIA DR (INVX)",
-            "price": 7.45,
-            "change_pct": -6.29,
-            "market_group": "Others"
-          },
-          {
             "symbol": "GSEMI24",
             "name": "GSEMI ETF DR (FSS)",
-            "price": 2.44,
-            "change_pct": -4.69,
+            "price": 2.42,
+            "change_pct": -5.47,
             "market_group": "Others"
           },
           {
             "symbol": "SOFTBANK80",
             "name": "SOFTBANK DR (KTB)",
-            "price": 14.3,
-            "change_pct": -4.67,
+            "price": 14.2,
+            "change_pct": -5.33,
+            "market_group": "Others"
+          },
+          {
+            "symbol": "KIOXIA23",
+            "name": "KIOXIA DR (INVX)",
+            "price": 7.6,
+            "change_pct": -4.4,
             "market_group": "Others"
           },
           {
@@ -233,5 +233,5 @@
       }
     }
   },
-  "last_fetched": 1779942830.582814
+  "last_fetched": 1779947132.5974004
 }

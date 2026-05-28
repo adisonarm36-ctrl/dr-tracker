@@ -228,10 +228,20 @@
             <!-- Left: Tracker Table / Cards (8 Cols) -->
             <div class="lg:col-span-8 space-y-4 order-2 lg:order-1">
                 <div class="glass-panel rounded-3xl p-5 shadow-2xl overflow-hidden">
-                    <h2 class="text-xl font-bold text-white mb-4 flex items-center justify-between">
-                        <span>⭐ รายการติดตามราคา DR ของฉัน</span>
-                        <span id="tracker-count" class="text-xs bg-slate-800 text-gray-400 px-3 py-1 rounded-full border border-gray-700">0 รายการ</span>
-                    </h2>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 border-b border-gray-800 pb-3">
+                        <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                            <span>⭐</span> รายการติดตามราคา DR ของฉัน
+                            <span id="tracker-count" class="text-xs bg-slate-800 text-gray-400 px-3 py-1 rounded-full border border-gray-700 font-mono font-bold font-sans">0 รายการ</span>
+                        </h2>
+                        
+                        <!-- Premium Sorting controls -->
+                        <div class="flex items-center gap-1 bg-slate-950/80 p-1 rounded-xl border border-gray-800 text-xs">
+                            <span class="text-gray-500 font-bold px-2 select-none">Sort %:</span>
+                            <button id="sort-btn-custom" onclick="setSortMode('custom')" class="px-2.5 py-1 rounded-lg font-bold transition bg-cyan-950 text-cyan-400 border border-cyan-800/30 active:scale-95">ของฉัน</button>
+                            <button id="sort-btn-change-desc" onclick="setSortMode('change_desc')" class="px-2.5 py-1 rounded-lg font-bold transition text-gray-400 hover:text-white hover:bg-slate-900 active:scale-95">บวกมาก ➡️ น้อย</button>
+                            <button id="sort-btn-change-asc" onclick="setSortMode('change_asc')" class="px-2.5 py-1 rounded-lg font-bold transition text-gray-400 hover:text-white hover:bg-slate-900 active:scale-95">บวกน้อย ➡️ มาก</button>
+                        </div>
+                    </div>
                     
                     <!-- Desktop Table View -->
                     <div class="hidden md:block overflow-x-auto">
@@ -244,13 +254,14 @@
                                     <th class="p-4 text-center bg-gray-800/10">ตลาดแม่ต่างประเทศ (อ้างอิง)</th>
                                     <th class="p-4 text-right text-cyan-400 w-36" title="ราคาอ้างอิงตามทฤษฎี (Fair Price) คำนวณจากราคาหุ้นแม่ต่างประเทศจริง x อัตราแลกเปลี่ยน x สัดส่วน DR">ราคาอ้างอิง Fair Price</th>
                                     <th class="p-4 text-right text-emerald-400 w-36" title="ราคาซื้อขายจริงของ DR ตัวนี้บนกระดานตลาดหลักทรัพย์แห่งประเทศไทย (SET)">ราคาจริงบน SET 🇹🇭</th>
+                                    <th class="p-4 text-center w-40">แนวโน้ม 30 วัน (Candle) 🕯️</th>
                                     <th class="p-4 text-center w-28" title="ราคาซื้อขายจริงบนกระดาน SET แพงกว่า (Premium) หรือ ถูกกว่า (Discount) ราคาอ้างอิงตามทฤษฎีกี่ %">ส่วนต่าง (Premium)</th>
                                     <th class="p-4 w-12 text-center">นำออก</th>
                                 </tr>
                             </thead>
                             <tbody id="ticker-body" class="divide-y divide-gray-850">
                                 <tr>
-                                    <td colspan="8" class="p-8 text-center text-gray-500">กำลังโหลดรายการติดตามของคุณ...</td>
+                                    <td colspan="9" class="p-8 text-center text-gray-500">กำลังโหลดรายการติดตามของคุณ...</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -353,6 +364,7 @@
         let currentData = [];
         let drCatalog = {};
         let searchActive = "";
+        let currentSortMode = "custom";
 
         // Toast notifications helper
         function showToast(message) {
@@ -758,7 +770,6 @@
                 currentData[index].dr_thb = result;
             }
         }
-
         function createSparkline(prices, isPositive) {
             if (!prices || prices.length < 2) return "";
             const min = Math.min(...prices);
@@ -780,41 +791,84 @@
                     </svg>`;
         }
 
-        function renderInput(ticker, price, multiplier, index, marketType, isActive, richData) {
-            if (!ticker) return `<span class="text-gray-600">-</span>`;
-            
-            const activeClass = isActive 
-                ? "border-cyan-500/50 bg-slate-900 text-cyan-300 ring-1 ring-cyan-500/30" 
-                : "border-gray-800 bg-slate-950/70 text-gray-400";
-            
-            let prevCloseHtml = "";
-            let tradeTimeHtml = "";
-            if (richData) {
-                 if (richData.prev_close) {
-                      prevCloseHtml = `<span class="text-[10px] text-gray-500 mt-1 block font-normal">ปิดเมื่อวาน: ${richData.prev_close.toFixed(2)}</span>`;
-                 }
-                 if (richData.last_trade_time) {
-                      tradeTimeHtml = `<span class="text-[9px] text-cyan-400/80 mt-1 block font-mono font-medium tracking-tighter" title="เวลาอัปเดตราคาล่าสุดเทียบเป็นเวลาไทย (ICT)">เวลาไทย: ${richData.last_trade_time}</span>`;
-                 }
+        function createCandlestickChart(candles) {
+            if (!candles || candles.length < 2) {
+                return `<div class="flex items-center justify-center w-full h-6 text-[9px] text-gray-600 font-medium bg-slate-950/20 rounded border border-gray-900/30">⏳ กำลังโหลด...</div>`;
             }
             
-            return `
-                <div class="inline-flex flex-col items-center w-28">
-                    <span class="text-xs font-bold text-gray-200 mb-1.5 tracking-wider uppercase">${ticker}</span>
-                    <input type="number" step="0.01"
-                           value="${price}" 
-                           data-multiplier="${multiplier}"
-                           oninput="recalculateDR(this, ${index}, '${marketType}')"
-                           class="${activeClass} font-mono text-center p-1 rounded border focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 outline-none w-24 text-sm transition-all shadow-inner">
-                    ${prevCloseHtml}
-                    ${tradeTimeHtml}
-                </div>
-            `;
+            const data = candles.slice(-30);
+            const highs = data.map(c => c.high);
+            const lows = data.map(c => c.low);
+            const min = Math.min(...lows);
+            const max = Math.max(...highs);
+            const range = max - min || 1;
+            
+            const width = 140;
+            const height = 32;
+            const paddingY = 2;
+            
+            const candleWidth = Math.max(1.8, (width / data.length) - 1.5);
+            const halfCandleWidth = candleWidth / 2;
+            
+            let svgContent = "";
+            
+            data.forEach((c, i) => {
+                const x = (i / data.length) * width;
+                
+                const yHigh = height - ((c.high - min) / range) * (height - 2 * paddingY) - paddingY;
+                const yLow = height - ((c.low - min) / range) * (height - 2 * paddingY) - paddingY;
+                const yOpen = height - ((c.open - min) / range) * (height - 2 * paddingY) - paddingY;
+                const yClose = height - ((c.close - min) / range) * (height - 2 * paddingY) - paddingY;
+                
+                const isBullish = c.close >= c.open;
+                const color = isBullish ? "#10b981" : "#ef4444"; // Emerald-500 or Red-500
+                
+                const yTop = Math.min(yOpen, yClose);
+                const yBottom = Math.max(yOpen, yClose);
+                const bodyHeight = Math.max(0.8, yBottom - yTop);
+                
+                // Wick
+                svgContent += `<line x1="${x + halfCandleWidth}" y1="${yHigh}" x2="${x + halfCandleWidth}" y2="${yLow}" stroke="${color}" stroke-width="1.0" />`;
+                // Body
+                svgContent += `<rect x="${x}" y="${yTop}" width="${candleWidth}" height="${bodyHeight}" fill="${color}" stroke="none" rx="0.3" />`;
+            });
+            
+            return `<svg viewBox="0 0 140 32" class="w-full h-full overflow-visible" preserveAspectRatio="none">
+                        ${svgContent}
+                    </svg>`;
+        }
+
+        function setSortMode(mode) {
+            currentSortMode = mode;
+            
+            // Update button styles
+            const btnCustom = document.getElementById("sort-btn-custom");
+            const btnDesc = document.getElementById("sort-btn-change-desc");
+            const btnAsc = document.getElementById("sort-btn-change-asc");
+            
+            if (btnCustom && btnDesc && btnAsc) {
+                btnCustom.className = "px-2.5 py-1 rounded-lg font-bold transition text-gray-400 hover:text-white hover:bg-slate-900 active:scale-95";
+                btnDesc.className = "px-2.5 py-1 rounded-lg font-bold transition text-gray-400 hover:text-white hover:bg-slate-900 active:scale-95";
+                btnAsc.className = "px-2.5 py-1 rounded-lg font-bold transition text-gray-400 hover:text-white hover:bg-slate-900 active:scale-95";
+                
+                if (mode === 'custom') {
+                    btnCustom.className = "px-2.5 py-1 rounded-lg font-bold transition bg-cyan-950 text-cyan-400 border border-cyan-800/30 active:scale-95";
+                } else if (mode === 'change_desc') {
+                    btnDesc.className = "px-2.5 py-1 rounded-lg font-bold transition bg-emerald-950 text-emerald-400 border border-emerald-800/30 active:scale-95";
+                } else if (mode === 'change_asc') {
+                    btnAsc.className = "px-2.5 py-1 rounded-lg font-bold transition bg-red-950 text-red-400 border border-red-800/30 active:scale-95";
+                }
+            }
+            
+            renderTable();
         }
 
         function renderTable() {
             const body = document.getElementById('ticker-body');
             const mobileCards = document.getElementById('ticker-mobile-cards');
+            
+            if (!body || !mobileCards) return;
+            
             document.getElementById('tracker-count').innerText = `${currentData.length} รายการ`;
             
             if (currentData.length === 0) {
@@ -824,21 +878,41 @@
                         <p class="text-xs">ค้นหา DR ในกล่องด้านขวา แล้วกด + เพิ่ม เพื่อติดตามราคาเรียลไทม์ได้เลย!</p>
                     </div>
                 `;
-                body.innerHTML = `<tr><td colspan="8">${emptyHtml}</td></tr>`;
+                body.innerHTML = `<tr><td colspan="9">${emptyHtml}</td></tr>`;
                 mobileCards.innerHTML = emptyHtml;
                 return;
             }
 
+            // Apply sorting on-the-fly for rendering
+            let sortedData = [...currentData];
+            
+            // Map sorted index back to original index to keep control button actions working
+            let sortedWithIndex = sortedData.map((item, originalIndex) => ({ item, originalIndex }));
+            
+            if (currentSortMode === "change_desc") {
+                sortedWithIndex.sort((a, b) => {
+                    const aVal = (a.item.set_rich && a.item.set_rich.change_pct !== undefined) ? parseFloat(a.item.set_rich.change_pct) : -999;
+                    const bVal = (b.item.set_rich && b.item.set_rich.change_pct !== undefined) ? parseFloat(b.item.set_rich.change_pct) : -999;
+                    return bVal - aVal;
+                });
+            } else if (currentSortMode === "change_asc") {
+                sortedWithIndex.sort((a, b) => {
+                    const aVal = (a.item.set_rich && a.item.set_rich.change_pct !== undefined) ? parseFloat(a.item.set_rich.change_pct) : 999;
+                    const bVal = (b.item.set_rich && b.item.set_rich.change_pct !== undefined) ? parseFloat(b.item.set_rich.change_pct) : 999;
+                    return aVal - bVal;
+                });
+            }
+
             // 1. Render Desktop Table Body
-            body.innerHTML = currentData.map((item, index) => {
+            body.innerHTML = sortedWithIndex.map(({ item, originalIndex }, sortedIdx) => {
                 let setPriceHtml = `<span class="text-gray-600 text-sm font-semibold">-</span>`;
+                let setCandleHtml = `<span class="text-gray-600 text-xs font-semibold">-</span>`;
+                
                 if (item.set_price) {
                     let setTrendHtml = "";
                     if (item.set_rich) {
                         const setSign = item.set_rich.change_pct > 0 ? "+" : "";
-                        const setBadgeClass = item.set_rich.change_pct >= 0 ? "text-emerald-400" : "text-red-400";
                         const setBgClass = item.set_rich.change_pct >= 0 ? "bg-emerald-950/30 text-emerald-400" : "bg-red-950/30 text-red-400";
-                        const setSparkline = createSparkline(item.set_rich.prices, item.set_rich.change_pct >= 0);
                         
                         setTrendHtml = `
                             <div class="flex items-center gap-1.5 mt-1 justify-end">
@@ -847,10 +921,19 @@
                             </div>
                         `;
                     }
+                    
                     setPriceHtml = `
                         <div class="flex flex-col items-end">
                             <span class="text-emerald-400 text-xl font-mono font-extrabold">${parseFloat(item.set_price).toFixed(2)}</span>
                             ${setTrendHtml}
+                        </div>
+                    `;
+                }
+
+                if (item.set_rich && item.set_rich.candles) {
+                    setCandleHtml = `
+                        <div class="w-36 h-8 mx-auto opacity-95 hover:opacity-100 transition-opacity">
+                            ${createCandlestickChart(item.set_rich.candles)}
                         </div>
                     `;
                 }
@@ -872,19 +955,37 @@
                     `;
                 }
 
+                let sortingControlsHtml = "";
+                if (currentSortMode === "custom") {
+                    sortingControlsHtml = `
+                        <div class="flex flex-col gap-1 items-center justify-center">
+                            <button onclick="moveItem(${originalIndex}, -1)" class="text-cyan-500 hover:text-cyan-400 transition text-[10px] font-bold px-1 select-none">▲</button>
+                            <button onclick="moveItem(${originalIndex}, 1)" class="text-cyan-500 hover:text-cyan-400 transition text-[10px] font-bold px-1 select-none">▼</button>
+                        </div>
+                    `;
+                } else {
+                    sortingControlsHtml = `<span class="text-gray-600 text-xs font-bold font-mono">-</span>`;
+                }
+
+                let indexInputHtml = "";
+                if (currentSortMode === "custom") {
+                    indexInputHtml = `
+                        <input type="number" 
+                               value="${originalIndex + 1}" 
+                               onchange="changeOrder(${originalIndex}, this.value)"
+                               class="bg-slate-900 text-gray-500 text-center w-10 py-1.5 rounded border border-gray-800 focus:border-cyan-400 focus:text-white outline-none text-xs font-bold font-mono">
+                    `;
+                } else {
+                    indexInputHtml = `<span class="text-cyan-400 font-bold font-mono text-sm">#${sortedIdx + 1}</span>`;
+                }
+
                 return `
                 <tr class="border-t border-gray-800 hover:bg-slate-900/30 transition-all duration-200">
                     <td class="p-3 text-center align-middle">
-                        <div class="flex flex-col gap-1 items-center justify-center">
-                            <button onclick="moveItem(${index}, -1)" class="text-cyan-500 hover:text-cyan-400 transition text-[10px] font-bold px-1 select-none">▲</button>
-                            <button onclick="moveItem(${index}, 1)" class="text-cyan-500 hover:text-cyan-400 transition text-[10px] font-bold px-1 select-none">▼</button>
-                        </div>
+                        ${sortingControlsHtml}
                     </td>
                     <td class="p-3 text-center align-middle">
-                        <input type="number" 
-                               value="${index + 1}" 
-                               onchange="changeOrder(${index}, this.value)"
-                               class="bg-slate-900 text-gray-500 text-center w-10 py-1.5 rounded border border-gray-800 focus:border-cyan-400 focus:text-white outline-none text-xs font-bold font-mono">
+                        ${indexInputHtml}
                     </td>
                     <td class="p-3 font-extrabold text-white text-base tracking-wide align-middle">
                         <p class="font-display font-bold">${item.symbol}</p>
@@ -893,17 +994,21 @@
                     
                     <td class="p-3 text-center border-l border-gray-900 bg-slate-900/10 align-middle">
                         <div class="flex items-center justify-center gap-3">
-                            ${renderInput(item.hk_ticker, item.hk_price, item.hk_multiplier, index, 'HK', item.active_market === 'HK', item.hk_rich)}
-                            ${renderInput(item.us_ticker, item.us_price, item.us_multiplier, index, 'US', item.active_market === 'US', item.us_rich)}
+                            ${renderInput(item.hk_ticker, item.hk_price, item.hk_multiplier, originalIndex, 'HK', item.active_market === 'HK', item.hk_rich)}
+                            ${renderInput(item.us_ticker, item.us_price, item.us_multiplier, originalIndex, 'US', item.active_market === 'US', item.us_rich)}
                         </div>
                     </td>
                     
                     <td class="p-3 text-right border-l border-gray-900 align-middle">
-                        <span id="dr-price-${index}" class="dr-price text-cyan-300 font-mono font-bold text-xl">${parseFloat(item.dr_thb).toFixed(2)}</span>
+                        <span id="dr-price-${originalIndex}" class="dr-price text-cyan-300 font-mono font-bold text-xl">${parseFloat(item.dr_thb).toFixed(2)}</span>
                     </td>
                     
                     <td class="p-3 text-right border-l border-gray-900 align-middle">
                         ${setPriceHtml}
+                    </td>
+
+                    <td class="p-3 text-center border-l border-gray-900 align-middle">
+                        ${setCandleHtml}
                     </td>
 
                     <td class="p-3 text-center border-l border-r border-gray-900 align-middle">
@@ -911,7 +1016,7 @@
                     </td>
                     
                     <td class="p-3 text-center align-middle">
-                        <button onclick="removeDR(${index})" class="text-rose-500/60 hover:text-rose-400 transition text-sm p-2 rounded-lg hover:bg-rose-950/20 active:scale-90" title="นำออกจากตาราง">
+                        <button onclick="removeDR(${originalIndex})" class="text-rose-500/60 hover:text-rose-400 transition text-sm p-2 rounded-lg hover:bg-rose-950/20 active:scale-90" title="นำออกจากตาราง">
                             🗑️
                         </button>
                     </td>
@@ -919,14 +1024,13 @@
             `}).join('');
 
             // 2. Render Mobile Touch-Friendly Card Stack
-            mobileCards.innerHTML = currentData.map((item, index) => {
+            mobileCards.innerHTML = sortedWithIndex.map(({ item, originalIndex }, sortedIdx) => {
                 let activeRichData = item.set_rich || (item.active_market === 'HK' ? item.hk_rich : item.us_rich);
                 let trendBadge = "";
                 let delayHtml = "";
                 let sparklineSvg = "";
                 
                 if (activeRichData) {
-                    const colorClass = activeRichData.change_pct >= 0 ? "text-emerald-400" : "text-red-400";
                     const bgBadgeClass = activeRichData.change_pct >= 0 ? "bg-emerald-950/40 text-emerald-400" : "bg-red-950/40 text-red-400";
                     const sign = activeRichData.change_pct > 0 ? "+" : "";
                     sparklineSvg = createSparkline(activeRichData.prices, activeRichData.change_pct >= 0);
@@ -968,6 +1072,18 @@
                     `;
                 }
                 
+                let mobileSortingControlsHtml = "";
+                if (currentSortMode === "custom") {
+                    mobileSortingControlsHtml = `
+                        <button onclick="moveItem(${originalIndex}, -1)" class="text-cyan-500 hover:text-cyan-400 transition text-xs font-bold bg-slate-950 p-2 rounded-xl border border-gray-855 select-none active:scale-90 w-8 h-8 flex items-center justify-center">▲</button>
+                        <button onclick="moveItem(${originalIndex}, 1)" class="text-cyan-500 hover:text-cyan-400 transition text-xs font-bold bg-slate-950 p-2 rounded-xl border border-gray-855 select-none active:scale-90 w-8 h-8 flex items-center justify-center">▼</button>
+                    `;
+                } else {
+                    mobileSortingControlsHtml = `
+                        <span class="px-2.5 py-1 rounded-lg bg-cyan-950 text-cyan-400 font-bold font-mono text-xs border border-cyan-900/30 select-none active:scale-90 w-8 h-8 flex items-center justify-center">#${sortedIdx + 1}</span>
+                    `;
+                }
+                
                 return `
                     <div class="glass-panel p-4 rounded-2xl border border-gray-800 space-y-4 shadow-lg text-left">
                         
@@ -983,9 +1099,8 @@
                                 </p>
                             </div>
                             <div class="flex items-center gap-1.5">
-                                <button onclick="moveItem(${index}, -1)" class="text-cyan-500 hover:text-cyan-400 transition text-xs font-bold bg-slate-950 p-2 rounded-xl border border-gray-855 select-none active:scale-90 w-8 h-8 flex items-center justify-center">▲</button>
-                                <button onclick="moveItem(${index}, 1)" class="text-cyan-500 hover:text-cyan-400 transition text-xs font-bold bg-slate-950 p-2 rounded-xl border border-gray-855 select-none active:scale-90 w-8 h-8 flex items-center justify-center">▼</button>
-                                <button onclick="removeDR(${index})" class="text-rose-500 bg-rose-950/20 border border-rose-900/30 rounded-xl p-2 text-xs ml-1 hover:bg-rose-950/40 active:scale-90 w-8 h-8 flex items-center justify-center" title="นำออก">🗑️</button>
+                                ${mobileSortingControlsHtml}
+                                <button onclick="removeDR(${originalIndex})" class="text-rose-500 bg-rose-950/20 border border-rose-900/30 rounded-xl p-2 text-xs ml-1 hover:bg-rose-950/40 active:scale-90 w-8 h-8 flex items-center justify-center" title="นำออก">🗑️</button>
                             </div>
                         </div>
                         
@@ -995,13 +1110,14 @@
                                 <span class="text-[9px] text-gray-500 font-bold uppercase tracking-wider flex items-center gap-1" title="ราคาอ้างอิงตามทฤษฎี (Fair Price) คำนวณจากหุ้นแม่ต่างประเทศ">
                                     ราคาอ้างอิง Fair
                                 </span>
-                                <span id="dr-mobile-price-${index}" class="text-cyan-300 text-lg font-mono font-extrabold mt-0.5">
+                                <span id="dr-mobile-price-${originalIndex}" class="text-cyan-300 text-lg font-mono font-extrabold mt-0.5">
                                     ${parseFloat(item.dr_thb).toFixed(2)}
                                 </span>
                             </div>
                             
-                            <div class="w-12 h-6 opacity-40">
-                                ${sparklineSvg}
+                            <!-- 30-Day Candlestick Chart / Sparkline fallback -->
+                            <div class="w-24 h-7 opacity-95">
+                                ${item.set_rich && item.set_rich.candles ? createCandlestickChart(item.set_rich.candles) : sparklineSvg}
                             </div>
                             
                             ${mobileSetPriceHtml}
@@ -1012,20 +1128,24 @@
                         <!-- Inputs Row -->
                         <div class="grid grid-cols-2 gap-3 py-1 text-center justify-items-center">
                             <div class="border-r border-gray-800/80 pr-1 w-full flex justify-center">
-                                ${renderInput(item.hk_ticker, item.hk_price, item.hk_multiplier, index, 'HK', item.active_market === 'HK', item.hk_rich)}
+                                ${renderInput(item.hk_ticker, item.hk_price, item.hk_multiplier, originalIndex, 'HK', item.active_market === 'HK', item.hk_rich)}
                             </div>
                             <div class="w-full flex justify-center">
-                                ${renderInput(item.us_ticker, item.us_price, item.us_multiplier, index, 'US', item.active_market === 'US', item.us_rich)}
+                                ${renderInput(item.us_ticker, item.us_price, item.us_multiplier, originalIndex, 'US', item.active_market === 'US', item.us_rich)}
                             </div>
                         </div>
                         
                         <!-- Sequence adjustment (Alternative order change input) -->
                         <div class="flex items-center justify-between text-xs text-gray-550 pt-1 border-t border-gray-900/35">
-                            <span class="text-[10px]">ปรับลำดับด้วยตัวเลข:</span>
-                            <input type="number" 
-                                   value="${index + 1}" 
-                                   onchange="changeOrder(${index}, this.value)"
-                                   class="bg-slate-950 text-gray-400 text-center w-9 py-1 rounded border border-gray-855 focus:border-cyan-500 focus:text-white outline-none font-bold font-mono text-xs">
+                            <span class="text-[10px]">ลำดับ:</span>
+                            ${currentSortMode === 'custom' ? `
+                                <input type="number" 
+                                       value="${originalIndex + 1}" 
+                                       onchange="changeOrder(${originalIndex}, this.value)"
+                                       class="bg-slate-950 text-gray-400 text-center w-9 py-1 rounded border border-gray-855 focus:border-cyan-500 focus:text-white outline-none font-bold font-mono text-xs">
+                            ` : `
+                                <span class="px-2 py-0.5 rounded bg-cyan-950/40 text-cyan-400 font-bold font-mono text-[9px]">เรียงตามเปอร์เซ็นต์เปลี่ยนแปลง</span>
+                            `}
                         </div>
                         
                     </div>

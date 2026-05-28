@@ -114,6 +114,47 @@ def get_rich_market_data(ticker):
         except:
             prev_close = 0.0
 
+        if ticker.endswith(".BK"):
+            # Fetch daily candles for the last 45 days (approx 30 trading days)
+            hist = t.history(period="45d")
+            if hist.empty:
+                raise ValueError("No daily history found")
+            
+            candles = []
+            prices = []
+            for idx, row in hist.iterrows():
+                candles.append({
+                    "date": idx.strftime('%Y-%m-%d'),
+                    "open": round(float(row['Open']), 2),
+                    "high": round(float(row['High']), 2),
+                    "low": round(float(row['Low']), 2),
+                    "close": round(float(row['Close']), 2)
+                })
+                prices.append(round(float(row['Close']), 2))
+                
+            candles = candles[-30:]
+            prices = prices[-30:]
+            last_price = prices[-1] if prices else 0.0
+            change_pct = ((last_price - prev_close) / prev_close) * 100 if prev_close and prev_close > 0 else 0.0
+            
+            last_ts = hist.index[-1]
+            tz_bangkok = pytz.timezone('Asia/Bangkok')
+            if last_ts.tzinfo is not None:
+                last_ts_bangkok = last_ts.astimezone(tz_bangkok)
+            else:
+                last_ts_bangkok = pytz.utc.localize(last_ts).astimezone(tz_bangkok)
+            last_trade_time = last_ts_bangkok.strftime('%H:%M (%d/%m)')
+            
+            return {
+                "price": last_price,
+                "prices": prices,
+                "change_pct": round(change_pct, 2),
+                "delay_msg": "Delayed",
+                "prev_close": round(prev_close, 2) if prev_close else 0.0,
+                "last_trade_time": last_trade_time,
+                "candles": candles
+            }
+
         hist = t.history(period="1d", interval="15m", prepost=True)
         if hist.empty:
             price = get_price_safe(ticker)
@@ -488,8 +529,8 @@ def update_movers_background():
             
             print(f"Downloading batch {i//BATCH_SIZE + 1} ({len(batch)} symbols)...")
             try:
-                # Controlled small download
-                data = yf.download(tickers_string, period="5d", group_by='ticker', progress=False)
+                # Controlled small download with 45 days period to get 30 trading days of daily candles!
+                data = yf.download(tickers_string, period="45d", group_by='ticker', progress=False)
                 
                 for sym in batch:
                     ticker_sym = f"{sym}.BK"
@@ -518,8 +559,24 @@ def update_movers_background():
                                     "market_group": market_group
                                 })
                                 
-                                # Populate SET_PRICES_CACHE so the watchlist can query SET price directly from cache without hitting yfinance
-                                prices_list = [round(float(p), 2) for p in closes.tolist() if not math.isnan(p)]
+                                # Build daily candles list for the 30-day candlestick chart
+                                ticker_df = data[ticker_sym].dropna(subset=['Close'])
+                                candles_list = []
+                                for idx, row in ticker_df.iterrows():
+                                    try:
+                                        candles_list.append({
+                                            "date": idx.strftime('%Y-%m-%d'),
+                                            "open": round(float(row['Open']), 2),
+                                            "high": round(float(row['High']), 2),
+                                            "low": round(float(row['Low']), 2),
+                                            "close": round(float(row['Close']), 2)
+                                        })
+                                    except Exception:
+                                        pass
+                                
+                                candles_list = candles_list[-30:]
+                                prices_list = [c["close"] for c in candles_list]
+                                
                                 tz_bangkok = pytz.timezone('Asia/Bangkok')
                                 last_trade_time = datetime.now(tz_bangkok).strftime('%H:%M (%d/%m)')
                                 SET_PRICES_CACHE[sym] = {
@@ -528,7 +585,8 @@ def update_movers_background():
                                     "change_pct": round(float(change), 2),
                                     "prev_close": round(float(prev_close), 2),
                                     "delay_msg": "Delayed",
-                                    "last_trade_time": last_trade_time
+                                    "last_trade_time": last_trade_time,
+                                    "candles": candles_list
                                 }
                     except Exception:
                         pass
