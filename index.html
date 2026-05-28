@@ -745,6 +745,38 @@
             showToast(`🔄 ปรับเปลี่ยนลำดับสำเร็จ`);
         }
 
+        function renderInput(ticker, price, multiplier, index, marketType, isActive, richData) {
+            if (!ticker) return `<span class="text-gray-650">-</span>`;
+            
+            const activeClass = isActive 
+                ? "border-cyan-500/50 bg-slate-900 text-cyan-300 ring-1 ring-cyan-500/30" 
+                : "border-gray-800 bg-slate-950/70 text-gray-400";
+            
+            let prevCloseHtml = "";
+            let tradeTimeHtml = "";
+            if (richData) {
+                 if (richData.prev_close !== undefined && richData.prev_close !== null) {
+                      prevCloseHtml = `<span class="text-[10px] text-gray-500 mt-1 block font-normal">ปิดเมื่อวาน: ${parseFloat(richData.prev_close || 0).toFixed(2)}</span>`;
+                 }
+                 if (richData.last_trade_time) {
+                      tradeTimeHtml = `<span class="text-[9px] text-cyan-400/80 mt-1 block font-mono font-medium tracking-tighter" title="เวลาอัปเดตราคาล่าสุดเทียบเป็นเวลาไทย (ICT)">เวลาไทย: ${richData.last_trade_time}</span>`;
+                 }
+            }
+            
+            return `
+                <div class="inline-flex flex-col items-center w-28">
+                    <span class="text-xs font-bold text-gray-200 mb-1.5 tracking-wider uppercase">${ticker}</span>
+                    <input type="number" step="0.01"
+                           value="${price}" 
+                           data-multiplier="${multiplier}"
+                           oninput="recalculateDR(this, ${index}, '${marketType}')"
+                           class="${activeClass} font-mono text-center p-1 rounded border focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 outline-none w-24 text-sm transition-all shadow-inner">
+                    ${prevCloseHtml}
+                    ${tradeTimeHtml}
+                </div>
+            `;
+        }
+
         function recalculateDR(inputElement, index, sourceMarket) {
             const multiplier = parseFloat(inputElement.getAttribute('data-multiplier'));
             const newPrice = parseFloat(inputElement.value);
