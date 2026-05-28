@@ -377,7 +377,37 @@ def save_config(req: ConfigSaveRequest):
 def update_movers_background():
     global top_movers_cache
     try:
+        import time as pytime
         print("Starting batch background update of top movers...")
+        
+        is_render = os.environ.get("RENDER") == "true" or "RENDER_SERVICE_ID" in os.environ
+        if is_render:
+            try:
+                import urllib.request
+                github_url = "https://raw.githubusercontent.com/adisonarm36-ctrl/dr-tracker/main/backend/top_movers_cache.json"
+                print(f"Attempting to fetch pre-compiled cache from GitHub Raw: {github_url}")
+                req = urllib.request.Request(github_url, headers={'User-Agent': 'Mozilla/5.0'})
+                with urllib.request.urlopen(req, timeout=5) as response:
+                    if response.status == 200:
+                        cached_file_data = json.loads(response.read().decode('utf-8'))
+                        if cached_file_data and "data" in cached_file_data and "movers" in cached_file_data["data"]:
+                            response_data = cached_file_data["data"]
+                            
+                            with cache_lock:
+                                top_movers_cache["data"] = response_data
+                                top_movers_cache["last_fetched"] = pytime.time()
+                                top_movers_cache["is_updating"] = False
+                                
+                            try:
+                                with open(MOVERS_CACHE_FILE, "w", encoding="utf-8") as f:
+                                    json.dump(cached_file_data, f, indent=2, ensure_ascii=False)
+                                print("Successfully updated and saved local cache from GitHub pre-compiled file.")
+                            except Exception as file_err:
+                                print("Failed to write loaded GitHub cache to local disk:", file_err)
+                            return
+            except Exception as github_err:
+                print("Failed to pull pre-compiled cache from GitHub raw, falling back to Yahoo Finance:", github_err)
+
         catalog = load_dr_catalog()
         # Query ALL recommended DRs (approx 262) as requested by user to get the complete market picture!
         symbols = [sym for sym, cat in catalog.items() if cat.get("recommend", False)]
@@ -391,7 +421,6 @@ def update_movers_background():
         BATCH_SIZE = 20
         results = []
         
-        import time as pytime
         for i in range(0, len(symbols), BATCH_SIZE):
             batch = symbols[i:i+BATCH_SIZE]
             tickers_string = " ".join([f"{sym}.BK" for sym in batch])
