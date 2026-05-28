@@ -408,12 +408,42 @@
         }
 
         // Fetch & Render Top Movers Panel
+        let moversPollTimer = null;
+
+        function showMoversLoading() {
+            const ids = ["movers-us-gainers", "movers-hk-gainers", "movers-other-gainers"];
+            ids.forEach(id => {
+                const list = document.getElementById(id);
+                if (list) {
+                    list.innerHTML = `<li class="text-cyan-500/50 text-[10px] italic font-mono animate-pulse">⏳ LOADING...</li>`;
+                }
+            });
+            const loserIds = ["movers-us-losers", "movers-hk-losers", "movers-other-losers"];
+            loserIds.forEach(id => {
+                const list = document.getElementById(id);
+                if (list) {
+                    list.innerHTML = `<li class="text-rose-500/30 text-[10px] italic font-mono animate-pulse">⏳ LOADING...</li>`;
+                }
+            });
+        }
+
         async function fetchTopMovers() {
+            if (moversPollTimer) {
+                clearTimeout(moversPollTimer);
+                moversPollTimer = null;
+            }
             try {
                 const res = await fetch(`${BACKEND_URL}/api/top_movers?t=${Date.now()}`);
                 const json = await res.json();
                 
                 if (json.status === "success") {
+                    if (json.is_loading) {
+                        showMoversLoading();
+                        // Poll quickly in 3 seconds to get the built cache
+                        moversPollTimer = setTimeout(fetchTopMovers, 3000);
+                        return;
+                    }
+                    
                     renderMoversList("movers-us-gainers", json.movers.US.gainers, true);
                     renderMoversList("movers-us-losers", json.movers.US.losers, false);
                     renderMoversList("movers-hk-gainers", json.movers["HK/CN"].gainers, true);
