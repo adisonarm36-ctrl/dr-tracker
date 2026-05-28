@@ -1,6 +1,6 @@
 {
   "AAPL80": {
-    "price": 10.1,
+    "price": 10.2,
     "prices": [
       8.39,
       8.54,
@@ -31,12 +31,12 @@
       10.2,
       10.2,
       10.0,
-      10.1
+      10.2
     ],
-    "change_pct": 1.0,
+    "change_pct": 2.0,
     "prev_close": 10.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -246,12 +246,12 @@
         "open": 10.1,
         "high": 10.5,
         "low": 10.0,
-        "close": 10.1
+        "close": 10.2
       }
     ]
   },
   "ABBV80": {
-    "price": 7.0,
+    "price": 7.1,
     "prices": [
       6.8,
       6.9,
@@ -264,12 +264,12 @@
       7.15,
       7.1,
       7.0,
-      7.0
+      7.1
     ],
-    "change_pct": 0.0,
+    "change_pct": 1.43,
     "prev_close": 7.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-05-13",
@@ -353,7 +353,7 @@
         "open": 7.1,
         "high": 7.1,
         "low": 6.95,
-        "close": 7.0
+        "close": 7.1
       }
     ]
   },
@@ -394,7 +394,7 @@
     "change_pct": -0.92,
     "prev_close": 4.36,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-08",
@@ -609,7 +609,7 @@
     ]
   },
   "ADBE06": {
-    "price": 1.97,
+    "price": 1.98,
     "prices": [
       2.04,
       1.96,
@@ -640,12 +640,12 @@
       2.02,
       2.02,
       1.96,
-      1.97
+      1.98
     ],
-    "change_pct": 0.51,
+    "change_pct": 1.02,
     "prev_close": 1.96,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -855,12 +855,12 @@
         "open": 1.95,
         "high": 1.99,
         "low": 1.93,
-        "close": 1.97
+        "close": 1.98
       }
     ]
   },
   "ADVANT23": {
-    "price": 3.62,
+    "price": 3.66,
     "prices": [
       3.46,
       3.92,
@@ -891,12 +891,12 @@
       3.84,
       3.7,
       3.88,
-      3.62
+      3.66
     ],
-    "change_pct": -6.7,
+    "change_pct": -5.67,
     "prev_close": 3.88,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -1106,12 +1106,12 @@
         "open": 3.74,
         "high": 3.74,
         "low": 3.6,
-        "close": 3.62
+        "close": 3.66
       }
     ]
   },
   "AFRM03": {
-    "price": 2.86,
+    "price": 2.88,
     "prices": [
       1.96,
       2.44,
@@ -1142,12 +1142,12 @@
       2.64,
       2.72,
       2.88,
-      2.86
+      2.88
     ],
-    "change_pct": -0.69,
+    "change_pct": 0.0,
     "prev_close": 2.88,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -1357,12 +1357,12 @@
         "open": 2.9,
         "high": 2.92,
         "low": 2.86,
-        "close": 2.86
+        "close": 2.88
       }
     ]
   },
   "AIA23": {
-    "price": 2.64,
+    "price": 2.66,
     "prices": [
       2.75,
       2.63,
@@ -1393,12 +1393,12 @@
       2.73,
       2.67,
       2.67,
-      2.64
+      2.66
     ],
-    "change_pct": -1.26,
+    "change_pct": -0.51,
     "prev_close": 2.67,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -1608,12 +1608,12 @@
         "open": 2.62,
         "high": 2.66,
         "low": 2.6,
-        "close": 2.64
+        "close": 2.66
       }
     ]
   },
   "AMD80": {
-    "price": 3.14,
+    "price": 3.18,
     "prices": [
       1.5,
       1.66,
@@ -1644,12 +1644,12 @@
       3.08,
       3.14,
       3.34,
-      3.14
+      3.18
     ],
-    "change_pct": -5.99,
+    "change_pct": -4.79,
     "prev_close": 3.34,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -1859,7 +1859,7 @@
         "open": 3.22,
         "high": 3.42,
         "low": 3.1,
-        "close": 3.14
+        "close": 3.18
       }
     ]
   },
@@ -1900,7 +1900,7 @@
     "change_pct": 0.0,
     "prev_close": 2.76,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -2151,7 +2151,7 @@
     "change_pct": 1.85,
     "prev_close": 2.16,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -2366,7 +2366,7 @@
     ]
   },
   "ANET80": {
-    "price": 4.98,
+    "price": 5.0,
     "prices": [
       4.72,
       4.62,
@@ -2379,12 +2379,12 @@
       5.2,
       5.2,
       5.15,
-      4.98
+      5.0
     ],
-    "change_pct": -3.3,
+    "change_pct": -2.91,
     "prev_close": 5.15,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-05-13",
@@ -2468,12 +2468,12 @@
         "open": 5.1,
         "high": 5.2,
         "low": 4.96,
-        "close": 4.98
+        "close": 5.0
       }
     ]
   },
   "ANTA23": {
-    "price": 1.93,
+    "price": 1.95,
     "prices": [
       2.17,
       2.17,
@@ -2504,12 +2504,12 @@
       1.99,
       1.99,
       1.98,
-      1.93
+      1.95
     ],
-    "change_pct": -2.53,
+    "change_pct": -1.52,
     "prev_close": 1.98,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -2719,12 +2719,12 @@
         "open": 1.93,
         "high": 1.95,
         "low": 1.92,
-        "close": 1.93
+        "close": 1.95
       }
     ]
   },
   "APLD03": {
-    "price": 5.2,
+    "price": 5.25,
     "prices": [
       2.74,
       3.34,
@@ -2755,12 +2755,12 @@
       5.2,
       5.15,
       4.98,
-      5.2
+      5.25
     ],
-    "change_pct": 4.42,
+    "change_pct": 5.42,
     "prev_close": 4.98,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -2970,12 +2970,12 @@
         "open": 5.3,
         "high": 5.35,
         "low": 4.8,
-        "close": 5.2
+        "close": 5.25
       }
     ]
   },
   "APPL03": {
-    "price": 3.08,
+    "price": 3.12,
     "prices": [
       2.04,
       2.54,
@@ -3006,12 +3006,12 @@
       2.66,
       2.64,
       2.84,
-      3.08
+      3.12
     ],
-    "change_pct": 8.45,
+    "change_pct": 9.86,
     "prev_close": 2.84,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -3221,12 +3221,12 @@
         "open": 3.12,
         "high": 3.16,
         "low": 2.84,
-        "close": 3.08
+        "close": 3.12
       }
     ]
   },
   "ASEMI24": {
-    "price": 3.82,
+    "price": 3.86,
     "prices": [
       2.7,
       2.7,
@@ -3257,12 +3257,12 @@
       3.76,
       3.76,
       3.98,
-      3.82
+      3.86
     ],
-    "change_pct": -4.02,
+    "change_pct": -3.02,
     "prev_close": 3.98,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -3472,12 +3472,12 @@
         "open": 3.9,
         "high": 3.92,
         "low": 3.82,
-        "close": 3.82
+        "close": 3.86
       }
     ]
   },
   "ASICS23": {
-    "price": 2.82,
+    "price": 2.74,
     "prices": [
       2.78,
       2.88,
@@ -3508,12 +3508,12 @@
       2.82,
       2.78,
       2.82,
-      2.82
+      2.74
     ],
-    "change_pct": 0.0,
+    "change_pct": -2.84,
     "prev_close": 2.82,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -3722,13 +3722,13 @@
         "date": "2026-05-28",
         "open": 2.82,
         "high": 2.82,
-        "low": 2.82,
-        "close": 2.82
+        "low": 2.74,
+        "close": 2.74
       }
     ]
   },
   "ASML01": {
-    "price": 43.5,
+    "price": 44.0,
     "prices": [
       38.43,
       38.68,
@@ -3759,12 +3759,12 @@
       45.25,
       44.75,
       44.75,
-      43.5
+      44.0
     ],
-    "change_pct": -2.79,
+    "change_pct": -1.68,
     "prev_close": 44.75,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -3974,12 +3974,12 @@
         "open": 43.5,
         "high": 45.25,
         "low": 43.5,
-        "close": 43.5
+        "close": 44.0
       }
     ]
   },
   "ASTS03": {
-    "price": 4.06,
+    "price": 4.1,
     "prices": [
       2.98,
       2.86,
@@ -4010,12 +4010,12 @@
       3.56,
       3.74,
       4.22,
-      4.06
+      4.1
     ],
-    "change_pct": -3.79,
+    "change_pct": -2.84,
     "prev_close": 4.22,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -4225,12 +4225,12 @@
         "open": 4.16,
         "high": 4.28,
         "low": 3.84,
-        "close": 4.06
+        "close": 4.1
       }
     ]
   },
   "AVGO80": {
-    "price": 2.76,
+    "price": 2.78,
     "prices": [
       2.3,
       2.5,
@@ -4261,12 +4261,12 @@
       2.72,
       2.74,
       2.78,
-      2.76
+      2.78
     ],
-    "change_pct": -0.72,
+    "change_pct": 0.0,
     "prev_close": 2.78,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -4476,12 +4476,12 @@
         "open": 2.74,
         "high": 2.84,
         "low": 2.72,
-        "close": 2.76
+        "close": 2.78
       }
     ]
   },
   "AXP06": {
-    "price": 2.58,
+    "price": 2.56,
     "prices": [
       2.54,
       2.64,
@@ -4512,12 +4512,12 @@
       2.56,
       2.56,
       2.56,
-      2.58
+      2.56
     ],
-    "change_pct": 0.78,
+    "change_pct": 0.0,
     "prev_close": 2.56,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -4727,12 +4727,12 @@
         "open": 2.56,
         "high": 2.58,
         "low": 2.56,
-        "close": 2.58
+        "close": 2.56
       }
     ]
   },
   "BABA80": {
-    "price": 5.05,
+    "price": 5.1,
     "prices": [
       5.5,
       5.55,
@@ -4763,12 +4763,12 @@
       5.35,
       5.3,
       5.15,
-      5.05
+      5.1
     ],
-    "change_pct": -1.94,
+    "change_pct": -0.97,
     "prev_close": 5.15,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -4976,9 +4976,9 @@
       {
         "date": "2026-05-28",
         "open": 5.1,
-        "high": 5.1,
+        "high": 5.15,
         "low": 5.0,
-        "close": 5.05
+        "close": 5.1
       }
     ]
   },
@@ -5019,7 +5019,7 @@
     "change_pct": -1.75,
     "prev_close": 3.42,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -5234,7 +5234,7 @@
     ]
   },
   "BDX06": {
-    "price": 1.6,
+    "price": 1.61,
     "prices": [
       1.69,
       1.68,
@@ -5265,12 +5265,12 @@
       1.6,
       1.6,
       1.61,
-      1.6
+      1.61
     ],
-    "change_pct": -0.62,
+    "change_pct": 0.0,
     "prev_close": 1.61,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -5480,7 +5480,7 @@
         "open": 1.6,
         "high": 1.63,
         "low": 1.6,
-        "close": 1.6
+        "close": 1.61
       }
     ]
   },
@@ -5521,7 +5521,7 @@
     "change_pct": -1.89,
     "prev_close": 5.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -5729,14 +5729,14 @@
       {
         "date": "2026-05-28",
         "open": 5.15,
-        "high": 5.2,
+        "high": 5.25,
         "low": 5.1,
         "close": 5.2
       }
     ]
   },
   "BILIBILI01": {
-    "price": 2.6,
+    "price": 2.64,
     "prices": [
       3.82,
       3.88,
@@ -5767,12 +5767,12 @@
       2.78,
       2.74,
       2.7,
-      2.6
+      2.64
     ],
-    "change_pct": -3.7,
+    "change_pct": -2.22,
     "prev_close": 2.7,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -5980,14 +5980,14 @@
       {
         "date": "2026-05-28",
         "open": 2.62,
-        "high": 2.62,
+        "high": 2.64,
         "low": 2.58,
-        "close": 2.6
+        "close": 2.64
       }
     ]
   },
   "BIREN23": {
-    "price": 8.95,
+    "price": 9.05,
     "prices": [
       5.95,
       8.05,
@@ -6018,12 +6018,12 @@
       8.3,
       8.6,
       8.8,
-      8.95
+      9.05
     ],
-    "change_pct": 1.7,
+    "change_pct": 2.84,
     "prev_close": 8.8,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -6231,9 +6231,9 @@
       {
         "date": "2026-05-28",
         "open": 8.85,
-        "high": 9.0,
+        "high": 9.1,
         "low": 8.75,
-        "close": 8.95
+        "close": 9.05
       }
     ]
   },
@@ -6274,7 +6274,7 @@
     "change_pct": 2.99,
     "prev_close": 2.68,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -6525,7 +6525,7 @@
     "change_pct": 0.57,
     "prev_close": 3.48,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -6758,7 +6758,7 @@
     "change_pct": 2.1,
     "prev_close": 7.15,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-05-13",
@@ -6847,7 +6847,7 @@
     ]
   },
   "BONDAS19": {
-    "price": 6.5,
+    "price": 6.45,
     "prices": [
       6.35,
       6.4,
@@ -6878,12 +6878,12 @@
       6.45,
       6.5,
       6.45,
-      6.5
+      6.45
     ],
-    "change_pct": 0.78,
+    "change_pct": 0.0,
     "prev_close": 6.45,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -7092,13 +7092,13 @@
         "date": "2026-05-28",
         "open": 6.55,
         "high": 6.55,
-        "low": 6.5,
-        "close": 6.5
+        "low": 6.45,
+        "close": 6.45
       }
     ]
   },
   "BRKB80": {
-    "price": 1.57,
+    "price": 1.58,
     "prices": [
       1.54,
       1.54,
@@ -7129,12 +7129,12 @@
       1.59,
       1.59,
       1.58,
-      1.57
+      1.58
     ],
-    "change_pct": -0.63,
+    "change_pct": 0.0,
     "prev_close": 1.58,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -7344,7 +7344,7 @@
         "open": 1.57,
         "high": 1.59,
         "low": 1.57,
-        "close": 1.57
+        "close": 1.58
       }
     ]
   },
@@ -7385,7 +7385,7 @@
     "change_pct": 0.0,
     "prev_close": 0.38,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -7600,7 +7600,7 @@
     ]
   },
   "CAMBRI80": {
-    "price": 6.6,
+    "price": 6.7,
     "prices": [
       3.96,
       4.31,
@@ -7631,12 +7631,12 @@
       6.6,
       6.75,
       6.35,
-      6.6
+      6.7
     ],
-    "change_pct": 3.94,
+    "change_pct": 5.51,
     "prev_close": 6.35,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -7846,12 +7846,12 @@
         "open": 6.5,
         "high": 6.75,
         "low": 6.5,
-        "close": 6.6
+        "close": 6.7
       }
     ]
   },
   "CATL80": {
-    "price": 29.0,
+    "price": 29.75,
     "prices": [
       27.75,
       29.0,
@@ -7882,12 +7882,12 @@
       28.75,
       27.75,
       29.25,
-      29.0
+      29.75
     ],
-    "change_pct": -0.85,
+    "change_pct": 1.71,
     "prev_close": 29.25,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -8095,9 +8095,9 @@
       {
         "date": "2026-05-28",
         "open": 29.0,
-        "high": 29.0,
+        "high": 30.0,
         "low": 28.5,
-        "close": 29.0
+        "close": 29.75
       }
     ]
   },
@@ -8138,7 +8138,7 @@
     "change_pct": -0.91,
     "prev_close": 2.2,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -8353,7 +8353,7 @@
     ]
   },
   "CEG23": {
-    "price": 2.36,
+    "price": 2.34,
     "prices": [
       2.28,
       2.36,
@@ -8384,12 +8384,12 @@
       2.36,
       2.44,
       2.46,
-      2.36
+      2.34
     ],
-    "change_pct": -4.07,
+    "change_pct": -4.88,
     "prev_close": 2.46,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -8599,12 +8599,12 @@
         "open": 2.34,
         "high": 2.48,
         "low": 2.32,
-        "close": 2.36
+        "close": 2.34
       }
     ]
   },
   "CHHONGQ19": {
-    "price": 12.2,
+    "price": 12.1,
     "prices": [
       14.8,
       14.52,
@@ -8635,12 +8635,12 @@
       12.4,
       12.4,
       12.8,
-      12.2
+      12.1
     ],
-    "change_pct": -4.69,
+    "change_pct": -5.47,
     "prev_close": 12.8,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -8850,12 +8850,12 @@
         "open": 12.2,
         "high": 12.2,
         "low": 12.1,
-        "close": 12.2
+        "close": 12.1
       }
     ]
   },
   "CHMOBILE23": {
-    "price": 2.72,
+    "price": 2.74,
     "prices": [
       2.62,
       2.54,
@@ -8886,12 +8886,12 @@
       2.74,
       2.82,
       2.68,
-      2.72
+      2.74
     ],
-    "change_pct": 1.49,
+    "change_pct": 2.24,
     "prev_close": 2.68,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-09",
@@ -9099,14 +9099,14 @@
       {
         "date": "2026-05-28",
         "open": 2.68,
-        "high": 2.72,
+        "high": 2.74,
         "low": 2.68,
-        "close": 2.72
+        "close": 2.74
       }
     ]
   },
   "CHNXT5023": {
-    "price": 9.3,
+    "price": 9.4,
     "prices": [
       8.0,
       8.0,
@@ -9137,12 +9137,12 @@
       9.05,
       9.15,
       9.3,
-      9.3
+      9.4
     ],
-    "change_pct": 0.0,
+    "change_pct": 1.08,
     "prev_close": 9.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -9350,9 +9350,9 @@
       {
         "date": "2026-05-28",
         "open": 9.1,
-        "high": 9.3,
+        "high": 9.4,
         "low": 9.1,
-        "close": 9.3
+        "close": 9.4
       }
     ]
   },
@@ -9393,7 +9393,7 @@
     "change_pct": -0.93,
     "prev_close": 2.16,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:56 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -9644,7 +9644,7 @@
     "change_pct": -1.29,
     "prev_close": 3.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -9859,7 +9859,7 @@
     ]
   },
   "CN01": {
-    "price": 24.4,
+    "price": 24.5,
     "prices": [
       22.5,
       22.9,
@@ -9890,12 +9890,12 @@
       24.2,
       24.3,
       24.3,
-      24.4
+      24.5
     ],
-    "change_pct": 0.41,
+    "change_pct": 0.82,
     "prev_close": 24.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -10103,14 +10103,14 @@
       {
         "date": "2026-05-28",
         "open": 24.3,
-        "high": 24.4,
+        "high": 24.5,
         "low": 24.2,
-        "close": 24.4
+        "close": 24.5
       }
     ]
   },
   "CN23": {
-    "price": 6.2,
+    "price": 6.15,
     "prices": [
       5.75,
       5.9,
@@ -10141,12 +10141,12 @@
       6.05,
       6.25,
       6.2,
-      6.2
+      6.15
     ],
-    "change_pct": 0.0,
+    "change_pct": -0.81,
     "prev_close": 6.2,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -10356,12 +10356,12 @@
         "open": 6.15,
         "high": 6.2,
         "low": 6.1,
-        "close": 6.2
+        "close": 6.15
       }
     ]
   },
   "CNBIO24": {
-    "price": 1.33,
+    "price": 1.32,
     "prices": [
       1.53,
       1.5,
@@ -10392,12 +10392,12 @@
       1.37,
       1.37,
       1.36,
-      1.33
+      1.32
     ],
-    "change_pct": -2.21,
+    "change_pct": -2.94,
     "prev_close": 1.36,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -10607,7 +10607,7 @@
         "open": 1.34,
         "high": 1.34,
         "low": 1.32,
-        "close": 1.33
+        "close": 1.32
       }
     ]
   },
@@ -10648,7 +10648,7 @@
     "change_pct": -0.83,
     "prev_close": 2.42,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -10863,7 +10863,7 @@
     ]
   },
   "CNRE80": {
-    "price": 2.42,
+    "price": 2.44,
     "prices": [
       2.68,
       2.6,
@@ -10876,12 +10876,12 @@
       2.46,
       2.44,
       2.36,
-      2.42
+      2.44
     ],
-    "change_pct": 2.54,
+    "change_pct": 3.39,
     "prev_close": 2.36,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-13",
@@ -10963,14 +10963,14 @@
       {
         "date": "2026-05-28",
         "open": 2.4,
-        "high": 2.42,
+        "high": 2.44,
         "low": 2.38,
-        "close": 2.42
+        "close": 2.44
       }
     ]
   },
   "CNROBOAI23": {
-    "price": 2.8,
+    "price": 2.82,
     "prices": [
       2.42,
       2.46,
@@ -11001,12 +11001,12 @@
       2.9,
       2.9,
       2.86,
-      2.8
+      2.82
     ],
-    "change_pct": -2.1,
+    "change_pct": -1.4,
     "prev_close": 2.86,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -11214,14 +11214,14 @@
       {
         "date": "2026-05-28",
         "open": 2.78,
-        "high": 2.8,
+        "high": 2.82,
         "low": 2.74,
-        "close": 2.8
+        "close": 2.82
       }
     ]
   },
   "CNSEMI23": {
-    "price": 4.08,
+    "price": 4.06,
     "prices": [
       2.58,
       2.7,
@@ -11252,12 +11252,12 @@
       4.02,
       4.16,
       4.06,
-      4.08
+      4.06
     ],
-    "change_pct": 0.49,
+    "change_pct": 0.0,
     "prev_close": 4.06,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -11467,12 +11467,12 @@
         "open": 4.04,
         "high": 4.08,
         "low": 4.0,
-        "close": 4.08
+        "close": 4.06
       }
     ]
   },
   "CNSTAR5023": {
-    "price": 9.3,
+    "price": 9.35,
     "prices": [
       6.8,
       7.0,
@@ -11503,12 +11503,12 @@
       9.7,
       9.35,
       9.05,
-      9.3
+      9.35
     ],
-    "change_pct": 2.76,
+    "change_pct": 3.31,
     "prev_close": 9.05,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -11718,7 +11718,7 @@
         "open": 9.3,
         "high": 9.45,
         "low": 9.3,
-        "close": 9.3
+        "close": 9.35
       }
     ]
   },
@@ -11759,7 +11759,7 @@
     "change_pct": -0.96,
     "prev_close": 26.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -11974,7 +11974,7 @@
     ]
   },
   "COIN80": {
-    "price": 5.6,
+    "price": 5.7,
     "prices": [
       6.9,
       6.6,
@@ -11987,12 +11987,12 @@
       6.2,
       6.15,
       5.95,
-      5.6
+      5.7
     ],
-    "change_pct": -5.88,
+    "change_pct": -4.2,
     "prev_close": 5.95,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-13",
@@ -12076,7 +12076,7 @@
         "open": 5.65,
         "high": 5.95,
         "low": 5.55,
-        "close": 5.6
+        "close": 5.7
       }
     ]
   },
@@ -12117,7 +12117,7 @@
     "change_pct": 1.53,
     "prev_close": 32.75,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -12332,7 +12332,7 @@
     ]
   },
   "CRM80": {
-    "price": 5.65,
+    "price": 5.7,
     "prices": [
       5.5,
       5.85,
@@ -12363,12 +12363,12 @@
       5.95,
       5.9,
       5.85,
-      5.65
+      5.7
     ],
-    "change_pct": -3.42,
+    "change_pct": -2.56,
     "prev_close": 5.85,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -12578,7 +12578,7 @@
         "open": 5.75,
         "high": 6.0,
         "low": 5.65,
-        "close": 5.65
+        "close": 5.7
       }
     ]
   },
@@ -12619,7 +12619,7 @@
     "change_pct": 2.98,
     "prev_close": 3.36,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -12834,7 +12834,7 @@
     ]
   },
   "CRWD80": {
-    "price": 21.1,
+    "price": 21.2,
     "prices": [
       13.0,
       13.5,
@@ -12865,12 +12865,12 @@
       22.0,
       21.5,
       21.1,
-      21.1
+      21.2
     ],
-    "change_pct": 0.0,
+    "change_pct": 0.47,
     "prev_close": 21.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -13080,12 +13080,12 @@
         "open": 21.1,
         "high": 21.4,
         "low": 20.8,
-        "close": 21.1
+        "close": 21.2
       }
     ]
   },
   "CRWV03": {
-    "price": 3.38,
+    "price": 3.42,
     "prices": [
       2.94,
       3.88,
@@ -13116,12 +13116,12 @@
       3.52,
       3.52,
       3.5,
-      3.38
+      3.42
     ],
-    "change_pct": -3.43,
+    "change_pct": -2.29,
     "prev_close": 3.5,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -13331,7 +13331,7 @@
         "open": 3.4,
         "high": 3.5,
         "low": 3.26,
-        "close": 3.38
+        "close": 3.42
       }
     ]
   },
@@ -13372,7 +13372,7 @@
     "change_pct": 1.65,
     "prev_close": 4.84,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -13623,7 +13623,7 @@
     "change_pct": 1.54,
     "prev_close": 13.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -13838,7 +13838,7 @@
     ]
   },
   "DASH03": {
-    "price": 2.58,
+    "price": 2.6,
     "prices": [
       2.48,
       2.9,
@@ -13869,12 +13869,12 @@
       2.46,
       2.66,
       2.52,
-      2.58
+      2.6
     ],
-    "change_pct": 2.38,
+    "change_pct": 3.17,
     "prev_close": 2.52,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-09",
@@ -14084,7 +14084,7 @@
         "open": 2.6,
         "high": 2.64,
         "low": 2.56,
-        "close": 2.58
+        "close": 2.6
       }
     ]
   },
@@ -14125,7 +14125,7 @@
     "change_pct": -1.24,
     "prev_close": 16.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -14340,7 +14340,7 @@
     ]
   },
   "DDOG19": {
-    "price": 7.6,
+    "price": 7.65,
     "prices": [
       4.0,
       4.0,
@@ -14371,12 +14371,12 @@
       7.35,
       7.15,
       7.3,
-      7.6
+      7.65
     ],
-    "change_pct": 4.11,
+    "change_pct": 4.79,
     "prev_close": 7.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -14584,9 +14584,9 @@
       {
         "date": "2026-05-28",
         "open": 7.45,
-        "high": 7.6,
+        "high": 7.7,
         "low": 7.15,
-        "close": 7.6
+        "close": 7.65
       }
     ]
   },
@@ -14627,7 +14627,7 @@
     "change_pct": 0.97,
     "prev_close": 10.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -14842,7 +14842,7 @@
     ]
   },
   "DISCO24": {
-    "price": 0.93,
+    "price": 0.92,
     "prices": [
       1.09,
       1.08,
@@ -14858,12 +14858,12 @@
       1.03,
       1.03,
       0.96,
-      0.93
+      0.92
     ],
-    "change_pct": -3.12,
+    "change_pct": -4.17,
     "prev_close": 0.96,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-08",
@@ -14968,7 +14968,7 @@
         "open": 0.96,
         "high": 0.97,
         "low": 0.91,
-        "close": 0.93
+        "close": 0.92
       }
     ]
   },
@@ -15009,7 +15009,7 @@
     "change_pct": -0.59,
     "prev_close": 17.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -15260,7 +15260,7 @@
     "change_pct": 2.78,
     "prev_close": 2.16,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -15511,7 +15511,7 @@
     "change_pct": 0.0,
     "prev_close": 44.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -15726,7 +15726,7 @@
     ]
   },
   "EOSE03": {
-    "price": 1.37,
+    "price": 1.38,
     "prices": [
       0.99,
       1.18,
@@ -15757,12 +15757,12 @@
       1.32,
       1.36,
       1.45,
-      1.37
+      1.38
     ],
-    "change_pct": -5.52,
+    "change_pct": -4.83,
     "prev_close": 1.45,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -15972,7 +15972,7 @@
         "open": 1.42,
         "high": 1.46,
         "low": 1.35,
-        "close": 1.37
+        "close": 1.38
       }
     ]
   },
@@ -16013,7 +16013,7 @@
     "change_pct": 5.32,
     "prev_close": 0.94,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -16228,7 +16228,7 @@
     ]
   },
   "EXPE06": {
-    "price": 2.96,
+    "price": 2.94,
     "prices": [
       2.97,
       3.23,
@@ -16259,12 +16259,12 @@
       2.81,
       2.81,
       2.93,
-      2.96
+      2.94
     ],
-    "change_pct": 0.86,
+    "change_pct": 0.18,
     "prev_close": 2.93,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -16474,12 +16474,12 @@
         "open": 2.94,
         "high": 3.0,
         "low": 2.92,
-        "close": 2.96
+        "close": 2.94
       }
     ]
   },
   "FANUC23": {
-    "price": 2.94,
+    "price": 2.98,
     "prices": [
       2.32,
       2.34,
@@ -16510,12 +16510,12 @@
       3.14,
       3.18,
       2.96,
-      2.94
+      2.98
     ],
-    "change_pct": -0.68,
+    "change_pct": 0.68,
     "prev_close": 2.96,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -16725,7 +16725,7 @@
         "open": 2.96,
         "high": 2.98,
         "low": 2.92,
-        "close": 2.94
+        "close": 2.98
       }
     ]
   },
@@ -16766,7 +16766,7 @@
     "change_pct": -2.27,
     "prev_close": 2.64,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -16981,7 +16981,7 @@
     ]
   },
   "FERRARI80": {
-    "price": 1.09,
+    "price": 1.08,
     "prices": [
       1.13,
       1.14,
@@ -17012,12 +17012,12 @@
       1.15,
       1.11,
       1.1,
-      1.09
+      1.08
     ],
-    "change_pct": -0.91,
+    "change_pct": -1.82,
     "prev_close": 1.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -17227,12 +17227,12 @@
         "open": 1.09,
         "high": 1.09,
         "low": 1.07,
-        "close": 1.09
+        "close": 1.08
       }
     ]
   },
   "FPTVN19": {
-    "price": 9.0,
+    "price": 8.95,
     "prices": [
       9.37,
       9.42,
@@ -17263,12 +17263,12 @@
       9.18,
       9.13,
       9.18,
-      9.0
+      8.95
     ],
-    "change_pct": -1.93,
+    "change_pct": -2.47,
     "prev_close": 9.18,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -17478,12 +17478,12 @@
         "open": 9.15,
         "high": 9.15,
         "low": 8.95,
-        "close": 9.0
+        "close": 8.95
       }
     ]
   },
   "FUEVFVND01": {
-    "price": 44.5,
+    "price": 44.75,
     "prices": [
       45.75,
       45.5,
@@ -17514,12 +17514,12 @@
       44.0,
       44.25,
       44.75,
-      44.5
+      44.75
     ],
-    "change_pct": -0.56,
+    "change_pct": 0.0,
     "prev_close": 44.75,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -17729,7 +17729,7 @@
         "open": 44.75,
         "high": 45.0,
         "low": 44.5,
-        "close": 44.5
+        "close": 44.75
       }
     ]
   },
@@ -17770,7 +17770,7 @@
     "change_pct": -1.83,
     "prev_close": 2.18,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -18021,7 +18021,7 @@
     "change_pct": -2.16,
     "prev_close": 2.78,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -18236,7 +18236,7 @@
     ]
   },
   "GASVN11": {
-    "price": 4.14,
+    "price": 4.08,
     "prices": [
       3.94,
       3.88,
@@ -18267,12 +18267,12 @@
       4.04,
       4.08,
       4.04,
-      4.14
+      4.08
     ],
-    "change_pct": 2.48,
+    "change_pct": 0.99,
     "prev_close": 4.04,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -18482,12 +18482,12 @@
         "open": 3.98,
         "high": 4.18,
         "low": 3.98,
-        "close": 4.14
+        "close": 4.08
       }
     ]
   },
   "GDS23": {
-    "price": 1.88,
+    "price": 1.89,
     "prices": [
       2.46,
       2.6,
@@ -18518,12 +18518,12 @@
       2.02,
       2.04,
       1.92,
-      1.88
+      1.89
     ],
-    "change_pct": -2.08,
+    "change_pct": -1.56,
     "prev_close": 1.92,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -18733,12 +18733,12 @@
         "open": 1.9,
         "high": 1.9,
         "low": 1.85,
-        "close": 1.88
+        "close": 1.89
       }
     ]
   },
   "GEELY80": {
-    "price": 7.9,
+    "price": 7.85,
     "prices": [
       10.1,
       10.2,
@@ -18769,12 +18769,12 @@
       8.0,
       7.95,
       8.05,
-      7.9
+      7.85
     ],
-    "change_pct": -1.86,
+    "change_pct": -2.48,
     "prev_close": 8.05,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -18984,7 +18984,7 @@
         "open": 7.9,
         "high": 7.9,
         "low": 7.8,
-        "close": 7.9
+        "close": 7.85
       }
     ]
   },
@@ -19007,7 +19007,7 @@
     "change_pct": -4.93,
     "prev_close": 35.5,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-13",
@@ -19096,7 +19096,7 @@
     ]
   },
   "GIGA23": {
-    "price": 11.2,
+    "price": 11.0,
     "prices": [
       5.39,
       6.44,
@@ -19127,12 +19127,12 @@
       11.3,
       11.8,
       11.6,
-      11.2
+      11.0
     ],
-    "change_pct": -3.45,
+    "change_pct": -5.17,
     "prev_close": 11.6,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -19341,13 +19341,13 @@
         "date": "2026-05-28",
         "open": 11.2,
         "high": 11.5,
-        "low": 11.1,
-        "close": 11.2
+        "low": 11.0,
+        "close": 11.0
       }
     ]
   },
   "GOLD03": {
-    "price": 3.3,
+    "price": 3.32,
     "prices": [
       3.52,
       3.56,
@@ -19378,12 +19378,12 @@
       3.46,
       3.42,
       3.38,
-      3.3
+      3.32
     ],
-    "change_pct": -2.37,
+    "change_pct": -1.78,
     "prev_close": 3.38,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -19593,7 +19593,7 @@
         "open": 3.32,
         "high": 3.32,
         "low": 3.28,
-        "close": 3.3
+        "close": 3.32
       }
     ]
   },
@@ -19634,7 +19634,7 @@
     "change_pct": -1.48,
     "prev_close": 13.5,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -19867,7 +19867,7 @@
     "change_pct": -2.22,
     "prev_close": 13.5,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-13",
@@ -19956,7 +19956,7 @@
     ]
   },
   "GOOG80": {
-    "price": 6.3,
+    "price": 6.25,
     "prices": [
       5.35,
       5.35,
@@ -19987,12 +19987,12 @@
       6.3,
       6.2,
       6.25,
-      6.3
+      6.25
     ],
-    "change_pct": 0.8,
+    "change_pct": 0.0,
     "prev_close": 6.25,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -20202,12 +20202,12 @@
         "open": 6.3,
         "high": 6.35,
         "low": 6.2,
-        "close": 6.3
+        "close": 6.25
       }
     ]
   },
   "GOOGL01": {
-    "price": 37.5,
+    "price": 37.25,
     "prices": [
       32.0,
       32.0,
@@ -20238,12 +20238,12 @@
       37.5,
       37.25,
       37.25,
-      37.5
+      37.25
     ],
-    "change_pct": 0.67,
+    "change_pct": 0.0,
     "prev_close": 37.25,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -20453,7 +20453,7 @@
         "open": 37.5,
         "high": 37.75,
         "low": 37.0,
-        "close": 37.5
+        "close": 37.25
       }
     ]
   },
@@ -20494,7 +20494,7 @@
     "change_pct": 0.85,
     "prev_close": 11.7,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -20709,7 +20709,7 @@
     ]
   },
   "GSEMI24": {
-    "price": 2.44,
+    "price": 2.46,
     "prices": [
       2.22,
       2.3,
@@ -20725,12 +20725,12 @@
       2.48,
       2.4,
       2.56,
-      2.44
+      2.46
     ],
-    "change_pct": -4.69,
+    "change_pct": -3.91,
     "prev_close": 2.56,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-08",
@@ -20835,7 +20835,7 @@
         "open": 2.5,
         "high": 2.5,
         "low": 2.42,
-        "close": 2.44
+        "close": 2.46
       }
     ]
   },
@@ -20876,7 +20876,7 @@
     "change_pct": 0.86,
     "prev_close": 4.64,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -21127,7 +21127,7 @@
     "change_pct": -2.42,
     "prev_close": 8.25,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -21342,7 +21342,7 @@
     ]
   },
   "HANSOH19": {
-    "price": 5.35,
+    "price": 5.25,
     "prices": [
       6.55,
       6.55,
@@ -21373,12 +21373,12 @@
       5.7,
       5.7,
       5.65,
-      5.35
+      5.25
     ],
-    "change_pct": -5.31,
+    "change_pct": -7.08,
     "prev_close": 5.65,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -21587,13 +21587,13 @@
         "date": "2026-05-28",
         "open": 5.4,
         "high": 5.4,
-        "low": 5.35,
-        "close": 5.35
+        "low": 5.25,
+        "close": 5.25
       }
     ]
   },
   "HERMES80": {
-    "price": 6.25,
+    "price": 6.15,
     "prices": [
       6.6,
       6.15,
@@ -21624,12 +21624,12 @@
       6.2,
       6.15,
       6.3,
-      6.25
+      6.15
     ],
-    "change_pct": -0.79,
+    "change_pct": -2.38,
     "prev_close": 6.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -21838,13 +21838,13 @@
         "date": "2026-05-28",
         "open": 6.25,
         "high": 6.3,
-        "low": 6.25,
-        "close": 6.25
+        "low": 6.15,
+        "close": 6.15
       }
     ]
   },
   "HIMS03": {
-    "price": 4.06,
+    "price": 4.1,
     "prices": [
       3.16,
       4.14,
@@ -21875,12 +21875,12 @@
       3.84,
       3.92,
       3.98,
-      4.06
+      4.1
     ],
-    "change_pct": 2.01,
+    "change_pct": 3.02,
     "prev_close": 3.98,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -22090,7 +22090,7 @@
         "open": 4.12,
         "high": 4.22,
         "low": 3.96,
-        "close": 4.06
+        "close": 4.1
       }
     ]
   },
@@ -22116,7 +22116,7 @@
     "change_pct": 3.91,
     "prev_close": 1.28,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-08",
@@ -22219,7 +22219,7 @@
       {
         "date": "2026-05-28",
         "open": 1.3,
-        "high": 1.33,
+        "high": 1.34,
         "low": 1.3,
         "close": 1.33
       }
@@ -22262,7 +22262,7 @@
     "change_pct": -1.41,
     "prev_close": 21.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -22470,7 +22470,7 @@
       {
         "date": "2026-05-28",
         "open": 21.0,
-        "high": 21.0,
+        "high": 21.1,
         "low": 20.9,
         "close": 21.0
       }
@@ -22513,7 +22513,7 @@
     "change_pct": -0.83,
     "prev_close": 24.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -22764,7 +22764,7 @@
     "change_pct": 0.94,
     "prev_close": 2.12,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -22979,7 +22979,7 @@
     ]
   },
   "HKTECH13": {
-    "price": 4.04,
+    "price": 4.06,
     "prices": [
       4.02,
       4.12,
@@ -23010,12 +23010,12 @@
       4.06,
       4.12,
       4.06,
-      4.04
+      4.06
     ],
-    "change_pct": -0.49,
+    "change_pct": 0.0,
     "prev_close": 4.06,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -23223,9 +23223,9 @@
       {
         "date": "2026-05-28",
         "open": 4.0,
-        "high": 4.04,
+        "high": 4.06,
         "low": 4.0,
-        "close": 4.04
+        "close": 4.06
       }
     ]
   },
@@ -23266,7 +23266,7 @@
     "change_pct": 1.38,
     "prev_close": 2.9,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -23481,7 +23481,7 @@
     ]
   },
   "HOOD80": {
-    "price": 2.48,
+    "price": 2.46,
     "prices": [
       2.26,
       2.88,
@@ -23512,12 +23512,12 @@
       2.42,
       2.44,
       2.44,
-      2.48
+      2.46
     ],
-    "change_pct": 1.64,
+    "change_pct": 0.82,
     "prev_close": 2.44,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -23727,12 +23727,12 @@
         "open": 2.48,
         "high": 2.5,
         "low": 2.42,
-        "close": 2.48
+        "close": 2.46
       }
     ]
   },
   "HORIZON23": {
-    "price": 1.48,
+    "price": 1.49,
     "prices": [
       1.86,
       1.88,
@@ -23763,12 +23763,12 @@
       1.6,
       1.68,
       1.57,
-      1.48
+      1.49
     ],
-    "change_pct": -5.73,
+    "change_pct": -5.1,
     "prev_close": 1.57,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -23976,14 +23976,14 @@
       {
         "date": "2026-05-28",
         "open": 1.48,
-        "high": 1.49,
+        "high": 1.5,
         "low": 1.46,
-        "close": 1.48
+        "close": 1.49
       }
     ]
   },
   "HPG19": {
-    "price": 3.04,
+    "price": 3.02,
     "prices": [
       3.15,
       3.1,
@@ -24014,12 +24014,12 @@
       3.04,
       3.02,
       3.02,
-      3.04
+      3.02
     ],
-    "change_pct": 0.66,
+    "change_pct": 0.0,
     "prev_close": 3.02,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -24229,12 +24229,12 @@
         "open": 3.04,
         "high": 3.04,
         "low": 3.02,
-        "close": 3.04
+        "close": 3.02
       }
     ]
   },
   "HSHD23": {
-    "price": 6.55,
+    "price": 6.6,
     "prices": [
       6.75,
       6.7,
@@ -24265,12 +24265,12 @@
       6.95,
       6.95,
       6.75,
-      6.55
+      6.6
     ],
-    "change_pct": -2.96,
+    "change_pct": -2.22,
     "prev_close": 6.75,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -24480,12 +24480,12 @@
         "open": 6.6,
         "high": 6.65,
         "low": 6.55,
-        "close": 6.55
+        "close": 6.6
       }
     ]
   },
   "HUAHONG23": {
-    "price": 10.2,
+    "price": 10.1,
     "prices": [
       5.35,
       5.35,
@@ -24516,12 +24516,12 @@
       8.6,
       8.55,
       9.05,
-      10.2
+      10.1
     ],
-    "change_pct": 12.71,
+    "change_pct": 11.6,
     "prev_close": 9.05,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -24731,12 +24731,12 @@
         "open": 10.0,
         "high": 10.3,
         "low": 9.95,
-        "close": 10.2
+        "close": 10.1
       }
     ]
   },
   "IBM06": {
-    "price": 3.34,
+    "price": 3.36,
     "prices": [
       3.04,
       3.12,
@@ -24767,12 +24767,12 @@
       3.44,
       3.36,
       3.28,
-      3.34
+      3.36
     ],
-    "change_pct": 1.83,
+    "change_pct": 2.44,
     "prev_close": 3.28,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -24982,12 +24982,12 @@
         "open": 3.34,
         "high": 3.38,
         "low": 3.22,
-        "close": 3.34
+        "close": 3.36
       }
     ]
   },
   "ICBC06": {
-    "price": 2.74,
+    "price": 2.76,
     "prices": [
       2.84,
       2.86,
@@ -25018,12 +25018,12 @@
       2.88,
       2.84,
       2.82,
-      2.74
+      2.76
     ],
-    "change_pct": -2.84,
+    "change_pct": -2.13,
     "prev_close": 2.82,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -25233,7 +25233,7 @@
         "open": 2.76,
         "high": 2.76,
         "low": 2.7,
-        "close": 2.74
+        "close": 2.76
       }
     ]
   },
@@ -25274,7 +25274,7 @@
     "change_pct": -2.5,
     "prev_close": 2.4,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -25525,7 +25525,7 @@
     "change_pct": -0.76,
     "prev_close": 13.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -25740,7 +25740,7 @@
     ]
   },
   "INDIAESG19": {
-    "price": 3.96,
+    "price": 4.0,
     "prices": [
       4.08,
       4.12,
@@ -25771,12 +25771,12 @@
       4.08,
       4.02,
       4.02,
-      3.96
+      4.0
     ],
-    "change_pct": -1.49,
+    "change_pct": -0.5,
     "prev_close": 4.02,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -25986,12 +25986,12 @@
         "open": 4.02,
         "high": 4.02,
         "low": 3.96,
-        "close": 3.96
+        "close": 4.0
       }
     ]
   },
   "INTEL03": {
-    "price": 7.7,
+    "price": 7.8,
     "prices": [
       3.96,
       4.26,
@@ -26022,12 +26022,12 @@
       7.9,
       8.05,
       7.95,
-      7.7
+      7.8
     ],
-    "change_pct": -3.14,
+    "change_pct": -1.89,
     "prev_close": 7.95,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -26237,12 +26237,12 @@
         "open": 7.75,
         "high": 8.15,
         "low": 7.6,
-        "close": 7.7
+        "close": 7.8
       }
     ]
   },
   "IONQ03": {
-    "price": 4.14,
+    "price": 4.16,
     "prices": [
       1.82,
       3.02,
@@ -26273,12 +26273,12 @@
       4.38,
       4.28,
       4.1,
-      4.14
+      4.16
     ],
-    "change_pct": 0.98,
+    "change_pct": 1.46,
     "prev_close": 4.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -26488,7 +26488,7 @@
         "open": 4.2,
         "high": 4.36,
         "low": 3.9,
-        "close": 4.14
+        "close": 4.16
       }
     ]
   },
@@ -26529,7 +26529,7 @@
     "change_pct": -3.77,
     "prev_close": 3.18,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -26744,7 +26744,7 @@
     ]
   },
   "ITOCHU19": {
-    "price": 6.6,
+    "price": 6.65,
     "prices": [
       6.65,
       6.7,
@@ -26775,12 +26775,12 @@
       6.6,
       6.65,
       6.6,
-      6.6
+      6.65
     ],
-    "change_pct": 0.0,
+    "change_pct": 0.76,
     "prev_close": 6.6,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -26990,7 +26990,7 @@
         "open": 6.6,
         "high": 6.65,
         "low": 6.55,
-        "close": 6.6
+        "close": 6.65
       }
     ]
   },
@@ -27031,7 +27031,7 @@
     "change_pct": 0.56,
     "prev_close": 3.58,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -27246,7 +27246,7 @@
     ]
   },
   "JAPAN10001": {
-    "price": 28.5,
+    "price": 28.75,
     "prices": [
       27.5,
       27.25,
@@ -27277,12 +27277,12 @@
       29.25,
       29.25,
       29.25,
-      28.5
+      28.75
     ],
-    "change_pct": -2.56,
+    "change_pct": -1.71,
     "prev_close": 29.25,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -27492,12 +27492,12 @@
         "open": 28.75,
         "high": 29.0,
         "low": 28.25,
-        "close": 28.5
+        "close": 28.75
       }
     ]
   },
   "JAPAN13": {
-    "price": 5.5,
+    "price": 5.45,
     "prices": [
       4.94,
       4.94,
@@ -27528,12 +27528,12 @@
       5.55,
       5.6,
       5.5,
-      5.5
+      5.45
     ],
-    "change_pct": 0.0,
+    "change_pct": -0.91,
     "prev_close": 5.5,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -27742,13 +27742,13 @@
         "date": "2026-05-28",
         "open": 5.55,
         "high": 5.55,
-        "low": 5.5,
-        "close": 5.5
+        "low": 5.45,
+        "close": 5.45
       }
     ]
   },
   "JD80": {
-    "price": 4.72,
+    "price": 4.76,
     "prices": [
       4.56,
       5.0,
@@ -27779,12 +27779,12 @@
       4.98,
       4.94,
       4.84,
-      4.72
+      4.76
     ],
-    "change_pct": -2.48,
+    "change_pct": -1.65,
     "prev_close": 4.84,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -27994,12 +27994,12 @@
         "open": 4.76,
         "high": 4.76,
         "low": 4.68,
-        "close": 4.72
+        "close": 4.76
       }
     ]
   },
   "JDHEAL19": {
-    "price": 3.22,
+    "price": 3.2,
     "prices": [
       3.98,
       4.02,
@@ -28030,12 +28030,12 @@
       3.44,
       3.32,
       3.32,
-      3.22
+      3.2
     ],
-    "change_pct": -3.01,
+    "change_pct": -3.61,
     "prev_close": 3.32,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -28245,12 +28245,12 @@
         "open": 3.22,
         "high": 3.22,
         "low": 3.18,
-        "close": 3.22
+        "close": 3.2
       }
     ]
   },
   "JEPI19": {
-    "price": 6.15,
+    "price": 6.2,
     "prices": [
       6.2,
       6.2,
@@ -28281,12 +28281,12 @@
       6.2,
       6.15,
       6.15,
-      6.15
+      6.2
     ],
-    "change_pct": 0.0,
+    "change_pct": 0.81,
     "prev_close": 6.15,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -28496,7 +28496,7 @@
         "open": 6.15,
         "high": 6.2,
         "low": 6.1,
-        "close": 6.15
+        "close": 6.2
       }
     ]
   },
@@ -28537,7 +28537,7 @@
     "change_pct": 0.0,
     "prev_close": 10.7,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -28770,7 +28770,7 @@
     "change_pct": 0.6,
     "prev_close": 8.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-13",
@@ -28852,14 +28852,14 @@
       {
         "date": "2026-05-28",
         "open": 8.3,
-        "high": 8.35,
+        "high": 8.45,
         "low": 8.15,
         "close": 8.35
       }
     ]
   },
   "JNJ03": {
-    "price": 3.8,
+    "price": 3.78,
     "prices": [
       3.88,
       3.82,
@@ -28890,12 +28890,12 @@
       3.84,
       3.86,
       3.76,
-      3.8
+      3.78
     ],
-    "change_pct": 1.06,
+    "change_pct": 0.53,
     "prev_close": 3.76,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -29105,7 +29105,7 @@
         "open": 3.78,
         "high": 3.82,
         "low": 3.78,
-        "close": 3.8
+        "close": 3.78
       }
     ]
   },
@@ -29131,7 +29131,7 @@
     "change_pct": -2.4,
     "prev_close": 1.25,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-08",
@@ -29277,7 +29277,7 @@
     "change_pct": -1.8,
     "prev_close": 3.34,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -29513,7 +29513,7 @@
     "change_pct": -1.34,
     "prev_close": 1.49,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-08",
@@ -29644,7 +29644,7 @@
     "change_pct": -2.82,
     "prev_close": 1.42,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-08",
@@ -29790,7 +29790,7 @@
     "change_pct": -1.71,
     "prev_close": 11.7,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -30041,7 +30041,7 @@
     "change_pct": 1.5,
     "prev_close": 2.66,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -30256,7 +30256,7 @@
     ]
   },
   "KINGSOFT23": {
-    "price": 1.48,
+    "price": 1.51,
     "prices": [
       1.6,
       1.66,
@@ -30287,12 +30287,12 @@
       1.5,
       1.51,
       1.44,
-      1.48
+      1.51
     ],
-    "change_pct": 2.78,
+    "change_pct": 4.86,
     "prev_close": 1.44,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -30500,14 +30500,14 @@
       {
         "date": "2026-05-28",
         "open": 1.46,
-        "high": 1.48,
+        "high": 1.53,
         "low": 1.45,
-        "close": 1.48
+        "close": 1.51
       }
     ]
   },
   "KIOXIA23": {
-    "price": 7.75,
+    "price": 8.0,
     "prices": [
       3.88,
       4.32,
@@ -30538,12 +30538,12 @@
       8.5,
       8.1,
       7.95,
-      7.75
+      8.0
     ],
-    "change_pct": -2.52,
+    "change_pct": 0.63,
     "prev_close": 7.95,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -30751,14 +30751,14 @@
       {
         "date": "2026-05-28",
         "open": 7.9,
-        "high": 7.9,
+        "high": 8.0,
         "low": 7.35,
-        "close": 7.75
+        "close": 8.0
       }
     ]
   },
   "KO80": {
-    "price": 2.66,
+    "price": 2.7,
     "prices": [
       2.44,
       2.44,
@@ -30789,12 +30789,12 @@
       2.68,
       2.68,
       2.64,
-      2.66
+      2.7
     ],
-    "change_pct": 0.76,
+    "change_pct": 2.27,
     "prev_close": 2.64,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -31004,7 +31004,7 @@
         "open": 2.66,
         "high": 2.7,
         "low": 2.64,
-        "close": 2.66
+        "close": 2.7
       }
     ]
   },
@@ -31030,7 +31030,7 @@
     "change_pct": -2.78,
     "prev_close": 1.08,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-08",
@@ -31140,7 +31140,7 @@
     ]
   },
   "KUAISH80": {
-    "price": 1.85,
+    "price": 1.87,
     "prices": [
       1.87,
       1.93,
@@ -31171,12 +31171,12 @@
       1.91,
       1.93,
       1.9,
-      1.85
+      1.87
     ],
-    "change_pct": -2.63,
+    "change_pct": -1.58,
     "prev_close": 1.9,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -31386,12 +31386,12 @@
         "open": 1.88,
         "high": 1.9,
         "low": 1.84,
-        "close": 1.85
+        "close": 1.87
       }
     ]
   },
   "LENOVO13": {
-    "price": 4.08,
+    "price": 4.22,
     "prices": [
       2.4,
       2.38,
@@ -31422,12 +31422,12 @@
       3.86,
       3.94,
       3.98,
-      4.08
+      4.22
     ],
-    "change_pct": 2.51,
+    "change_pct": 6.03,
     "prev_close": 3.98,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -31635,14 +31635,14 @@
       {
         "date": "2026-05-28",
         "open": 4.02,
-        "high": 4.14,
+        "high": 4.22,
         "low": 4.02,
-        "close": 4.08
+        "close": 4.22
       }
     ]
   },
   "LLY80": {
-    "price": 1.76,
+    "price": 1.77,
     "prices": [
       1.54,
       1.47,
@@ -31673,12 +31673,12 @@
       1.77,
       1.77,
       1.75,
-      1.76
+      1.77
     ],
-    "change_pct": 0.57,
+    "change_pct": 1.14,
     "prev_close": 1.75,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -31888,12 +31888,12 @@
         "open": 1.76,
         "high": 1.78,
         "low": 1.73,
-        "close": 1.76
+        "close": 1.77
       }
     ]
   },
   "LOREAL80": {
-    "price": 1.45,
+    "price": 1.49,
     "prices": [
       1.34,
       1.33,
@@ -31924,12 +31924,12 @@
       1.39,
       1.38,
       1.44,
-      1.45
+      1.49
     ],
-    "change_pct": 0.69,
+    "change_pct": 3.47,
     "prev_close": 1.44,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -32137,14 +32137,14 @@
       {
         "date": "2026-05-28",
         "open": 1.46,
-        "high": 1.48,
+        "high": 1.49,
         "low": 1.44,
-        "close": 1.45
+        "close": 1.49
       }
     ]
   },
   "LPGOLD13": {
-    "price": 2.12,
+    "price": 2.14,
     "prices": [
       2.68,
       2.68,
@@ -32175,12 +32175,12 @@
       2.16,
       2.22,
       2.22,
-      2.12
+      2.14
     ],
-    "change_pct": -4.5,
+    "change_pct": -3.6,
     "prev_close": 2.22,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -32390,12 +32390,12 @@
         "open": 2.16,
         "high": 2.16,
         "low": 2.12,
-        "close": 2.12
+        "close": 2.14
       }
     ]
   },
   "LRCX23": {
-    "price": 3.96,
+    "price": 3.98,
     "prices": [
       3.28,
       3.32,
@@ -32426,12 +32426,12 @@
       3.88,
       3.94,
       4.1,
-      3.96
+      3.98
     ],
-    "change_pct": -3.41,
+    "change_pct": -2.93,
     "prev_close": 4.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -32641,7 +32641,7 @@
         "open": 4.02,
         "high": 4.26,
         "low": 3.94,
-        "close": 3.96
+        "close": 3.98
       }
     ]
   },
@@ -32682,7 +32682,7 @@
     "change_pct": 2.86,
     "prev_close": 2.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -32897,7 +32897,7 @@
     ]
   },
   "LVMH01": {
-    "price": 11.5,
+    "price": 11.3,
     "prices": [
       11.46,
       11.46,
@@ -32928,12 +32928,12 @@
       11.3,
       11.2,
       11.5,
-      11.5
+      11.3
     ],
-    "change_pct": 0.0,
+    "change_pct": -1.74,
     "prev_close": 11.5,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -33142,8 +33142,8 @@
         "date": "2026-05-28",
         "open": 11.5,
         "high": 11.7,
-        "low": 11.5,
-        "close": 11.5
+        "low": 11.3,
+        "close": 11.3
       }
     ]
   },
@@ -33184,7 +33184,7 @@
     "change_pct": 1.24,
     "prev_close": 1.61,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -33417,7 +33417,7 @@
     "change_pct": -1.64,
     "prev_close": 2.44,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-13",
@@ -33506,7 +33506,7 @@
     ]
   },
   "MEITUAN80": {
-    "price": 3.04,
+    "price": 3.06,
     "prices": [
       3.64,
       3.68,
@@ -33537,12 +33537,12 @@
       3.4,
       3.32,
       3.26,
-      3.04
+      3.06
     ],
-    "change_pct": -6.75,
+    "change_pct": -6.13,
     "prev_close": 3.26,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -33752,7 +33752,7 @@
         "open": 3.08,
         "high": 3.08,
         "low": 3.02,
-        "close": 3.04
+        "close": 3.06
       }
     ]
   },
@@ -33793,7 +33793,7 @@
     "change_pct": 3.74,
     "prev_close": 2.14,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -34044,7 +34044,7 @@
     "change_pct": 3.23,
     "prev_close": 2.48,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -34295,7 +34295,7 @@
     "change_pct": -3.25,
     "prev_close": 30.75,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -34528,7 +34528,7 @@
     "change_pct": -2.2,
     "prev_close": 3.64,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-13",
@@ -34653,7 +34653,7 @@
     "change_pct": -2.48,
     "prev_close": 8.05,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -34868,7 +34868,7 @@
     ]
   },
   "MIXUE80": {
-    "price": 10.6,
+    "price": 10.5,
     "prices": [
       11.7,
       11.3,
@@ -34881,12 +34881,12 @@
       10.9,
       11.0,
       10.8,
-      10.6
+      10.5
     ],
-    "change_pct": -1.85,
+    "change_pct": -2.78,
     "prev_close": 10.8,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-13",
@@ -34969,8 +34969,8 @@
         "date": "2026-05-28",
         "open": 10.6,
         "high": 10.6,
-        "low": 10.6,
-        "close": 10.6
+        "low": 10.5,
+        "close": 10.5
       }
     ]
   },
@@ -35011,7 +35011,7 @@
     "change_pct": -0.99,
     "prev_close": 10.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -35262,7 +35262,7 @@
     "change_pct": 2.46,
     "prev_close": 4.06,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -35477,7 +35477,7 @@
     ]
   },
   "MONTAGE80": {
-    "price": 19.5,
+    "price": 19.3,
     "prices": [
       21.0,
       19.8,
@@ -35490,12 +35490,12 @@
       19.7,
       19.3,
       19.2,
-      19.5
+      19.3
     ],
-    "change_pct": 1.56,
+    "change_pct": 0.52,
     "prev_close": 19.2,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-13",
@@ -35579,12 +35579,12 @@
         "open": 19.0,
         "high": 19.6,
         "low": 19.0,
-        "close": 19.5
+        "close": 19.3
       }
     ]
   },
   "MOUTAI80": {
-    "price": 6.2,
+    "price": 6.15,
     "prices": [
       6.4,
       6.45,
@@ -35597,12 +35597,12 @@
       6.3,
       6.2,
       6.3,
-      6.2
+      6.15
     ],
-    "change_pct": -1.59,
+    "change_pct": -2.38,
     "prev_close": 6.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-13",
@@ -35686,12 +35686,12 @@
         "open": 6.15,
         "high": 6.25,
         "low": 6.15,
-        "close": 6.2
+        "close": 6.15
       }
     ]
   },
   "MP80": {
-    "price": 20.9,
+    "price": 21.0,
     "prices": [
       21.4,
       20.7,
@@ -35704,12 +35704,12 @@
       21.3,
       21.4,
       22.0,
-      20.9
+      21.0
     ],
-    "change_pct": -5.0,
+    "change_pct": -4.55,
     "prev_close": 22.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-13",
@@ -35793,12 +35793,12 @@
         "open": 21.3,
         "high": 22.0,
         "low": 20.7,
-        "close": 20.9
+        "close": 21.0
       }
     ]
   },
   "MRVL80": {
-    "price": 6.25,
+    "price": 6.35,
     "prices": [
       3.92,
       4.32,
@@ -35829,12 +35829,12 @@
       6.55,
       6.85,
       7.2,
-      6.25
+      6.35
     ],
-    "change_pct": -13.19,
+    "change_pct": -11.81,
     "prev_close": 7.2,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -36044,12 +36044,12 @@
         "open": 6.4,
         "high": 7.25,
         "low": 6.1,
-        "close": 6.25
+        "close": 6.35
       }
     ]
   },
   "MS06": {
-    "price": 4.4,
+    "price": 4.42,
     "prices": [
       3.78,
       4.06,
@@ -36080,12 +36080,12 @@
       4.4,
       4.44,
       4.38,
-      4.4
+      4.42
     ],
-    "change_pct": 0.46,
+    "change_pct": 0.91,
     "prev_close": 4.38,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -36295,12 +36295,12 @@
         "open": 4.42,
         "high": 4.42,
         "low": 4.3,
-        "close": 4.4
+        "close": 4.42
       }
     ]
   },
   "MSFT80": {
-    "price": 6.75,
+    "price": 6.8,
     "prices": [
       6.74,
       6.69,
@@ -36331,12 +36331,12 @@
       6.8,
       6.8,
       6.75,
-      6.75
+      6.8
     ],
-    "change_pct": 0.0,
+    "change_pct": 0.74,
     "prev_close": 6.75,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -36546,7 +36546,7 @@
         "open": 6.75,
         "high": 6.8,
         "low": 6.7,
-        "close": 6.75
+        "close": 6.8
       }
     ]
   },
@@ -36587,7 +36587,7 @@
     "change_pct": 0.0,
     "prev_close": 3.2,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -36838,7 +36838,7 @@
     "change_pct": -3.91,
     "prev_close": 2.56,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-09",
@@ -37047,7 +37047,7 @@
         "date": "2026-05-28",
         "open": 2.48,
         "high": 2.48,
-        "low": 2.46,
+        "low": 2.44,
         "close": 2.46
       }
     ]
@@ -37089,7 +37089,7 @@
     "change_pct": 1.0,
     "prev_close": 10.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -37340,7 +37340,7 @@
     "change_pct": -2.31,
     "prev_close": 32.5,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -37555,7 +37555,7 @@
     ]
   },
   "NBIS03": {
-    "price": 7.4,
+    "price": 7.5,
     "prices": [
       4.3,
       5.5,
@@ -37586,12 +37586,12 @@
       7.4,
       7.25,
       6.85,
-      7.4
+      7.5
     ],
-    "change_pct": 8.03,
+    "change_pct": 9.49,
     "prev_close": 6.85,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -37801,12 +37801,12 @@
         "open": 7.45,
         "high": 7.5,
         "low": 6.5,
-        "close": 7.4
+        "close": 7.5
       }
     ]
   },
   "NDAQ06": {
-    "price": 2.98,
+    "price": 2.94,
     "prices": [
       2.74,
       2.82,
@@ -37837,12 +37837,12 @@
       3.0,
       3.0,
       3.0,
-      2.98
+      2.94
     ],
-    "change_pct": -0.67,
+    "change_pct": -2.0,
     "prev_close": 3.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -38052,12 +38052,12 @@
         "open": 2.98,
         "high": 2.98,
         "low": 2.94,
-        "close": 2.98
+        "close": 2.94
       }
     ]
   },
   "NDX01": {
-    "price": 25.25,
+    "price": 25.5,
     "prices": [
       20.9,
       21.8,
@@ -38088,12 +38088,12 @@
       25.25,
       25.25,
       25.75,
-      25.25
+      25.5
     ],
-    "change_pct": -1.94,
+    "change_pct": -0.97,
     "prev_close": 25.75,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -38303,12 +38303,12 @@
         "open": 25.5,
         "high": 26.0,
         "low": 25.25,
-        "close": 25.25
+        "close": 25.5
       }
     ]
   },
   "NEE80": {
-    "price": 2.88,
+    "price": 2.86,
     "prices": [
       3.1,
       3.08,
@@ -38321,12 +38321,12 @@
       2.94,
       2.94,
       2.88,
-      2.88
+      2.86
     ],
-    "change_pct": 0.0,
+    "change_pct": -0.69,
     "prev_close": 2.88,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-13",
@@ -38410,244 +38410,244 @@
         "open": 2.86,
         "high": 2.88,
         "low": 2.84,
-        "close": 2.88
+        "close": 2.86
       }
     ]
   },
   "NEM23": {
     "price": 2.14,
     "prices": [
-      2.4,
-      2.3,
-      2.3,
-      2.3,
-      2.26,
-      2.28,
-      2.26,
-      2.28,
-      2.42,
-      2.3,
-      2.26,
-      2.22,
-      2.24,
-      2.32,
-      2.36,
-      2.32,
-      2.32,
-      2.42,
-      2.44,
-      2.42,
-      2.32,
-      2.22,
-      2.24,
-      2.16,
-      2.18,
-      2.22,
-      2.22,
-      2.26,
+      2.39,
+      2.29,
+      2.29,
+      2.29,
+      2.25,
+      2.27,
+      2.25,
+      2.27,
+      2.41,
+      2.29,
+      2.25,
+      2.21,
+      2.23,
+      2.31,
+      2.35,
+      2.31,
+      2.31,
+      2.41,
+      2.43,
+      2.41,
+      2.31,
+      2.21,
+      2.23,
+      2.15,
+      2.17,
+      2.21,
+      2.21,
+      2.25,
       2.26,
       2.14
     ],
     "change_pct": -5.31,
     "prev_close": 2.26,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
-        "open": 2.38,
-        "high": 2.4,
-        "low": 2.38,
-        "close": 2.4
+        "open": 2.37,
+        "high": 2.39,
+        "low": 2.37,
+        "close": 2.39
       },
       {
         "date": "2026-04-16",
-        "open": 2.44,
-        "high": 2.44,
-        "low": 2.24,
-        "close": 2.3
+        "open": 2.43,
+        "high": 2.43,
+        "low": 2.23,
+        "close": 2.29
       },
       {
         "date": "2026-04-17",
-        "open": 2.3,
-        "high": 2.3,
-        "low": 2.26,
-        "close": 2.3
+        "open": 2.29,
+        "high": 2.29,
+        "low": 2.25,
+        "close": 2.29
       },
       {
         "date": "2026-04-20",
-        "open": 2.34,
-        "high": 2.36,
-        "low": 2.3,
-        "close": 2.3
+        "open": 2.33,
+        "high": 2.35,
+        "low": 2.29,
+        "close": 2.29
       },
       {
         "date": "2026-04-21",
-        "open": 2.28,
-        "high": 2.3,
-        "low": 2.26,
-        "close": 2.26
+        "open": 2.27,
+        "high": 2.29,
+        "low": 2.25,
+        "close": 2.25
       },
       {
         "date": "2026-04-22",
-        "open": 2.3,
-        "high": 2.3,
-        "low": 2.22,
-        "close": 2.28
+        "open": 2.29,
+        "high": 2.29,
+        "low": 2.21,
+        "close": 2.27
       },
       {
         "date": "2026-04-23",
-        "open": 2.26,
-        "high": 2.28,
-        "low": 2.24,
-        "close": 2.26
+        "open": 2.25,
+        "high": 2.27,
+        "low": 2.23,
+        "close": 2.25
       },
       {
         "date": "2026-04-24",
-        "open": 2.28,
-        "high": 2.28,
-        "low": 2.22,
-        "close": 2.28
+        "open": 2.27,
+        "high": 2.27,
+        "low": 2.21,
+        "close": 2.27
       },
       {
         "date": "2026-04-27",
-        "open": 2.28,
-        "high": 2.44,
-        "low": 2.28,
-        "close": 2.42
+        "open": 2.27,
+        "high": 2.43,
+        "low": 2.27,
+        "close": 2.41
       },
       {
         "date": "2026-04-28",
-        "open": 2.4,
-        "high": 2.4,
-        "low": 2.3,
-        "close": 2.3
+        "open": 2.39,
+        "high": 2.39,
+        "low": 2.29,
+        "close": 2.29
       },
       {
         "date": "2026-04-29",
-        "open": 2.3,
-        "high": 2.3,
-        "low": 2.22,
-        "close": 2.26
+        "open": 2.29,
+        "high": 2.29,
+        "low": 2.21,
+        "close": 2.25
       },
       {
         "date": "2026-04-30",
-        "open": 2.24,
-        "high": 2.26,
-        "low": 2.18,
-        "close": 2.22
+        "open": 2.23,
+        "high": 2.25,
+        "low": 2.17,
+        "close": 2.21
       },
       {
         "date": "2026-05-05",
-        "open": 2.26,
-        "high": 2.26,
-        "low": 2.22,
-        "close": 2.24
+        "open": 2.25,
+        "high": 2.25,
+        "low": 2.21,
+        "close": 2.23
       },
       {
         "date": "2026-05-06",
-        "open": 2.26,
-        "high": 2.32,
-        "low": 2.22,
-        "close": 2.32
+        "open": 2.25,
+        "high": 2.31,
+        "low": 2.21,
+        "close": 2.31
       },
       {
         "date": "2026-05-07",
-        "open": 2.34,
-        "high": 2.36,
-        "low": 2.3,
-        "close": 2.36
+        "open": 2.33,
+        "high": 2.35,
+        "low": 2.29,
+        "close": 2.35
       },
       {
         "date": "2026-05-08",
-        "open": 2.4,
-        "high": 2.4,
-        "low": 2.32,
-        "close": 2.32
+        "open": 2.39,
+        "high": 2.39,
+        "low": 2.31,
+        "close": 2.31
       },
       {
         "date": "2026-05-11",
-        "open": 2.36,
-        "high": 2.36,
-        "low": 2.32,
-        "close": 2.32
+        "open": 2.35,
+        "high": 2.35,
+        "low": 2.31,
+        "close": 2.31
       },
       {
         "date": "2026-05-12",
-        "open": 2.34,
-        "high": 2.44,
-        "low": 2.34,
-        "close": 2.42
+        "open": 2.33,
+        "high": 2.43,
+        "low": 2.33,
+        "close": 2.41
       },
       {
         "date": "2026-05-13",
-        "open": 2.42,
-        "high": 2.44,
-        "low": 2.34,
-        "close": 2.44
+        "open": 2.41,
+        "high": 2.43,
+        "low": 2.33,
+        "close": 2.43
       },
       {
         "date": "2026-05-14",
-        "open": 2.42,
-        "high": 2.44,
-        "low": 2.42,
-        "close": 2.42
+        "open": 2.41,
+        "high": 2.43,
+        "low": 2.41,
+        "close": 2.41
       },
       {
         "date": "2026-05-15",
-        "open": 2.4,
-        "high": 2.4,
-        "low": 2.3,
-        "close": 2.32
+        "open": 2.39,
+        "high": 2.39,
+        "low": 2.29,
+        "close": 2.31
       },
       {
         "date": "2026-05-18",
-        "open": 2.3,
-        "high": 2.3,
-        "low": 2.18,
-        "close": 2.22
+        "open": 2.29,
+        "high": 2.29,
+        "low": 2.17,
+        "close": 2.21
       },
       {
         "date": "2026-05-19",
-        "open": 2.24,
-        "high": 2.26,
-        "low": 2.22,
-        "close": 2.24
+        "open": 2.23,
+        "high": 2.25,
+        "low": 2.21,
+        "close": 2.23
       },
       {
         "date": "2026-05-20",
-        "open": 2.24,
-        "high": 2.24,
+        "open": 2.23,
+        "high": 2.23,
         "low": 2.12,
-        "close": 2.16
+        "close": 2.15
       },
       {
         "date": "2026-05-21",
-        "open": 2.16,
-        "high": 2.2,
-        "low": 2.16,
-        "close": 2.18
+        "open": 2.15,
+        "high": 2.19,
+        "low": 2.15,
+        "close": 2.17
       },
       {
         "date": "2026-05-22",
-        "open": 2.18,
-        "high": 2.22,
-        "low": 2.16,
-        "close": 2.22
+        "open": 2.17,
+        "high": 2.21,
+        "low": 2.15,
+        "close": 2.21
       },
       {
         "date": "2026-05-25",
-        "open": 2.22,
-        "high": 2.22,
-        "low": 2.18,
-        "close": 2.22
+        "open": 2.21,
+        "high": 2.21,
+        "low": 2.17,
+        "close": 2.21
       },
       {
         "date": "2026-05-26",
-        "open": 2.22,
-        "high": 2.28,
-        "low": 2.22,
-        "close": 2.26
+        "open": 2.21,
+        "high": 2.27,
+        "low": 2.21,
+        "close": 2.25
       },
       {
         "date": "2026-05-27",
@@ -38666,7 +38666,7 @@
     ]
   },
   "NET03": {
-    "price": 3.44,
+    "price": 3.5,
     "prices": [
       3.12,
       3.1,
@@ -38697,12 +38697,12 @@
       3.58,
       3.58,
       3.52,
-      3.44
+      3.5
     ],
-    "change_pct": -2.27,
+    "change_pct": -0.57,
     "prev_close": 3.52,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -38912,7 +38912,7 @@
         "open": 3.46,
         "high": 3.5,
         "low": 3.44,
-        "close": 3.44
+        "close": 3.5
       }
     ]
   },
@@ -38953,7 +38953,7 @@
     "change_pct": -1.23,
     "prev_close": 8.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -39168,7 +39168,7 @@
     ]
   },
   "NFLX80": {
-    "price": 2.84,
+    "price": 2.86,
     "prices": [
       3.12,
       3.14,
@@ -39199,12 +39199,12 @@
       2.92,
       2.9,
       2.84,
-      2.84
+      2.86
     ],
-    "change_pct": 0.0,
+    "change_pct": 0.7,
     "prev_close": 2.84,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -39414,12 +39414,12 @@
         "open": 2.88,
         "high": 2.9,
         "low": 2.82,
-        "close": 2.84
+        "close": 2.86
       }
     ]
   },
   "NIKE80": {
-    "price": 0.74,
+    "price": 0.75,
     "prices": [
       0.7,
       0.74,
@@ -39450,12 +39450,12 @@
       0.73,
       0.72,
       0.73,
-      0.74
+      0.75
     ],
-    "change_pct": 1.37,
+    "change_pct": 2.74,
     "prev_close": 0.73,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -39665,7 +39665,7 @@
         "open": 0.74,
         "high": 0.76,
         "low": 0.73,
-        "close": 0.74
+        "close": 0.75
       }
     ]
   },
@@ -39706,7 +39706,7 @@
     "change_pct": -1.43,
     "prev_close": 14.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -39921,7 +39921,7 @@
     ]
   },
   "NINTENDO23": {
-    "price": 1.26,
+    "price": 1.25,
     "prices": [
       1.5,
       1.51,
@@ -39952,12 +39952,12 @@
       1.3,
       1.29,
       1.3,
-      1.26
+      1.25
     ],
-    "change_pct": -3.08,
+    "change_pct": -3.85,
     "prev_close": 1.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -40166,13 +40166,13 @@
         "date": "2026-05-28",
         "open": 1.27,
         "high": 1.27,
-        "low": 1.26,
-        "close": 1.26
+        "low": 1.25,
+        "close": 1.25
       }
     ]
   },
   "NONGFU80": {
-    "price": 1.76,
+    "price": 1.77,
     "prices": [
       1.89,
       1.88,
@@ -40203,12 +40203,12 @@
       1.81,
       1.83,
       1.8,
-      1.76
+      1.77
     ],
-    "change_pct": -2.22,
+    "change_pct": -1.67,
     "prev_close": 1.8,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -40418,12 +40418,12 @@
         "open": 1.76,
         "high": 1.77,
         "low": 1.75,
-        "close": 1.76
+        "close": 1.77
       }
     ]
   },
   "NOVOB80": {
-    "price": 1.49,
+    "price": 1.47,
     "prices": [
       1.22,
       1.32,
@@ -40454,12 +40454,12 @@
       1.48,
       1.47,
       1.46,
-      1.49
+      1.47
     ],
-    "change_pct": 2.05,
+    "change_pct": 0.68,
     "prev_close": 1.46,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -40667,14 +40667,14 @@
       {
         "date": "2026-05-28",
         "open": 1.48,
-        "high": 1.49,
+        "high": 1.5,
         "low": 1.44,
-        "close": 1.49
+        "close": 1.47
       }
     ]
   },
   "NOW19": {
-    "price": 3.46,
+    "price": 3.5,
     "prices": [
       3.18,
       3.1,
@@ -40705,12 +40705,12 @@
       3.4,
       3.36,
       3.24,
-      3.46
+      3.5
     ],
-    "change_pct": 6.79,
+    "change_pct": 8.02,
     "prev_close": 3.24,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -40918,9 +40918,9 @@
       {
         "date": "2026-05-28",
         "open": 3.46,
-        "high": 3.48,
+        "high": 3.5,
         "low": 3.22,
-        "close": 3.46
+        "close": 3.5
       }
     ]
   },
@@ -40961,7 +40961,7 @@
     "change_pct": -1.43,
     "prev_close": 35.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -41176,7 +41176,7 @@
     ]
   },
   "NVTS03": {
-    "price": 9.35,
+    "price": 9.4,
     "prices": [
       3.06,
       3.34,
@@ -41207,12 +41207,12 @@
       10.6,
       10.3,
       10.6,
-      9.35
+      9.4
     ],
-    "change_pct": -11.79,
+    "change_pct": -11.32,
     "prev_close": 10.6,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -41422,7 +41422,7 @@
         "open": 9.55,
         "high": 10.7,
         "low": 9.1,
-        "close": 9.35
+        "close": 9.4
       }
     ]
   },
@@ -41448,7 +41448,7 @@
     "change_pct": 1.63,
     "prev_close": 18.4,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-08",
@@ -41594,7 +41594,7 @@
     "change_pct": -1.52,
     "prev_close": 2.64,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -41809,7 +41809,7 @@
     ]
   },
   "ORCL01": {
-    "price": 3.86,
+    "price": 3.94,
     "prices": [
       3.64,
       3.44,
@@ -41840,12 +41840,12 @@
       3.9,
       3.9,
       3.92,
-      3.86
+      3.94
     ],
-    "change_pct": -1.53,
+    "change_pct": 0.51,
     "prev_close": 3.92,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -42053,9 +42053,9 @@
       {
         "date": "2026-05-28",
         "open": 3.88,
-        "high": 3.92,
+        "high": 3.94,
         "low": 3.84,
-        "close": 3.86
+        "close": 3.94
       }
     ]
   },
@@ -42096,7 +42096,7 @@
     "change_pct": -0.61,
     "prev_close": 8.2,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -42347,7 +42347,7 @@
     "change_pct": 2.08,
     "prev_close": 0.96,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -42598,7 +42598,7 @@
     "change_pct": 0.9,
     "prev_close": 4.44,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -42849,7 +42849,7 @@
     "change_pct": 1.18,
     "prev_close": 16.9,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -43064,7 +43064,7 @@
     ]
   },
   "PINGAN80": {
-    "price": 2.46,
+    "price": 2.48,
     "prices": [
       2.58,
       2.56,
@@ -43095,12 +43095,12 @@
       2.58,
       2.52,
       2.52,
-      2.46
+      2.48
     ],
-    "change_pct": -2.38,
+    "change_pct": -1.59,
     "prev_close": 2.52,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -43308,14 +43308,14 @@
       {
         "date": "2026-05-28",
         "open": 2.46,
-        "high": 2.46,
+        "high": 2.48,
         "low": 2.44,
-        "close": 2.46
+        "close": 2.48
       }
     ]
   },
   "PLTR01": {
-    "price": 3.94,
+    "price": 3.96,
     "prices": [
       4.2,
       4.22,
@@ -43346,12 +43346,12 @@
       4.06,
       4.04,
       4.0,
-      3.94
+      3.96
     ],
-    "change_pct": -1.5,
+    "change_pct": -1.0,
     "prev_close": 4.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -43561,12 +43561,12 @@
         "open": 3.94,
         "high": 4.0,
         "low": 3.92,
-        "close": 3.94
+        "close": 3.96
       }
     ]
   },
   "POPMART80": {
-    "price": 6.65,
+    "price": 6.7,
     "prices": [
       6.04,
       6.49,
@@ -43597,12 +43597,12 @@
       6.25,
       6.4,
       6.4,
-      6.65
+      6.7
     ],
-    "change_pct": 3.91,
+    "change_pct": 4.69,
     "prev_close": 6.4,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -43812,12 +43812,12 @@
         "open": 6.65,
         "high": 6.75,
         "low": 6.55,
-        "close": 6.65
+        "close": 6.7
       }
     ]
   },
   "PYPL06": {
-    "price": 2.84,
+    "price": 2.88,
     "prices": [
       2.94,
       3.16,
@@ -43848,12 +43848,12 @@
       2.9,
       2.9,
       2.9,
-      2.84
+      2.88
     ],
-    "change_pct": -2.07,
+    "change_pct": -0.69,
     "prev_close": 2.9,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -44063,12 +44063,12 @@
         "open": 2.84,
         "high": 2.88,
         "low": 2.84,
-        "close": 2.84
+        "close": 2.88
       }
     ]
   },
   "QCOM06": {
-    "price": 3.74,
+    "price": 3.8,
     "prices": [
       2.04,
       2.14,
@@ -44099,12 +44099,12 @@
       3.98,
       4.0,
       4.1,
-      3.74
+      3.8
     ],
-    "change_pct": -8.78,
+    "change_pct": -7.32,
     "prev_close": 4.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -44314,7 +44314,7 @@
         "open": 3.8,
         "high": 4.14,
         "low": 3.66,
-        "close": 3.74
+        "close": 3.8
       }
     ]
   },
@@ -44355,7 +44355,7 @@
     "change_pct": 0.0,
     "prev_close": 19.6,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -44570,7 +44570,7 @@
     ]
   },
   "RBLX06": {
-    "price": 1.25,
+    "price": 1.24,
     "prices": [
       1.49,
       1.61,
@@ -44601,12 +44601,12 @@
       1.28,
       1.31,
       1.23,
-      1.25
+      1.24
     ],
-    "change_pct": 1.63,
+    "change_pct": 0.81,
     "prev_close": 1.23,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -44816,12 +44816,12 @@
         "open": 1.26,
         "high": 1.26,
         "low": 1.23,
-        "close": 1.25
+        "close": 1.24
       }
     ]
   },
   "REMX03": {
-    "price": 3.22,
+    "price": 3.24,
     "prices": [
       3.0,
       3.24,
@@ -44852,12 +44852,12 @@
       3.2,
       3.2,
       3.2,
-      3.22
+      3.24
     ],
-    "change_pct": 0.62,
+    "change_pct": 1.25,
     "prev_close": 3.2,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -45067,12 +45067,12 @@
         "open": 3.24,
         "high": 3.24,
         "low": 3.14,
-        "close": 3.22
+        "close": 3.24
       }
     ]
   },
   "RGTI03": {
-    "price": 3.88,
+    "price": 3.9,
     "prices": [
       2.3,
       3.3,
@@ -45103,12 +45103,12 @@
       4.6,
       4.32,
       4.0,
-      3.88
+      3.9
     ],
-    "change_pct": -3.0,
+    "change_pct": -2.5,
     "prev_close": 4.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -45318,12 +45318,12 @@
         "open": 3.94,
         "high": 4.16,
         "low": 3.82,
-        "close": 3.88
+        "close": 3.9
       }
     ]
   },
   "RKLB80": {
-    "price": 4.82,
+    "price": 4.8,
     "prices": [
       4.1,
       3.98,
@@ -45336,12 +45336,12 @@
       4.54,
       4.7,
       5.1,
-      4.82
+      4.8
     ],
-    "change_pct": -5.49,
+    "change_pct": -5.88,
     "prev_close": 5.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-13",
@@ -45425,12 +45425,12 @@
         "open": 4.86,
         "high": 5.1,
         "low": 4.5,
-        "close": 4.82
+        "close": 4.8
       }
     ]
   },
   "SANOFI80": {
-    "price": 2.94,
+    "price": 2.92,
     "prices": [
       3.08,
       3.04,
@@ -45461,12 +45461,12 @@
       2.92,
       2.96,
       2.92,
-      2.94
+      2.92
     ],
-    "change_pct": 0.68,
+    "change_pct": 0.0,
     "prev_close": 2.92,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -45674,9 +45674,9 @@
       {
         "date": "2026-05-28",
         "open": 2.92,
-        "high": 2.94,
+        "high": 2.96,
         "low": 2.92,
-        "close": 2.94
+        "close": 2.92
       }
     ]
   },
@@ -45717,7 +45717,7 @@
     "change_pct": -1.71,
     "prev_close": 8.75,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-07",
@@ -45968,7 +45968,7 @@
     "change_pct": 1.2,
     "prev_close": 1.66,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -46219,7 +46219,7 @@
     "change_pct": 0.0,
     "prev_close": 5.85,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -46434,7 +46434,7 @@
     ]
   },
   "SEMB19": {
-    "price": 5.45,
+    "price": 5.5,
     "prices": [
       5.67,
       5.87,
@@ -46465,12 +46465,12 @@
       5.35,
       5.3,
       5.25,
-      5.45
+      5.5
     ],
-    "change_pct": 3.81,
+    "change_pct": 4.76,
     "prev_close": 5.25,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -46678,14 +46678,14 @@
       {
         "date": "2026-05-28",
         "open": 5.35,
-        "high": 5.45,
+        "high": 5.5,
         "low": 5.35,
-        "close": 5.45
+        "close": 5.5
       }
     ]
   },
   "SENSE23": {
-    "price": 1.7,
+    "price": 1.72,
     "prices": [
       2.06,
       2.18,
@@ -46716,12 +46716,12 @@
       1.89,
       1.88,
       1.81,
-      1.7
+      1.72
     ],
-    "change_pct": -6.08,
+    "change_pct": -4.97,
     "prev_close": 1.81,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -46931,12 +46931,12 @@
         "open": 1.75,
         "high": 1.75,
         "low": 1.7,
-        "close": 1.7
+        "close": 1.72
       }
     ]
   },
   "SGX19": {
-    "price": 5.45,
+    "price": 5.55,
     "prices": [
       5.27,
       5.32,
@@ -46967,12 +46967,12 @@
       5.7,
       5.65,
       5.65,
-      5.45
+      5.55
     ],
-    "change_pct": -3.54,
+    "change_pct": -1.77,
     "prev_close": 5.65,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -47180,14 +47180,14 @@
       {
         "date": "2026-05-28",
         "open": 5.5,
-        "high": 5.5,
+        "high": 5.55,
         "low": 5.45,
-        "close": 5.45
+        "close": 5.55
       }
     ]
   },
   "SHOP06": {
-    "price": 1.76,
+    "price": 1.78,
     "prices": [
       1.82,
       2.1,
@@ -47218,12 +47218,12 @@
       1.68,
       1.71,
       1.71,
-      1.76
+      1.78
     ],
-    "change_pct": 2.92,
+    "change_pct": 4.09,
     "prev_close": 1.71,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -47433,12 +47433,12 @@
         "open": 1.76,
         "high": 1.78,
         "low": 1.71,
-        "close": 1.76
+        "close": 1.78
       }
     ]
   },
   "SIA19": {
-    "price": 17.1,
+    "price": 17.2,
     "prices": [
       16.5,
       16.6,
@@ -47469,12 +47469,12 @@
       16.9,
       16.9,
       17.0,
-      17.1
+      17.2
     ],
-    "change_pct": 0.59,
+    "change_pct": 1.18,
     "prev_close": 17.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -47684,7 +47684,7 @@
         "open": 17.1,
         "high": 17.2,
         "low": 17.1,
-        "close": 17.1
+        "close": 17.2
       }
     ]
   },
@@ -47725,7 +47725,7 @@
     "change_pct": -3.38,
     "prev_close": 2.96,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -47940,7 +47940,7 @@
     ]
   },
   "SINGTEL80": {
-    "price": 11.1,
+    "price": 11.2,
     "prices": [
       12.1,
       12.2,
@@ -47971,12 +47971,12 @@
       11.7,
       11.5,
       11.6,
-      11.1
+      11.2
     ],
-    "change_pct": -4.31,
+    "change_pct": -3.45,
     "prev_close": 11.6,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -48186,12 +48186,12 @@
         "open": 11.3,
         "high": 11.3,
         "low": 11.0,
-        "close": 11.1
+        "close": 11.2
       }
     ]
   },
   "SINOBIO19": {
-    "price": 4.06,
+    "price": 4.04,
     "prices": [
       4.9,
       4.9,
@@ -48222,12 +48222,12 @@
       4.4,
       4.28,
       4.18,
-      4.06
+      4.04
     ],
-    "change_pct": -2.87,
+    "change_pct": -3.35,
     "prev_close": 4.18,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -48437,12 +48437,12 @@
         "open": 4.08,
         "high": 4.08,
         "low": 4.02,
-        "close": 4.06
+        "close": 4.04
       }
     ]
   },
   "SMCI03": {
-    "price": 2.46,
+    "price": 2.48,
     "prices": [
       1.5,
       1.77,
@@ -48473,12 +48473,12 @@
       2.42,
       2.38,
       2.46,
-      2.46
+      2.48
     ],
-    "change_pct": 0.0,
+    "change_pct": 0.81,
     "prev_close": 2.46,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -48688,12 +48688,12 @@
         "open": 2.5,
         "high": 2.54,
         "low": 2.4,
-        "close": 2.46
+        "close": 2.48
       }
     ]
   },
   "SMFG19": {
-    "price": 12.1,
+    "price": 12.0,
     "prices": [
       11.4,
       11.3,
@@ -48724,12 +48724,12 @@
       12.3,
       12.5,
       12.3,
-      12.1
+      12.0
     ],
-    "change_pct": -1.63,
+    "change_pct": -2.44,
     "prev_close": 12.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -48938,13 +48938,13 @@
         "date": "2026-05-28",
         "open": 12.2,
         "high": 12.2,
-        "low": 12.1,
-        "close": 12.1
+        "low": 12.0,
+        "close": 12.0
       }
     ]
   },
   "SMIC01": {
-    "price": 5.35,
+    "price": 5.2,
     "prices": [
       3.44,
       3.52,
@@ -48975,12 +48975,12 @@
       5.6,
       5.0,
       5.0,
-      5.35
+      5.2
     ],
-    "change_pct": 7.0,
+    "change_pct": 4.0,
     "prev_close": 5.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -49190,7 +49190,7 @@
         "open": 5.3,
         "high": 5.45,
         "low": 5.2,
-        "close": 5.35
+        "close": 5.2
       }
     ]
   },
@@ -49213,7 +49213,7 @@
     "change_pct": -3.81,
     "prev_close": 5.25,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-13",
@@ -49338,7 +49338,7 @@
     "change_pct": 34.85,
     "prev_close": 2.64,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -49553,7 +49553,7 @@
     ]
   },
   "SOFTBANK80": {
-    "price": 14.4,
+    "price": 14.5,
     "prices": [
       12.8,
       12.0,
@@ -49566,12 +49566,12 @@
       14.6,
       16.2,
       15.0,
-      14.4
+      14.5
     ],
-    "change_pct": -4.0,
+    "change_pct": -3.33,
     "prev_close": 15.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-05-13",
@@ -49655,12 +49655,12 @@
         "open": 14.6,
         "high": 14.8,
         "low": 14.2,
-        "close": 14.4
+        "close": 14.5
       }
     ]
   },
   "SONY80": {
-    "price": 3.58,
+    "price": 3.52,
     "prices": [
       3.38,
       3.44,
@@ -49691,12 +49691,12 @@
       3.68,
       3.64,
       3.62,
-      3.58
+      3.52
     ],
-    "change_pct": -1.1,
+    "change_pct": -2.76,
     "prev_close": 3.62,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -49906,7 +49906,7 @@
         "open": 3.52,
         "high": 3.58,
         "low": 3.5,
-        "close": 3.58
+        "close": 3.52
       }
     ]
   },
@@ -49947,7 +49947,7 @@
     "change_pct": 0.0,
     "prev_close": 24.9,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -50198,7 +50198,7 @@
     "change_pct": 0.0,
     "prev_close": 2.9,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -50449,7 +50449,7 @@
     "change_pct": -0.6,
     "prev_close": 8.4,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -50700,7 +50700,7 @@
     "change_pct": 2.13,
     "prev_close": 3.76,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-09",
@@ -50915,7 +50915,7 @@
     ]
   },
   "SPENGY80": {
-    "price": 3.78,
+    "price": 3.76,
     "prices": [
       3.7,
       3.56,
@@ -50946,12 +50946,12 @@
       3.84,
       3.86,
       3.74,
-      3.78
+      3.76
     ],
-    "change_pct": 1.07,
+    "change_pct": 0.53,
     "prev_close": 3.74,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -51161,7 +51161,7 @@
         "open": 3.74,
         "high": 3.8,
         "low": 3.7,
-        "close": 3.78
+        "close": 3.76
       }
     ]
   },
@@ -51202,7 +51202,7 @@
     "change_pct": 0.6,
     "prev_close": 16.8,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -51453,7 +51453,7 @@
     "change_pct": 0.83,
     "prev_close": 4.84,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -51704,7 +51704,7 @@
     "change_pct": -2.8,
     "prev_close": 2.14,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -51955,7 +51955,7 @@
     "change_pct": -1.64,
     "prev_close": 12.2,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -52170,7 +52170,7 @@
     ]
   },
   "STAR5001": {
-    "price": 54.0,
+    "price": 54.25,
     "prices": [
       39.25,
       40.5,
@@ -52201,12 +52201,12 @@
       54.75,
       55.0,
       53.5,
-      54.0
+      54.25
     ],
-    "change_pct": 0.93,
+    "change_pct": 1.4,
     "prev_close": 53.5,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -52414,9 +52414,9 @@
       {
         "date": "2026-05-28",
         "open": 53.75,
-        "high": 54.0,
+        "high": 54.25,
         "low": 53.25,
-        "close": 54.0
+        "close": 54.25
       }
     ]
   },
@@ -52457,7 +52457,7 @@
     "change_pct": 0.89,
     "prev_close": 28.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -52708,7 +52708,7 @@
     "change_pct": -3.21,
     "prev_close": 3.12,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -52923,7 +52923,7 @@
     ]
   },
   "SUSHI23": {
-    "price": 3.2,
+    "price": 3.24,
     "prices": [
       2.94,
       2.88,
@@ -52954,12 +52954,12 @@
       3.16,
       3.24,
       3.12,
-      3.2
+      3.24
     ],
-    "change_pct": 2.56,
+    "change_pct": 3.85,
     "prev_close": 3.12,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -53169,12 +53169,12 @@
         "open": 3.2,
         "high": 3.26,
         "low": 3.18,
-        "close": 3.2
+        "close": 3.24
       }
     ]
   },
   "SYNP03": {
-    "price": 3.38,
+    "price": 3.36,
     "prices": [
       2.62,
       2.88,
@@ -53205,12 +53205,12 @@
       3.56,
       3.5,
       3.54,
-      3.38
+      3.36
     ],
-    "change_pct": -4.52,
+    "change_pct": -5.08,
     "prev_close": 3.54,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -53419,8 +53419,8 @@
         "date": "2026-05-28",
         "open": 3.4,
         "high": 3.54,
-        "low": 3.38,
-        "close": 3.38
+        "low": 3.36,
+        "close": 3.36
       }
     ]
   },
@@ -53461,7 +53461,7 @@
     "change_pct": -1.74,
     "prev_close": 43.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -53712,7 +53712,7 @@
     "change_pct": -0.51,
     "prev_close": 19.8,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -53963,7 +53963,7 @@
     "change_pct": -0.81,
     "prev_close": 31.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -54214,7 +54214,7 @@
     "change_pct": -2.78,
     "prev_close": 10.8,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -54465,7 +54465,7 @@
     "change_pct": -2.21,
     "prev_close": 18.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -54680,7 +54680,7 @@
     ]
   },
   "THAIBEV19": {
-    "price": 11.4,
+    "price": 11.5,
     "prices": [
       10.58,
       10.48,
@@ -54711,12 +54711,12 @@
       11.56,
       11.5,
       11.5,
-      11.4
+      11.5
     ],
-    "change_pct": -0.87,
+    "change_pct": 0.0,
     "prev_close": 11.5,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -54926,12 +54926,12 @@
         "open": 11.5,
         "high": 11.5,
         "low": 11.3,
-        "close": 11.4
+        "close": 11.5
       }
     ]
   },
   "TME23": {
-    "price": 0.92,
+    "price": 0.91,
     "prices": [
       0.98,
       1.03,
@@ -54962,12 +54962,12 @@
       0.97,
       0.93,
       0.93,
-      0.92
+      0.91
     ],
-    "change_pct": -1.08,
+    "change_pct": -2.15,
     "prev_close": 0.93,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -55177,7 +55177,7 @@
         "open": 0.91,
         "high": 0.92,
         "low": 0.9,
-        "close": 0.92
+        "close": 0.91
       }
     ]
   },
@@ -55218,7 +55218,7 @@
     "change_pct": 0.81,
     "prev_close": 6.15,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -55469,7 +55469,7 @@
     "change_pct": -1.3,
     "prev_close": 1.54,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -55720,7 +55720,7 @@
     "change_pct": 2.02,
     "prev_close": 3.96,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-09",
@@ -55935,7 +55935,7 @@
     ]
   },
   "TSLA80": {
-    "price": 2.82,
+    "price": 2.84,
     "prices": [
       2.22,
       2.54,
@@ -55966,12 +55966,12 @@
       2.8,
       2.8,
       2.9,
-      2.82
+      2.84
     ],
-    "change_pct": -2.76,
+    "change_pct": -2.07,
     "prev_close": 2.9,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -56181,7 +56181,7 @@
         "open": 2.86,
         "high": 2.9,
         "low": 2.8,
-        "close": 2.82
+        "close": 2.84
       }
     ]
   },
@@ -56222,7 +56222,7 @@
     "change_pct": 1.75,
     "prev_close": 2.28,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -56437,7 +56437,7 @@
     ]
   },
   "UBTECH23": {
-    "price": 1.85,
+    "price": 1.82,
     "prices": [
       1.8,
       1.82,
@@ -56468,12 +56468,12 @@
       2.22,
       2.04,
       1.96,
-      1.85
+      1.82
     ],
-    "change_pct": -5.61,
+    "change_pct": -7.14,
     "prev_close": 1.96,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -56683,12 +56683,12 @@
         "open": 1.85,
         "high": 1.86,
         "low": 1.81,
-        "close": 1.85
+        "close": 1.82
       }
     ]
   },
   "UNH19": {
-    "price": 6.25,
+    "price": 6.3,
     "prices": [
       4.92,
       5.05,
@@ -56719,12 +56719,12 @@
       6.3,
       6.3,
       6.1,
-      6.25
+      6.3
     ],
-    "change_pct": 2.46,
+    "change_pct": 3.28,
     "prev_close": 6.1,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -56934,7 +56934,7 @@
         "open": 6.25,
         "high": 6.3,
         "low": 6.1,
-        "close": 6.25
+        "close": 6.3
       }
     ]
   },
@@ -56975,7 +56975,7 @@
     "change_pct": 0.0,
     "prev_close": 16.0,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -57226,7 +57226,7 @@
     "change_pct": 0.0,
     "prev_close": 9.7,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -57441,7 +57441,7 @@
     ]
   },
   "USTR24": {
-    "price": 1.17,
+    "price": 1.18,
     "prices": [
       1.16,
       1.16,
@@ -57472,12 +57472,12 @@
       1.17,
       1.17,
       1.18,
-      1.17
+      1.18
     ],
-    "change_pct": -0.85,
+    "change_pct": 0.0,
     "prev_close": 1.18,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -57687,7 +57687,7 @@
         "open": 1.18,
         "high": 1.18,
         "low": 1.17,
-        "close": 1.17
+        "close": 1.18
       }
     ]
   },
@@ -57728,7 +57728,7 @@
     "change_pct": -0.63,
     "prev_close": 7.95,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -57943,7 +57943,7 @@
     ]
   },
   "VENTURE19": {
-    "price": 4.58,
+    "price": 4.56,
     "prices": [
       4.02,
       4.08,
@@ -57974,12 +57974,12 @@
       4.66,
       4.62,
       4.62,
-      4.58
+      4.56
     ],
-    "change_pct": -0.87,
+    "change_pct": -1.3,
     "prev_close": 4.62,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -58189,12 +58189,12 @@
         "open": 4.56,
         "high": 4.6,
         "low": 4.56,
-        "close": 4.58
+        "close": 4.56
       }
     ]
   },
   "VHM19": {
-    "price": 18.2,
+    "price": 19.6,
     "prices": [
       15.2,
       17.8,
@@ -58225,12 +58225,12 @@
       19.7,
       19.3,
       18.6,
-      18.2
+      19.6
     ],
-    "change_pct": -2.15,
+    "change_pct": 5.38,
     "prev_close": 18.6,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -58438,9 +58438,9 @@
       {
         "date": "2026-05-28",
         "open": 18.5,
-        "high": 18.5,
+        "high": 19.6,
         "low": 18.1,
-        "close": 18.2
+        "close": 19.6
       }
     ]
   },
@@ -58481,7 +58481,7 @@
     "change_pct": 1.52,
     "prev_close": 1.32,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -58732,7 +58732,7 @@
     "change_pct": -1.06,
     "prev_close": 1.89,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -58983,7 +58983,7 @@
     "change_pct": 0.68,
     "prev_close": 7.4,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -59234,7 +59234,7 @@
     "change_pct": -3.8,
     "prev_close": 3.16,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -59449,7 +59449,7 @@
     ]
   },
   "VT03": {
-    "price": 3.4,
+    "price": 3.44,
     "prices": [
       3.1,
       3.22,
@@ -59480,12 +59480,12 @@
       3.54,
       3.54,
       3.44,
-      3.4
+      3.44
     ],
-    "change_pct": -1.16,
+    "change_pct": 0.0,
     "prev_close": 3.44,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -59695,7 +59695,7 @@
         "open": 3.42,
         "high": 3.44,
         "low": 3.4,
-        "close": 3.4
+        "close": 3.44
       }
     ]
   },
@@ -59736,7 +59736,7 @@
     "change_pct": 0.0,
     "prev_close": 3.9,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -59951,7 +59951,7 @@
     ]
   },
   "WORLD03": {
-    "price": 4.32,
+    "price": 4.36,
     "prices": [
       3.72,
       3.96,
@@ -59982,12 +59982,12 @@
       4.38,
       4.34,
       4.32,
-      4.32
+      4.36
     ],
-    "change_pct": 0.0,
+    "change_pct": 0.93,
     "prev_close": 4.32,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -60195,14 +60195,14 @@
       {
         "date": "2026-05-28",
         "open": 4.32,
-        "high": 4.34,
+        "high": 4.36,
         "low": 4.3,
-        "close": 4.32
+        "close": 4.36
       }
     ]
   },
   "WORLDA01": {
-    "price": 5.15,
+    "price": 5.05,
     "prices": [
       4.58,
       4.66,
@@ -60233,12 +60233,12 @@
       5.05,
       5.05,
       5.05,
-      5.15
+      5.05
     ],
-    "change_pct": 1.98,
+    "change_pct": 0.0,
     "prev_close": 5.05,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -60446,14 +60446,14 @@
       {
         "date": "2026-05-28",
         "open": 5.05,
-        "high": 5.15,
+        "high": 5.2,
         "low": 5.0,
-        "close": 5.15
+        "close": 5.05
       }
     ]
   },
   "WUXI06": {
-    "price": 3.38,
+    "price": 3.4,
     "prices": [
       3.66,
       3.8,
@@ -60484,12 +60484,12 @@
       3.44,
       3.6,
       3.54,
-      3.38
+      3.4
     ],
-    "change_pct": -4.52,
+    "change_pct": -3.95,
     "prev_close": 3.54,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -60699,7 +60699,7 @@
         "open": 3.4,
         "high": 3.42,
         "low": 3.36,
-        "close": 3.38
+        "close": 3.4
       }
     ]
   },
@@ -60740,7 +60740,7 @@
     "change_pct": -2.8,
     "prev_close": 5.35,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -60955,7 +60955,7 @@
     ]
   },
   "XIAOMI80": {
-    "price": 11.7,
+    "price": 12.0,
     "prices": [
       13.1,
       13.3,
@@ -60986,12 +60986,12 @@
       12.6,
       12.4,
       11.8,
-      11.7
+      12.0
     ],
-    "change_pct": -0.85,
+    "change_pct": 1.69,
     "prev_close": 11.8,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -61199,14 +61199,14 @@
       {
         "date": "2026-05-28",
         "open": 11.7,
-        "high": 11.7,
+        "high": 12.0,
         "low": 11.5,
-        "close": 11.7
+        "close": 12.0
       }
     ]
   },
   "XPENG03": {
-    "price": 2.74,
+    "price": 2.8,
     "prices": [
       2.86,
       2.86,
@@ -61237,12 +61237,12 @@
       2.68,
       2.72,
       2.64,
-      2.74
+      2.8
     ],
-    "change_pct": 3.79,
+    "change_pct": 6.06,
     "prev_close": 2.64,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -61450,14 +61450,14 @@
       {
         "date": "2026-05-28",
         "open": 2.68,
-        "high": 2.74,
+        "high": 2.84,
         "low": 2.66,
-        "close": 2.74
+        "close": 2.8
       }
     ]
   },
   "ZAI23": {
-    "price": 16.4,
+    "price": 17.0,
     "prices": [
       9.6,
       9.2,
@@ -61488,12 +61488,12 @@
       13.7,
       14.3,
       14.7,
-      16.4
+      17.0
     ],
-    "change_pct": 11.56,
+    "change_pct": 15.65,
     "prev_close": 14.7,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -61701,9 +61701,9 @@
       {
         "date": "2026-05-28",
         "open": 15.3,
-        "high": 16.4,
+        "high": 17.1,
         "low": 15.3,
-        "close": 16.4
+        "close": 17.0
       }
     ]
   },
@@ -61744,7 +61744,7 @@
     "change_pct": -3.5,
     "prev_close": 14.3,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-17",
@@ -61959,7 +61959,7 @@
     ]
   },
   "ZJINNO80": {
-    "price": 5.65,
+    "price": 5.75,
     "prices": [
       3.48,
       3.8,
@@ -61990,12 +61990,12 @@
       5.35,
       5.3,
       5.4,
-      5.65
+      5.75
     ],
-    "change_pct": 4.63,
+    "change_pct": 6.48,
     "prev_close": 5.4,
     "delay_msg": "Delayed",
-    "last_trade_time": "13:16 (28/05)",
+    "last_trade_time": "14:57 (28/05)",
     "candles": [
       {
         "date": "2026-04-10",
@@ -62203,9 +62203,9 @@
       {
         "date": "2026-05-28",
         "open": 5.3,
-        "high": 5.7,
+        "high": 5.75,
         "low": 5.25,
-        "close": 5.65
+        "close": 5.75
       }
     ]
   }

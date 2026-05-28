@@ -254,7 +254,7 @@
                                     <th class="p-4 text-center bg-gray-800/10">ตลาดแม่ต่างประเทศ (อ้างอิง)</th>
                                     <th class="p-4 text-right text-cyan-400 w-36" title="ราคาอ้างอิงตามทฤษฎี (Fair Price) คำนวณจากราคาหุ้นแม่ต่างประเทศจริง x อัตราแลกเปลี่ยน x สัดส่วน DR">ราคาอ้างอิง Fair Price</th>
                                     <th class="p-4 text-right text-emerald-400 w-36" title="ราคาซื้อขายจริงของ DR ตัวนี้บนกระดานตลาดหลักทรัพย์แห่งประเทศไทย (SET)">ราคาจริงบน SET 🇹🇭</th>
-                                    <th class="p-4 text-center w-40">แนวโน้ม 30 วัน (Candle) 🕯️</th>
+                                    <th class="p-4 text-center w-40" title="กราฟแนวโน้มเทรนด์ 30 วันย้อนหลังของสินทรัพย์อ้างอิงหลักในต่างประเทศ">แนวโน้ม 30 วัน (อ้างอิง) 🕯️</th>
                                     <th class="p-4 text-center w-28" title="ราคาซื้อขายจริงบนกระดาน SET แพงกว่า (Premium) หรือ ถูกกว่า (Discount) ราคาอ้างอิงตามทฤษฎีกี่ %">ส่วนต่าง (Premium)</th>
                                     <th class="p-4 w-12 text-center">นำออก</th>
                                 </tr>
@@ -509,7 +509,7 @@
                     <li class="flex justify-between items-center py-1 border-b border-gray-900/30">
                         <div class="flex flex-col">
                             <span class="font-bold text-gray-200 tracking-wider">${item.symbol}</span>
-                            <span class="text-[9px] text-gray-500 max-w-[80px] truncate" title="${item.name}">${item.name}</span>
+                            <span class="text-[9px] text-cyan-400/80 font-semibold font-mono tracking-tighter max-w-[80px] truncate" title="${drCatalog && drCatalog[item.symbol] ? drCatalog[item.symbol].primary : item.name}">${drCatalog && drCatalog[item.symbol] ? drCatalog[item.symbol].primary : item.name}</span>
                         </div>
                         <div class="text-right">
                             <p class="font-mono text-gray-300 font-medium">${item.price.toFixed(2)}</p>
@@ -964,10 +964,19 @@
                     `;
                 }
 
-                if (item.set_rich && item.set_rich.candles) {
+                let underlyingCandles = null;
+                if (item.active_market === 'US' && item.us_rich && item.us_rich.candles) {
+                    underlyingCandles = item.us_rich.candles;
+                } else if (item.active_market === 'HK' && item.hk_rich && item.hk_rich.candles) {
+                    underlyingCandles = item.hk_rich.candles;
+                } else if (item.set_rich && item.set_rich.candles) {
+                    underlyingCandles = item.set_rich.candles;
+                }
+
+                if (underlyingCandles) {
                     setCandleHtml = `
-                        <div class="w-36 h-8 mx-auto opacity-95 hover:opacity-100 transition-opacity">
-                            ${createCandlestickChart(item.set_rich.candles)}
+                        <div class="w-36 h-8 mx-auto opacity-95 hover:opacity-100 transition-opacity" title="แนวโน้มกราช 30 วันของสินทรัพย์อ้างอิงหลักในต่างประเทศ">
+                            ${createCandlestickChart(underlyingCandles)}
                         </div>
                     `;
                 }
@@ -1060,6 +1069,16 @@
             // 2. Render Mobile Touch-Friendly Card Stack
             mobileCards.innerHTML = sortedWithIndex.map(({ item, originalIndex }, sortedIdx) => {
                 let activeRichData = item.set_rich || (item.active_market === 'HK' ? item.hk_rich : item.us_rich);
+                
+                let underlyingCandles = null;
+                if (item.active_market === 'US' && item.us_rich && item.us_rich.candles) {
+                    underlyingCandles = item.us_rich.candles;
+                } else if (item.active_market === 'HK' && item.hk_rich && item.hk_rich.candles) {
+                    underlyingCandles = item.hk_rich.candles;
+                } else if (item.set_rich && item.set_rich.candles) {
+                    underlyingCandles = item.set_rich.candles;
+                }
+                
                 let trendBadge = "";
                 let delayHtml = "";
                 let sparklineSvg = "";
@@ -1153,7 +1172,7 @@
                             
                             <!-- 30-Day Candlestick Chart / Sparkline fallback -->
                             <div class="w-24 h-7 opacity-95">
-                                ${item.set_rich && item.set_rich.candles ? createCandlestickChart(item.set_rich.candles) : sparklineSvg}
+                                ${underlyingCandles ? createCandlestickChart(underlyingCandles) : sparklineSvg}
                             </div>
                             
                             ${mobileSetPriceHtml}

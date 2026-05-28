@@ -114,119 +114,45 @@ def get_rich_market_data(ticker):
         except:
             prev_close = 0.0
 
-        if ticker.endswith(".BK"):
-            # Fetch daily candles for the last 45 days (approx 30 trading days)
-            hist = t.history(period="45d")
-            if hist.empty:
-                raise ValueError("No daily history found")
-            
-            candles = []
-            prices = []
-            for idx, row in hist.iterrows():
-                candles.append({
-                    "date": idx.strftime('%Y-%m-%d'),
-                    "open": round(float(row['Open']), 2),
-                    "high": round(float(row['High']), 2),
-                    "low": round(float(row['Low']), 2),
-                    "close": round(float(row['Close']), 2)
-                })
-                prices.append(round(float(row['Close']), 2))
-                
-            candles = candles[-30:]
-            prices = prices[-30:]
-            last_price = prices[-1] if prices else 0.0
-            change_pct = ((last_price - prev_close) / prev_close) * 100 if prev_close and prev_close > 0 else 0.0
-            
-            last_ts = hist.index[-1]
-            tz_bangkok = pytz.timezone('Asia/Bangkok')
-            if last_ts.tzinfo is not None:
-                last_ts_bangkok = last_ts.astimezone(tz_bangkok)
-            else:
-                last_ts_bangkok = pytz.utc.localize(last_ts).astimezone(tz_bangkok)
-            last_trade_time = last_ts_bangkok.strftime('%H:%M (%d/%m)')
-            
-            return {
-                "price": last_price,
-                "prices": prices,
-                "change_pct": round(change_pct, 2),
-                "delay_msg": "Delayed",
-                "prev_close": round(prev_close, 2) if prev_close else 0.0,
-                "last_trade_time": last_trade_time,
-                "candles": candles
-            }
-
-        hist = t.history(period="1d", interval="15m", prepost=True)
+        # Fetch daily history for 45 days (covers approx 30 trading days) for ALL tickers
+        hist = t.history(period="45d")
         if hist.empty:
-            price = get_price_safe(ticker)
-            last_ts = None
-            try:
-                hist_daily = t.history(period="1d")
-                if not hist_daily.empty:
-                    last_ts = hist_daily.index[-1]
-            except:
-                pass
-            last_trade_time = ""
-            if last_ts is not None:
-                tz_bangkok = pytz.timezone('Asia/Bangkok')
-                if last_ts.tzinfo is not None:
-                    last_ts_bangkok = last_ts.astimezone(tz_bangkok)
-                else:
-                    last_ts_bangkok = pytz.utc.localize(last_ts).astimezone(tz_bangkok)
-                last_trade_time = last_ts_bangkok.strftime('%H:%M (%d/%m)')
-            return {"price": price, "prices": [price] if price else [], "change_pct": 0.0, "delay_msg": "Closed", "prev_close": prev_close, "last_trade_time": last_trade_time}
-            
-        prices = [round(p, 2) for p in hist['Close'].tolist() if not math.isnan(p)]
-        if not prices:
-             price = get_price_safe(ticker)
-             last_ts = None
-             try:
-                 hist_daily = t.history(period="1d")
-                 if not hist_daily.empty:
-                     last_ts = hist_daily.index[-1]
-             except:
-                 pass
-             last_trade_time = ""
-             if last_ts is not None:
-                 tz_bangkok = pytz.timezone('Asia/Bangkok')
-                 if last_ts.tzinfo is not None:
-                     last_ts_bangkok = last_ts.astimezone(tz_bangkok)
-                 else:
-                     last_ts_bangkok = pytz.utc.localize(last_ts).astimezone(tz_bangkok)
-                 last_trade_time = last_ts_bangkok.strftime('%H:%M (%d/%m)')
-             return {"price": price, "prices": [price] if price else [], "change_pct": 0.0, "delay_msg": "Closed", "prev_close": prev_close, "last_trade_time": last_trade_time}
-             
-        last_price = prices[-1]
+            raise ValueError("No daily history found")
         
+        candles = []
+        prices = []
+        for idx, row in hist.iterrows():
+            candles.append({
+                "date": idx.strftime('%Y-%m-%d'),
+                "open": round(float(row['Open']), 2),
+                "high": round(float(row['High']), 2),
+                "low": round(float(row['Low']), 2),
+                "close": round(float(row['Close']), 2)
+            })
+            prices.append(round(float(row['Close']), 2))
+            
+        candles = candles[-30:]
+        prices = prices[-30:]
+        last_price = prices[-1] if prices else 0.0
+        
+        # Keep pricing perfectly real-time by checking fast_info
+        try:
+            live_price = t.fast_info.last_price
+            if live_price and live_price > 0:
+                last_price = live_price
+                if candles:
+                    candles[-1]["close"] = round(float(live_price), 2)
+                    if live_price > candles[-1]["high"]:
+                        candles[-1]["high"] = round(float(live_price), 2)
+                    if live_price < candles[-1]["low"]:
+                        candles[-1]["low"] = round(float(live_price), 2)
+        except:
+            pass
+
         change_pct = ((last_price - prev_close) / prev_close) * 100 if prev_close and prev_close > 0 else 0.0
         
+        # Last trade time
         last_ts = hist.index[-1]
-        now_utc = datetime.now(timezone.utc)
-        if last_ts.tzinfo is not None:
-            last_ts_utc = last_ts.astimezone(timezone.utc)
-        else:
-            last_ts_utc = last_ts.replace(tzinfo=timezone.utc)
-            
-        diff_minutes = int((now_utc - last_ts_utc).total_seconds() / 60)
-        
-        is_overnight = False
-        if hasattr(last_ts, 'hour'):
-            time_float = last_ts.hour + last_ts.minute / 60.0
-            if time_float >= 16.0 or time_float < 9.5:
-                is_overnight = True
-                
-        if is_overnight:
-             if diff_minutes <= 15:
-                 delay_msg = "Overnight (Live)"
-             else:
-                 delay_msg = "Overnight (Close)"
-        else:
-            if diff_minutes <= 10:
-                delay_msg = "Realtime"
-            elif diff_minutes > 120:
-                 delay_msg = "Market Closed"
-            else:
-                 delay_msg = f"Delayed {diff_minutes}m"
-             
         tz_bangkok = pytz.timezone('Asia/Bangkok')
         if last_ts.tzinfo is not None:
             last_ts_bangkok = last_ts.astimezone(tz_bangkok)
@@ -234,13 +160,44 @@ def get_rich_market_data(ticker):
             last_ts_bangkok = pytz.utc.localize(last_ts).astimezone(tz_bangkok)
         last_trade_time = last_ts_bangkok.strftime('%H:%M (%d/%m)')
         
+        # Calculate delay message based on ticker market type
+        now_utc = datetime.now(timezone.utc)
+        if last_ts.tzinfo is not None:
+            last_ts_utc = last_ts.astimezone(timezone.utc)
+        else:
+            last_ts_utc = last_ts.replace(tzinfo=timezone.utc)
+        diff_minutes = int((now_utc - last_ts_utc).total_seconds() / 60)
+        
+        if ticker.endswith(".BK"):
+            delay_msg = "Delayed"
+        else:
+            # Check for overnight/live
+            is_overnight = False
+            try:
+                tz_th = pytz.timezone('Asia/Bangkok')
+                now_th = datetime.now(tz_th)
+                time_float = now_th.hour + now_th.minute / 60.0
+                if time_float >= 20.5 or time_float <= 3.0:
+                    is_overnight = True
+            except:
+                pass
+                
+            if is_overnight:
+                delay_msg = "Overnight (Live)"
+            else:
+                if diff_minutes <= 1440:  # within 24 hours
+                    delay_msg = "Realtime" if diff_minutes <= 15 else "Delayed"
+                else:
+                    delay_msg = "Market Closed"
+                    
         return {
-            "price": last_price,
+            "price": round(last_price, 2),
             "prices": prices,
             "change_pct": round(change_pct, 2),
             "delay_msg": delay_msg,
             "prev_close": round(prev_close, 2) if prev_close else 0.0,
-            "last_trade_time": last_trade_time
+            "last_trade_time": last_trade_time,
+            "candles": candles
         }
     except Exception as e:
         print(f"Error fetching {ticker}: {e}")
