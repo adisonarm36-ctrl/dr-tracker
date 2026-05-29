@@ -766,7 +766,295 @@ def get_top_movers(force: bool = False):
         "is_loading": True
     }
 
+NARRATIVE_MAPPING = {
+    "NVDA": {
+        "name": "NVIDIA",
+        "sector": "Semiconductors",
+        "themes": ["AI", "Data Center", "Semiconductor", "Compute"],
+        "description": "ผู้นำชิปประมวลผล GPU สำหรับปัญญาประดิษฐ์และโครงสร้างพื้นฐาน Data Center"
+    },
+    "AAPL": {
+        "name": "Apple",
+        "sector": "Technology",
+        "themes": ["AI", "Compute"],
+        "description": "ยักษ์ใหญ่เทคโนโลยีผู้พัฒนา Apple Intelligence และชิประดับสูง Apple Silicon"
+    },
+    "MSFT": {
+        "name": "Microsoft",
+        "sector": "Software",
+        "themes": ["AI", "Compute"],
+        "description": "ผู้นำซอฟต์แวร์ระดับโลก คลาวด์ Azure AI และความร่วมมือแนบแน่นกับ OpenAI"
+    },
+    "TSLA": {
+        "name": "Tesla",
+        "sector": "Electronic Technology",
+        "themes": ["AI", "Compute"],
+        "description": "ผู้ผลิตยานยนต์ไฟฟ้าอัจฉริยะ นำเทคโนโลยี AI มาใช้ในการขับเคลื่อนอัตโนมัติและหุ่นยนต์"
+    },
+    "AVGO": {
+        "name": "Broadcom",
+        "sector": "Semiconductors",
+        "themes": ["Semiconductor", "Data Center", "Optical"],
+        "description": "ชิปการเชื่อมต่อระบบเครือข่ายความเร็วสูง และโมดูลส่งสัญญาณแสงสำหรับโครงข่ายข้อมูล"
+    },
+    "AMD": {
+        "name": "AMD",
+        "sector": "Semiconductors",
+        "themes": ["AI", "Compute", "Semiconductor", "Data Center"],
+        "description": "ผู้ท้าชิงหลักชิป AI GPU (Instinct) และซีพียูสำหรับเซิร์ฟเวอร์ EPYC"
+    },
+    "SMCI": {
+        "name": "Super Micro",
+        "sector": "Technology",
+        "themes": ["Compute", "Data Center"],
+        "description": "ผู้ผลิตเซิร์ฟเวอร์ประมวลผล AI สมรรถนะสูงพร้อมโซลูชันระบบระบายความร้อนด้วยของเหลว"
+    },
+    "MU": {
+        "name": "Micron",
+        "sector": "Semiconductors",
+        "themes": ["Semiconductor", "Compute", "Data Center"],
+        "description": "ผู้ผลิตหน่วยความจำแบนด์วิดท์สูง (HBM3E) สำคัญสำหรับการประมวลผลจีพียู AI"
+    },
+    "ASML": {
+        "name": "ASML",
+        "sector": "Semiconductors",
+        "themes": ["Semiconductor"],
+        "description": "ผู้ผลิตเครื่องจักรฉายรังสีออปติคอล EUV ชิ้นสำคัญในการพิมพ์ลายวงจรชิปขั้นสูงที่สุดในโลก"
+    },
+    "LRCX": {
+        "name": "Lam Research",
+        "sector": "Semiconductors",
+        "themes": ["Semiconductor"],
+        "description": "ผู้ผลิตอุปกรณ์สลักแผ่นเวเฟอร์ซิลิคอนระดับนาโนสำหรับโรงงานผลิตชิป"
+    },
+    "AMAT": {
+        "name": "Applied Materials",
+        "sector": "Semiconductors",
+        "themes": ["Semiconductor"],
+        "description": "ผู้ผลิตเครื่องจักรเคลือบสารตัวนำผิวเวเฟอร์ในอุตสาหกรรมชิป"
+    },
+    "VST": {
+        "name": "Vistra",
+        "sector": "Electronic Technology",
+        "themes": ["Power Infra", "Data Center"],
+        "description": "ผู้ผลิตพลังงานไฟฟ้าสะอาดที่ใหญ่ที่สุดรายหนึ่งในสหรัฐฯ ซัพพลายระบบ Data Center"
+    },
+    "CEG": {
+        "name": "Constellation",
+        "sector": "Electronic Technology",
+        "themes": ["Power Infra", "Data Center"],
+        "description": "ผู้ผลิตพลังงานนิวเคลียร์สะอาดอันดับหนึ่งของสหรัฐฯ เซ็นสัญญาจ่ายไฟแก่ไมโครซอฟท์"
+    },
+    "GEV": {
+        "name": "GE Vernova",
+        "sector": "Electronic Technology",
+        "themes": ["Power Infra"],
+        "description": "ผู้นำอุปกรณ์ระบบกริดสายส่งไฟฟ้า กังหันลม และเครื่องปั่นไฟฟ้าขนาดใหญ่ทั่วโลก"
+    },
+    "DELL": {
+        "name": "Dell",
+        "sector": "Technology",
+        "themes": ["Compute", "Data Center"],
+        "description": "ผู้จำหน่ายเซิร์ฟเวอร์ AI และโครงสร้างพื้นฐานการจัดการข้อมูลสำหรับองค์กร"
+    },
+    "ANET": {
+        "name": "Arista Networks",
+        "sector": "Technology",
+        "themes": ["Data Center", "Optical"],
+        "description": "ผู้นำสวิตช์สายส่งโครงข่ายความเร็วสูงระดับ Ultra-low Latency ในระดับ Data Center ขนาดใหญ่"
+    },
+    "COHR": {
+        "name": "Coherent",
+        "sector": "Technology",
+        "themes": ["Optical", "Photonics"],
+        "description": "ผู้นำเทคโนโลยีชิ้นส่วนเลเซอร์และชิปสื่อสารส่งข้อมูลด้วยแสง 800G/1.6T"
+    },
+    "LITE": {
+        "name": "Lumentum",
+        "sector": "Technology",
+        "themes": ["Optical", "Photonics"],
+        "description": "ผู้นำตัวรับส่งสัญญาณแสงพลังสูง เลเซอร์ไดโอดความแม่นยำสูงในระบบโครงข่ายสัญญาณ"
+    },
+    "QCOM": {
+        "name": "Qualcomm",
+        "sector": "Semiconductors",
+        "themes": ["Semiconductor", "AI", "Compute"],
+        "description": "ผู้นำชิปประมวลผลสื่อสารเคลื่อนที่ Snapdragon และสถาปัตยกรรม On-Device AI"
+    },
+    "META": {
+        "name": "Meta",
+        "sector": "Software",
+        "themes": ["AI"],
+        "description": "ผู้พัฒนาโมเดล Llama AI และโซเชียลมีเดียชั้นนำระดับโลก"
+    },
+    "GOOG": {
+        "name": "Alphabet",
+        "sector": "Software",
+        "themes": ["AI", "Compute", "Data Center"],
+        "description": "ผู้พัฒนา Gemini AI บริการค้นหา คลาวด์ และตัวเร่งประมวลผล Tensor Processing Unit"
+    },
+    "AMZN": {
+        "name": "Amazon",
+        "sector": "Software",
+        "themes": ["AI", "Data Center", "Compute"],
+        "description": "ผู้นำบริการคลาวด์ยักษ์ใหญ่ AWS และผู้พัฒนาชิปเซ็ตประมวลผลและฝึกหัด AI"
+    },
+    "ADVANT": {
+        "name": "Advantest",
+        "sector": "Electronic Technology",
+        "themes": ["Semiconductor", "Compute"],
+        "description": "ผู้ผลิตและออกแบบระบบทดสอบความถูกต้องของชิปเซ็ตและแผงวงจรความเร็วสูงของญี่ปุ่น"
+    },
+    "JPSEMI": {
+        "name": "JPSEMI ETF",
+        "sector": "Semiconductors",
+        "themes": ["Semiconductor"],
+        "description": "กองทุนรวม ETF รวบรวมยักษ์ใหญ่ผู้ผลิตเครื่องจักรและชิปเซมิคอนดักเตอร์ของญี่ปุ่น"
+    },
+    "ASEMI": {
+        "name": "ASEMI ETF",
+        "sector": "Semiconductors",
+        "themes": ["Semiconductor"],
+        "description": "กองทุนรวม ETF หุ้นเซมิคอนดักเตอร์ของเอเชียและฮ่องกง"
+    },
+    "CNSEMI": {
+        "name": "CNSEMI ETF",
+        "sector": "Semiconductors",
+        "themes": ["Semiconductor"],
+        "description": "กองทุนรวม ETF หุ้นผู้พัฒนาเทคโนโลยีชิปพึ่งพาตนเองชั้นนำของจีน"
+    }
+}
+
+SECTOR_NARRATIVES = {
+    "Technology": "กลุ่มสินค้าและบริการเทคโนโลยีเป็นกลไกขับเคลื่อนการทำ Digital Transformation ทั่วโลก โดยปัจจุบันมีแรงหนุนหลักจากการปรับสถาปัตยกรรมคลาวด์เพื่อรับมือการคำนวณและบริหารจัดการ AI ในระดับองค์กรขนาดใหญ่",
+    "Semiconductors": "เซมิคอนดักเตอร์คือ 'น้ำมันยุคใหม่' ชิปประมวลผล (GPU) และชิปหน่วยความจำแบนด์วิดท์สูง (HBM) เป็นทรัพยากรคอขวดที่ทุกค่ายยักษ์ใหญ่กำลังแย่งชิงกัน",
+    "Software": "กลุ่มผู้พัฒนาซอฟต์แวร์และแอปพลิเคชันคลาวด์กำลังได้รับประโยชน์จากการรวมปัญญาประดิษฐ์ (AI Copilot) เข้ากับบริการเดิมเพื่อเรียกเก็บค่าบริการเพิ่มขึ้นแบบก้าวกระโดด",
+    "Electronic Technology": "กลุ่มอิเล็กทรอนิกส์และผู้ให้บริการพลังงาน ได้รับประโยชน์อย่างมหาศาลจากการเร่งสร้างสายส่งไฟฟ้าและระบบโครงข่ายไฟฟ้ารองรับ Data Center และชิป AI ยุคใหม่"
+}
+
+THEME_NARRATIVES = {
+    "AI": "ปัญญาประดิษฐ์ Generative AI คือ narrative การปฏิวัติทางวิทยาการที่ใหญ่ที่สุดในทศวรรษนี้ โดยบริษัทขนาดใหญ่แข่งขันพัฒนาโมเดลภาษาและการใช้งาน AI เชิงธุรกิจอย่างกว้างขวาง",
+    "Data Center": "ศูนย์ข้อมูล Hyperscale Data Center โดดเด่นอย่างมากจากความจำเป็นในการปรับระบบระบายความร้อนด้วยของเหลว (Liquid Cooling) และเซิร์ฟเวอร์ประกอบเฉพาะทางสำหรับ AI",
+    "Optical": "ระบบส่งสัญญาณเครือข่ายความเร็วสูงด้วยเส้นใยแก้วออปติกส์ระดับ 800G เป็นจุดสำคัญที่หลีกเลี่ยงไม่ได้ในการเชื่อมต่อกลุ่มจีพียูจำนวนมหาศาลเข้าด้วยกันใน Data Center",
+    "Photonics": "เทคโนโลยีโฟโตนิกส์ (Photonics) นำพาการปฏิวัติการนำแสงเลเซอร์ส่งข้อมูลแทนสายไฟเพื่อทลายข้อจำกัดด้านพลังงานความร้อนและความเร็วยุคถัดไป",
+    "Semiconductor": "อุตสาหกรรมชิปเซมิคอนดักเตอร์ต้นน้ำ โดดเด่นจากการลงทุนระดับชาติและการสร้างความมั่นคงด้านวิทยาการชิปเพื่อพึ่งพาตนเอง ทั้งในสหรัฐฯ ฮ่องกง และญี่ปุ่น",
+    "Compute": "ความต้องการขีดความสามารถการประมวลผลสมรรถนะสูงเป็นตัวขับเคลื่อนหลัก นำมาซึ่งความต้องการชิป GPU ตัวท็อป และชิปประมวลผลคลาวด์ที่ออกแบบขึ้นเป็นการเฉพาะ",
+    "Power Infra": "โครงสร้างพื้นฐานพลังงานไฟฟ้าและนิวเคลียร์คือกลุ่มเหมืองทองคำใหม่ในการป้อนกระแสไฟฟ้าอันมหาศาลแก่ Data Center ทั่วสหรัฐฯ สัญญาส่งจ่ายไฟฟ้าสะอาดระยะยาวได้รับแรงหนุนสุดร้อนแรง"
+}
+
+def compute_narratives_data():
+    # Load catalog to make sure we map accurately
+    catalog = load_dr_catalog()
+    
+    # Establish structures
+    sectors_data = {
+        "Technology": {"avg": 0.0, "count": 0, "items": []},
+        "Semiconductors": {"avg": 0.0, "count": 0, "items": []},
+        "Software": {"avg": 0.0, "count": 0, "items": []},
+        "Electronic Technology": {"avg": 0.0, "count": 0, "items": []}
+    }
+    
+    themes_data = {
+        "AI": {"avg": 0.0, "count": 0, "items": []},
+        "Data Center": {"avg": 0.0, "count": 0, "items": []},
+        "Optical": {"avg": 0.0, "count": 0, "items": []},
+        "Photonics": {"avg": 0.0, "count": 0, "items": []},
+        "Semiconductor": {"avg": 0.0, "count": 0, "items": []},
+        "Compute": {"avg": 0.0, "count": 0, "items": []},
+        "Power Infra": {"avg": 0.0, "count": 0, "items": []}
+    }
+    
+    # Scan recommended symbols in SET_PRICES_CACHE
+    for sym, cached in SET_PRICES_CACHE.items():
+        # Match symbol prefix
+        mapping_item = None
+        for prefix, item in NARRATIVE_MAPPING.items():
+            if sym.startswith(prefix):
+                mapping_item = item
+                break
+                
+        if not mapping_item:
+            continue
+            
+        change_pct = cached.get("change_pct", 0.0)
+        price = cached.get("price", 0.0)
+        name = mapping_item["name"]
+        
+        dr_item = {
+            "symbol": sym,
+            "name": name,
+            "price": price,
+            "change_pct": change_pct,
+            "description": mapping_item["description"]
+        }
+        
+        # Classify into Sector
+        sec = mapping_item["sector"]
+        if sec in sectors_data:
+            sectors_data[sec]["items"].append(dr_item)
+            
+        # Classify into Themes
+        for theme in mapping_item["themes"]:
+            if theme in themes_data:
+                themes_data[theme]["items"].append(dr_item)
+                
+    # 4. Compute statistics for sectors
+    sectors_results = []
+    for sec_name, sec_info in sectors_data.items():
+        items = sec_info["items"]
+        if not items:
+            continue
+        avg_change = sum(x["change_pct"] for x in items) / len(items)
+        leader = sorted(items, key=lambda x: x["change_pct"], reverse=True)[0]
+        
+        sectors_results.append({
+            "name": sec_name,
+            "avg_change": round(avg_change, 2),
+            "dr_count": len(items),
+            "leader_symbol": leader["symbol"],
+            "leader_name": leader["name"],
+            "leader_change": leader["change_pct"],
+            "narrative": SECTOR_NARRATIVES.get(sec_name, ""),
+            "items": sorted(items, key=lambda x: x["change_pct"], reverse=True)[:5]
+        })
+        
+    sectors_results = sorted(sectors_results, key=lambda x: x["avg_change"], reverse=True)
+    
+    # 5. Compute statistics for themes
+    themes_results = []
+    for theme_name, theme_info in themes_data.items():
+        items = theme_info["items"]
+        if not items:
+            continue
+        avg_change = sum(x["change_pct"] for x in items) / len(items)
+        leader = sorted(items, key=lambda x: x["change_pct"], reverse=True)[0]
+        
+        themes_results.append({
+            "name": theme_name,
+            "avg_change": round(avg_change, 2),
+            "dr_count": len(items),
+            "leader_symbol": leader["symbol"],
+            "leader_name": leader["name"],
+            "leader_change": leader["change_pct"],
+            "narrative": THEME_NARRATIVES.get(theme_name, ""),
+            "items": sorted(items, key=lambda x: x["change_pct"], reverse=True)[:5]
+        })
+        
+    themes_results = sorted(themes_results, key=lambda x: x["avg_change"], reverse=True)
+    
+    return {
+        "status": "success",
+        "timestamp": datetime.now().isoformat(),
+        "sectors": sectors_results,
+        "themes": themes_results
+    }
+
+@app.get("/api/narratives")
+def get_narratives():
+    return compute_narratives_data()
+
 if __name__ == "__main__":
     import os
     port = int(os.environ.get("PORT", 8000))
     uvicorn.run(app, host="0.0.0.0", port=port)
+

@@ -129,8 +129,21 @@
             </div>
         </div>
 
-        <!-- Top Movers Section -->
-        <div class="space-y-4">
+        <!-- Navigation Tabs Switcher (Double Tab Glassmorphic panel) -->
+        <div class="flex bg-slate-950/60 p-1.5 rounded-2xl border border-cyan-500/10 gap-2 max-w-md mx-auto relative z-20 shadow-xl mb-2">
+            <button id="nav-btn-watchlist" onclick="switchDashboardView('watchlist')" class="flex-1 text-center py-2.5 px-5 rounded-xl text-xs font-bold transition duration-200 bg-gradient-to-r from-cyan-600 to-cyan-500 text-white shadow-lg flex items-center justify-center gap-2">
+                <span>📈</span> บอร์ดติดตาม (Watchlist)
+            </button>
+            <button id="nav-btn-narratives" onclick="switchDashboardView('narratives')" class="flex-1 text-center py-2.5 px-5 rounded-xl text-xs font-bold transition duration-200 text-gray-400 hover:text-white flex items-center justify-center gap-2">
+                <span>🔥</span> กลุ่ม & Narrative (Sectors & Themes)
+            </button>
+        </div>
+
+        <!-- Main Watchlist Dashboard View container -->
+        <div id="dashboard-watchlist-view" class="space-y-6 block">
+
+            <!-- Top Movers Section -->
+            <div class="space-y-4">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2">
                 <div class="flex flex-wrap items-center gap-2">
                     <h2 class="text-xl font-bold text-cyan-400 flex items-center gap-2">
@@ -371,8 +384,48 @@
                 </div>
                 
             </div>
+        </div> <!-- Closes watchlist grid -->
+        
+        <!-- Sectors & Themes Narratives Dashboard View -->
+        <div id="dashboard-narratives-view" class="space-y-6 hidden">
+            <!-- Header Title -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2">
+                <div class="flex flex-wrap items-center gap-2">
+                    <h2 class="text-xl font-bold text-cyan-400 flex items-center gap-2">
+                        <span>🔥</span> สถิติวิเคราะห์กลุ่มหลักทรัพย์ & Theme คลื่น Narrative
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Double Grid: Left Sectors (5), Right Themes (7) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <!-- Left: Sectors (12 cols on mobile, 5 cols on desktop) -->
+                <div class="lg:col-span-5 space-y-5">
+                    <div class="flex items-center justify-between border-b border-gray-800 pb-2 mb-1 px-1">
+                        <h3 class="text-sm font-bold text-teal-400 flex items-center gap-2 uppercase tracking-wider">
+                            <span>💼</span> สถิติแยกตามหมวดอุตสาหกรรม (Sectors)
+                        </h3>
+                    </div>
+                    <div id="narratives-sectors-list" class="space-y-4">
+                        <div class="text-center py-10 text-gray-500 font-mono animate-pulse">⏳ กำลังประมวลผลโมเดลสถิติ Sector...</div>
+                    </div>
+                </div>
+
+                <!-- Right: Themes (12 cols on mobile, 7 cols on desktop) -->
+                <div class="lg:col-span-7 space-y-5">
+                    <div class="flex items-center justify-between border-b border-gray-800 pb-2 mb-1 px-1">
+                        <h3 class="text-sm font-bold text-indigo-400 flex items-center gap-2 uppercase tracking-wider">
+                            <span>🚀</span> สถิติวิเคราะห์คลื่นกระแสหลัก (Themes / Narratives)
+                        </h3>
+                    </div>
+                    <div id="narratives-themes-list" class="space-y-4">
+                        <div class="text-center py-10 text-gray-500 font-mono animate-pulse">⏳ กำลังประมวลผลโมเดลวิเคราะห์ Theme...</div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+
+    </div> <!-- Closes max-w-7xl container -->
 
     <!-- Notification overlay -->
     <div id="toast" class="fixed bottom-5 right-5 bg-cyan-950 border border-cyan-500 text-cyan-300 px-5 py-3 rounded-2xl shadow-[0_0_20px_rgba(6,182,212,0.3)] transition-all duration-300 transform translate-y-20 opacity-0 text-sm font-medium z-50">
@@ -1343,6 +1396,7 @@
             showToast("⏳ กำลังอัปเดตข้อมูลราคาทั้งหมด...");
             await updateTracker();
             await fetchTopMovers(true);
+            await fetchNarratives();
             showToast("✓ อัปเดตข้อมูลเสร็จสิ้น!");
         }
 
@@ -1414,6 +1468,180 @@
             }
         }
 
+        // Narratives & Themes View Switcher and Render helpers
+        let narrativesData = null;
+        async function fetchNarratives() {
+            try {
+                const res = await fetch(`${BACKEND_URL}/api/narratives?t=${Date.now()}`);
+                const data = await res.json();
+                if (data.status === "success") {
+                    narrativesData = data;
+                    renderNarrativesView();
+                }
+            } catch (e) {
+                console.error("Failed to fetch narratives:", e);
+            }
+        }
+
+        function renderNarrativesView() {
+            if (!narrativesData) return;
+            
+            // 1. Render Sectors
+            const sectorsList = document.getElementById("narratives-sectors-list");
+            if (sectorsList) {
+                sectorsList.innerHTML = narrativesData.sectors.map(sec => {
+                    const sign = sec.avg_change > 0 ? "+" : "";
+                    const avgColor = sec.avg_change > 0 ? "text-emerald-400 bg-emerald-950/40 border-emerald-500/20" : "text-red-400 bg-red-950/40 border-red-500/20";
+                    const leaderSign = sec.leader_change > 0 ? "+" : "";
+                    const leaderBadge = sec.leader_change > 0 ? "text-emerald-400 bg-emerald-950/40" : "text-red-400 bg-red-950/40";
+                    
+                    const itemsHtml = sec.items.map(item => {
+                        const itemSign = item.change_pct > 0 ? "+" : "";
+                        const itemColor = item.change_pct > 0 ? "text-emerald-400" : "text-red-400";
+                        const barColor = item.change_pct > 0 ? "bg-emerald-500" : "bg-red-500";
+                        const maxAbsChange = Math.max(...sec.items.map(x => Math.abs(x.change_pct))) || 1;
+                        const pctWidth = Math.min(100, (Math.abs(item.change_pct) / maxAbsChange) * 100);
+                        
+                        return `
+                            <div class="space-y-1">
+                                <div class="flex justify-between items-center text-[11px]">
+                                    <span class="font-bold text-gray-300 font-mono">${item.symbol} <span class="text-gray-500 text-[10px] font-normal">${item.name}</span></span>
+                                    <span class="font-mono font-bold ${itemColor}">${itemSign}${item.change_pct}%</span>
+                                </div>
+                                <div class="w-full bg-slate-900 rounded-full h-1.5 overflow-hidden">
+                                    <div class="${barColor} h-1.5 rounded-full" style="width: ${pctWidth}%"></div>
+                                </div>
+                            </div>
+                        `;
+                    }).join('');
+
+                    return `
+                        <div class="glass-panel rounded-2xl p-5 border-l-4 border-l-teal-400 border-cyan-500/10 shadow-lg relative overflow-hidden transition duration-300 hover:border-cyan-500/30 hover:shadow-[0_0_20px_rgba(6,182,212,0.1)]">
+                            <div class="flex justify-between items-start gap-4">
+                                <div>
+                                    <h4 class="text-base font-bold text-gray-100">${sec.name}</h4>
+                                    <p class="text-[10px] text-gray-500 font-semibold font-mono mt-0.5">${sec.dr_count} DRs ในกลุ่ม</p>
+                                </div>
+                                <span class="font-mono text-xs sm:text-sm font-bold px-2.5 py-1 rounded-xl border ${avgColor}">${sign}${sec.avg_change}%</span>
+                            </div>
+                            
+                            <p class="text-xs text-gray-400 leading-relaxed mt-3 pb-3 border-b border-gray-900/30 font-medium">
+                                ${sec.narrative}
+                            </p>
+                            
+                            <!-- Hottest Leader Widget -->
+                            <div class="bg-slate-900/50 rounded-xl p-3 border border-gray-800/80 mt-3 flex justify-between items-center">
+                                <div class="flex flex-col">
+                                    <span class="text-[9px] text-cyan-400 font-bold uppercase tracking-wider">🏆 ตัวนำกลุ่มวันนี้</span>
+                                    <span class="font-bold text-gray-200 text-xs mt-1 font-mono">${sec.leader_symbol} <span class="text-gray-400 font-normal text-[10px]">${sec.leader_name}</span></span>
+                                </div>
+                                <span class="font-mono text-xs font-bold px-2 py-0.5 rounded ${leaderBadge}">${leaderSign}${sec.leader_change}%</span>
+                            </div>
+                            
+                            <!-- Sector Items breakdown -->
+                            <div class="mt-4 space-y-2.5">
+                                <p class="text-[9px] text-gray-500 font-bold uppercase tracking-wider">📈 อัตราผลตอบแทนภายในกลุ่ม (Top 5)</p>
+                                ${itemsHtml}
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // 2. Render Themes
+            const themesList = document.getElementById("narratives-themes-list");
+            if (themesList) {
+                themesList.innerHTML = narrativesData.themes.map(theme => {
+                    const sign = theme.avg_change > 0 ? "+" : "";
+                    const avgColor = theme.avg_change > 0 ? "text-emerald-400 bg-emerald-950/40 border-emerald-500/20" : "text-red-400 bg-red-950/40 border-red-500/20";
+                    const leaderSign = theme.leader_change > 0 ? "+" : "";
+                    const leaderBadge = theme.leader_change > 0 ? "text-emerald-400 bg-emerald-950/40" : "text-red-400 bg-red-950/40";
+                    
+                    const itemsHtml = theme.items.map(item => {
+                        const itemSign = item.change_pct > 0 ? "+" : "";
+                        const itemColor = item.change_pct > 0 ? "text-emerald-400" : "text-red-400";
+                        const barColor = item.change_pct > 0 ? "bg-emerald-500" : "bg-red-500";
+                        const maxAbsChange = Math.max(...theme.items.map(x => Math.abs(x.change_pct))) || 1;
+                        const pctWidth = Math.min(100, (Math.abs(item.change_pct) / maxAbsChange) * 100);
+                        
+                        return `
+                            <div class="space-y-1">
+                                <div class="flex justify-between items-center text-[11px]">
+                                    <span class="font-bold text-gray-300 font-mono">${item.symbol} <span class="text-gray-500 text-[10px] font-normal">${item.name}</span></span>
+                                    <span class="font-mono font-bold ${itemColor}">${itemSign}${item.change_pct}%</span>
+                                </div>
+                                <div class="w-full bg-slate-900 rounded-full h-1.5 overflow-hidden">
+                                    <div class="${barColor} h-1.5 rounded-full" style="width: ${pctWidth}%"></div>
+                                </div>
+                            </div>
+                        `;
+                    }).join('');
+
+                    return `
+                        <div class="glass-panel rounded-2xl p-5 border-l-4 border-l-indigo-400 border-cyan-500/10 shadow-lg relative overflow-hidden transition duration-300 hover:border-cyan-500/30 hover:shadow-[0_0_20px_rgba(6,182,212,0.1)]">
+                            <div class="flex justify-between items-start gap-4">
+                                <div>
+                                    <h4 class="text-base font-bold text-gray-100">${theme.name}</h4>
+                                    <p class="text-[10px] text-gray-500 font-semibold font-mono mt-0.5">${theme.dr_count} DRs ในกลุ่ม</p>
+                                </div>
+                                <span class="font-mono text-xs sm:text-sm font-bold px-2.5 py-1 rounded-xl border ${avgColor}">${sign}${theme.avg_change}%</span>
+                            </div>
+                            
+                            <p class="text-xs text-gray-400 leading-relaxed mt-3 pb-3 border-b border-gray-900/30 font-medium">
+                                ${theme.narrative}
+                            </p>
+                            
+                            <!-- Hottest Leader Widget -->
+                            <div class="bg-slate-900/50 rounded-xl p-3 border border-gray-800/80 mt-3 flex justify-between items-center">
+                                <div class="flex flex-col">
+                                    <span class="text-[9px] text-cyan-400 font-bold uppercase tracking-wider">🏆 ตัวนำกลุ่มวันนี้</span>
+                                    <span class="font-bold text-gray-200 text-xs mt-1 font-mono">${theme.leader_symbol} <span class="text-gray-400 font-normal text-[10px]">${theme.leader_name}</span></span>
+                                </div>
+                                <span class="font-mono text-xs font-bold px-2 py-0.5 rounded ${leaderBadge}">${leaderSign}${theme.leader_change}%</span>
+                            </div>
+                            
+                            <!-- Theme Items breakdown -->
+                            <div class="mt-4 space-y-2.5">
+                                <p class="text-[9px] text-gray-500 font-bold uppercase tracking-wider">📈 อัตราผลตอบแทนภายในกลุ่ม (Top 5)</p>
+                                ${itemsHtml}
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+        }
+
+        function switchDashboardView(view) {
+            const watchlistBtn = document.getElementById('nav-btn-watchlist');
+            const narrativesBtn = document.getElementById('nav-btn-narratives');
+            const watchlistView = document.getElementById('dashboard-watchlist-view');
+            const narrativesView = document.getElementById('dashboard-narratives-view');
+            
+            if (view === 'watchlist') {
+                watchlistBtn.classList.remove('text-gray-400');
+                watchlistBtn.classList.add('bg-gradient-to-r', 'from-cyan-600', 'to-cyan-500', 'text-white', 'shadow-lg');
+                narrativesBtn.classList.add('text-gray-400');
+                narrativesBtn.classList.remove('bg-gradient-to-r', 'from-cyan-600', 'to-cyan-500', 'text-white', 'shadow-lg');
+                
+                narrativesView.classList.remove('block');
+                narrativesView.classList.add('hidden');
+                watchlistView.classList.remove('hidden');
+                watchlistView.classList.add('block');
+            } else {
+                narrativesBtn.classList.remove('text-gray-400');
+                narrativesBtn.classList.add('bg-gradient-to-r', 'from-cyan-600', 'to-cyan-500', 'text-white', 'shadow-lg');
+                watchlistBtn.classList.add('text-gray-400');
+                watchlistBtn.classList.remove('bg-gradient-to-r', 'from-cyan-600', 'to-cyan-500', 'text-white', 'shadow-lg');
+                
+                watchlistView.classList.remove('block');
+                watchlistView.classList.add('hidden');
+                narrativesView.classList.remove('hidden');
+                narrativesView.classList.add('block');
+                
+                fetchNarratives();
+            }
+        }
+
         // Initialize application
         async function init() {
             // Start connection checker timer (shows banner after 1.5 seconds if loading hangs)
@@ -1447,6 +1675,7 @@
                 
                 await updateTracker();
                 await fetchTopMovers();
+                await fetchNarratives();
                 
                 // Hide connection alert banner on successful load
                 hideConnectionBanner();
@@ -1455,6 +1684,8 @@
                 setInterval(updateTracker, 60000);
                 // Poll for top movers every 5 minutes
                 setInterval(fetchTopMovers, 300000);
+                // Poll for narratives every 5 minutes
+                setInterval(fetchNarratives, 300000);
             } catch (err) {
                 console.error("Failed to initialize app:", err);
             }
