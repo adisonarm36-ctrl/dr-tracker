@@ -140,25 +140,28 @@
                 </div>
                 
                 <!-- Mobile Market Tabs Switcher (Visible on mobile only, < 1024px) -->
-                <div class="flex lg:hidden bg-slate-950/60 p-1 rounded-2xl border border-gray-850 gap-1 self-start sm:self-auto w-full sm:w-auto">
-                    <button id="tab-btn-us" onclick="setMoverTab('US')" class="flex-1 sm:flex-initial text-center py-2 px-4 rounded-xl text-xs font-bold transition duration-200 bg-cyan-600 text-white shadow-md">
+                <div class="flex lg:hidden bg-slate-950/60 p-1 rounded-2xl border border-gray-850 gap-1 self-start sm:self-auto w-full sm:w-auto overflow-x-auto whitespace-nowrap scrollbar-thin">
+                    <button id="tab-btn-us" onclick="setMoverTab('US')" class="flex-1 sm:flex-initial text-center py-2 px-4 rounded-xl text-xs font-bold transition duration-200 whitespace-nowrap bg-cyan-600 text-white shadow-md">
                         🇺🇸 ตลาด US
                     </button>
-                    <button id="tab-btn-hk" onclick="setMoverTab('HK')" class="flex-1 sm:flex-initial text-center py-2 px-4 rounded-xl text-xs font-bold transition duration-200 text-gray-400 hover:text-white">
+                    <button id="tab-btn-hk" onclick="setMoverTab('HK')" class="flex-1 sm:flex-initial text-center py-2 px-4 rounded-xl text-xs font-bold transition duration-200 whitespace-nowrap text-gray-400 hover:text-white">
                         🇭🇰 ตลาด HK/CN
                     </button>
-                    <button id="tab-btn-other" onclick="setMoverTab('OTHER')" class="flex-1 sm:flex-initial text-center py-2 px-4 rounded-xl text-xs font-bold transition duration-200 text-gray-400 hover:text-white">
+                    <button id="tab-btn-jp" onclick="setMoverTab('JP')" class="flex-1 sm:flex-initial text-center py-2 px-4 rounded-xl text-xs font-bold transition duration-200 whitespace-nowrap text-gray-400 hover:text-white">
+                        🇯🇵 ตลาด JP
+                    </button>
+                    <button id="tab-btn-other" onclick="setMoverTab('OTHER')" class="flex-1 sm:flex-initial text-center py-2 px-4 rounded-xl text-xs font-bold transition duration-200 whitespace-nowrap text-gray-400 hover:text-white">
                         🌐 ตลาดอื่นๆ
                     </button>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
                 <!-- US Market -->
                 <div id="mover-col-us" class="mover-column glass-panel rounded-2xl p-5 shadow-lg border border-cyan-500/10 block lg:block">
                     <h3 class="text-sm font-bold text-cyan-400 border-b border-gray-800 pb-2 mb-3 flex justify-between items-center">
                         <span>🇺🇸 ตลาดสหรัฐฯ (US)</span>
-                        <span class="text-[10px] bg-cyan-950 text-cyan-400 px-2 py-0.5 rounded-md font-mono">Top 5</span>
+                        <span class="text-[10px] bg-cyan-950 text-cyan-400 px-2 py-0.5 rounded-md font-mono">Top 10</span>
                     </h3>
                     <div class="grid grid-cols-2 gap-4">
                         <div>
@@ -180,7 +183,7 @@
                 <div id="mover-col-hk" class="mover-column glass-panel rounded-2xl p-5 shadow-lg border border-cyan-500/10 hidden lg:block">
                     <h3 class="text-sm font-bold text-cyan-400 border-b border-gray-800 pb-2 mb-3 flex justify-between items-center">
                         <span>🇨🇳 ตลาดฮ่องกง / จีน (HK/CN)</span>
-                        <span class="text-[10px] bg-cyan-950 text-cyan-400 px-2 py-0.5 rounded-md font-mono">Top 5</span>
+                        <span class="text-[10px] bg-cyan-950 text-cyan-400 px-2 py-0.5 rounded-md font-mono">Top 10</span>
                     </h3>
                     <div class="grid grid-cols-2 gap-4">
                         <div>
@@ -198,11 +201,33 @@
                     </div>
                 </div>
 
+                <!-- JP Market -->
+                <div id="mover-col-jp" class="mover-column glass-panel rounded-2xl p-5 shadow-lg border border-cyan-500/10 hidden lg:block">
+                    <h3 class="text-sm font-bold text-cyan-400 border-b border-gray-800 pb-2 mb-3 flex justify-between items-center">
+                        <span>🇯🇵 ตลาดญี่ปุ่น (JP)</span>
+                        <span class="text-[10px] bg-cyan-950 text-cyan-400 px-2 py-0.5 rounded-md font-mono">Top 10</span>
+                    </h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-[10px] text-emerald-400 font-bold mb-1.5 flex items-center gap-1">🟢 Top Gainers</p>
+                            <ul id="movers-jp-gainers" class="space-y-1.5 text-xs">
+                                <li class="text-gray-600">-</li>
+                            </ul>
+                        </div>
+                        <div class="border-l border-gray-800/80 pl-4">
+                            <p class="text-[10px] text-red-400 font-bold mb-1.5 flex items-center gap-1">🔴 Top Losers</p>
+                            <ul id="movers-jp-losers" class="space-y-1.5 text-xs">
+                                <li class="text-gray-600">-</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Others Market -->
                 <div id="mover-col-other" class="mover-column glass-panel rounded-2xl p-5 shadow-lg border border-cyan-500/10 hidden lg:block">
                     <h3 class="text-sm font-bold text-cyan-400 border-b border-gray-800 pb-2 mb-3 flex justify-between items-center">
-                        <span>🇸🇬🇻🇳 ตลาดอื่นๆ (SG/VN)</span>
-                        <span class="text-[10px] bg-cyan-950 text-cyan-400 px-2 py-0.5 rounded-md font-mono">Top 5</span>
+                        <span>🌐 ตลาดอื่นๆ (SG/VN)</span>
+                        <span class="text-[10px] bg-cyan-950 text-cyan-400 px-2 py-0.5 rounded-md font-mono">Top 10</span>
                     </h3>
                     <div class="grid grid-cols-2 gap-4">
                         <div>
@@ -427,14 +452,14 @@
         let moversPollTimer = null;
 
         function showMoversLoading() {
-            const ids = ["movers-us-gainers", "movers-hk-gainers", "movers-other-gainers"];
+            const ids = ["movers-us-gainers", "movers-hk-gainers", "movers-jp-gainers", "movers-other-gainers"];
             ids.forEach(id => {
                 const list = document.getElementById(id);
                 if (list) {
                     list.innerHTML = `<li class="text-cyan-500/50 text-[10px] italic font-mono animate-pulse">⏳ LOADING...</li>`;
                 }
             });
-            const loserIds = ["movers-us-losers", "movers-hk-losers", "movers-other-losers"];
+            const loserIds = ["movers-us-losers", "movers-hk-losers", "movers-jp-losers", "movers-other-losers"];
             loserIds.forEach(id => {
                 const list = document.getElementById(id);
                 if (list) {
@@ -485,6 +510,8 @@
                     renderMoversList("movers-us-losers", json.movers.US.losers, false);
                     renderMoversList("movers-hk-gainers", json.movers["HK/CN"].gainers, true);
                     renderMoversList("movers-hk-losers", json.movers["HK/CN"].losers, false);
+                    renderMoversList("movers-jp-gainers", json.movers.JP ? json.movers.JP.gainers : [], true);
+                    renderMoversList("movers-jp-losers", json.movers.JP ? json.movers.JP.losers : [], false);
                     renderMoversList("movers-other-gainers", json.movers.Others.gainers, true);
                     renderMoversList("movers-other-losers", json.movers.Others.losers, false);
                 }
@@ -1351,9 +1378,10 @@
             // 1. Update button classes
             const btnUs = document.getElementById('tab-btn-us');
             const btnHk = document.getElementById('tab-btn-hk');
+            const btnJp = document.getElementById('tab-btn-jp');
             const btnOther = document.getElementById('tab-btn-other');
             
-            [btnUs, btnHk, btnOther].forEach(btn => {
+            [btnUs, btnHk, btnJp, btnOther].forEach(btn => {
                 if (btn) {
                     btn.classList.remove('bg-cyan-600', 'text-white', 'shadow-md');
                     btn.classList.add('text-gray-400');
@@ -1369,9 +1397,10 @@
             // 2. Update columns visibility
             const colUs = document.getElementById('mover-col-us');
             const colHk = document.getElementById('mover-col-hk');
+            const colJp = document.getElementById('mover-col-jp');
             const colOther = document.getElementById('mover-col-other');
             
-            [colUs, colHk, colOther].forEach(col => {
+            [colUs, colHk, colJp, colOther].forEach(col => {
                 if (col) {
                     col.classList.add('hidden');
                     col.classList.remove('block');

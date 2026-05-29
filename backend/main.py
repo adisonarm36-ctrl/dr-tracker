@@ -629,10 +629,14 @@ def update_movers_background():
                                 # Add to results list for movers rankings
                                 catalog_item = catalog.get(sym)
                                 if catalog_item:
-                                    market_group = "US" if catalog_item["market"] == "US" else (
-                                        "HK/CN" if catalog_item["market"] in ["HK", "CN"] else "Others"
-                                    )
-                                    if catalog_item["market"] in ["SG", "VN", "JP", "AS", "FR", "IT", "TW", "DK", "DE"]:
+                                    market = catalog_item.get("market", "US")
+                                    if market == "US":
+                                        market_group = "US"
+                                    elif market in ["HK", "CN"]:
+                                        market_group = "HK/CN"
+                                    elif market == "JP":
+                                        market_group = "JP"
+                                    else:
                                         market_group = "Others"
                                         
                                     results.append({
@@ -660,7 +664,7 @@ def update_movers_background():
             return
             
         # Group and rank results
-        markets = {"US": [], "HK/CN": [], "Others": []}
+        markets = {"US": [], "HK/CN": [], "JP": [], "Others": []}
         for r in results:
             if r["market_group"] in markets:
                 markets[r["market_group"]].append(r)
@@ -671,8 +675,8 @@ def update_movers_background():
             losers = sorted(items, key=lambda x: x["change_pct"])
             
             movers[grp] = {
-                "gainers": gainers[:5],
-                "losers": losers[:5]
+                "gainers": gainers[:10],
+                "losers": losers[:10]
             }
             
         response_data = {
@@ -756,6 +760,7 @@ def get_top_movers(force: bool = False):
         "movers": {
             "US": {"gainers": [], "losers": []},
             "HK/CN": {"gainers": [], "losers": []},
+            "JP": {"gainers": [], "losers": []},
             "Others": {"gainers": [], "losers": []}
         },
         "is_loading": True
