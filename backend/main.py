@@ -1173,7 +1173,8 @@ def compute_narratives_data():
             best_drs_by_prefix[matched_prefix] = {
                 "symbol": sym, # Keep actual Thai DR symbol e.g., ASML01, LRCX23
                 "name": name,
-                "price": parent_price,
+                "price": price, # Actual Thai DR stock price on SET in Baht
+                "parent_price": parent_price, # Global parent stock price
                 "change_pct": parent_change,
                 "description": description,
                 "granular_group": group_key

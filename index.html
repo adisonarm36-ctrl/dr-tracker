@@ -1512,7 +1512,7 @@
                                         <div class="${barColor} h-2 rounded-full" style="width: ${pctWidth}%"></div>
                                     </div>
                                     <div class="flex items-center gap-4 ml-auto sm:ml-0">
-                                        <span class="text-[11px] text-gray-400 font-mono">ราคาแม่: <span class="text-white font-bold">$${item.price.toFixed(2)}</span></span>
+                                        <span class="text-[11px] text-gray-400 font-mono">ราคา DR: <span class="text-white font-bold">฿${item.price.toFixed(2)}</span>${item.parent_price ? ` <span class="text-gray-500 text-[10px] ml-1.5 font-normal">(แม่: $${item.parent_price.toFixed(2)})</span>` : ''}</span>
                                         <span class="font-mono font-bold text-sm ${itemColor}">${itemSign}${item.change_pct}%</span>
                                     </div>
                                 </div>
