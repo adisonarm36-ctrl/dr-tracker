@@ -1160,22 +1160,20 @@ def compute_narratives_data():
             market_label = catalog[sym].get("market", "US")
             description = f"หุ้นเด่นในกลุ่ม {group_key} (ตลาด {market_label})"
             
-        # Get active price/change from parent ticker if available to make narrative alive!
+        # Get active price from parent ticker if available for display
         primary_sym = catalog[sym].get("primary")
         parent_price = price
-        parent_change = change_pct
         if primary_sym and primary_sym in SET_PRICES_CACHE:
             parent_price = SET_PRICES_CACHE[primary_sym].get("price", parent_price)
-            parent_change = SET_PRICES_CACHE[primary_sym].get("change_pct", parent_change)
             
-        # Select best representative for this underlying prefix based on absolute return of parent or DR
-        if matched_prefix not in best_drs_by_prefix or abs(parent_change) > abs(best_drs_by_prefix[matched_prefix]["change_pct"]):
+        # Select best representative for this underlying prefix based on absolute return of the DR
+        if matched_prefix not in best_drs_by_prefix or abs(change_pct) > abs(best_drs_by_prefix[matched_prefix]["change_pct"]):
             best_drs_by_prefix[matched_prefix] = {
                 "symbol": sym, # Keep actual Thai DR symbol e.g., ASML01, LRCX23
                 "name": name,
                 "price": price, # Actual Thai DR stock price on SET in Baht
                 "parent_price": parent_price, # Global parent stock price
-                "change_pct": parent_change,
+                "change_pct": change_pct, # Actual Thai DR daily change percent (e.g. 37.14% for DELL19)
                 "description": description,
                 "granular_group": group_key
             }
