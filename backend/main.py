@@ -771,156 +771,182 @@ NARRATIVE_MAPPING = {
         "name": "NVIDIA",
         "sector": "Semiconductors",
         "themes": ["AI", "Data Center", "Semiconductor", "Compute"],
+        "granular_group": "AI Processing Chips",
         "description": "ผู้นำชิปประมวลผล GPU สำหรับปัญญาประดิษฐ์และโครงสร้างพื้นฐาน Data Center"
     },
     "AAPL": {
         "name": "Apple",
         "sector": "Technology",
         "themes": ["AI", "Compute"],
+        "granular_group": "Consumer Electronics & Edge AI",
         "description": "ยักษ์ใหญ่เทคโนโลยีผู้พัฒนา Apple Intelligence และชิประดับสูง Apple Silicon"
     },
     "MSFT": {
         "name": "Microsoft",
         "sector": "Software",
         "themes": ["AI", "Compute"],
+        "granular_group": "Hyperscale Cloud & Enterprise Software",
         "description": "ผู้นำซอฟต์แวร์ระดับโลก คลาวด์ Azure AI และความร่วมมือแนบแน่นกับ OpenAI"
     },
     "TSLA": {
         "name": "Tesla",
         "sector": "Electronic Technology",
         "themes": ["AI", "Compute"],
+        "granular_group": "Autonomous Systems & EV Robotics",
         "description": "ผู้ผลิตยานยนต์ไฟฟ้าอัจฉริยะ นำเทคโนโลยี AI มาใช้ในการขับเคลื่อนอัตโนมัติและหุ่นยนต์"
     },
     "AVGO": {
         "name": "Broadcom",
         "sector": "Semiconductors",
         "themes": ["Semiconductor", "Data Center", "Optical"],
+        "granular_group": "AI Processing Chips",
         "description": "ชิปการเชื่อมต่อระบบเครือข่ายความเร็วสูง และโมดูลส่งสัญญาณแสงสำหรับโครงข่ายข้อมูล"
     },
     "AMD": {
         "name": "AMD",
         "sector": "Semiconductors",
         "themes": ["AI", "Compute", "Semiconductor", "Data Center"],
+        "granular_group": "AI Processing Chips",
         "description": "ผู้ท้าชิงหลักชิป AI GPU (Instinct) และซีพียูสำหรับเซิร์ฟเวอร์ EPYC"
     },
     "SMCI": {
         "name": "Super Micro",
         "sector": "Technology",
         "themes": ["Compute", "Data Center"],
+        "granular_group": "AI Servers & Liquid Cooling",
         "description": "ผู้ผลิตเซิร์ฟเวอร์ประมวลผล AI สมรรถนะสูงพร้อมโซลูชันระบบระบายความร้อนด้วยของเหลว"
     },
     "MU": {
         "name": "Micron",
         "sector": "Semiconductors",
         "themes": ["Semiconductor", "Compute", "Data Center"],
+        "granular_group": "High-Performance Memory",
         "description": "ผู้ผลิตหน่วยความจำแบนด์วิดท์สูง (HBM3E) สำคัญสำหรับการประมวลผลจีพียู AI"
     },
     "ASML": {
         "name": "ASML",
         "sector": "Semiconductors",
         "themes": ["Semiconductor"],
+        "granular_group": "Semiconductor Equipment & Fab Supply",
         "description": "ผู้ผลิตเครื่องจักรฉายรังสีออปติคอล EUV ชิ้นสำคัญในการพิมพ์ลายวงจรชิปขั้นสูงที่สุดในโลก"
     },
     "LRCX": {
         "name": "Lam Research",
         "sector": "Semiconductors",
         "themes": ["Semiconductor"],
+        "granular_group": "Semiconductor Equipment & Fab Supply",
         "description": "ผู้ผลิตอุปกรณ์สลักแผ่นเวเฟอร์ซิลิคอนระดับนาโนสำหรับโรงงานผลิตชิป"
     },
     "AMAT": {
         "name": "Applied Materials",
         "sector": "Semiconductors",
         "themes": ["Semiconductor"],
+        "granular_group": "Semiconductor Equipment & Fab Supply",
         "description": "ผู้ผลิตเครื่องจักรเคลือบสารตัวนำผิวเวเฟอร์ในอุตสาหกรรมชิป"
     },
     "VST": {
         "name": "Vistra",
         "sector": "Electronic Technology",
         "themes": ["Power Infra", "Data Center"],
+        "granular_group": "Clean Energy & Power Infrastructure",
         "description": "ผู้ผลิตพลังงานไฟฟ้าสะอาดที่ใหญ่ที่สุดรายหนึ่งในสหรัฐฯ ซัพพลายระบบ Data Center"
     },
     "CEG": {
         "name": "Constellation",
         "sector": "Electronic Technology",
         "themes": ["Power Infra", "Data Center"],
+        "granular_group": "Clean Energy & Power Infrastructure",
         "description": "ผู้ผลิตพลังงานนิวเคลียร์สะอาดอันดับหนึ่งของสหรัฐฯ เซ็นสัญญาจ่ายไฟแก่ไมโครซอฟท์"
     },
     "GEV": {
         "name": "GE Vernova",
         "sector": "Electronic Technology",
         "themes": ["Power Infra"],
+        "granular_group": "Clean Energy & Power Infrastructure",
         "description": "ผู้นำอุปกรณ์ระบบกริดสายส่งไฟฟ้า กังหันลม และเครื่องปั่นไฟฟ้าขนาดใหญ่ทั่วโลก"
     },
     "DELL": {
         "name": "Dell",
         "sector": "Technology",
         "themes": ["Compute", "Data Center"],
+        "granular_group": "AI Servers & Liquid Cooling",
         "description": "ผู้จำหน่ายเซิร์ฟเวอร์ AI และโครงสร้างพื้นฐานการจัดการข้อมูลสำหรับองค์กร"
     },
     "ANET": {
         "name": "Arista Networks",
         "sector": "Technology",
         "themes": ["Data Center", "Optical"],
+        "granular_group": "High-Speed Cloud Networking",
         "description": "ผู้นำสวิตช์สายส่งโครงข่ายความเร็วสูงระดับ Ultra-low Latency ในระดับ Data Center ขนาดใหญ่"
     },
     "COHR": {
         "name": "Coherent",
         "sector": "Technology",
         "themes": ["Optical", "Photonics"],
+        "granular_group": "Optical Signal Communications",
         "description": "ผู้นำเทคโนโลยีชิ้นส่วนเลเซอร์และชิปสื่อสารส่งข้อมูลด้วยแสง 800G/1.6T"
     },
     "LITE": {
         "name": "Lumentum",
         "sector": "Technology",
         "themes": ["Optical", "Photonics"],
+        "granular_group": "Optical Signal Communications",
         "description": "ผู้นำตัวรับส่งสัญญาณแสงพลังสูง เลเซอร์ไดโอดความแม่นยำสูงในระบบโครงข่ายสัญญาณ"
     },
     "QCOM": {
         "name": "Qualcomm",
         "sector": "Semiconductors",
         "themes": ["Semiconductor", "AI", "Compute"],
+        "granular_group": "Consumer Electronics & Edge AI",
         "description": "ผู้นำชิปประมวลผลสื่อสารเคลื่อนที่ Snapdragon และสถาปัตยกรรม On-Device AI"
     },
     "META": {
         "name": "Meta",
         "sector": "Software",
         "themes": ["AI"],
+        "granular_group": "Social Media & AI Ecosystems",
         "description": "ผู้พัฒนาโมเดล Llama AI และโซเชียลมีเดียชั้นนำระดับโลก"
     },
     "GOOG": {
         "name": "Alphabet",
         "sector": "Software",
         "themes": ["AI", "Compute", "Data Center"],
+        "granular_group": "Hyperscale Cloud & Enterprise Software",
         "description": "ผู้พัฒนา Gemini AI บริการค้นหา คลาวด์ และตัวเร่งประมวลผล Tensor Processing Unit"
     },
     "AMZN": {
         "name": "Amazon",
         "sector": "Software",
         "themes": ["AI", "Data Center", "Compute"],
+        "granular_group": "Hyperscale Cloud & Enterprise Software",
         "description": "ผู้นำบริการคลาวด์ยักษ์ใหญ่ AWS และผู้พัฒนาชิปเซ็ตประมวลผลและฝึกหัด AI"
     },
     "ADVANT": {
         "name": "Advantest",
         "sector": "Electronic Technology",
         "themes": ["Semiconductor", "Compute"],
+        "granular_group": "Semiconductor Equipment & Fab Supply",
         "description": "ผู้ผลิตและออกแบบระบบทดสอบความถูกต้องของชิปเซ็ตและแผงวงจรความเร็วสูงของญี่ปุ่น"
     },
     "JPSEMI": {
         "name": "JPSEMI ETF",
         "sector": "Semiconductors",
         "themes": ["Semiconductor"],
+        "granular_group": "Semiconductor Equipment & Fab Supply",
         "description": "กองทุนรวม ETF รวบรวมยักษ์ใหญ่ผู้ผลิตเครื่องจักรและชิปเซมิคอนดักเตอร์ของญี่ปุ่น"
     },
     "ASEMI": {
         "name": "ASEMI ETF",
         "sector": "Semiconductors",
         "themes": ["Semiconductor"],
+        "granular_group": "Semiconductor Equipment & Fab Supply",
         "description": "กองทุนรวม ETF หุ้นเซมิคอนดักเตอร์ของเอเชียและฮ่องกง"
     },
     "CNSEMI": {
         "name": "CNSEMI ETF",
         "sector": "Semiconductors",
         "themes": ["Semiconductor"],
+        "granular_group": "Semiconductor Equipment & Fab Supply",
         "description": "กองทุนรวม ETF หุ้นผู้พัฒนาเทคโนโลยีชิปพึ่งพาตนเองชั้นนำของจีน"
     }
 }
@@ -985,137 +1011,219 @@ UPCOMING_EVENTS = [
     }
 ]
 
+GRANULAR_GROUPS_METADATA = {
+    "Hyperscale Cloud & Enterprise Software": {
+        "name_th": "คลาวด์ยักษ์ใหญ่ & ซอฟต์แวร์องค์กร",
+        "icon": "☁️",
+        "description": "ผู้ให้บริการโครงสร้างพื้นฐานคลาวด์ (IaaS) และผู้พัฒนาซอฟต์แวร์ระบบคลาวด์สำหรับธุรกิจและ AI ในระดับองค์กรยักษ์ใหญ่"
+    },
+    "Social Media & AI Ecosystems": {
+        "name_th": "โซเชียลมีเดีย & ระบบโมเดล AI เปิด",
+        "icon": "💬",
+        "description": "ผู้นำแพลตฟอร์มโซเชียลมีเดียระดับพันล้านผู้ใช้งาน และผู้พัฒนาโครงข่ายโมเดลเปิดภาษาขนาดใหญ่ (Open-source AI Llama)"
+    },
+    "Consumer Electronics & Edge AI": {
+        "name_th": "อุปกรณ์ไอที & ปัญญาประดิษฐ์บนอุปกรณ์พกพา",
+        "icon": "📱",
+        "description": "ผู้พัฒนาอุปกรณ์อิเล็กทรอนิกส์พรีเมียมส่วนบุคคล ชิปประมวลผลขนาดจิ๋ว และสถาปัตยกรรม Edge AI บนสมาร์ตโฟนและแล็ปท็อป"
+    },
+    "AI Processing Chips": {
+        "name_th": "ผู้ออกแบบชิปประมวลผล AI & GPU",
+        "icon": "👾",
+        "description": "บริษัทผู้คิดค้นและออกแบบการ์ดประมวลผลหลัก (GPU) และชิปเฉพาะทางสำหรับการเรียนรู้และประมวลผลเชิงลึกของปัญญาประดิษฐ์"
+    },
+    "High-Performance Memory": {
+        "name_th": "หน่วยความจำสมรรถนะสูง & HBM",
+        "icon": "💾",
+        "description": "ผู้ผลิตและพัฒนาชิปหน่วยความจำแบนด์วิดท์สูงพิเศษ (HBM) ซึ่งเป็นทรัพยากรหลักที่ขาดไม่ได้ในการส่งข้อมูลให้ GPU ประมวลผล"
+    },
+    "AI Servers & Liquid Cooling": {
+        "name_th": "เซิร์ฟเวอร์ AI & ระบบระบายความร้อน",
+        "icon": "🖥️",
+        "description": "ผู้ประกอบระบบตู้เซิร์ฟเวอร์ประกอบเฉพาะทางสำหรับ AI, โซลูชันการจัดการความร้อน และการระบายความร้อนด้วยของเหลวในดาต้าเซ็นเตอร์"
+    },
+    "High-Speed Cloud Networking": {
+        "name_th": "ระบบเครือข่ายความเร็วสูง & สวิตช์เชื่อมต่อ",
+        "icon": "🔌",
+        "description": "ผู้จัดหาระบบสวิตช์เราเตอร์และอุปกรณ์เชื่อมต่อสายส่งเครือข่ายความเร็วสูงเป็นพิเศษในการผูกกลุ่มคลัสเตอร์ GPU ขนาดใหญ่เข้าด้วยกัน"
+    },
+    "Optical Signal Communications": {
+        "name_th": "เลเซอร์ & การสื่อสารสัญญาณแสง",
+        "icon": "⚡",
+        "description": "ผู้พัฒนาชิ้นส่วนเลเซอร์ออปติคอลโมดูล และตัวรับส่งสัญญาณส่งถ่ายข้อมูลความเร็วสูง 800G/1.6T เพื่อประหยัดพลังงานความร้อน"
+    },
+    "Semiconductor Equipment & Fab Supply": {
+        "name_th": "เครื่องจักรผลิตชิป & เทคโนโลยีการพิมพ์วงจร",
+        "icon": "⚙️",
+        "description": "บริษัทเครื่องจักรอุตสาหกรรมต้นน้ำระดับโลก ทั้งด้านการพิมพ์ลายวงจรด้วยรังสี (EUV), การเคลือบผิวเวเฟอร์ และระบบการตรวจสอบชิป"
+    },
+    "Autonomous Systems & EV Robotics": {
+        "name_th": "ระบบยานยนต์อัตโนมัติ & หุ่นยนต์อัจฉริยะ",
+        "icon": "🚗",
+        "description": "ผู้พัฒนาโครงข่ายชิปประมวลผลการขับเคลื่อนอัตโนมัติเต็มระบบ (FSD), บริการแท็กซี่ไร้คนขับ และหุ่นยนต์ฮิวแมนนอยด์อัจฉริยะ"
+    },
+    "Clean Energy & Power Infrastructure": {
+        "name_th": "พลังงานสะอาด & โครงสร้างพื้นฐานไฟฟ้า",
+        "icon": "🔋",
+        "description": "ผู้ให้บริการพลังงานไฟฟ้านิวเคลียร์ สายส่งส่งจ่ายพลังงานสะอาด และโรงผลิตพลังงานไฟฟ้าสำหรับป้อนแก่ Hyperscale Data Center"
+    },
+    "Financial Services": {
+        "name_th": "ธุรกิจการเงิน & การธนาคาร",
+        "icon": "🏦",
+        "description": "กลุ่มธุรกิจธนาคาร ประกันภัย กองทุน และบริการการชำระเงินในระดับโลก"
+    },
+    "Healthcare": {
+        "name_th": "สุขภาพ & การแพทย์ชีวภาพ",
+        "icon": "🏥",
+        "description": "ผู้พัฒนาเภสัชภัณฑ์ชีวภาพ อุปกรณ์ทางการแพทย์ และบริการดูแลสุขภาพชั้นนำ"
+    },
+    "Consumer Cyclical": {
+        "name_th": "สินค้าฟุ่มเฟือย & ยานยนต์ระดับโลก",
+        "icon": "🛍️",
+        "description": "แบรนด์แฟชั่นหรูระดับโลก บริการการท่องเที่ยว ร้านอาหาร และผู้ผลิตยานยนต์ชั้นนำ"
+    },
+    "Consumer Defensive": {
+        "name_th": "สินค้าอุปโภคบริโภคจำเป็น",
+        "icon": "🛒",
+        "description": "ผู้ผลิตและค้าปลีกอาหาร เครื่องดื่ม และสินค้าอุปโภคจำเป็นพื้นฐานในชีวิตประจำวัน"
+    },
+    "Industrials": {
+        "name_th": "อุตสาหกรรมหนัก & วิศวรรณระบบ",
+        "icon": "🏗️",
+        "description": "กลุ่มเทคโนโลยีอุตสาหกรรม เครื่องจักร สายพานสายส่ง และระบบขับเคลื่อนไฟฟ้าขนาดใหญ่"
+    },
+    "Basic Materials": {
+        "name_th": "วัสดุพื้นฐาน & พลังงานสะอาดต้นน้ำ",
+        "icon": "💎",
+        "description": "ผู้ผลิตทรัพยากรต้นน้ำ โลหะ เหมืองแร่ ลิเทียม และสารตัวนำป้อนอุตสาหกรรมสีเขียว"
+    },
+    "Communication Services": {
+        "name_th": "สื่อสาร & บันเทิงแพลตฟอร์ม",
+        "icon": "📡",
+        "description": "ผู้นำบริการสื่อสารเคลื่อนที่ แพลตฟอร์มสตรีมมิ่ง โซเชียลเน็ตเวิร์ก และเกมออนไลน์"
+    },
+    "Utilities": {
+        "name_th": "สาธารณูปโภค & พลังงานทดแทน",
+        "icon": "🚰",
+        "description": "ผู้ส่งจ่ายกระแสไฟฟ้า น้ำประปา และระบบพลังงานทดแทนพื้นฐานของประเทศ"
+    },
+    "Energy": {
+        "name_th": "พลังงานดั้งเดิม & น้ำมันปิโตรเลียม",
+        "icon": "🛢️",
+        "description": "ผู้สำรวจ ผลิต และกลั่นน้ำมันดิบ ก๊าซธรรมชาติป้อนอุตสาหกรรมหลักทั่วโลก"
+    },
+    "ETFs & Indices": {
+        "name_th": "กองทุนดัชนี & ETFs รวมตลาด",
+        "icon": "📈",
+        "description": "กองทุนดัชนี ETFs รวมตลาดหุ้นต่างประเทศ ดัชนีหลัก และพันธบัตรรัฐบาลเพื่อการกระจายความเสี่ยง"
+    },
+    "Other / Diverse": {
+        "name_th": "ธุรกิจหลากหลาย & กองทุนรวมเฉพาะกลุ่ม",
+        "icon": "💼",
+        "description": "สินทรัพย์ทางเลือกอื่น ๆ กองทุนรวมเฉพาะกลุ่ม หรือหุ้นที่มีความหลากหลายทางธุรกิจสูง"
+    }
+}
+
 def compute_narratives_data():
+    import re
     # Load catalog to make sure we map accurately
     catalog = load_dr_catalog()
-    
-    # Establish structures
-    sectors_data = {
-        "Technology": {"avg": 0.0, "count": 0, "items": []},
-        "Semiconductors": {"avg": 0.0, "count": 0, "items": []},
-        "Software": {"avg": 0.0, "count": 0, "items": []},
-        "Electronic Technology": {"avg": 0.0, "count": 0, "items": []}
-    }
-    
-    themes_data = {
-        "AI": {"avg": 0.0, "count": 0, "items": []},
-        "Data Center": {"avg": 0.0, "count": 0, "items": []},
-        "Optical": {"avg": 0.0, "count": 0, "items": []},
-        "Photonics": {"avg": 0.0, "count": 0, "items": []},
-        "Semiconductor": {"avg": 0.0, "count": 0, "items": []},
-        "Compute": {"avg": 0.0, "count": 0, "items": []},
-        "Power Infra": {"avg": 0.0, "count": 0, "items": []}
-    }
     
     # Group DRs by underlying prefix first to prevent duplicate assets (ตัวไม่ซ้ำกัน)
     # For each prefix, we keep the one with the highest absolute performance change percentage.
     best_drs_by_prefix = {}
     for sym, cached in SET_PRICES_CACHE.items():
-        # Match symbol prefix
-        mapping_item = None
-        matched_prefix = None
-        for prefix, item in NARRATIVE_MAPPING.items():
-            if sym.startswith(prefix):
-                mapping_item = item
-                matched_prefix = prefix
-                break
-                
-        if not mapping_item:
+        # Only process recommended DRs listed in the catalog
+        if sym not in catalog or not catalog[sym].get("recommend", False):
             continue
             
         change_pct = cached.get("change_pct", 0.0)
         price = cached.get("price", 0.0)
         
-        # We want to keep the single best representative for each underlying prefix
-        # We compare absolute change to find the most active/high-moving DR symbol today
-        if matched_prefix not in best_drs_by_prefix or abs(change_pct) > abs(best_drs_by_prefix[matched_prefix]["change_pct"]):
+        # Match symbol prefix (strip trailing digits e.g., ASML01 -> ASML)
+        match = re.match(r"^([A-Z]+)", sym)
+        matched_prefix = match.group(1) if match else sym
+        
+        mapping_item = NARRATIVE_MAPPING.get(matched_prefix)
+        if mapping_item:
+            group_key = mapping_item["granular_group"]
+            name = mapping_item["name"]
+            description = mapping_item["description"]
+        else:
+            # Fallback to catalog-enriched sector
+            group_key = catalog[sym].get("sector", "Other / Diverse")
+            if not group_key or group_key == "N/A" or group_key == "None":
+                group_key = "Other / Diverse"
+            name = catalog[sym].get("name", sym)
+            if " DR" in name:
+                name = name.split(" DR")[0]
+            market_label = catalog[sym].get("market", "US")
+            description = f"หุ้นเด่นในกลุ่ม {group_key} (ตลาด {market_label})"
+            
+        # Get active price/change from parent ticker if available to make narrative alive!
+        primary_sym = catalog[sym].get("primary")
+        parent_price = price
+        parent_change = change_pct
+        if primary_sym and primary_sym in SET_PRICES_CACHE:
+            parent_price = SET_PRICES_CACHE[primary_sym].get("price", parent_price)
+            parent_change = SET_PRICES_CACHE[primary_sym].get("change_pct", parent_change)
+            
+        # Select best representative for this underlying prefix based on absolute return of parent or DR
+        if matched_prefix not in best_drs_by_prefix or abs(parent_change) > abs(best_drs_by_prefix[matched_prefix]["change_pct"]):
             best_drs_by_prefix[matched_prefix] = {
-                "symbol": sym,
-                "name": mapping_item["name"],
-                "price": price,
-                "change_pct": change_pct,
-                "description": mapping_item["description"],
-                "sector": mapping_item["sector"],
-                "themes": mapping_item["themes"]
+                "symbol": sym, # Keep actual Thai DR symbol e.g., ASML01, LRCX23
+                "name": name,
+                "price": parent_price,
+                "change_pct": parent_change,
+                "description": description,
+                "granular_group": group_key
             }
             
-    # Classify unique DRs into Sectors and Themes
+    # Establish dynamic groups
+    groups_data = {}
+    for group_key in GRANULAR_GROUPS_METADATA.keys():
+        groups_data[group_key] = []
+        
+    # Classify unique DRs into their groups
     for prefix, dr_item in best_drs_by_prefix.items():
-        # Classify into Sector
-        sec = dr_item["sector"]
-        if sec in sectors_data:
-            sectors_data[sec]["items"].append(dr_item)
-            
-        # Classify into Themes
-        for theme in dr_item["themes"]:
-            if theme in themes_data:
-                themes_data[theme]["items"].append(dr_item)
-                
-    # 4. Compute statistics for sectors
-    sectors_results = []
-    for sec_name, sec_info in sectors_data.items():
-        items = sec_info["items"]
+        grp = dr_item["granular_group"]
+        if grp not in groups_data:
+            grp = "Other / Diverse"
+        groups_data[grp].append(dr_item)
+        
+    # Compute statistics for each group
+    groups_results = []
+    for grp_key, items in groups_data.items():
         if not items:
             continue
+            
         avg_change = sum(x["change_pct"] for x in items) / len(items)
         leader = sorted(items, key=lambda x: x["change_pct"], reverse=True)[0]
+        meta = GRANULAR_GROUPS_METADATA.get(grp_key, {"name_th": grp_key, "icon": "📁", "description": ""})
         
-        sectors_results.append({
-            "name": sec_name,
+        # Sort items inside the group from highest change (+) to lowest change (-)
+        sorted_items = sorted(items, key=lambda x: x["change_pct"], reverse=True)
+        
+        groups_results.append({
+            "group_key": grp_key,
+            "name_th": meta["name_th"],
+            "icon": meta["icon"],
+            "description": meta["description"],
             "avg_change": round(avg_change, 2),
             "dr_count": len(items),
             "leader_symbol": leader["symbol"],
             "leader_name": leader["name"],
             "leader_change": leader["change_pct"],
-            "narrative": SECTOR_NARRATIVES.get(sec_name, ""),
-            # Sort items by change descending and show ALL of them (บอกว่าในนั้นมีตัวอะไรบ้าง ขึ้นลงเท่าไหร่)
-            "items": sorted(items, key=lambda x: x["change_pct"], reverse=True)
+            "items": sorted_items
         })
         
-    sectors_results = sorted(sectors_results, key=lambda x: x["avg_change"], reverse=True)
-    
-    # 5. Compute statistics for themes
-    themes_results = []
-    for theme_name, theme_info in themes_data.items():
-        items = theme_info["items"]
-        if not items:
-            continue
-        avg_change = sum(x["change_pct"] for x in items) / len(items)
-        leader = sorted(items, key=lambda x: x["change_pct"], reverse=True)[0]
-        
-        # Theme: Get top 5 gainers (>= 0) and top 5 losers (< 0)
-        gainers_pool = [x for x in items if x["change_pct"] >= 0]
-        losers_pool = [x for x in items if x["change_pct"] < 0]
-        
-        top_gainers = sorted(gainers_pool, key=lambda x: x["change_pct"], reverse=True)[:5]
-        top_losers = sorted(losers_pool, key=lambda x: x["change_pct"])[:5]
-        
-        # Fallbacks in case one side is completely empty
-        if not top_gainers and items:
-            top_gainers = sorted(items, key=lambda x: x["change_pct"], reverse=True)[:5]
-        if not top_losers and items:
-            top_losers = sorted(items, key=lambda x: x["change_pct"])[:5]
-            
-        themes_results.append({
-            "name": theme_name,
-            "avg_change": round(avg_change, 2),
-            "dr_count": len(items),
-            "leader_symbol": leader["symbol"],
-            "leader_name": leader["name"],
-            "leader_change": leader["change_pct"],
-            "narrative": THEME_NARRATIVES.get(theme_name, ""),
-            # Return both gainers and losers arrays!
-            "top_gainers": top_gainers,
-            "top_losers": top_losers
-        })
-        
-    themes_results = sorted(themes_results, key=lambda x: x["avg_change"], reverse=True)
+    # Sort groups by avg_change descending (Hottest groups first)
+    groups_results = sorted(groups_results, key=lambda x: x["avg_change"], reverse=True)
     
     return {
         "status": "success",
         "timestamp": datetime.now().isoformat(),
-        "sectors": sectors_results,
-        "themes": themes_results,
+        "groups": groups_results,
         "events": UPCOMING_EVENTS
     }
 

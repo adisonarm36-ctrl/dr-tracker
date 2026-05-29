@@ -33,7 +33,8 @@
     "name": "AAPL DR (KTB)",
     "issuer": "KTB",
     "underlying": "AAPL",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Electronics & Edge AI"
   },
   "ABBV19": {
     "primary": "ABBV",
@@ -51,7 +52,8 @@
     "name": "ABBV DR (KTB)",
     "issuer": "KTB",
     "underlying": "ABBV",
-    "recommend": true
+    "recommend": true,
+    "sector": "Healthcare"
   },
   "ABNB06": {
     "primary": "ABNB",
@@ -60,7 +62,8 @@
     "name": "ABNB DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "ABNB",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "ADBE03": {
     "primary": "ADBE",
@@ -78,7 +81,8 @@
     "name": "ADBE DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "ADBE",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "ADVANT19": {
     "primary": "6857.T",
@@ -96,7 +100,8 @@
     "name": "ADVANT DR (INVX)",
     "issuer": "INVX",
     "underlying": "ADVANT",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "AFRM03": {
     "primary": "AFRM",
@@ -105,7 +110,8 @@
     "name": "AFRM DR (PI)",
     "issuer": "PI",
     "underlying": "AFRM",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "AIA06": {
     "primary": "1299.HK",
@@ -132,7 +138,8 @@
     "name": "AIA DR (INVX)",
     "issuer": "INVX",
     "underlying": "AIA",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "AMD03": {
     "primary": "AMD",
@@ -159,7 +166,8 @@
     "name": "AMD DR (KTB)",
     "issuer": "KTB",
     "underlying": "AMD",
-    "recommend": true
+    "recommend": true,
+    "sector": "AI Processing Chips"
   },
   "AMGN06": {
     "primary": "AMGN",
@@ -168,7 +176,8 @@
     "name": "AMGN DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "AMGN",
-    "recommend": true
+    "recommend": true,
+    "sector": "Healthcare"
   },
   "AMZN01": {
     "primary": "AMZN",
@@ -213,7 +222,8 @@
     "name": "AMZN DR (KTB)",
     "issuer": "KTB",
     "underlying": "AMZN",
-    "recommend": true
+    "recommend": true,
+    "sector": "Hyperscale Cloud & Enterprise Software"
   },
   "ANET23": {
     "primary": "ANET",
@@ -231,7 +241,8 @@
     "name": "ANET DR (KTB)",
     "issuer": "KTB",
     "underlying": "ANET",
-    "recommend": true
+    "recommend": true,
+    "sector": "High-Speed Cloud Networking"
   },
   "ANTA13": {
     "primary": "2020.HK",
@@ -249,7 +260,8 @@
     "name": "ANTA DR (INVX)",
     "issuer": "INVX",
     "underlying": "ANTA",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "APLD03": {
     "primary": "APLD",
@@ -258,7 +270,8 @@
     "name": "APLD DR (PI)",
     "issuer": "PI",
     "underlying": "APLD",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "APPL03": {
     "primary": "APPL",
@@ -267,7 +280,8 @@
     "name": "APPL DR (PI)",
     "issuer": "PI",
     "underlying": "APPL",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "ASEMI24": {
     "primary": "3119.HK",
@@ -276,7 +290,8 @@
     "name": "ASEMI ETF DR (FSS)",
     "issuer": "FSS",
     "underlying": "ASEMI ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "ASICS23": {
     "primary": "7936.T",
@@ -285,7 +300,8 @@
     "name": "ASICS DR (INVX)",
     "issuer": "INVX",
     "underlying": "ASICS",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "ASML01": {
     "primary": "ASML.AS",
@@ -294,7 +310,8 @@
     "name": "ASML DR (BLS)",
     "issuer": "BLS",
     "underlying": "ASML",
-    "recommend": true
+    "recommend": true,
+    "sector": "Semiconductor Equipment & Fab Supply"
   },
   "ASTS03": {
     "primary": "ASTS",
@@ -303,7 +320,8 @@
     "name": "ASTS DR (PI)",
     "issuer": "PI",
     "underlying": "ASTS",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "AVGO23": {
     "primary": "AVGO",
@@ -321,7 +339,8 @@
     "name": "AVGO DR (KTB)",
     "issuer": "KTB",
     "underlying": "AVGO",
-    "recommend": true
+    "recommend": true,
+    "sector": "AI Processing Chips"
   },
   "AXP06": {
     "primary": "AXP",
@@ -330,7 +349,8 @@
     "name": "AXP DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "AXP",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "BABA01": {
     "primary": "9988.HK",
@@ -375,7 +395,8 @@
     "name": "BABA DR (KTB)",
     "issuer": "KTB",
     "underlying": "BABA",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "BAC03": {
     "primary": "BAC",
@@ -384,7 +405,8 @@
     "name": "BAC DR (PI)",
     "issuer": "PI",
     "underlying": "BAC",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "BDX06": {
     "primary": "BDX",
@@ -393,7 +415,8 @@
     "name": "BDX DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "BDX",
-    "recommend": true
+    "recommend": true,
+    "sector": "Healthcare"
   },
   "BIDU01": {
     "primary": "9888.HK",
@@ -429,7 +452,8 @@
     "name": "BIDU DR (KTB)",
     "issuer": "KTB",
     "underlying": "BIDU",
-    "recommend": true
+    "recommend": true,
+    "sector": "Communication Services"
   },
   "BILIBILI01": {
     "primary": "9626.HK",
@@ -438,7 +462,8 @@
     "name": "BILIBI DR (BLS)",
     "issuer": "BLS",
     "underlying": "BILIBI",
-    "recommend": true
+    "recommend": true,
+    "sector": "Communication Services"
   },
   "BIREN23": {
     "primary": "6082.HK",
@@ -447,7 +472,8 @@
     "name": "BIREN DR (INVX)",
     "issuer": "INVX",
     "underlying": "BIREN",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "BKNG03": {
     "primary": "BKNG",
@@ -465,7 +491,8 @@
     "name": "BKNG DR (KTB)",
     "issuer": "KTB",
     "underlying": "BKNG",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "BLK06": {
     "primary": "BLK",
@@ -474,7 +501,8 @@
     "name": "BLK DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "BLK",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "BOEING80": {
     "primary": "BOEING",
@@ -483,7 +511,8 @@
     "name": "BOEING DR (KTB)",
     "issuer": "KTB",
     "underlying": "BOEING",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "BONDAS19": {
     "primary": "N6M.SI",
@@ -492,7 +521,8 @@
     "name": "BONDAS ETF DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "BONDAS ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "BRKB80": {
     "primary": "BRKB",
@@ -501,7 +531,8 @@
     "name": "BRKB DR (KTB)",
     "issuer": "KTB",
     "underlying": "BRKB",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "BYDCOM01": {
     "primary": "0285.HK",
@@ -519,7 +550,8 @@
     "name": "BYDCOM DR (KTB)",
     "issuer": "KTB",
     "underlying": "BYDCOM",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "CAMBRI80": {
     "primary": "688256.SS",
@@ -528,7 +560,8 @@
     "name": "CAMBRI DR (KTB)",
     "issuer": "KTB",
     "underlying": "CAMBRI",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "CATL01": {
     "primary": "300750.SZ",
@@ -555,7 +588,8 @@
     "name": "CATL DR (KTB)",
     "issuer": "KTB",
     "underlying": "CATL",
-    "recommend": true
+    "recommend": true,
+    "sector": "Industrials"
   },
   "CCJ23": {
     "primary": "CCJ",
@@ -564,7 +598,8 @@
     "name": "CCJ DR (INVX)",
     "issuer": "INVX",
     "underlying": "CCJ",
-    "recommend": true
+    "recommend": true,
+    "sector": "Energy"
   },
   "CEG23": {
     "primary": "CEG",
@@ -573,7 +608,8 @@
     "name": "CEG DR (INVX)",
     "issuer": "INVX",
     "underlying": "CEG",
-    "recommend": true
+    "recommend": true,
+    "sector": "Clean Energy & Power Infrastructure"
   },
   "CHHONGQ19": {
     "primary": "1378.HK",
@@ -582,7 +618,8 @@
     "name": "CHHONGQ DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "CHHONGQ",
-    "recommend": true
+    "recommend": true,
+    "sector": "Basic Materials"
   },
   "CHMOBILE19": {
     "primary": "0941.HK",
@@ -600,7 +637,8 @@
     "name": "CHMOBILE DR (INVX)",
     "issuer": "INVX",
     "underlying": "CHMOBILE",
-    "recommend": true
+    "recommend": true,
+    "sector": "Communication Services"
   },
   "CHNXT5023": {
     "primary": "159682.SZ",
@@ -609,7 +647,8 @@
     "name": "CHNXT50 ETF DR (INVX)",
     "issuer": "INVX",
     "underlying": "CHNXT50 ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "CMBANK23": {
     "primary": "3968.HK",
@@ -618,7 +657,8 @@
     "name": "CMBANK DR (INVX)",
     "issuer": "INVX",
     "underlying": "CMBANK",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "CME03": {
     "primary": "CME",
@@ -627,7 +667,8 @@
     "name": "CME DR (PI)",
     "issuer": "PI",
     "underlying": "CME",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "CN01": {
     "primary": "3180.HK",
@@ -636,7 +677,8 @@
     "name": "CAM CSI300 ETF DR (BLS)",
     "issuer": "BLS",
     "underlying": "CAM CSI300 ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "CN23": {
     "primary": "510300.SS",
@@ -645,7 +687,8 @@
     "name": "CN CSI300 ETF DR (INVX)",
     "issuer": "INVX",
     "underlying": "CN CSI300 ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "CNBIO24": {
     "primary": "2820.HK",
@@ -654,7 +697,8 @@
     "name": "CNBIO ETF DR (FSS)",
     "issuer": "FSS",
     "underlying": "CNBIO ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "CNEV24": {
     "primary": "2845.HK",
@@ -663,7 +707,8 @@
     "name": "CNEV ETF DR (FSS)",
     "issuer": "FSS",
     "underlying": "CNEV ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "CNRE80": {
     "primary": "600111.SS",
@@ -672,7 +717,8 @@
     "name": "CNRE DR (KTB)",
     "issuer": "KTB",
     "underlying": "CNRE",
-    "recommend": true
+    "recommend": true,
+    "sector": "Basic Materials"
   },
   "CNROBOAI23": {
     "primary": "2807.HK",
@@ -681,7 +727,8 @@
     "name": "CNROBOAI ETF DR (INVX)",
     "issuer": "INVX",
     "underlying": "CNROBOAI ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "CNSEMI23": {
     "primary": "3191.HK",
@@ -690,7 +737,8 @@
     "name": "CNSEMI ETF DR (INVX)",
     "issuer": "INVX",
     "underlying": "CNSEMI ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "CNSTAR5023": {
     "primary": "588000.SS",
@@ -699,7 +747,8 @@
     "name": "CNSTAR50 ETF DR (INVX)",
     "issuer": "INVX",
     "underlying": "CNSTAR50 ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "CNTECH01": {
     "primary": "3088.HK",
@@ -708,7 +757,8 @@
     "name": "CAM HSTECH ETF DR (BLS)",
     "issuer": "BLS",
     "underlying": "CAM HSTECH ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "COIN80": {
     "primary": "COIN",
@@ -717,7 +767,8 @@
     "name": "COIN DR (KTB)",
     "issuer": "KTB",
     "underlying": "COIN",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "COSTCO19": {
     "primary": "COSTCO",
@@ -726,7 +777,8 @@
     "name": "COSTCO DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "COSTCO",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "CRM01": {
     "primary": "CRM",
@@ -753,7 +805,8 @@
     "name": "CRM DR (KTB)",
     "issuer": "KTB",
     "underlying": "CRM",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "CRSP03": {
     "primary": "CRSP",
@@ -762,7 +815,8 @@
     "name": "CRSP DR (PI)",
     "issuer": "PI",
     "underlying": "CRSP",
-    "recommend": true
+    "recommend": true,
+    "sector": "Healthcare"
   },
   "CRWD06": {
     "primary": "CRWD",
@@ -780,7 +834,8 @@
     "name": "CRWD DR (KTB)",
     "issuer": "KTB",
     "underlying": "CRWD",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "CRWV03": {
     "primary": "CRWV",
@@ -789,7 +844,8 @@
     "name": "CRWV DR (PI)",
     "issuer": "PI",
     "underlying": "CRWV",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "CSCO06": {
     "primary": "CSCO",
@@ -798,7 +854,8 @@
     "name": "CSCO DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "CSCO",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "CYPC80": {
     "primary": "600900.SS",
@@ -807,7 +864,8 @@
     "name": "CYPC DR (KTB)",
     "issuer": "KTB",
     "underlying": "CYPC",
-    "recommend": true
+    "recommend": true,
+    "sector": "Utilities"
   },
   "DASH03": {
     "primary": "DASH",
@@ -816,7 +874,8 @@
     "name": "DASH DR (PI)",
     "issuer": "PI",
     "underlying": "DASH",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "DBS19": {
     "primary": "D05.SI",
@@ -825,7 +884,8 @@
     "name": "DBS DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "DBS",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "DDOG19": {
     "primary": "DDOG",
@@ -834,7 +894,8 @@
     "name": "DDOG DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "DDOG",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "DELL19": {
     "primary": "DELL",
@@ -843,7 +904,8 @@
     "name": "DELL DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "DELL",
-    "recommend": true
+    "recommend": true,
+    "sector": "AI Servers & Liquid Cooling"
   },
   "DISCO24": {
     "primary": "6146.T",
@@ -852,7 +914,8 @@
     "name": "DISCO DR (FSS)",
     "issuer": "FSS",
     "underlying": "DISCO",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "DISNEY19": {
     "primary": "DISNEY",
@@ -861,7 +924,8 @@
     "name": "DISNEY DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "DISNEY",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "DUOL06": {
     "primary": "DUOL",
@@ -870,7 +934,8 @@
     "name": "DUOL DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "DUOL",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "E1VFVN3001": {
     "primary": "E1VFVN30.HM",
@@ -879,7 +944,8 @@
     "name": "DCVFMVN30 ETF DR (BLS)",
     "issuer": "BLS",
     "underlying": "DCVFMVN30 ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "EOSE03": {
     "primary": "EOSE",
@@ -888,7 +954,8 @@
     "name": "EOSE DR (PI)",
     "issuer": "PI",
     "underlying": "EOSE",
-    "recommend": true
+    "recommend": true,
+    "sector": "Industrials"
   },
   "ESTEE80": {
     "primary": "ESTEE",
@@ -897,7 +964,8 @@
     "name": "ESTEE DR (KTB)",
     "issuer": "KTB",
     "underlying": "ESTEE",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "EXPE06": {
     "primary": "EXPE",
@@ -906,7 +974,8 @@
     "name": "EXPE DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "EXPE",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "FANUC23": {
     "primary": "6954.T",
@@ -915,7 +984,8 @@
     "name": "FANUC DR (INVX)",
     "issuer": "INVX",
     "underlying": "FANUC",
-    "recommend": true
+    "recommend": true,
+    "sector": "Industrials"
   },
   "FCX23": {
     "primary": "FCX",
@@ -924,7 +994,8 @@
     "name": "FCX DR (INVX)",
     "issuer": "INVX",
     "underlying": "FCX",
-    "recommend": true
+    "recommend": true,
+    "sector": "Basic Materials"
   },
   "FERRARI80": {
     "primary": "RACE.MI",
@@ -933,7 +1004,8 @@
     "name": "FERRARI DR (KTB)",
     "issuer": "KTB",
     "underlying": "FERRARI",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "FPTVN11": {
     "primary": "FPT.HM",
@@ -951,7 +1023,8 @@
     "name": "FPTVN DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "FPTVN",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "FUEVFVND01": {
     "primary": "FUEVFVND.HM",
@@ -960,7 +1033,8 @@
     "name": "DCVFMVN DIAMOND ETF DR (BLS)",
     "issuer": "BLS",
     "underlying": "DCVFMVN DIAMOND ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "GAC03": {
     "primary": "2238.HK",
@@ -969,7 +1043,8 @@
     "name": "GAC DR (PI)",
     "issuer": "PI",
     "underlying": "GAC",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "GANFENG23": {
     "primary": "1772.HK",
@@ -978,7 +1053,8 @@
     "name": "GANFENG DR (INVX)",
     "issuer": "INVX",
     "underlying": "GANFENG",
-    "recommend": true
+    "recommend": true,
+    "sector": "Basic Materials"
   },
   "GASVN11": {
     "primary": "GAS.HM",
@@ -987,7 +1063,8 @@
     "name": "GASVN DR (KS)",
     "issuer": "KS",
     "underlying": "GASVN",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "GDS23": {
     "primary": "9698.HK",
@@ -996,7 +1073,8 @@
     "name": "GDS DR (INVX)",
     "issuer": "INVX",
     "underlying": "GDS",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "GEELY06": {
     "primary": "0175.HK",
@@ -1014,7 +1092,8 @@
     "name": "GEELY DR (KTB)",
     "issuer": "KTB",
     "underlying": "GEELY",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "GEV23": {
     "primary": "GEV",
@@ -1032,7 +1111,8 @@
     "name": "GEV DR (KTB)",
     "issuer": "KTB",
     "underlying": "GEV",
-    "recommend": true
+    "recommend": true,
+    "sector": "Clean Energy & Power Infrastructure"
   },
   "GIGA23": {
     "primary": "603986.SS",
@@ -1041,7 +1121,8 @@
     "name": "GIGA DR (INVX)",
     "issuer": "INVX",
     "underlying": "GIGA",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "GOLD03": {
     "primary": "2840.HK",
@@ -1050,7 +1131,8 @@
     "name": "SPDR GOLD (HK) ETF DR (PI)",
     "issuer": "PI",
     "underlying": "SPDR GOLD (HK) ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "GOLD19": {
     "primary": "O33.SI",
@@ -1059,7 +1141,8 @@
     "name": "SPDR GOLD TRUST(GSD) DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "SPDR GOLD TRUST(GSD)",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "GOLDUS03": {
     "primary": "GLD",
@@ -1086,7 +1169,8 @@
     "name": "SPDR GOLD (US) ETF DR (KTB)",
     "issuer": "KTB",
     "underlying": "SPDR GOLD (US) ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "GOOG23": {
     "primary": "GOOG",
@@ -1104,7 +1188,8 @@
     "name": "GOOG DR (KTB)",
     "issuer": "KTB",
     "underlying": "GOOG",
-    "recommend": true
+    "recommend": true,
+    "sector": "Hyperscale Cloud & Enterprise Software"
   },
   "GOOGL01": {
     "primary": "GOOGL",
@@ -1113,7 +1198,8 @@
     "name": "GOOGL DR (BLS)",
     "issuer": "BLS",
     "underlying": "GOOGL",
-    "recommend": true
+    "recommend": true,
+    "sector": "Hyperscale Cloud & Enterprise Software"
   },
   "GOOGL03": {
     "primary": "GOOGL",
@@ -1131,7 +1217,8 @@
     "name": "GRAB DR (KTB)",
     "issuer": "KTB",
     "underlying": "GRAB",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "GSEMI24": {
     "primary": "2644.T",
@@ -1140,7 +1227,8 @@
     "name": "GSEMI ETF DR (FSS)",
     "issuer": "FSS",
     "underlying": "GSEMI ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "GSUS06": {
     "primary": "GSUS",
@@ -1149,7 +1237,8 @@
     "name": "GSUS DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "GSUS",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "HAIERS19": {
     "primary": "6690.HK",
@@ -1158,7 +1247,8 @@
     "name": "HAIERS DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "HAIERS",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "HANSOH19": {
     "primary": "3692.HK",
@@ -1167,7 +1257,8 @@
     "name": "HANSOH DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "HANSOH",
-    "recommend": true
+    "recommend": true,
+    "sector": "Healthcare"
   },
   "HERMES80": {
     "primary": "RMS.PA",
@@ -1176,7 +1267,8 @@
     "name": "HERMES DR (KTB)",
     "issuer": "KTB",
     "underlying": "HERMES",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "HIMS03": {
     "primary": "HIMS",
@@ -1185,7 +1277,8 @@
     "name": "HIMS DR (PI)",
     "issuer": "PI",
     "underlying": "HIMS",
-    "recommend": true
+    "recommend": true,
+    "sector": "Healthcare"
   },
   "HITACHI24": {
     "primary": "6501.T",
@@ -1194,7 +1287,8 @@
     "name": "HITACHI DR (FSS)",
     "issuer": "FSS",
     "underlying": "HITACHI",
-    "recommend": true
+    "recommend": true,
+    "sector": "Industrials"
   },
   "HK01": {
     "primary": "2800.HK",
@@ -1203,7 +1297,8 @@
     "name": "TRAHK ETF DR (BLS)",
     "issuer": "BLS",
     "underlying": "TRAHK ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "HK13": {
     "primary": "2800.HK",
@@ -1221,7 +1316,8 @@
     "name": "HSCEI ETF DR (BLS)",
     "issuer": "BLS",
     "underlying": "HSCEI ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "HKEX23": {
     "primary": "0388.HK",
@@ -1230,7 +1326,8 @@
     "name": "HKEX DR (INVX)",
     "issuer": "INVX",
     "underlying": "HKEX",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "HKTECH13": {
     "primary": "3032.HK",
@@ -1239,7 +1336,8 @@
     "name": "HSTECH ETF DR (KGI)",
     "issuer": "KGI",
     "underlying": "HSTECH ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "HONDA19": {
     "primary": "7267.T",
@@ -1248,7 +1346,8 @@
     "name": "HONDA DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "HONDA",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "HOOD03": {
     "primary": "HOOD",
@@ -1275,7 +1374,8 @@
     "name": "HOOD DR (KTB)",
     "issuer": "KTB",
     "underlying": "HOOD",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "HORIZON23": {
     "primary": "9930.HK",
@@ -1284,7 +1384,8 @@
     "name": "HORIZON DR (INVX)",
     "issuer": "INVX",
     "underlying": "HORIZON",
-    "recommend": true
+    "recommend": true,
+    "sector": "Industrials"
   },
   "HPG19": {
     "primary": "HPG.HM",
@@ -1293,7 +1394,8 @@
     "name": "HPG DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "HPG",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "HSHD23": {
     "primary": "3110.HK",
@@ -1302,7 +1404,8 @@
     "name": "HSHD ETF DR (INVX)",
     "issuer": "INVX",
     "underlying": "HSHD ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "HUAHONG23": {
     "primary": "1347.HK",
@@ -1311,7 +1414,8 @@
     "name": "HUAHONG DR (INVX)",
     "issuer": "INVX",
     "underlying": "HUAHONG",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "IBM06": {
     "primary": "IBM",
@@ -1320,7 +1424,8 @@
     "name": "IBM DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "IBM",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "ICBC06": {
     "primary": "1398.HK",
@@ -1329,7 +1434,8 @@
     "name": "ICBC DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "ICBC",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "ICBC19": {
     "primary": "1398.HK",
@@ -1347,7 +1453,8 @@
     "name": "IFLYTEK DR (KTB)",
     "issuer": "KTB",
     "underlying": "IFLYTEK",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "INDIA01": {
     "primary": "3074.HK",
@@ -1356,7 +1463,8 @@
     "name": "CAM MSCIINDIA ETF DR (BLS)",
     "issuer": "BLS",
     "underlying": "CAM MSCIINDIA ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "INDIAESG19": {
     "primary": "I17.SI",
@@ -1365,7 +1473,8 @@
     "name": "IS INDIA CLIMATE ETF DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "IS INDIA CLIMATE ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "INTEL03": {
     "primary": "INTEL",
@@ -1374,7 +1483,8 @@
     "name": "INTEL DR (PI)",
     "issuer": "PI",
     "underlying": "INTEL",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "IONQ03": {
     "primary": "IONQ",
@@ -1383,7 +1493,8 @@
     "name": "IONQ DR (PI)",
     "issuer": "PI",
     "underlying": "IONQ",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "ISRG01": {
     "primary": "ISRG",
@@ -1392,7 +1503,8 @@
     "name": "ISRG DR (BLS)",
     "issuer": "BLS",
     "underlying": "ISRG",
-    "recommend": true
+    "recommend": true,
+    "sector": "Healthcare"
   },
   "ISRG06": {
     "primary": "ISRG",
@@ -1419,7 +1531,8 @@
     "name": "ITOCHU DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "ITOCHU",
-    "recommend": true
+    "recommend": true,
+    "sector": "Industrials"
   },
   "JAP03": {
     "primary": "3118.HK",
@@ -1428,7 +1541,8 @@
     "name": "GLOBALX JAPAN(HK)ETF DR (PI)",
     "issuer": "PI",
     "underlying": "GLOBALX JAPAN(HK)ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "JAPAN10001": {
     "primary": "3126.HK",
@@ -1437,7 +1551,8 @@
     "name": "HS JAPAN TPX100 ETF DR (BLS)",
     "issuer": "BLS",
     "underlying": "HS JAPAN TPX100 ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "JAPAN13": {
     "primary": "3160.HK",
@@ -1446,7 +1561,8 @@
     "name": "CAM JAPAN HDG ETF DR (KGI)",
     "issuer": "KGI",
     "underlying": "CAM JAPAN HDG ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "JD80": {
     "primary": "9618.HK",
@@ -1455,7 +1571,8 @@
     "name": "JD DR (KTB)",
     "issuer": "KTB",
     "underlying": "JD",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "JDHEAL19": {
     "primary": "6618.HK",
@@ -1464,7 +1581,8 @@
     "name": "JDHEAL DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "JDHEAL",
-    "recommend": true
+    "recommend": true,
+    "sector": "Healthcare"
   },
   "JEPI19": {
     "primary": "JEPI",
@@ -1473,7 +1591,8 @@
     "name": "JEPI ETF DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "JEPI ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "JGRO19": {
     "primary": "JGRO",
@@ -1482,7 +1601,8 @@
     "name": "JGRO ETF DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "JGRO ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "JLMAG80": {
     "primary": "6680.HK",
@@ -1491,7 +1611,8 @@
     "name": "JLMAG DR (KTB)",
     "issuer": "KTB",
     "underlying": "JLMAG",
-    "recommend": true
+    "recommend": true,
+    "sector": "Industrials"
   },
   "JNJ03": {
     "primary": "JNJ",
@@ -1500,7 +1621,8 @@
     "name": "JNJ DR (PI)",
     "issuer": "PI",
     "underlying": "JNJ",
-    "recommend": true
+    "recommend": true,
+    "sector": "Healthcare"
   },
   "JPANIME24": {
     "primary": "2524.T",
@@ -1509,7 +1631,8 @@
     "name": "JPANIME ETF DR (FSS)",
     "issuer": "FSS",
     "underlying": "JPANIME ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "JPMUS06": {
     "primary": "JPMUS",
@@ -1518,7 +1641,8 @@
     "name": "JPMUS DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "JPMUS",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "JPMUS19": {
     "primary": "JPMUS",
@@ -1536,7 +1660,8 @@
     "name": "JPROBOAI ETF DR (FSS)",
     "issuer": "FSS",
     "underlying": "JPROBOAI ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "JPSEMI24": {
     "primary": "2644.T",
@@ -1545,7 +1670,8 @@
     "name": "JPSEMI ETF DR (FSS)",
     "issuer": "FSS",
     "underlying": "JPSEMI ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "JTEK19": {
     "primary": "JTEK",
@@ -1554,7 +1680,8 @@
     "name": "JTEK ETF DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "JTEK ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "KEYENCE23": {
     "primary": "6861.T",
@@ -1563,7 +1690,8 @@
     "name": "KEYENCE DR (INVX)",
     "issuer": "INVX",
     "underlying": "KEYENCE",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "KINGSOFT23": {
     "primary": "3888.HK",
@@ -1572,7 +1700,8 @@
     "name": "KINGSOFT DR (INVX)",
     "issuer": "INVX",
     "underlying": "KINGSOFT",
-    "recommend": true
+    "recommend": true,
+    "sector": "Communication Services"
   },
   "KIOXIA23": {
     "primary": "6600.T",
@@ -1581,7 +1710,8 @@
     "name": "KIOXIA DR (INVX)",
     "issuer": "INVX",
     "underlying": "KIOXIA",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "KO80": {
     "primary": "KO",
@@ -1590,7 +1720,8 @@
     "name": "KO DR (KTB)",
     "issuer": "KTB",
     "underlying": "KO",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Defensive"
   },
   "KONAMI24": {
     "primary": "9766.T",
@@ -1599,7 +1730,8 @@
     "name": "KONAMI DR (FSS)",
     "issuer": "FSS",
     "underlying": "KONAMI",
-    "recommend": true
+    "recommend": true,
+    "sector": "Communication Services"
   },
   "KUAISH01": {
     "primary": "1024.HK",
@@ -1635,7 +1767,8 @@
     "name": "KUAISH DR (KTB)",
     "issuer": "KTB",
     "underlying": "KUAISH",
-    "recommend": true
+    "recommend": true,
+    "sector": "Communication Services"
   },
   "LENOVO13": {
     "primary": "0992.HK",
@@ -1644,7 +1777,8 @@
     "name": "LENOVO DR (KGI)",
     "issuer": "KGI",
     "underlying": "LENOVO",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "LLY80": {
     "primary": "LLY",
@@ -1653,7 +1787,8 @@
     "name": "LLY DR (KTB)",
     "issuer": "KTB",
     "underlying": "LLY",
-    "recommend": true
+    "recommend": true,
+    "sector": "Healthcare"
   },
   "LOREAL80": {
     "primary": "OR.PA",
@@ -1662,7 +1797,8 @@
     "name": "LOREAL DR (KTB)",
     "issuer": "KTB",
     "underlying": "LOREAL",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Defensive"
   },
   "LPGOLD13": {
     "primary": "6181.HK",
@@ -1671,7 +1807,8 @@
     "name": "LAOPU DR (KGI)",
     "issuer": "KGI",
     "underlying": "LAOPU",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "LRCX23": {
     "primary": "LRCX",
@@ -1680,7 +1817,8 @@
     "name": "LRCX DR (INVX)",
     "issuer": "INVX",
     "underlying": "LRCX",
-    "recommend": true
+    "recommend": true,
+    "sector": "Semiconductor Equipment & Fab Supply"
   },
   "LULU06": {
     "primary": "LULU",
@@ -1689,7 +1827,8 @@
     "name": "LULU DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "LULU",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "LVMH01": {
     "primary": "MC.PA",
@@ -1698,7 +1837,8 @@
     "name": "LVMH DR (BLS)",
     "issuer": "BLS",
     "underlying": "LVMH",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "MA80": {
     "primary": "MA",
@@ -1707,7 +1847,8 @@
     "name": "MA DR (KTB)",
     "issuer": "KTB",
     "underlying": "MA",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "MAOGEP80": {
     "primary": "1042.HK",
@@ -1716,7 +1857,8 @@
     "name": "MAOGEP DR (KTB)",
     "issuer": "KTB",
     "underlying": "MAOGEP",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "MEITUAN19": {
     "primary": "3690.HK",
@@ -1743,7 +1885,8 @@
     "name": "MEITUAN DR (KTB)",
     "issuer": "KTB",
     "underlying": "MEITUAN",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "MELI06": {
     "primary": "MELI",
@@ -1752,7 +1895,8 @@
     "name": "MELI DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "MELI",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "META01": {
     "primary": "META",
@@ -1788,7 +1932,8 @@
     "name": "META DR (KTB)",
     "issuer": "KTB",
     "underlying": "META",
-    "recommend": true
+    "recommend": true,
+    "sector": "Social Media & AI Ecosystems"
   },
   "MICRON01": {
     "primary": "MICRON",
@@ -1833,7 +1978,8 @@
     "name": "MICRON DR (KTB)",
     "issuer": "KTB",
     "underlying": "MICRON",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "MIDEA80": {
     "primary": "0300.HK",
@@ -1842,7 +1988,8 @@
     "name": "MIDEA DR (KTB)",
     "issuer": "KTB",
     "underlying": "MIDEA",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "MITSU19": {
     "primary": "8031.T",
@@ -1851,7 +1998,8 @@
     "name": "MITSU DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "MITSU",
-    "recommend": true
+    "recommend": true,
+    "sector": "Industrials"
   },
   "MIXUE80": {
     "primary": "MIXUE",
@@ -1860,7 +2008,8 @@
     "name": "MIXUE DR (KTB)",
     "issuer": "KTB",
     "underlying": "MIXUE",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "MNSO80": {
     "primary": "9896.HK",
@@ -1869,7 +2018,8 @@
     "name": "MNSO DR (KTB)",
     "issuer": "KTB",
     "underlying": "MNSO",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "MNST06": {
     "primary": "MNST",
@@ -1878,7 +2028,8 @@
     "name": "MNST DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "MNST",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Defensive"
   },
   "MONTAGE80": {
     "primary": "6809.HK",
@@ -1887,7 +2038,8 @@
     "name": "MONTAGE DR (KTB)",
     "issuer": "KTB",
     "underlying": "MONTAGE",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "MOUTAI80": {
     "primary": "600519.SS",
@@ -1896,7 +2048,8 @@
     "name": "MOUTAI DR (KTB)",
     "issuer": "KTB",
     "underlying": "MOUTAI",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Defensive"
   },
   "MP80": {
     "primary": "MP",
@@ -1905,7 +2058,8 @@
     "name": "MP DR (KTB)",
     "issuer": "KTB",
     "underlying": "MP",
-    "recommend": true
+    "recommend": true,
+    "sector": "Basic Materials"
   },
   "MRVL06": {
     "primary": "MRVL",
@@ -1932,7 +2086,8 @@
     "name": "MRVL DR (KTB)",
     "issuer": "KTB",
     "underlying": "MRVL",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "MS06": {
     "primary": "MS",
@@ -1941,7 +2096,8 @@
     "name": "MS DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "MS",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "MSFT01": {
     "primary": "MSFT",
@@ -1995,7 +2151,8 @@
     "name": "MSFT DR (KTB)",
     "issuer": "KTB",
     "underlying": "MSFT",
-    "recommend": true
+    "recommend": true,
+    "sector": "Hyperscale Cloud & Enterprise Software"
   },
   "MSN11": {
     "primary": "MSN.HM",
@@ -2013,7 +2170,8 @@
     "name": "MSN DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "MSN",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "MUFG19": {
     "primary": "8306.T",
@@ -2031,7 +2189,8 @@
     "name": "MUFG DR (INVX)",
     "issuer": "INVX",
     "underlying": "MUFG",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "MWG11": {
     "primary": "MWG.HM",
@@ -2049,7 +2208,8 @@
     "name": "MWG DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "MWG",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "NAURA23": {
     "primary": "002371.SZ",
@@ -2067,7 +2227,8 @@
     "name": "NAURA DR (KTB)",
     "issuer": "KTB",
     "underlying": "NAURA",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "NBIS03": {
     "primary": "NBIS",
@@ -2076,7 +2237,8 @@
     "name": "NBIS DR (PI)",
     "issuer": "PI",
     "underlying": "NBIS",
-    "recommend": true
+    "recommend": true,
+    "sector": "Communication Services"
   },
   "NDAQ06": {
     "primary": "NDAQ",
@@ -2085,7 +2247,8 @@
     "name": "NDAQ DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "NDAQ",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "NDX01": {
     "primary": "3086.HK",
@@ -2094,7 +2257,8 @@
     "name": "CAM NASDAQ 100 ETF DR (BLS)",
     "issuer": "BLS",
     "underlying": "CAM NASDAQ 100 ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "NEE80": {
     "primary": "NEE",
@@ -2103,7 +2267,8 @@
     "name": "NEE DR (KTB)",
     "issuer": "KTB",
     "underlying": "NEE",
-    "recommend": true
+    "recommend": true,
+    "sector": "Utilities"
   },
   "NEM06": {
     "primary": "NEM",
@@ -2121,7 +2286,8 @@
     "name": "NEM DR (INVX)",
     "issuer": "INVX",
     "underlying": "NEM",
-    "recommend": true
+    "recommend": true,
+    "sector": "Basic Materials"
   },
   "NET03": {
     "primary": "NET",
@@ -2130,7 +2296,8 @@
     "name": "NET DR (PI)",
     "issuer": "PI",
     "underlying": "NET",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "NETEASE80": {
     "primary": "9999.HK",
@@ -2139,7 +2306,8 @@
     "name": "NTES DR (KTB)",
     "issuer": "KTB",
     "underlying": "NTES",
-    "recommend": true
+    "recommend": true,
+    "sector": "Communication Services"
   },
   "NFLX06": {
     "primary": "NFLX",
@@ -2157,7 +2325,8 @@
     "name": "NFLX DR (KTB)",
     "issuer": "KTB",
     "underlying": "NFLX",
-    "recommend": true
+    "recommend": true,
+    "sector": "Communication Services"
   },
   "NIKE80": {
     "primary": "NIKE",
@@ -2166,7 +2335,8 @@
     "name": "NIKE DR (KTB)",
     "issuer": "KTB",
     "underlying": "NIKE",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "NIKKEI80": {
     "primary": "1321.T",
@@ -2175,7 +2345,8 @@
     "name": "NIKKEI ETF DR (KTB)",
     "issuer": "KTB",
     "underlying": "NIKKEI ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "NINTENDO19": {
     "primary": "7974.T",
@@ -2193,7 +2364,8 @@
     "name": "NINTENDO DR (INVX)",
     "issuer": "INVX",
     "underlying": "NINTENDO",
-    "recommend": true
+    "recommend": true,
+    "sector": "Communication Services"
   },
   "NONGFU80": {
     "primary": "9633.HK",
@@ -2202,7 +2374,8 @@
     "name": "NONGFU DR (KTB)",
     "issuer": "KTB",
     "underlying": "NONGFU",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Defensive"
   },
   "NOVOB80": {
     "primary": "NOVO-B.CO",
@@ -2211,7 +2384,8 @@
     "name": "NOVOB DR (KTB)",
     "issuer": "KTB",
     "underlying": "NOVOB",
-    "recommend": true
+    "recommend": true,
+    "sector": "Healthcare"
   },
   "NOW19": {
     "primary": "NOW",
@@ -2220,7 +2394,8 @@
     "name": "NOW DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "NOW",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "NVDA01": {
     "primary": "NVDA",
@@ -2274,7 +2449,8 @@
     "name": "NVDA DR (KTB)",
     "issuer": "KTB",
     "underlying": "NVDA",
-    "recommend": true
+    "recommend": true,
+    "sector": "AI Processing Chips"
   },
   "NVTS03": {
     "primary": "NVTS",
@@ -2283,7 +2459,8 @@
     "name": "NVTS DR (PI)",
     "issuer": "PI",
     "underlying": "NVTS",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "OIL03": {
     "primary": "3097.HK",
@@ -2301,7 +2478,8 @@
     "name": "S&P CRUDE OIL(HK)ETF DR (FSS)",
     "issuer": "FSS",
     "underlying": "S&P CRUDE OIL(HK)ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "ONON03": {
     "primary": "ONON",
@@ -2310,7 +2488,8 @@
     "name": "ONON DR (PI)",
     "issuer": "PI",
     "underlying": "ONON",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "ORCL01": {
     "primary": "ORCL",
@@ -2319,7 +2498,8 @@
     "name": "ORCL DR (BLS)",
     "issuer": "BLS",
     "underlying": "ORCL",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "ORCL06": {
     "primary": "ORCL",
@@ -2346,7 +2526,8 @@
     "name": "PANW DR (KTB)",
     "issuer": "KTB",
     "underlying": "PANW",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "PEP80": {
     "primary": "PEP",
@@ -2355,7 +2536,8 @@
     "name": "PEP DR (KTB)",
     "issuer": "KTB",
     "underlying": "PEP",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Defensive"
   },
   "PETROCN80": {
     "primary": "0857.HK",
@@ -2364,7 +2546,8 @@
     "name": "PETROCN DR (KTB)",
     "issuer": "KTB",
     "underlying": "PETROCN",
-    "recommend": true
+    "recommend": true,
+    "sector": "Energy"
   },
   "PFIZER19": {
     "primary": "PFIZER",
@@ -2373,7 +2556,8 @@
     "name": "PFIZER DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "PFIZER",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "PINGAN01": {
     "primary": "2318.HK",
@@ -2391,7 +2575,8 @@
     "name": "PINGAN DR (KTB)",
     "issuer": "KTB",
     "underlying": "PINGAN",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "PLTR01": {
     "primary": "PLTR",
@@ -2400,7 +2585,8 @@
     "name": "PLTR DR (BLS)",
     "issuer": "BLS",
     "underlying": "PLTR",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "PLTR03": {
     "primary": "PLTR",
@@ -2445,7 +2631,8 @@
     "name": "POPMART DR (KTB)",
     "issuer": "KTB",
     "underlying": "POPMART",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "PYPL06": {
     "primary": "PYPL",
@@ -2454,7 +2641,8 @@
     "name": "PYPL DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "PYPL",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "QCOM06": {
     "primary": "QCOM",
@@ -2463,7 +2651,8 @@
     "name": "QCOM DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "QCOM",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "QQQM19": {
     "primary": "INVESCO NDAQ100",
@@ -2472,7 +2661,8 @@
     "name": "INVESCO NDAQ100 ETF DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "INVESCO NDAQ100 ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "RBLX06": {
     "primary": "RBLX",
@@ -2481,7 +2671,8 @@
     "name": "RBLX DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "RBLX",
-    "recommend": true
+    "recommend": true,
+    "sector": "Communication Services"
   },
   "REMX03": {
     "primary": "REMX",
@@ -2490,7 +2681,8 @@
     "name": "REMX ETF DR (PI)",
     "issuer": "PI",
     "underlying": "REMX ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "RGTI03": {
     "primary": "RGTI",
@@ -2499,7 +2691,8 @@
     "name": "RGTI DR (PI)",
     "issuer": "PI",
     "underlying": "RGTI",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "RKLB03": {
     "primary": "RKLB",
@@ -2517,7 +2710,8 @@
     "name": "RKLB DR (KTB)",
     "issuer": "KTB",
     "underlying": "RKLB",
-    "recommend": true
+    "recommend": true,
+    "sector": "Industrials"
   },
   "SANOFI80": {
     "primary": "SAN.PA",
@@ -2526,7 +2720,8 @@
     "name": "SANOFI DR (KTB)",
     "issuer": "KTB",
     "underlying": "SANOFI",
-    "recommend": true
+    "recommend": true,
+    "sector": "Healthcare"
   },
   "SANRIO23": {
     "primary": "8136.T",
@@ -2544,7 +2739,8 @@
     "name": "SANRIO DR (KTB)",
     "issuer": "KTB",
     "underlying": "SANRIO",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "SBUX80": {
     "primary": "SBUX",
@@ -2553,7 +2749,8 @@
     "name": "SBUX DR (KTB)",
     "issuer": "KTB",
     "underlying": "SBUX",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "SEAGATE23": {
     "primary": "SEAGATE",
@@ -2562,7 +2759,8 @@
     "name": "SEAGATE DR (INVX)",
     "issuer": "INVX",
     "underlying": "SEAGATE",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "SEMB19": {
     "primary": "U96.SI",
@@ -2571,7 +2769,8 @@
     "name": "SEMB DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "SEMB",
-    "recommend": true
+    "recommend": true,
+    "sector": "Utilities"
   },
   "SENSE23": {
     "primary": "0020.HK",
@@ -2580,7 +2779,8 @@
     "name": "SENSE DR (INVX)",
     "issuer": "INVX",
     "underlying": "SENSE",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "SGX19": {
     "primary": "S68.SI",
@@ -2589,7 +2789,8 @@
     "name": "SGX DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "SGX",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "SHOP03": {
     "primary": "SHOP",
@@ -2607,7 +2808,8 @@
     "name": "SHOP DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "SHOP",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "SIA19": {
     "primary": "C6L.SI",
@@ -2616,7 +2818,8 @@
     "name": "SIA DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "SIA",
-    "recommend": true
+    "recommend": true,
+    "sector": "Industrials"
   },
   "SIL03": {
     "primary": "SIL",
@@ -2625,7 +2828,8 @@
     "name": "SIL ETF DR (PI)",
     "issuer": "PI",
     "underlying": "SIL ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "SINGTEL80": {
     "primary": "Z74.SI",
@@ -2634,7 +2838,8 @@
     "name": "SINGTEL DR (KTB)",
     "issuer": "KTB",
     "underlying": "SINGTEL",
-    "recommend": true
+    "recommend": true,
+    "sector": "Communication Services"
   },
   "SINOBIO19": {
     "primary": "1177.HK",
@@ -2643,7 +2848,8 @@
     "name": "SINOBIO DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "SINOBIO",
-    "recommend": true
+    "recommend": true,
+    "sector": "Healthcare"
   },
   "SMCI03": {
     "primary": "SMCI",
@@ -2652,7 +2858,8 @@
     "name": "SMCI DR (PI)",
     "issuer": "PI",
     "underlying": "SMCI",
-    "recommend": true
+    "recommend": true,
+    "sector": "AI Servers & Liquid Cooling"
   },
   "SMFG19": {
     "primary": "8316.T",
@@ -2661,7 +2868,8 @@
     "name": "SMFG DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "SMFG",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "SMIC01": {
     "primary": "0981.HK",
@@ -2670,7 +2878,8 @@
     "name": "SMIC DR (BLS)",
     "issuer": "BLS",
     "underlying": "SMIC",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "SMIC03": {
     "primary": "0981.HK",
@@ -2724,7 +2933,8 @@
     "name": "SNDK DR (KTB)",
     "issuer": "KTB",
     "underlying": "SNDK",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "SNOW06": {
     "primary": "SNOW",
@@ -2742,7 +2952,8 @@
     "name": "SNOW DR (INVX)",
     "issuer": "INVX",
     "underlying": "SNOW",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "SOFTBANK23": {
     "primary": "9984.T",
@@ -2760,7 +2971,8 @@
     "name": "SOFTBANK DR (KTB)",
     "issuer": "KTB",
     "underlying": "SOFTBANK",
-    "recommend": true
+    "recommend": true,
+    "sector": "Communication Services"
   },
   "SONY80": {
     "primary": "6758.T",
@@ -2769,7 +2981,8 @@
     "name": "SONY DR (KTB)",
     "issuer": "KTB",
     "underlying": "SONY",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "SP50001": {
     "primary": "3195.HK",
@@ -2778,7 +2991,8 @@
     "name": "SP500HK ETF DR (BLS)",
     "issuer": "BLS",
     "underlying": "SP500HK ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "SP500US19": {
     "primary": "SPY",
@@ -2796,7 +3010,8 @@
     "name": "SP500US ETF DR (KTB)",
     "issuer": "KTB",
     "underlying": "SP500US ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "SPBOND80": {
     "primary": "BND",
@@ -2805,7 +3020,8 @@
     "name": "SPBOND ETF DR (KTB)",
     "issuer": "KTB",
     "underlying": "SPBOND ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "SPCOM80": {
     "primary": "SPCOM",
@@ -2814,7 +3030,8 @@
     "name": "SPCOM ETF DR (KTB)",
     "issuer": "KTB",
     "underlying": "SPCOM ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "SPENGY80": {
     "primary": "XLE",
@@ -2823,7 +3040,8 @@
     "name": "SPENGY ETF DR (KTB)",
     "issuer": "KTB",
     "underlying": "SPENGY ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "SPFIN80": {
     "primary": "XLF",
@@ -2832,7 +3050,8 @@
     "name": "SPFIN ETF DR (KTB)",
     "issuer": "KTB",
     "underlying": "SPFIN ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "SPHLTH80": {
     "primary": "XLV",
@@ -2841,7 +3060,8 @@
     "name": "SPHLTH ETF DR (KTB)",
     "issuer": "KTB",
     "underlying": "SPHLTH ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "SPOT06": {
     "primary": "SPOT",
@@ -2850,7 +3070,8 @@
     "name": "SPOT DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "SPOT",
-    "recommend": true
+    "recommend": true,
+    "sector": "Communication Services"
   },
   "SPTECH80": {
     "primary": "XLK",
@@ -2859,7 +3080,8 @@
     "name": "SPTECH ETF DR (KTB)",
     "issuer": "KTB",
     "underlying": "SPTECH ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "STAR5001": {
     "primary": "3151.HK",
@@ -2868,7 +3090,8 @@
     "name": "PREMIA STAR50 ETF DR (BLS)",
     "issuer": "BLS",
     "underlying": "PREMIA STAR50 ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "STEG19": {
     "primary": "S63.SI",
@@ -2877,7 +3100,8 @@
     "name": "STEG DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "STEG",
-    "recommend": true
+    "recommend": true,
+    "sector": "Industrials"
   },
   "SUNNY19": {
     "primary": "2382.HK",
@@ -2895,7 +3119,8 @@
     "name": "SUNNY DR (KTB)",
     "issuer": "KTB",
     "underlying": "SUNNY",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "SUSHI23": {
     "primary": "7550.T",
@@ -2904,7 +3129,8 @@
     "name": "SUSHI DR (INVX)",
     "issuer": "INVX",
     "underlying": "SUSHI",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "SYNP03": {
     "primary": "SYNP",
@@ -2913,7 +3139,8 @@
     "name": "SYNP DR (PI)",
     "issuer": "PI",
     "underlying": "SYNP",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "TAIWAN19": {
     "primary": "0050.TW",
@@ -2922,7 +3149,8 @@
     "name": "YT TAIWAN50 ETF DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "YT TAIWAN50 ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "TAIWANAI13": {
     "primary": "00915.TW",
@@ -2931,7 +3159,8 @@
     "name": "KGI TAIWAN AI 50 ETF DR (KGI)",
     "issuer": "KGI",
     "underlying": "KGI TAIWAN AI 50 ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "TAIWANHD13": {
     "primary": "00918.TW",
@@ -2940,7 +3169,8 @@
     "name": "KGI TAIWAN HD 30 ETF DR (KGI)",
     "issuer": "KGI",
     "underlying": "KGI TAIWAN HD 30 ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "TEL23": {
     "primary": "8035.T",
@@ -2958,7 +3188,8 @@
     "name": "TEL DR (KTB)",
     "issuer": "KTB",
     "underlying": "TEL",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "TENCENT01": {
     "primary": "0700.HK",
@@ -3012,7 +3243,8 @@
     "name": "TENCENT DR (KTB)",
     "issuer": "KTB",
     "underlying": "TENCENT",
-    "recommend": true
+    "recommend": true,
+    "sector": "Communication Services"
   },
   "THAIBEV19": {
     "primary": "Y92.SI",
@@ -3021,7 +3253,8 @@
     "name": "THAIBEV DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "THAIBEV",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Defensive"
   },
   "TME23": {
     "primary": "1698.HK",
@@ -3030,7 +3263,8 @@
     "name": "TME DR (INVX)",
     "issuer": "INVX",
     "underlying": "TME",
-    "recommend": true
+    "recommend": true,
+    "sector": "Communication Services"
   },
   "TOYOTA80": {
     "primary": "7203.T",
@@ -3039,7 +3273,8 @@
     "name": "TOYOTA DR (KTB)",
     "issuer": "KTB",
     "underlying": "TOYOTA",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "TRIPCOM23": {
     "primary": "9961.HK",
@@ -3057,7 +3292,8 @@
     "name": "TRIPCOM DR (KTB)",
     "issuer": "KTB",
     "underlying": "TRIPCOM",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "TRVUS06": {
     "primary": "TRVUS",
@@ -3066,7 +3302,8 @@
     "name": "TRVUS DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "TRVUS",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "TSLA01": {
     "primary": "TSLA",
@@ -3102,7 +3339,8 @@
     "name": "TSLA DR (KTB)",
     "issuer": "KTB",
     "underlying": "TSLA",
-    "recommend": true
+    "recommend": true,
+    "sector": "Autonomous Systems & EV Robotics"
   },
   "UBER06": {
     "primary": "UBER",
@@ -3111,7 +3349,8 @@
     "name": "UBER DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "UBER",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "UBTECH23": {
     "primary": "9880.HK",
@@ -3120,7 +3359,8 @@
     "name": "UBTECH DR (INVX)",
     "issuer": "INVX",
     "underlying": "UBTECH",
-    "recommend": true
+    "recommend": true,
+    "sector": "Industrials"
   },
   "UNH19": {
     "primary": "UNH",
@@ -3129,7 +3369,8 @@
     "name": "UNH DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "UNH",
-    "recommend": true
+    "recommend": true,
+    "sector": "Healthcare"
   },
   "UNIQLO80": {
     "primary": "9983.T",
@@ -3138,7 +3379,8 @@
     "name": "UNIQLO DR (KTB)",
     "issuer": "KTB",
     "underlying": "UNIQLO",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "UOB19": {
     "primary": "U11.SI",
@@ -3147,7 +3389,8 @@
     "name": "UOB DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "UOB",
-    "recommend": true
+    "recommend": true,
+    "sector": "Financial Services"
   },
   "USTR24": {
     "primary": "3433.HK",
@@ -3156,7 +3399,8 @@
     "name": "USTR ETF DR (FSS)",
     "issuer": "FSS",
     "underlying": "USTR ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "VCB11": {
     "primary": "VCB.HM",
@@ -3174,7 +3418,8 @@
     "name": "VCB DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "VCB",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "VENTURE19": {
     "primary": "V03.SI",
@@ -3183,7 +3428,8 @@
     "name": "VENTURE DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "VENTURE",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "VHM19": {
     "primary": "VHM.HM",
@@ -3192,7 +3438,8 @@
     "name": "VHM DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "VHM",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "VISA06": {
     "primary": "VISA",
@@ -3210,7 +3457,8 @@
     "name": "VISA DR (KTB)",
     "issuer": "KTB",
     "underlying": "VISA",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "VNFIN24": {
     "primary": "FUESSVFL.HM",
@@ -3219,7 +3467,8 @@
     "name": "VNFIN LEAD ETF DR (FSS)",
     "issuer": "FSS",
     "underlying": "VNFIN LEAD ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "VNM19": {
     "primary": "VNM.HM",
@@ -3228,7 +3477,8 @@
     "name": "VNM DR (YUANTA)",
     "issuer": "YUANTA",
     "underlying": "VNM",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "VRT23": {
     "primary": "VRT",
@@ -3237,7 +3487,8 @@
     "name": "VRT DR (INVX)",
     "issuer": "INVX",
     "underlying": "VRT",
-    "recommend": true
+    "recommend": true,
+    "sector": "Industrials"
   },
   "VT03": {
     "primary": "VT",
@@ -3246,7 +3497,8 @@
     "name": "VT ETF DR (PI)",
     "issuer": "PI",
     "underlying": "VT ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "WMT06": {
     "primary": "WMT",
@@ -3255,7 +3507,8 @@
     "name": "WMT DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "WMT",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Defensive"
   },
   "WORLD03": {
     "primary": "3110.HK",
@@ -3264,7 +3517,8 @@
     "name": "GLOBALX INBLU(HK)ETF DR (PI)",
     "issuer": "PI",
     "underlying": "GLOBALX INBLU(HK)ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "WORLDA01": {
     "primary": "EUNL.DE",
@@ -3273,7 +3527,8 @@
     "name": "WORLDA ETF DR (BLS)",
     "issuer": "BLS",
     "underlying": "WORLDA ETF",
-    "recommend": true
+    "recommend": true,
+    "sector": "Other / Diverse"
   },
   "WUXI06": {
     "primary": "2269.HK",
@@ -3282,7 +3537,8 @@
     "name": "WUXI DR (KKPS)",
     "issuer": "KKPS",
     "underlying": "WUXI",
-    "recommend": true
+    "recommend": true,
+    "sector": "Healthcare"
   },
   "WUXI13": {
     "primary": "2269.HK",
@@ -3300,7 +3556,8 @@
     "name": "WUXIAT DR (KTB)",
     "issuer": "KTB",
     "underlying": "WUXIAT",
-    "recommend": true
+    "recommend": true,
+    "sector": "Healthcare"
   },
   "XIAOMI01": {
     "primary": "1810.HK",
@@ -3345,7 +3602,8 @@
     "name": "XIAOMI DR (KTB)",
     "issuer": "KTB",
     "underlying": "XIAOMI",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   },
   "XPENG03": {
     "primary": "9868.HK",
@@ -3354,7 +3612,8 @@
     "name": "XPENG DR (PI)",
     "issuer": "PI",
     "underlying": "XPENG",
-    "recommend": true
+    "recommend": true,
+    "sector": "Consumer Cyclical"
   },
   "ZAI23": {
     "primary": "9688.HK",
@@ -3363,7 +3622,8 @@
     "name": "ZAI DR (INVX)",
     "issuer": "INVX",
     "underlying": "ZAI",
-    "recommend": true
+    "recommend": true,
+    "sector": "Healthcare"
   },
   "ZIJIN13": {
     "primary": "2899.HK",
@@ -3390,7 +3650,8 @@
     "name": "ZIJIN DR (KTB)",
     "issuer": "KTB",
     "underlying": "ZIJIN",
-    "recommend": true
+    "recommend": true,
+    "sector": "Basic Materials"
   },
   "ZJINNO80": {
     "primary": "300308.SZ",
@@ -3399,6 +3660,7 @@
     "name": "ZJINNO DR (KTB)",
     "issuer": "KTB",
     "underlying": "ZJINNO",
-    "recommend": true
+    "recommend": true,
+    "sector": "Technology"
   }
 }
