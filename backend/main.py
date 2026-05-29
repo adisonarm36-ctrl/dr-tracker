@@ -942,6 +942,49 @@ THEME_NARRATIVES = {
     "Power Infra": "โครงสร้างพื้นฐานพลังงานไฟฟ้าและนิวเคลียร์คือกลุ่มเหมืองทองคำใหม่ในการป้อนกระแสไฟฟ้าอันมหาศาลแก่ Data Center ทั่วสหรัฐฯ สัญญาส่งจ่ายไฟฟ้าสะอาดระยะยาวได้รับแรงหนุนสุดร้อนแรง"
 }
 
+UPCOMING_EVENTS = [
+    {
+        "symbol": "AAPL",
+        "underlying": "Apple",
+        "event_name": "Apple WWDC 2026 Developer Conference",
+        "date": "มิถุนายน 2026",
+        "impact": "High",
+        "description": "การเปิดตัว iOS 20 พร้อมฟีเจอร์ AI 'Apple Intelligence 2.0' ที่ประมวลผลบนชิป Apple Silicon รุ่นใหม่ คาดกระตุ้นยอดขายอัปเกรด iPhone ยุคใหม่"
+    },
+    {
+        "symbol": "NVDA",
+        "underlying": "NVIDIA",
+        "event_name": "Computex Taipei 2026 & Keynote",
+        "date": "ต้นมิถุนายน 2026",
+        "impact": "Critical",
+        "description": "CEO Jensen Huang เตรียมขึ้นแถลงเปิดตัวสถาปัตยกรรมชิป AI รุ่นถัดไป (คาดเป็นรหัส Rubin หรือสถาปัตยกรรม Blackwell Ultra) คาดกระตุ้นความต้องการสั่งซื้อ GPU ทั่วโลก"
+    },
+    {
+        "symbol": "TSLA",
+        "underlying": "Tesla",
+        "event_name": "Tesla RoboTaxi FSD V13 Launch",
+        "date": "กลางปี 2026",
+        "impact": "High",
+        "description": "งานเปิดตัวทดลองใช้บริการ RoboTaxi บนเครือข่าย FSD เต็มระบบเชิงพาณิชย์ในสหรัฐฯ เป็นจุดเปลี่ยนสำคัญด้าน AI ในยานยนต์ไร้คนขับ"
+    },
+    {
+        "symbol": "MSFT",
+        "underlying": "Microsoft",
+        "event_name": "Azure AI Partner Summit 2026",
+        "date": "กรกฎาคม 2026",
+        "impact": "Medium",
+        "description": "การประกาศแผนการรวมโมเดล GPT-5 (หรือโมเดล AI รุ่นถัดไปจาก OpenAI) เข้าสู่ระบบปฏิบัติการ Windows และคลาวด์ Azure ในเชิงพาณิชย์"
+    },
+    {
+        "symbol": "ASML",
+        "underlying": "ASML",
+        "event_name": "High-NA EUV Machine Shipments Update",
+        "date": "ไตรมาส 3 2026",
+        "impact": "High",
+        "description": "รายงานความคืบหน้าการส่งมอบเครื่องพิมพ์ลายวงจรชิปขนาดจิ๋วรุ่นประหยัดพลังงานตัวท็อปราคา 350 ล้านดอลลาร์ ให้แก่ Intel, TSMC, และ Samsung"
+    }
+]
+
 def compute_narratives_data():
     # Load catalog to make sure we map accurately
     catalog = load_dr_catalog()
@@ -964,13 +1007,17 @@ def compute_narratives_data():
         "Power Infra": {"avg": 0.0, "count": 0, "items": []}
     }
     
-    # Scan recommended symbols in SET_PRICES_CACHE
+    # Group DRs by underlying prefix first to prevent duplicate assets (ตัวไม่ซ้ำกัน)
+    # For each prefix, we keep the one with the highest absolute performance change percentage.
+    best_drs_by_prefix = {}
     for sym, cached in SET_PRICES_CACHE.items():
         # Match symbol prefix
         mapping_item = None
+        matched_prefix = None
         for prefix, item in NARRATIVE_MAPPING.items():
             if sym.startswith(prefix):
                 mapping_item = item
+                matched_prefix = prefix
                 break
                 
         if not mapping_item:
@@ -978,23 +1025,29 @@ def compute_narratives_data():
             
         change_pct = cached.get("change_pct", 0.0)
         price = cached.get("price", 0.0)
-        name = mapping_item["name"]
         
-        dr_item = {
-            "symbol": sym,
-            "name": name,
-            "price": price,
-            "change_pct": change_pct,
-            "description": mapping_item["description"]
-        }
-        
+        # We want to keep the single best representative for each underlying prefix
+        # We compare absolute change to find the most active/high-moving DR symbol today
+        if matched_prefix not in best_drs_by_prefix or abs(change_pct) > abs(best_drs_by_prefix[matched_prefix]["change_pct"]):
+            best_drs_by_prefix[matched_prefix] = {
+                "symbol": sym,
+                "name": mapping_item["name"],
+                "price": price,
+                "change_pct": change_pct,
+                "description": mapping_item["description"],
+                "sector": mapping_item["sector"],
+                "themes": mapping_item["themes"]
+            }
+            
+    # Classify unique DRs into Sectors and Themes
+    for prefix, dr_item in best_drs_by_prefix.items():
         # Classify into Sector
-        sec = mapping_item["sector"]
+        sec = dr_item["sector"]
         if sec in sectors_data:
             sectors_data[sec]["items"].append(dr_item)
             
         # Classify into Themes
-        for theme in mapping_item["themes"]:
+        for theme in dr_item["themes"]:
             if theme in themes_data:
                 themes_data[theme]["items"].append(dr_item)
                 
@@ -1015,7 +1068,8 @@ def compute_narratives_data():
             "leader_name": leader["name"],
             "leader_change": leader["change_pct"],
             "narrative": SECTOR_NARRATIVES.get(sec_name, ""),
-            "items": sorted(items, key=lambda x: x["change_pct"], reverse=True)[:5]
+            # Sort items by change descending and show ALL of them (บอกว่าในนั้นมีตัวอะไรบ้าง ขึ้นลงเท่าไหร่)
+            "items": sorted(items, key=lambda x: x["change_pct"], reverse=True)
         })
         
     sectors_results = sorted(sectors_results, key=lambda x: x["avg_change"], reverse=True)
@@ -1029,6 +1083,19 @@ def compute_narratives_data():
         avg_change = sum(x["change_pct"] for x in items) / len(items)
         leader = sorted(items, key=lambda x: x["change_pct"], reverse=True)[0]
         
+        # Theme: Get top 5 gainers (>= 0) and top 5 losers (< 0)
+        gainers_pool = [x for x in items if x["change_pct"] >= 0]
+        losers_pool = [x for x in items if x["change_pct"] < 0]
+        
+        top_gainers = sorted(gainers_pool, key=lambda x: x["change_pct"], reverse=True)[:5]
+        top_losers = sorted(losers_pool, key=lambda x: x["change_pct"])[:5]
+        
+        # Fallbacks in case one side is completely empty
+        if not top_gainers and items:
+            top_gainers = sorted(items, key=lambda x: x["change_pct"], reverse=True)[:5]
+        if not top_losers and items:
+            top_losers = sorted(items, key=lambda x: x["change_pct"])[:5]
+            
         themes_results.append({
             "name": theme_name,
             "avg_change": round(avg_change, 2),
@@ -1037,7 +1104,9 @@ def compute_narratives_data():
             "leader_name": leader["name"],
             "leader_change": leader["change_pct"],
             "narrative": THEME_NARRATIVES.get(theme_name, ""),
-            "items": sorted(items, key=lambda x: x["change_pct"], reverse=True)[:5]
+            # Return both gainers and losers arrays!
+            "top_gainers": top_gainers,
+            "top_losers": top_losers
         })
         
     themes_results = sorted(themes_results, key=lambda x: x["avg_change"], reverse=True)
@@ -1046,7 +1115,8 @@ def compute_narratives_data():
         "status": "success",
         "timestamp": datetime.now().isoformat(),
         "sectors": sectors_results,
-        "themes": themes_results
+        "themes": themes_results,
+        "events": UPCOMING_EVENTS
     }
 
 @app.get("/api/narratives")
