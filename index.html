@@ -393,37 +393,15 @@
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2">
                 <div class="flex flex-wrap items-center gap-2">
                     <h2 class="text-xl font-bold text-cyan-400 flex items-center gap-2">
-                        <span>🔥</span> สถิติวิเคราะห์กลุ่มหลักทรัพย์ & Theme คลื่น Narrative
+                        <span>🔥</span> วิเคราะห์กลุ่มอุตสาหกรรมเทคโนโลยี & คลื่น Narrative (11 กลุ่มหลัก)
                     </h2>
                 </div>
             </div>
 
-            <!-- Double Grid: Left Sectors (5), Right Themes (7) -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                <!-- Left: Sectors (12 cols on mobile, 5 cols on desktop) -->
-                <div class="lg:col-span-5 space-y-5">
-                    <div class="flex items-center justify-between border-b border-gray-800 pb-2 mb-1 px-1">
-                        <h3 class="text-sm font-bold text-teal-400 flex items-center gap-2 uppercase tracking-wider">
-                            <span>💼</span> สถิติแยกตามหมวดอุตสาหกรรม (Sectors)
-                        </h3>
-                    </div>
-                    <div id="narratives-sectors-list" class="space-y-4">
-                        <div class="text-center py-10 text-gray-500 font-mono animate-pulse">⏳ กำลังประมวลผลโมเดลสถิติ Sector...</div>
-                    </div>
-                </div>
-
-                <!-- Right: Themes (12 cols on mobile, 7 cols on desktop) -->
-                <div class="lg:col-span-7 space-y-5">
-                    <div class="flex items-center justify-between border-b border-gray-800 pb-2 mb-1 px-1">
-                        <h3 class="text-sm font-bold text-indigo-400 flex items-center gap-2 uppercase tracking-wider">
-                            <span>🚀</span> สถิติวิเคราะห์คลื่นกระแสหลัก (Themes / Narratives)
-                        </h3>
-                    </div>
-                    <div id="narratives-themes-list" class="space-y-4">
-                        <div class="text-center py-10 text-gray-500 font-mono animate-pulse">⏳ กำลังประมวลผลโมเดลวิเคราะห์ Theme...</div>
-                    </div>
-                </div>
-            </div> <!-- Closes double grid row -->
+            <!-- Single Column Premium Accordion Container -->
+            <div class="max-w-4xl mx-auto space-y-4" id="narratives-groups-list">
+                <div class="text-center py-10 text-gray-500 font-mono animate-pulse">⏳ กำลังประมวลผลวิเคราะห์กลุ่มอุตสาหกรรม...</div>
+            </div>
             
             <!-- Upcoming Event Catalysts Row -->
             <div class="glass-panel rounded-3xl p-6 border border-cyan-500/10 shadow-2xl relative overflow-hidden mt-6 bg-slate-950/40">
@@ -1500,159 +1478,92 @@
         function renderNarrativesView() {
             if (!narrativesData) return;
             
-            // 1. Render Sectors (Unique Assets, No duplicate underlyings)
-            const sectorsList = document.getElementById("narratives-sectors-list");
-            if (sectorsList) {
-                sectorsList.innerHTML = narrativesData.sectors.map(sec => {
-                    const sign = sec.avg_change > 0 ? "+" : "";
-                    const avgColor = sec.avg_change > 0 ? "text-emerald-400 bg-emerald-950/40 border-emerald-500/20" : "text-red-400 bg-red-950/40 border-red-500/20";
-                    const leaderSign = sec.leader_change > 0 ? "+" : "";
-                    const leaderBadge = sec.leader_change > 0 ? "text-emerald-400 bg-emerald-950/40" : "text-red-400 bg-red-950/40";
+            // 1. Render Granular Groups Accordion (Unique Assets, No duplicate underlyings)
+            const groupsList = document.getElementById("narratives-groups-list");
+            if (groupsList && narrativesData.groups) {
+                groupsList.innerHTML = narrativesData.groups.map((group, grpIdx) => {
+                    const sign = group.avg_change > 0 ? "+" : "";
+                    const avgColor = group.avg_change > 0 
+                        ? "text-emerald-400 bg-emerald-950/40 border-emerald-500/20" 
+                        : (group.avg_change < 0 ? "text-red-400 bg-red-950/40 border-red-500/20" : "text-gray-400 bg-slate-950/40 border-gray-800");
+                    const leaderSign = group.leader_change > 0 ? "+" : "";
                     
-                    const itemsHtml = sec.items.map(item => {
+                    // Render constituents list inside the accordion drawer
+                    const itemsHtml = group.items.map(item => {
                         const itemSign = item.change_pct > 0 ? "+" : "";
-                        const itemColor = item.change_pct > 0 ? "text-emerald-400" : "text-red-400";
-                        const barColor = item.change_pct > 0 ? "bg-emerald-500" : "bg-red-500";
-                        const maxAbsChange = Math.max(...sec.items.map(x => Math.abs(x.change_pct))) || 1;
+                        const itemColor = item.change_pct > 0 ? "text-emerald-400" : (item.change_pct < 0 ? "text-red-400" : "text-gray-400");
+                        const barColor = item.change_pct > 0 ? "bg-emerald-500" : (item.change_pct < 0 ? "bg-red-500" : "bg-gray-500");
+                        
+                        // Width relative to max absolute return in this group
+                        const maxAbsChange = Math.max(...group.items.map(x => Math.abs(x.change_pct))) || 1;
                         const pctWidth = Math.min(100, (Math.abs(item.change_pct) / maxAbsChange) * 100);
                         
                         return `
-                            <div class="space-y-1">
-                                <div class="flex justify-between items-center text-[11px]">
-                                    <span class="font-bold text-gray-300 font-mono">${item.symbol} <span class="text-gray-500 text-[10px] font-normal">${item.name}</span></span>
-                                    <span class="font-mono font-bold ${itemColor}">${itemSign}${item.change_pct}%</span>
+                            <div class="bg-slate-900/60 rounded-xl p-3 border border-gray-850 hover:border-cyan-500/20 transition flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs">
+                                <div class="flex items-start md:items-center gap-2.5 min-w-[200px]">
+                                    <span class="font-bold text-gray-200 font-mono tracking-tight">${item.symbol}</span>
+                                    <div class="flex flex-col text-left">
+                                        <span class="text-xs font-bold text-gray-300 text-left">${item.name}</span>
+                                        <span class="text-[10px] text-gray-500 font-medium font-sans mt-0.5 text-left">${item.description}</span>
+                                    </div>
                                 </div>
-                                <div class="w-full bg-slate-900 rounded-full h-1.5 overflow-hidden">
-                                    <div class="${barColor} h-1.5 rounded-full" style="width: ${pctWidth}%"></div>
-                                </div>
-                            </div>
-                        `;
-                    }).join('');
- 
-                    return `
-                        <div class="glass-panel rounded-2xl p-5 border-l-4 border-l-teal-400 border-cyan-500/10 shadow-lg relative overflow-hidden transition duration-300 hover:border-cyan-500/30 hover:shadow-[0_0_20px_rgba(6,182,212,0.1)]">
-                            <div class="flex justify-between items-start gap-4">
-                                <div>
-                                    <h4 class="text-base font-bold text-gray-100">${sec.name}</h4>
-                                    <p class="text-[10px] text-gray-500 font-semibold font-mono mt-0.5">${sec.dr_count} กลุ่มธุรกิจหลัก (ตัวไม่ซ้ำกัน)</p>
-                                </div>
-                                <span class="font-mono text-xs sm:text-sm font-bold px-2.5 py-1 rounded-xl border ${avgColor}">${sign}${sec.avg_change}%</span>
-                            </div>
-                            
-                            <p class="text-xs text-gray-400 leading-relaxed mt-3 pb-3 border-b border-gray-900/30 font-medium">
-                                ${sec.narrative}
-                            </p>
-                            
-                            <!-- Hottest Leader Widget -->
-                            <div class="bg-slate-900/50 rounded-xl p-3 border border-gray-800/80 mt-3 flex justify-between items-center">
-                                <div class="flex flex-col">
-                                    <span class="text-[9px] text-cyan-400 font-bold uppercase tracking-wider">🏆 ตัวนำกลุ่มวันนี้</span>
-                                    <span class="font-bold text-gray-200 text-xs mt-1 font-mono">${sec.leader_symbol} <span class="text-gray-400 font-normal text-[10px]">${sec.leader_name}</span></span>
-                                </div>
-                                <span class="font-mono text-xs font-bold px-2 py-0.5 rounded ${leaderBadge}">${leaderSign}${sec.leader_change}%</span>
-                            </div>
-                            
-                            <!-- Sector Items breakdown -->
-                            <div class="mt-4 space-y-2.5">
-                                <p class="text-[9px] text-gray-500 font-bold uppercase tracking-wider">📈 รายการหลักทรัพย์ทั้งหมดภายในกลุ่ม (ตัวไม่ซ้ำกัน)</p>
-                                ${itemsHtml}
-                            </div>
-                        </div>
-                    `;
-                }).join('');
-            }
- 
-            // 2. Render Themes (Top 5 Gainers & Top 5 Losers per theme)
-            const themesList = document.getElementById("narratives-themes-list");
-            if (themesList) {
-                themesList.innerHTML = narrativesData.themes.map(theme => {
-                    const sign = theme.avg_change > 0 ? "+" : "";
-                    const avgColor = theme.avg_change > 0 ? "text-emerald-400 bg-emerald-950/40 border-emerald-500/20" : "text-red-400 bg-red-950/40 border-red-500/20";
-                    const leaderSign = theme.leader_change > 0 ? "+" : "";
-                    const leaderBadge = theme.leader_change > 0 ? "text-emerald-400 bg-emerald-950/40" : "text-red-400 bg-red-950/40";
-                    
-                    const gainersHtml = theme.top_gainers.map(item => {
-                        const itemSign = item.change_pct > 0 ? "+" : "";
-                        const itemColor = item.change_pct > 0 ? "text-emerald-400" : "text-gray-400";
-                        const barColor = item.change_pct > 0 ? "bg-emerald-500" : "bg-gray-500";
-                        const maxAbsChange = Math.max(...theme.top_gainers.map(x => Math.abs(x.change_pct))) || 1;
-                        const pctWidth = Math.min(100, (Math.abs(item.change_pct) / maxAbsChange) * 100);
-                        
-                        return `
-                            <div class="space-y-0.5">
-                                <div class="flex justify-between items-center text-[10px]">
-                                    <span class="font-bold text-gray-300 font-mono">${item.symbol}</span>
-                                    <span class="font-mono font-bold ${itemColor}">${itemSign}${item.change_pct}%</span>
-                                </div>
-                                <div class="w-full bg-slate-900 rounded-full h-1 overflow-hidden">
-                                    <div class="${barColor} h-1 rounded-full" style="width: ${pctWidth}%"></div>
+                                <div class="flex flex-1 items-center gap-4 justify-between md:justify-end">
+                                    <div class="hidden sm:block flex-1 bg-slate-950 rounded-full h-2 overflow-hidden max-w-[200px]">
+                                        <div class="${barColor} h-2 rounded-full" style="width: ${pctWidth}%"></div>
+                                    </div>
+                                    <div class="flex items-center gap-4 ml-auto sm:ml-0">
+                                        <span class="text-[11px] text-gray-400 font-mono">ราคาแม่: <span class="text-white font-bold">$${item.price.toFixed(2)}</span></span>
+                                        <span class="font-mono font-bold text-sm ${itemColor}">${itemSign}${item.change_pct}%</span>
+                                    </div>
                                 </div>
                             </div>
                         `;
                     }).join('');
 
-                    const losersHtml = theme.top_losers.map(item => {
-                        const itemSign = item.change_pct > 0 ? "+" : "";
-                        const itemColor = item.change_pct < 0 ? "text-red-400" : "text-gray-400";
-                        const barColor = item.change_pct < 0 ? "bg-red-500" : "bg-gray-500";
-                        const maxAbsChange = Math.max(...theme.top_losers.map(x => Math.abs(x.change_pct))) || 1;
-                        const pctWidth = Math.min(100, (Math.abs(item.change_pct) / maxAbsChange) * 100);
-                        
-                        return `
-                            <div class="space-y-0.5">
-                                <div class="flex justify-between items-center text-[10px]">
-                                    <span class="font-bold text-gray-300 font-mono">${item.symbol}</span>
-                                    <span class="font-mono font-bold ${itemColor}">${itemSign}${item.change_pct}%</span>
-                                </div>
-                                <div class="w-full bg-slate-900 rounded-full h-1 overflow-hidden">
-                                    <div class="${barColor} h-1 rounded-full" style="width: ${pctWidth}%"></div>
-                                </div>
-                            </div>
-                        `;
-                    }).join('');
- 
+                    // Interactive toggle state - keep first expanded by default, others collapsed!
+                    const isExpanded = grpIdx === 0;
+                    const displayStyle = isExpanded ? "block" : "hidden";
+                    const arrowRotation = isExpanded ? "rotate-90" : "";
+                    
                     return `
-                        <div class="glass-panel rounded-2xl p-5 border-l-4 border-l-indigo-400 border-cyan-500/10 shadow-lg relative overflow-hidden transition duration-300 hover:border-cyan-500/30 hover:shadow-[0_0_20px_rgba(6,182,212,0.1)]">
-                            <div class="flex justify-between items-start gap-4">
-                                <div>
-                                    <h4 class="text-base font-bold text-gray-100">${theme.name}</h4>
-                                    <p class="text-[10px] text-gray-500 font-semibold font-mono mt-0.5">${theme.dr_count} กลุ่มธุรกิจหลัก (ตัวไม่ซ้ำกัน)</p>
-                                </div>
-                                <span class="font-mono text-xs sm:text-sm font-bold px-2.5 py-1 rounded-xl border ${avgColor}">${sign}${theme.avg_change}%</span>
-                            </div>
-                            
-                            <p class="text-xs text-gray-400 leading-relaxed mt-3 pb-3 border-b border-gray-900/30 font-medium">
-                                ${theme.narrative}
-                            </p>
-                            
-                            <!-- Hottest Leader Widget -->
-                            <div class="bg-slate-900/50 rounded-xl p-3 border border-gray-800/80 mt-3 flex justify-between items-center">
-                                <div class="flex flex-col">
-                                    <span class="text-[9px] text-cyan-400 font-bold uppercase tracking-wider">🏆 ตัวนำกลุ่มวันนี้</span>
-                                    <span class="font-bold text-gray-200 text-xs mt-1 font-mono">${theme.leader_symbol} <span class="text-gray-400 font-normal text-[10px]">${theme.leader_name}</span></span>
-                                </div>
-                                <span class="font-mono text-xs font-bold px-2 py-0.5 rounded ${leaderBadge}">${leaderSign}${theme.leader_change}%</span>
-                            </div>
-                            
-                            <!-- Theme Gainers & Losers Dual Columns -->
-                            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-gray-900/30 pt-4">
-                                <!-- Top Gainers Column -->
-                                <div class="space-y-2">
-                                    <p class="text-[9px] text-emerald-400 font-bold uppercase tracking-wider flex items-center gap-1">
-                                        <span>🟢</span> ขึ้นเยอะสุด (Top 5 Gainers)
-                                    </p>
-                                    <div class="space-y-2.5">
-                                        ${gainersHtml || '<p class="text-[10px] text-gray-650 font-mono italic">ไม่มีข้อมูลการปรับขึ้น</p>'}
+                        <div class="glass-panel rounded-3xl border border-cyan-500/10 shadow-xl overflow-hidden relative transition hover:border-cyan-500/20 bg-slate-900/10">
+                            <!-- Clickable Header Row -->
+                            <div onclick="toggleGroupAccordion('grp-${grpIdx}')" class="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer select-none bg-slate-950/20 hover:bg-slate-900/20 transition active:scale-[0.99] relative z-10">
+                                <div class="flex items-center gap-4">
+                                    <!-- Rotating Arrow Icon -->
+                                    <span id="arrow-grp-${grpIdx}" class="text-sm text-cyan-400 font-bold transition-transform duration-300 transform ${arrowRotation} flex items-center justify-center w-5 h-5 bg-slate-900 rounded-lg border border-gray-800">▶</span>
+                                    
+                                    <div class="flex items-center gap-3">
+                                        <span class="text-2xl">${group.icon}</span>
+                                        <div class="text-left">
+                                            <h4 class="text-base font-bold text-white leading-snug">${group.name_th}</h4>
+                                            <p class="text-[10px] text-gray-400 font-medium mt-0.5">${group.group_key} • ${group.dr_count} สินทรัพย์อ้างอิง</p>
+                                        </div>
                                     </div>
                                 </div>
                                 
-                                <!-- Top Losers Column -->
-                                <div class="space-y-2">
-                                    <p class="text-[9px] text-red-400 font-bold uppercase tracking-wider flex items-center gap-1">
-                                        <span>🔴</span> ลดเยอะสุด (Top 5 Losers)
-                                    </p>
-                                    <div class="space-y-2.5">
-                                        ${losersHtml || '<p class="text-[10px] text-gray-650 font-mono italic">ไม่มีข้อมูลการปรับลด</p>'}
+                                <div class="flex items-center justify-between sm:justify-end gap-4 ml-8 sm:ml-0">
+                                    <!-- Leader Indicator Badge -->
+                                    <div class="hidden md:flex flex-col text-right">
+                                        <span class="text-[9px] text-cyan-400/80 font-bold flex items-center gap-1 justify-end">🏆 ตัวนำกลุ่ม</span>
+                                        <span class="text-xs font-mono font-bold text-gray-300">${group.leader_symbol} (${leaderSign}${group.leader_change}%)</span>
+                                    </div>
+                                    
+                                    <!-- Group Return Capsule -->
+                                    <span class="font-mono text-sm sm:text-base font-bold px-3 py-1 rounded-xl border ${avgColor}">${sign}${group.avg_change}%</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Expandable Drawer Area -->
+                            <div id="drawer-grp-${grpIdx}" class="${displayStyle} px-5 pb-5 border-t border-gray-900/30 pt-4 bg-slate-950/20 transition duration-300">
+                                <p class="text-xs text-gray-400 leading-relaxed font-medium mb-4 pl-1 font-sans text-left">
+                                    ${group.description}
+                                </p>
+                                
+                                <div class="space-y-2.5">
+                                    <p class="text-[9px] text-cyan-400/80 font-bold uppercase tracking-wider pl-1 text-left">📋 รายชื่อหลักทรัพย์ภายในกลุ่ม (เรียงจากบวกมาก ➡️ น้อย)</p>
+                                    <div class="space-y-2">
+                                        ${itemsHtml}
                                     </div>
                                 </div>
                             </div>
@@ -1661,7 +1572,7 @@
                 }).join('');
             }
 
-            // 3. Render Upcoming Catalyst Event Calendar
+            // 2. Render Upcoming Catalyst Event Calendar
             const eventsList = document.getElementById("narratives-events-list");
             if (eventsList && narrativesData.events) {
                 eventsList.innerHTML = narrativesData.events.map(ev => {
@@ -1679,8 +1590,8 @@
                                     <span class="text-[9px] font-bold px-2 py-0.5 rounded border uppercase tracking-wider ${impactBadge}">${ev.impact} Catalyst</span>
                                 </div>
                                 
-                                <h4 class="text-xs font-bold text-gray-200 mt-2 font-sans">${ev.event_name}</h4>
-                                <p class="text-[10px] text-gray-450 leading-relaxed mt-1 font-medium font-sans">
+                                <h4 class="text-xs font-bold text-gray-200 mt-2 font-sans text-left">${ev.event_name}</h4>
+                                <p class="text-[10px] text-gray-455 leading-relaxed mt-1 font-medium font-sans text-left">
                                     ${ev.description}
                                 </p>
                             </div>
@@ -1692,6 +1603,22 @@
                         </div>
                     `;
                 }).join('');
+            }
+        }
+
+        function toggleGroupAccordion(id) {
+            const drawer = document.getElementById(`drawer-${id}`);
+            const arrow = document.getElementById(`arrow-${id}`);
+            if (drawer && arrow) {
+                if (drawer.classList.contains('hidden')) {
+                    drawer.classList.remove('hidden');
+                    drawer.classList.add('block');
+                    arrow.classList.add('rotate-90');
+                } else {
+                    drawer.classList.remove('block');
+                    drawer.classList.add('hidden');
+                    arrow.classList.remove('rotate-90');
+                }
             }
         }
 
